@@ -1,0 +1,50 @@
+# Rename this file as cooktimer.changes to include changelog
+# entries in your RPM file.
+#
+# Add new changelog entries following the format below.
+# Add newest entries to the top of the list.
+# Separate entries from eachother with a blank line.
+
+# * date Author's Name <author's email> version-release
+# - Summary of changes
+
+* sat Dec 6 2014 Jack Tar <jack.tar@example.com> 0.0.1-11
+- small haptic feedback for start/stop button
+- fix: only last executed alarm timer should have highlighted color
+- fixed wrong size of 3rd start button
+- option for additional banner when alarm rings
+
+* mon Nov 3 2014 Jack Tar <jack.tar@example.com> 0.0.1-10
+- Touching running timer will pause the timer
+- Small changes in mainscreen
+
+* sat Oct 18 2014 Jack Tar <jack.tar@example.com> 0.0.1-9
+- Adapted for other resolutions (tested on Nexus 7 v.2012)
+
+* fri Oct 17 2014 Jack Tar <jack.tar@example.com> 0.0.1-8
+- Remaining time label now always updated if timer is not running
+
+* Tue Aug 26 2014 Jack Tar <jack.tar@example.com> 0.0.1-7
+- Cover time colors identical to main page
+- More testing/fixing of deep sleep issues
+
+* Sun Aug 24 2014 Jack Tar <jack.tar@example.com> 0.0.1-6
+- Coverpage now shows dishes
+- Small bugfix in selecting dish
+
+* Sat Aug 23 2014 Jack Tar <jack.tar@example.com> 0.0.1-5
+- Case insensitive sort in dishlist
+- Dish timer number added to initial dish text
+- Added background to mainpage and timer dialog
+
+* Thu Apr 21 2014 Jack Tar <jack.tar@example.com> 0.0.1-4
+- Trying to fix deep sleep issues
+
+* Sun Apr 15 2014 Jack Tar <jack.tar@example.com> 0.0.1-3
+- Added seconds to Edit dish screen
+
+* Sun Apr 14 2014 Jack Tar <jack.tar@example.com> 0.0.1-2
+- Added seconds to manual time picking
+
+* Sun Apr 13 2014 Jack Tar <jack.tar@example.com> 0.0.1-1
+- Initial version
