@@ -88,44 +88,44 @@
 <context>
     <name>MainPage</name>
     <message>
-        <location filename="../qml/pages/MainPage.qml" line="242"/>
-        <location filename="../qml/pages/MainPage.qml" line="246"/>
+        <location filename="../qml/pages/MainPage.qml" line="245"/>
+        <location filename="../qml/pages/MainPage.qml" line="249"/>
         <source>ready</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/MainPage.qml" line="342"/>
+        <location filename="../qml/pages/MainPage.qml" line="345"/>
         <source>About</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/MainPage.qml" line="346"/>
+        <location filename="../qml/pages/MainPage.qml" line="349"/>
         <source>Settings</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/MainPage.qml" line="350"/>
+        <location filename="../qml/pages/MainPage.qml" line="353"/>
         <source>Edit dishes</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/MainPage.qml" line="389"/>
-        <location filename="../qml/pages/MainPage.qml" line="567"/>
-        <location filename="../qml/pages/MainPage.qml" line="740"/>
+        <location filename="../qml/pages/MainPage.qml" line="392"/>
+        <location filename="../qml/pages/MainPage.qml" line="589"/>
+        <location filename="../qml/pages/MainPage.qml" line="782"/>
         <source>Dish</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/MainPage.qml" line="430"/>
-        <location filename="../qml/pages/MainPage.qml" line="608"/>
-        <location filename="../qml/pages/MainPage.qml" line="781"/>
+        <location filename="../qml/pages/MainPage.qml" line="453"/>
+        <location filename="../qml/pages/MainPage.qml" line="650"/>
+        <location filename="../qml/pages/MainPage.qml" line="843"/>
         <source>Stop</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/MainPage.qml" line="430"/>
-        <location filename="../qml/pages/MainPage.qml" line="608"/>
-        <location filename="../qml/pages/MainPage.qml" line="781"/>
+        <location filename="../qml/pages/MainPage.qml" line="453"/>
+        <location filename="../qml/pages/MainPage.qml" line="650"/>
+        <location filename="../qml/pages/MainPage.qml" line="843"/>
         <source>Start</source>
         <translation type="unfinished"></translation>
     </message>
@@ -133,28 +133,33 @@
 <context>
     <name>SettingPage</name>
     <message>
-        <location filename="../qml/pages/SettingPage.qml" line="35"/>
+        <location filename="../qml/pages/SettingPage.qml" line="37"/>
         <source>Save</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/SettingPage.qml" line="36"/>
+        <location filename="../qml/pages/SettingPage.qml" line="38"/>
         <source>Cancel</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/SettingPage.qml" line="37"/>
+        <location filename="../qml/pages/SettingPage.qml" line="39"/>
         <source>Settings</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/SettingPage.qml" line="52"/>
+        <location filename="../qml/pages/SettingPage.qml" line="54"/>
         <source>Keep backlight on</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/SettingPage.qml" line="58"/>
+        <location filename="../qml/pages/SettingPage.qml" line="60"/>
         <source>Show additional banner notification</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/SettingPage.qml" line="66"/>
+        <source>Show progress circles</source>
         <translation type="unfinished"></translation>
     </message>
 </context>

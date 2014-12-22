@@ -8,6 +8,14 @@
 # * date Author's Name <author's email> version-release
 # - Summary of changes
 
+* sun Dec 21 2014 Jack Tar <jack.tar@example.com> 0.0.1-13
+- Added Czech and Russian, Dutch updated
+- Introduced optional progress circles
+
+* wed Dec 10 2014 Jack Tar <jack.tar@example.com> 0.0.1-12
+- Added internationalization on request of eson
+- Dutch (not supported as language) and Swedish language added
+
 * sat Dec 6 2014 Jack Tar <jack.tar@example.com> 0.0.1-11
 - small haptic feedback for start/stop button
 - fix: only last executed alarm timer should have highlighted color

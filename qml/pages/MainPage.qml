@@ -36,6 +36,9 @@ Page {
     property int _remaining1: 0
     property int _remaining2: 0
     property int _remaining3: 0
+    property int _totalsecs1: 0
+    property int _totalsecs2: 0
+    property int _totalsecs3: 0
 
     ThemeEffect {
         id: buttonBuzz
@@ -389,6 +392,9 @@ Page {
                         myGlobalDish1 = GlobVars.myDish = mainapp.dishText1 = qsTr("Dish") + " 1"
                     }
                 }
+            Item {
+                height: Theme.itemSizeMedium
+                width: (page.width - (Theme.paddingLarge * 2)) / 3.3
                 Button {
                     id: timer1
                     width: (page.width - (Theme.paddingLarge * 2)) / 3.3
@@ -424,6 +430,23 @@ Page {
                         }
                     }
                 }
+                ProgressCircle {
+                id: progressCircle1
+                scale: Theme.paddingSmall / 3
+                opacity: 0.7
+                visible: (mainapp.timer1running || isPaused1) && (myset.value("progresscircle") == "true")
+                anchors.horizontalCenter: parent.horizontalCenter
+                progressColor: Theme.highlightDimmerColor
+                backgroundColor: Theme.primaryColor
+
+                Timer {
+                    interval: 1000
+                    repeat: true
+                    onTriggered: progressCircle1.value = (1 - (remainingTime1.seconds / _totalsecs1) + 0.001)
+                    running: Qt.application.active && mainapp.timer1running
+                }
+                }
+}
                 Button {
                     id: start1
                     width: (page.width - (Theme.paddingLarge * 2)) / 4
@@ -433,7 +456,7 @@ Page {
                         mainapp.timeText1 = remainingTime1.text
                         var tt = timer1.text
                         tt = tt.split(":")
-                        var sec = tt[0] * 3600 + tt[1] * 60 + tt[2] * 1
+                        var sec = _totalsecs1 = tt[0] * 3600 + tt[1] * 60 + tt[2] * 1
                         remainingTime1.seconds = sec
                         GlobVars.myDuration = remainingTime1.text
                         if (remainingTime1.text != "00:00:00"
@@ -498,11 +521,10 @@ Page {
                 }
             }
             Item {
-                height: Theme.itemSizeLarge
+                height: Theme.itemSizeMedium
                 anchors.horizontalCenter: parent.horizontalCenter
                 width: parent.width - Theme.paddingLarge
                 Rectangle {
-                    id: rectangle1
                     anchors.fill: parent
                     opacity: 0
                 }
@@ -543,7 +565,7 @@ Page {
             // small grey line
             Rectangle {
                 color: "#999999"
-                opacity: 0.5
+                opacity: 0.0
                 x: 0
                 width: parent.width
                 height: 4
@@ -567,6 +589,9 @@ Page {
                         myGlobalDish2 = GlobVars.myDish = mainapp.dishText2 = qsTr("Dish") + " 2"
                     }
                 }
+            Item {
+                height: Theme.itemSizeMedium
+                width: (page.width - (Theme.paddingLarge * 2)) / 3.3
                 Button {
                     id: timer2
                     width: (page.width - (Theme.paddingLarge * 2)) / 3.3
@@ -602,6 +627,23 @@ Page {
                         }
                     }
                 }
+                ProgressCircle {
+                id: progressCircle2
+                scale: Theme.paddingSmall / 3
+                opacity: 0.7
+                visible: (mainapp.timer2running || isPaused2) && (myset.value("progresscircle") == "true")
+                anchors.horizontalCenter: parent.horizontalCenter
+                progressColor: Theme.highlightDimmerColor
+                backgroundColor: Theme.primaryColor
+
+                Timer {
+                    interval: 1000
+                    repeat: true
+                    onTriggered: progressCircle2.value = (1 - (remainingTime2.seconds / _totalsecs2) + 0.001)
+                    running: Qt.application.active && mainapp.timer2running
+                }
+                }
+}
                 Button {
                     id: start2
                     width: (page.width - (Theme.paddingLarge * 2)) / 4
@@ -611,7 +653,7 @@ Page {
                         mainapp.timeText2 = remainingTime2.text
                         var tt = timer2.text
                         tt = tt.split(":")
-                        var sec = tt[0] * 3600 + tt[1] * 60 + tt[2] * 1
+                        var sec = _totalsecs2 = tt[0] * 3600 + tt[1] * 60 + tt[2] * 1
                         remainingTime2.seconds = sec
                         GlobVars.myDuration = remainingTime2.text
                         if (remainingTime2.text != "00:00:00"
@@ -675,7 +717,7 @@ Page {
                 }
             }
             Item {
-                height: Theme.itemSizeLarge
+                height: Theme.itemSizeMedium
                 anchors.horizontalCenter: parent.horizontalCenter
                 width: parent.width - Theme.paddingLarge
                 Rectangle {
@@ -717,7 +759,7 @@ Page {
             }
             Rectangle {
                 color: "#999999"
-                opacity: 0.5
+                opacity: 0.0
                 x: 0
                 width: parent.width
                 height: 4
@@ -740,6 +782,9 @@ Page {
                         myGlobalDish3 = GlobVars.myDish = mainapp.dishText3 = qsTr("Dish") + " 3"
                     }
                 }
+            Item {
+                height: Theme.itemSizeMedium
+                width: (page.width - (Theme.paddingLarge * 2)) / 3.3
                 Button {
                     id: timer3
                     width: (page.width - (Theme.paddingLarge * 2)) / 3.3
@@ -775,6 +820,23 @@ Page {
                         }
                     }
                 }
+                ProgressCircle {
+                id: progressCircle3
+                scale: Theme.paddingSmall / 3
+                opacity: 0.7
+                visible: (mainapp.timer3running || isPaused3) && (myset.value("progresscircle") == "true")
+                anchors.horizontalCenter: parent.horizontalCenter
+                progressColor: Theme.highlightDimmerColor
+                backgroundColor: Theme.primaryColor
+
+                Timer {
+                    interval: 1000
+                    repeat: true
+                    onTriggered: progressCircle3.value = (1 - (remainingTime3.seconds / _totalsecs3) + 0.001)
+                    running: Qt.application.active && mainapp.timer3running
+                }
+                }
+}
                 Button {
                     id: start3
                     width: (page.width - (Theme.paddingLarge * 2)) / 4
@@ -784,7 +846,7 @@ Page {
                         mainapp.timeText3 = remainingTime3.text
                         var tt = timer3.text
                         tt = tt.split(":")
-                        var sec = tt[0] * 3600 + tt[1] * 60 + tt[2] * 1
+                        var sec = _totalsecs3 = tt[0] * 3600 + tt[1] * 60 + tt[2] * 1
                         remainingTime3.seconds = sec
                         GlobVars.myDuration = remainingTime3.text
                         if (remainingTime3.text != "00:00:00"
@@ -848,7 +910,7 @@ Page {
                 }
             }
             Item {
-                height: Theme.itemSizeLarge
+                height: Theme.itemSizeMedium
                 anchors.horizontalCenter: parent.horizontalCenter
                 width: parent.width - Theme.paddingLarge
                 Rectangle {
