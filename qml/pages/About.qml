@@ -34,14 +34,14 @@ Page {
                 font.pixelSize: Theme.fontSizeExtraLarge
                 anchors.horizontalCenter: parent.horizontalCenter
             }
+            Image {
+                anchors.horizontalCenter: parent.horizontalCenter
+                source: "/usr/share/icons/hicolor/86x86/apps/cooktimer.png"
+            }
             Label {
                 text: qsTr("Version") + " " + version
                 anchors.horizontalCenter: parent.horizontalCenter
                 color: Theme.secondaryHighlightColor
-            }
-            Image {
-                anchors.horizontalCenter: parent.horizontalCenter
-                source: "/usr/share/icons/hicolor/86x86/apps/cooktimer.png"
             }
             Label {
                 text: qsTr("\"Timers for cooking\"")
@@ -61,7 +61,7 @@ Page {
                 anchors.topMargin: 30
             }
             Label {
-                text: "© Arno Dekker 2014"
+                text: "© Arno Dekker 2014-2015"
                 anchors.horizontalCenter: parent.horizontalCenter
             }
         }

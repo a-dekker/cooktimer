@@ -14,10 +14,10 @@ Name:       cooktimer
 %{?qtc_builddir:%define _builddir %qtc_builddir}
 Summary:    Three timers for cooking
 Version:    0.1
-Release:    13
+Release:    16
 Group:      Qt/Qt
 License:    LICENSE
-URL:        http://example.org/
+URL:        https://openrepos.net/content/ade/cooktimer
 Source0:    %{name}-%{version}.tar.bz2
 Source100:  cooktimer.yaml
 Requires:   sailfishsilica-qt5 >= 0.10.9

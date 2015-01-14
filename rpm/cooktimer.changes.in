@@ -8,6 +8,15 @@
 # * date Author's Name <author's email> version-release
 # - Summary of changes
 
+* wed Jan 14 2015 Jack Tar <jack.tar@example.com> 0.0.1-16
+- Added French, Turkish, Finnish and German translations
+
+* sat Jan 10 2015 Jack Tar <jack.tar@example.com> 0.0.1-15
+- Minor changes in setup page/disable start button when applicable
+
+* sun Dec 26 2014 Jack Tar <jack.tar@example.com> 0.0.1-14
+- Russian translation completed
+
 * sun Dec 21 2014 Jack Tar <jack.tar@example.com> 0.0.1-13
 - Added Czech and Russian, Dutch updated
 - Introduced optional progress circles

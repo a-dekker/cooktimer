@@ -72,6 +72,7 @@ Dialog {
                             dishlist.model.setProperty(index, 'Dish', text)
                         }
                     }
+                    EnterKey.enabled: text.trim().length > 0
                 }
                 TextField {
                     id: hours

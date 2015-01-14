@@ -14,7 +14,7 @@
         <translation>Informace</translation>
     </message>
     <message>
-        <location filename="../qml/pages/About.qml" line="38"/>
+        <location filename="../qml/pages/About.qml" line="42"/>
         <source>Version</source>
         <translation>Verze</translation>
     </message>
@@ -52,27 +52,27 @@
         <translation>Název pokrmu</translation>
     </message>
     <message>
-        <location filename="../qml/pages/DishEdit.qml" line="80"/>
+        <location filename="../qml/pages/DishEdit.qml" line="81"/>
         <source>Hours</source>
         <translation>hodin</translation>
     </message>
     <message>
-        <location filename="../qml/pages/DishEdit.qml" line="107"/>
+        <location filename="../qml/pages/DishEdit.qml" line="108"/>
         <source>minutes</source>
         <translation>minut</translation>
     </message>
     <message>
-        <location filename="../qml/pages/DishEdit.qml" line="135"/>
+        <location filename="../qml/pages/DishEdit.qml" line="136"/>
         <source>seconds</source>
         <translation>sekund</translation>
     </message>
     <message>
-        <location filename="../qml/pages/DishEdit.qml" line="162"/>
+        <location filename="../qml/pages/DishEdit.qml" line="163"/>
         <source>No dishes defined. Press the plus button to add one.</source>
         <translation>Nestanoven žádný pokrm. Pro přidání pokrmu stiskněte tlačítko plus.</translation>
     </message>
     <message>
-        <location filename="../qml/pages/DishEdit.qml" line="173"/>
+        <location filename="../qml/pages/DishEdit.qml" line="174"/>
         <source>New dish</source>
         <translation>Nový pokrm</translation>
     </message>
@@ -110,22 +110,25 @@
     </message>
     <message>
         <location filename="../qml/pages/MainPage.qml" line="392"/>
-        <location filename="../qml/pages/MainPage.qml" line="589"/>
-        <location filename="../qml/pages/MainPage.qml" line="782"/>
+        <location filename="../qml/pages/MainPage.qml" line="590"/>
+        <location filename="../qml/pages/MainPage.qml" line="784"/>
         <source>Dish</source>
         <translation>Pokrm</translation>
     </message>
     <message>
         <location filename="../qml/pages/MainPage.qml" line="453"/>
-        <location filename="../qml/pages/MainPage.qml" line="650"/>
-        <location filename="../qml/pages/MainPage.qml" line="843"/>
+        <location filename="../qml/pages/MainPage.qml" line="454"/>
+        <location filename="../qml/pages/MainPage.qml" line="651"/>
+        <location filename="../qml/pages/MainPage.qml" line="652"/>
+        <location filename="../qml/pages/MainPage.qml" line="845"/>
+        <location filename="../qml/pages/MainPage.qml" line="846"/>
         <source>Stop</source>
         <translation>Zastavit</translation>
     </message>
     <message>
         <location filename="../qml/pages/MainPage.qml" line="453"/>
-        <location filename="../qml/pages/MainPage.qml" line="650"/>
-        <location filename="../qml/pages/MainPage.qml" line="843"/>
+        <location filename="../qml/pages/MainPage.qml" line="651"/>
+        <location filename="../qml/pages/MainPage.qml" line="845"/>
         <source>Start</source>
         <translation>Spustit</translation>
     </message>
@@ -143,22 +146,37 @@
         <translation>Zrušit</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SettingPage.qml" line="39"/>
+        <location filename="../qml/pages/SettingPage.qml" line="42"/>
         <source>Settings</source>
         <translation>Nastavení</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SettingPage.qml" line="54"/>
+        <location filename="../qml/pages/SettingPage.qml" line="48"/>
         <source>Keep backlight on</source>
         <translation>Ponechat zadní osvětlení zapnuto</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SettingPage.qml" line="60"/>
-        <source>Show additional banner notification</source>
-        <translation>Ukázat dodatečný oznamovací proužek</translation>
+        <location filename="../qml/pages/SettingPage.qml" line="49"/>
+        <source>Prevent screen from dimming.</source>
+        <translation>Zabránit obrazovce v pohasnutí</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SettingPage.qml" line="66"/>
+        <location filename="../qml/pages/SettingPage.qml" line="55"/>
+        <source>Show additional banner</source>
+        <translation>Ukázat dodatečný proužek</translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/SettingPage.qml" line="56"/>
+        <source>Notification banner in upper screen.</source>
+        <translation>Oznamovací proužek v horní části obrazovky.</translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/SettingPage.qml" line="63"/>
+        <source>Indicator for total progress.</source>
+        <translation>Ukazatel celkového postupu.</translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/SettingPage.qml" line="62"/>
         <source>Show progress circles</source>
         <translation>Ukázat postupová kolečka</translation>
     </message>

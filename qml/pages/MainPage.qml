@@ -451,6 +451,7 @@ Page {
                     id: start1
                     width: (page.width - (Theme.paddingLarge * 2)) / 4
                     text: ticker1.running || isPaused1 ? qsTr("Stop") : qsTr("Start")
+                    enabled: timer1.text == "00:00:00" && start1.text != qsTr("Stop") ? false : true
                     onClicked: {
                         remainingTime1.text = timer1.text
                         mainapp.timeText1 = remainingTime1.text
@@ -648,6 +649,7 @@ Page {
                     id: start2
                     width: (page.width - (Theme.paddingLarge * 2)) / 4
                     text: ticker2.running || isPaused2 ? qsTr("Stop") : qsTr("Start")
+                    enabled: timer2.text == "00:00:00" && start2.text != qsTr("Stop") ? false : true
                     onClicked: {
                         remainingTime2.text = timer2.text
                         mainapp.timeText2 = remainingTime2.text
@@ -841,6 +843,7 @@ Page {
                     id: start3
                     width: (page.width - (Theme.paddingLarge * 2)) / 4
                     text: ticker3.running || isPaused3 ? qsTr("Stop") : qsTr("Start")
+                    enabled: timer3.text == "00:00:00" && start3.text != qsTr("Stop") ? false : true
                     onClicked: {
                         remainingTime3.text = timer3.text
                         mainapp.timeText3 = remainingTime3.text

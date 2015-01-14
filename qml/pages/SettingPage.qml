@@ -36,34 +36,31 @@ Dialog {
 
                 acceptText: qsTr("Save")
                 cancelText: qsTr("Cancel")
-                title: qsTr("Settings")
+      //          title: qsTr("Settings")
             }
-            Rectangle {
-                id: splitter
-                color: "#999999"
-                x: 20
-                width: parent.width - 40
-                height: 2
-                anchors.leftMargin: 20
-                anchors.topMargin: 30
+            SectionHeader {
+                text: qsTr("Settings")
             }
 
             TextSwitch {
                 id: backlight
                 width: parent.width
                 text: qsTr("Keep backlight on")
+                description: qsTr("Prevent screen from dimming.")
                 checked: myset.value("backlight") == "true"
             }
             TextSwitch {
                 id: popup
                 width: parent.width
-                text: qsTr("Show additional banner notification")
+                text: qsTr("Show additional banner")
+                description: qsTr("Notification banner in upper screen.")
                 checked: myset.value("popup") == "true"
             }
             TextSwitch {
                 id: progresscircle
                 width: parent.width
                 text: qsTr("Show progress circles")
+                description: qsTr("Indicator for total progress.")
                 checked: myset.value("progresscircle") == "true"
             }
       //      TextSwitch {
@@ -73,16 +70,6 @@ Dialog {
         //        checked: taskListWindow.taskOpenAppearance
         //        onCheckedChanged: {}
    //         }
-
-            Rectangle {
-                color: "#999999"
-                x: 20
-                width: parent.width - 40
-                height: 2
-                //anchors.top: projectfulltext.bottom
-                anchors.leftMargin: 20
-                anchors.topMargin: 30
-            }
 
         }
     }

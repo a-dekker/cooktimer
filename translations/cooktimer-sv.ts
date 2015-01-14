@@ -14,7 +14,7 @@
         <translation>Info</translation>
     </message>
     <message>
-        <location filename="../qml/pages/About.qml" line="38"/>
+        <location filename="../qml/pages/About.qml" line="42"/>
         <source>Version</source>
         <translation>Version</translation>
     </message>
@@ -52,27 +52,27 @@
         <translation>Maträtt</translation>
     </message>
     <message>
-        <location filename="../qml/pages/DishEdit.qml" line="80"/>
+        <location filename="../qml/pages/DishEdit.qml" line="81"/>
         <source>Hours</source>
         <translation>Timmar</translation>
     </message>
     <message>
-        <location filename="../qml/pages/DishEdit.qml" line="107"/>
+        <location filename="../qml/pages/DishEdit.qml" line="108"/>
         <source>minutes</source>
         <translation>Minuter</translation>
     </message>
     <message>
-        <location filename="../qml/pages/DishEdit.qml" line="135"/>
+        <location filename="../qml/pages/DishEdit.qml" line="136"/>
         <source>seconds</source>
         <translation>Sekunder</translation>
     </message>
     <message>
-        <location filename="../qml/pages/DishEdit.qml" line="162"/>
+        <location filename="../qml/pages/DishEdit.qml" line="163"/>
         <source>No dishes defined. Press the plus button to add one.</source>
         <translation>Inga maträtter definierade. Tryck på plus för att lägga till en.</translation>
     </message>
     <message>
-        <location filename="../qml/pages/DishEdit.qml" line="173"/>
+        <location filename="../qml/pages/DishEdit.qml" line="174"/>
         <source>New dish</source>
         <translation>Ny maträtt</translation>
     </message>
@@ -82,7 +82,7 @@
     <message>
         <location filename="../qml/pages/DishPage.qml" line="87"/>
         <source>No dishes defined. Choose &quot;Edit Dishes&quot; from the pulley menu.</source>
-        <translation>Inga maträtter definierade. Välj &quot;Redigera maträtter&quot; på drag-menyn.</translation>
+        <translation>Inga maträtter definierade. Välj &quot;Redigera maträtter&quot; från drag-menyn.</translation>
     </message>
 </context>
 <context>
@@ -110,22 +110,25 @@
     </message>
     <message>
         <location filename="../qml/pages/MainPage.qml" line="392"/>
-        <location filename="../qml/pages/MainPage.qml" line="589"/>
-        <location filename="../qml/pages/MainPage.qml" line="782"/>
+        <location filename="../qml/pages/MainPage.qml" line="590"/>
+        <location filename="../qml/pages/MainPage.qml" line="784"/>
         <source>Dish</source>
         <translation>Maträtt</translation>
     </message>
     <message>
         <location filename="../qml/pages/MainPage.qml" line="453"/>
-        <location filename="../qml/pages/MainPage.qml" line="650"/>
-        <location filename="../qml/pages/MainPage.qml" line="843"/>
+        <location filename="../qml/pages/MainPage.qml" line="454"/>
+        <location filename="../qml/pages/MainPage.qml" line="651"/>
+        <location filename="../qml/pages/MainPage.qml" line="652"/>
+        <location filename="../qml/pages/MainPage.qml" line="845"/>
+        <location filename="../qml/pages/MainPage.qml" line="846"/>
         <source>Stop</source>
         <translation>Stopp</translation>
     </message>
     <message>
         <location filename="../qml/pages/MainPage.qml" line="453"/>
-        <location filename="../qml/pages/MainPage.qml" line="650"/>
-        <location filename="../qml/pages/MainPage.qml" line="843"/>
+        <location filename="../qml/pages/MainPage.qml" line="651"/>
+        <location filename="../qml/pages/MainPage.qml" line="845"/>
         <source>Start</source>
         <translation>Start</translation>
     </message>
@@ -143,24 +146,39 @@
         <translation>Avbryt</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SettingPage.qml" line="39"/>
+        <location filename="../qml/pages/SettingPage.qml" line="42"/>
         <source>Settings</source>
         <translation>Inställningar</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SettingPage.qml" line="54"/>
+        <location filename="../qml/pages/SettingPage.qml" line="48"/>
         <source>Keep backlight on</source>
         <translation>Släck inte bakgrundsbelysningen</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SettingPage.qml" line="60"/>
-        <source>Show additional banner notification</source>
-        <translation>Visa tilläggsnotifiering</translation>
+        <location filename="../qml/pages/SettingPage.qml" line="49"/>
+        <source>Prevent screen from dimming.</source>
+        <translation>Förhindra skärmdimmer</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SettingPage.qml" line="66"/>
+        <location filename="../qml/pages/SettingPage.qml" line="55"/>
+        <source>Show additional banner</source>
+        <translation>Visa extra avisering</translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/SettingPage.qml" line="56"/>
+        <source>Notification banner in upper screen.</source>
+        <translation>Aviseringsflagga i skärmens överkant</translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/SettingPage.qml" line="63"/>
+        <source>Indicator for total progress.</source>
+        <translation>Indikator för hela förloppet</translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/SettingPage.qml" line="62"/>
         <source>Show progress circles</source>
-        <translation type="unfinished"></translation>
+        <translation>Visa förloppscirklar</translation>
     </message>
 </context>
 <context>

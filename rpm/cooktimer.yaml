@@ -1,11 +1,11 @@
 Name: cooktimer
 Summary: Three timers for cooking
 Version: 0.1
-Release: 13
+Release: 16
 # The contents of the Group field must be one of the groups listed here:
 # http://gitorious.org/meego-developer-tools/spectacle/blobs/master/data/GROUPS
 Group: Qt/Qt
-URL: http://example.org/
+URL: https://openrepos.net/content/ade/cooktimer
 License: LICENSE
 # This must be generated before uploading a package to a remote build service.
 # Usually this line does not need to be modified.

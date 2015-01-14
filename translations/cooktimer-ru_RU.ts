@@ -11,22 +11,22 @@
     <message>
         <location filename="../qml/pages/About.qml" line="22"/>
         <source>Info</source>
-        <translation type="unfinished"></translation>
+        <translation>Информация</translation>
     </message>
     <message>
-        <location filename="../qml/pages/About.qml" line="38"/>
+        <location filename="../qml/pages/About.qml" line="42"/>
         <source>Version</source>
-        <translation type="unfinished"></translation>
+        <translation>Версия</translation>
     </message>
     <message>
         <location filename="../qml/pages/About.qml" line="47"/>
         <source>&quot;Timers for cooking&quot;</source>
-        <translation type="unfinished"></translation>
+        <translation>&quot;Таймеры для приготовления&quot;</translation>
     </message>
     <message>
         <location filename="../qml/pages/About.qml" line="53"/>
         <source>Author</source>
-        <translation type="unfinished"></translation>
+        <translation>Автор</translation>
     </message>
 </context>
 <context>
@@ -49,32 +49,32 @@
     <message>
         <location filename="../qml/pages/DishEdit.qml" line="64"/>
         <source>Dish name</source>
-        <translation type="unfinished"></translation>
+        <translation>Название блюда</translation>
     </message>
     <message>
-        <location filename="../qml/pages/DishEdit.qml" line="80"/>
+        <location filename="../qml/pages/DishEdit.qml" line="81"/>
         <source>Hours</source>
         <translation>Часы</translation>
     </message>
     <message>
-        <location filename="../qml/pages/DishEdit.qml" line="107"/>
+        <location filename="../qml/pages/DishEdit.qml" line="108"/>
         <source>minutes</source>
         <translation>минуты</translation>
     </message>
     <message>
-        <location filename="../qml/pages/DishEdit.qml" line="135"/>
+        <location filename="../qml/pages/DishEdit.qml" line="136"/>
         <source>seconds</source>
         <translation>секунды</translation>
     </message>
     <message>
-        <location filename="../qml/pages/DishEdit.qml" line="162"/>
+        <location filename="../qml/pages/DishEdit.qml" line="163"/>
         <source>No dishes defined. Press the plus button to add one.</source>
-        <translation type="unfinished"></translation>
+        <translation>Не обнаружено ни одного блюда. Нажмите кнопку &quot;+&quot;, чтобы добавить.</translation>
     </message>
     <message>
-        <location filename="../qml/pages/DishEdit.qml" line="173"/>
+        <location filename="../qml/pages/DishEdit.qml" line="174"/>
         <source>New dish</source>
-        <translation type="unfinished"></translation>
+        <translation>Новое блюдо</translation>
     </message>
 </context>
 <context>
@@ -82,7 +82,7 @@
     <message>
         <location filename="../qml/pages/DishPage.qml" line="87"/>
         <source>No dishes defined. Choose &quot;Edit Dishes&quot; from the pulley menu.</source>
-        <translation type="unfinished"></translation>
+        <translation>Не обнаружено ни одного блюда. Выберите &quot;Редактировать блюдо&quot; из меню.</translation>
     </message>
 </context>
 <context>
@@ -96,7 +96,7 @@
     <message>
         <location filename="../qml/pages/MainPage.qml" line="345"/>
         <source>About</source>
-        <translation type="unfinished">О программе</translation>
+        <translation>О программе</translation>
     </message>
     <message>
         <location filename="../qml/pages/MainPage.qml" line="349"/>
@@ -106,26 +106,29 @@
     <message>
         <location filename="../qml/pages/MainPage.qml" line="353"/>
         <source>Edit dishes</source>
-        <translation type="unfinished"></translation>
+        <translation>Редактировать блюда</translation>
     </message>
     <message>
         <location filename="../qml/pages/MainPage.qml" line="392"/>
-        <location filename="../qml/pages/MainPage.qml" line="589"/>
-        <location filename="../qml/pages/MainPage.qml" line="782"/>
+        <location filename="../qml/pages/MainPage.qml" line="590"/>
+        <location filename="../qml/pages/MainPage.qml" line="784"/>
         <source>Dish</source>
-        <translation type="unfinished"></translation>
+        <translation>Блюдо</translation>
     </message>
     <message>
         <location filename="../qml/pages/MainPage.qml" line="453"/>
-        <location filename="../qml/pages/MainPage.qml" line="650"/>
-        <location filename="../qml/pages/MainPage.qml" line="843"/>
+        <location filename="../qml/pages/MainPage.qml" line="454"/>
+        <location filename="../qml/pages/MainPage.qml" line="651"/>
+        <location filename="../qml/pages/MainPage.qml" line="652"/>
+        <location filename="../qml/pages/MainPage.qml" line="845"/>
+        <location filename="../qml/pages/MainPage.qml" line="846"/>
         <source>Stop</source>
         <translation>Стоп</translation>
     </message>
     <message>
         <location filename="../qml/pages/MainPage.qml" line="453"/>
-        <location filename="../qml/pages/MainPage.qml" line="650"/>
-        <location filename="../qml/pages/MainPage.qml" line="843"/>
+        <location filename="../qml/pages/MainPage.qml" line="651"/>
+        <location filename="../qml/pages/MainPage.qml" line="845"/>
         <source>Start</source>
         <translation>Старт</translation>
     </message>
@@ -143,24 +146,39 @@
         <translation>Отмена</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SettingPage.qml" line="39"/>
+        <location filename="../qml/pages/SettingPage.qml" line="42"/>
         <source>Settings</source>
         <translation>Настройки</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SettingPage.qml" line="54"/>
+        <location filename="../qml/pages/SettingPage.qml" line="48"/>
         <source>Keep backlight on</source>
-        <translation type="unfinished"></translation>
+        <translation>Не выключать подсветку экрана</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SettingPage.qml" line="60"/>
-        <source>Show additional banner notification</source>
-        <translation type="unfinished"></translation>
+        <location filename="../qml/pages/SettingPage.qml" line="49"/>
+        <source>Prevent screen from dimming.</source>
+        <translation>Не выключать экран. </translation>
     </message>
     <message>
-        <location filename="../qml/pages/SettingPage.qml" line="66"/>
+        <location filename="../qml/pages/SettingPage.qml" line="55"/>
+        <source>Show additional banner</source>
+        <translation>Показать дополнительный баннер</translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/SettingPage.qml" line="56"/>
+        <source>Notification banner in upper screen.</source>
+        <translation>Уведомление в верхнем углу экрана.</translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/SettingPage.qml" line="63"/>
+        <source>Indicator for total progress.</source>
+        <translation>Индикатор прогресса.</translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/SettingPage.qml" line="62"/>
         <source>Show progress circles</source>
-        <translation type="unfinished"></translation>
+        <translation>Показывать круговой прогресс</translation>
     </message>
 </context>
 <context>
@@ -183,7 +201,7 @@
         <location filename="../qml/cooktimer.qml" line="13"/>
         <location filename="../qml/cooktimer.qml" line="14"/>
         <source>Dish</source>
-        <translation type="unfinished"></translation>
+        <translation>Блюдо</translation>
     </message>
 </context>
 </TS>
