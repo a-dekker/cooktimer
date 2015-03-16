@@ -134,7 +134,7 @@ Page {
             }
         }
 
-        property DBusInterface _dbus:  DBusInterface {
+        property DBusInterface _dbus: DBusInterface {
                                           id: dbus
 
                                           destination: "com.nokia.mce"
@@ -241,12 +241,13 @@ Page {
     }
 
     function alarm(alarmtxt) {
-        if ( myset.value("popup") == "true" ) {
+        if (myset.value("popup") == "true") {
             banner.notify(alarmtxt + " " + qsTr("ready"))
         }
         // pageStack.push(Qt.resolvedUrl("AlarmDialogBase.qml"))
-        bar.launch("timedclient-qt5 -b'TITLE=button0' -e\"APPLICATION=test;TITLE=" + alarmtxt
-                   + "\n" + qsTr("ready") + ";ticker=0;type=countdown;suppressTimeoutSnooze;hideSnoozeButton1\"")
+        bar.launch("timedclient-qt5 -b'TITLE=button0' -e\"APPLICATION=test;TITLE="
+                   + alarmtxt + "\n" + qsTr("ready")
+                   + ";ticker=0;type=countdown;suppressTimeoutSnooze;hideSnoozeButton1\"")
     }
 
     function wakeUp1() {
@@ -337,7 +338,7 @@ Page {
     SilicaFlickable {
         anchors.fill: parent
         // Tell SilicaFlickable the height of its content.
-        contentHeight: column.height
+        // contentHeight: column.height
 
         // PullDownMenu and PushUpMenu must be declared in SilicaFlickable, SilicaListView or SilicaGridView
         PullDownMenu {
@@ -363,35 +364,35 @@ Page {
             id: banner
         }
 
-        // Place our content in a Column.  The PageHeader is always placed at the top
-        // of the page, followed by our content.
-        Column {
-            id: column
-
-            width: page.width
-            // set spacing considering the width/height ratio
-            spacing: page.height / page.width > 1.6 ? Theme.paddingLarge : Theme.paddingMedium
-            PageHeader {
-                title: "cooktimer"
-            }
-            Row {
-                /* inner row */
-                anchors.horizontalCenter: parent.horizontalCenter
-                Button {
-                    id: dish1
-                    width: (page.width - (Theme.paddingLarge * 2)) / 2.34
-                    text: myGlobalDish1 == "Dish" ? qsTr(myGlobalDish1) + " 1" : myGlobalDish1.substring(
-                                                        0, 16)
-                    onClicked: {
-                        GlobVars.myCurrentTimer = 1
-                        GlobVars.myDish = dish1.text
-                        pageStack.push(Qt.resolvedUrl("DishPage.qml"))
-                        mainapp.dishText1 = GlobVars.myDish // = Dish
-                    }
-                    onPressAndHold: {
-                        myGlobalDish1 = GlobVars.myDish = mainapp.dishText1 = qsTr("Dish") + " 1"
-                    }
+        // set spacing considering the width/height ratio
+        // spacing: page.height / page.width > 1.6 ? Theme.paddingLarge : Theme.paddingMedium
+        PageHeader {
+            id: header
+            title: "cooktimer"
+        }
+        Row {
+            /* inner row */
+            id: timerRow1
+            anchors.top: header.bottom
+            anchors.horizontalCenter: parent.horizontalCenter
+            height: page.height / page.width > 1.6 ? Theme.itemSizeMedium : Theme.itemSizeSmall
+            Button {
+                id: dish1
+                width: (page.width - (Theme.paddingLarge * 2)) / 2.34
+                text: myGlobalDish1 == "Dish" ? qsTr(
+                                                    myGlobalDish1) + " 1" : myGlobalDish1.substring(
+                                                    0, 16)
+                onClicked: {
+                    GlobVars.myCurrentTimer = 1
+                    GlobVars.myDish = dish1.text
+                    pageStack.push(Qt.resolvedUrl("DishPage.qml"))
+             //       mainapp.dishText1 = GlobVars.myDish // = Dish
                 }
+                onPressAndHold: {
+                    myGlobalDish1 = GlobVars.myDish = mainapp.dishText1 = qsTr(
+                                "Dish") + " 1"
+                }
+            }
             Item {
                 height: Theme.itemSizeMedium
                 width: (page.width - (Theme.paddingLarge * 2)) / 3.3
@@ -430,166 +431,164 @@ Page {
                         }
                     }
                 }
-                ProgressCircle {
-                id: progressCircle1
-                scale: Theme.paddingSmall / 3
-                opacity: 0.7
-                visible: (mainapp.timer1running || isPaused1) && (myset.value("progresscircle") == "true")
-                anchors.horizontalCenter: parent.horizontalCenter
-                progressColor: Theme.highlightDimmerColor
-                backgroundColor: Theme.primaryColor
 
-                Timer {
-                    interval: 1000
-                    repeat: true
-                    onTriggered: progressCircle1.value = (1 - (remainingTime1.seconds / _totalsecs1) + 0.001)
-                    running: Qt.application.active && mainapp.timer1running
+            }
+            Button {
+                id: start1
+                width: (page.width - (Theme.paddingLarge * 2)) / 4
+                text: ticker1.running || isPaused1 ? qsTr(
+                                                         "Stop") : qsTr("Start")
+                enabled: timer1.text == "00:00:00" && start1.text != qsTr(
+                             "Stop") ? false : true
+                onClicked: {
+                    remainingTime1.text = timer1.text
+                    mainapp.timeText1 = remainingTime1.text
+                    var tt = timer1.text
+                    tt = tt.split(":")
+                    var sec = _totalsecs1 = tt[0] * 3600 + tt[1] * 60 + tt[2] * 1
+                    remainingTime1.seconds = sec
+                    GlobVars.myDuration = remainingTime1.text
+                    if (remainingTime1.text != "00:00:00" || ticker1.running) {
+                        _lastTick1 = Math.round(Date.now() / 1000)
+                        if (!isPaused1) {
+                            buttonBuzz.play()
+                            ticker1.running = !ticker1.running
+                            mainapp.timer1running = !mainapp.timer1running
+                        }
+                        if (ticker1.running) {
+                            remainingTime1.color = Theme.highlightColor
+                            remainingTime1.font.bold = true
+                        } else {
+                            remainingTime1.color = Theme.secondaryHighlightColor
+                            remainingTime1.font.bold = false
+                            remainingTime1.font.underline = false
+                        }
+                        isPaused1 = false
+                    }
+                    if (!ticker1.running) {
+                        if (insomniac1.running) {
+                            insomniac1.stop()
+                        }
+                    }
                 }
+            }
+        }
+        Timer {
+            id: ticker1
+            interval: 1000
+            running: false
+            repeat: true
+            onTriggered: {
+                var now = Math.round(Date.now() / 1000)
+                seconds1 -= now - _lastTick1
+                _lastTick1 = now
+                remainingTime1.seconds = seconds1
+                remainingTime1.text = timeFromSecs(remainingTime1.seconds)
+                mainapp.timeText1 = remainingTime1.text
+                if (remainingTime1.seconds <= 0) {
+                    ticker1.stop()
+                    remainingTime1.text = "00:00:00"
+                    remainingTime1.font.bold = false
+                    mainapp.timeText1 = remainingTime1.text
+                    var tt = timer1.text
+                    //    running = false
+                    mainapp.timer1running = !mainapp.timer1running
+                    if (insomniac1.running) {
+                        insomniac1.stop()
+                    }
+                    // make sure the other timers have no highlight color left
+                    if (!ticker2.running) {
+                        remainingTime2.color = Theme.secondaryHighlightColor
+                    }
+                    if (!ticker3.running) {
+                        remainingTime3.color = Theme.secondaryHighlightColor
+                    }
+                    // sound the alarm
+                    alarm(dish1.text)
                 }
-}
-                Button {
-                    id: start1
-                    width: (page.width - (Theme.paddingLarge * 2)) / 4
-                    text: ticker1.running || isPaused1 ? qsTr("Stop") : qsTr("Start")
-                    enabled: timer1.text == "00:00:00" && start1.text != qsTr("Stop") ? false : true
-                    onClicked: {
-                        remainingTime1.text = timer1.text
-                        mainapp.timeText1 = remainingTime1.text
-                        var tt = timer1.text
-                        tt = tt.split(":")
-                        var sec = _totalsecs1 = tt[0] * 3600 + tt[1] * 60 + tt[2] * 1
-                        remainingTime1.seconds = sec
+            }
+        }
+        Item {
+            id: counter1
+            anchors.top: timerRow1.bottom
+            height: page.height / page.width > 1.6 ? Theme.itemSizeMedium : Theme.itemSizeSmall
+            anchors.horizontalCenter: parent.horizontalCenter
+            width: parent.width - Theme.paddingLarge
+            Rectangle {
+                anchors.fill: parent
+                opacity: 0
+            }
+            TextField {
+                anchors.bottomMargin: 1
+                id: remainingTime1
+                readOnly: true
+                property int seconds
+                anchors.horizontalCenter: parent.horizontalCenter
+                color: Theme.secondaryHighlightColor
+                font.pixelSize: Theme.fontSizeExtraLarge * 1.8
+                text: "00:00:00"
+                onClicked: {
+                    if (ticker1.running) {
+                        ticker1.stop()
+                        isPaused1 = true
+                        remainingTime1.color = Theme.secondaryColor
+                        remainingTime1.font.bold = false
+                        remainingTime1.font.underline = true
+                        mainapp.timer1running = !mainapp.timer1running
+                    } else if (seconds1 > 0 && isPaused1) {
+                        isPaused1 = false
                         GlobVars.myDuration = remainingTime1.text
                         if (remainingTime1.text != "00:00:00"
                                 || ticker1.running) {
                             _lastTick1 = Math.round(Date.now() / 1000)
-                            if (!isPaused1) {
-                                buttonBuzz.play()
-                                ticker1.running = !ticker1.running
-                                mainapp.timer1running = !mainapp.timer1running
-                            }
-                            if (ticker1.running) {
-                                remainingTime1.color = Theme.highlightColor
-                                remainingTime1.font.bold = true
-                            } else {
-                                remainingTime1.color = Theme.secondaryHighlightColor
-                                remainingTime1.font.bold = false
-                                remainingTime1.font.underline = false
-                            }
-                            isPaused1 = false
-                        }
-                        if (!ticker1.running) {
-                            if (insomniac1.running) {
-                                insomniac1.stop()
-                            }
-                        }
-                    }
-                }
-            }
-            Timer {
-                id: ticker1
-                interval: 1000
-                running: false
-                repeat: true
-                onTriggered: {
-                    var now = Math.round(Date.now() / 1000)
-                    seconds1 -= now - _lastTick1
-                    _lastTick1 = now
-                    remainingTime1.seconds = seconds1
-                    remainingTime1.text = timeFromSecs(remainingTime1.seconds)
-                    mainapp.timeText1 = remainingTime1.text
-                    if (remainingTime1.seconds <= 0) {
-                        ticker1.stop()
-                        remainingTime1.text = "00:00:00"
-                        remainingTime1.font.bold = false
-                        mainapp.timeText1 = remainingTime1.text
-                        var tt = timer1.text
-                        //    running = false
-                        mainapp.timer1running = !mainapp.timer1running
-                        if (insomniac1.running) {
-                            insomniac1.stop()
-                        }
-                        // make sure the other timers have no highlight color left
-                        if (!ticker2.running) {
-                            remainingTime2.color = Theme.secondaryHighlightColor
-                        }
-                        if (!ticker3.running) {
-                            remainingTime3.color = Theme.secondaryHighlightColor
-                        }
-                        // sound the alarm
-                        alarm(dish1.text)
-                    }
-                }
-            }
-            Item {
-                height: Theme.itemSizeMedium
-                anchors.horizontalCenter: parent.horizontalCenter
-                width: parent.width - Theme.paddingLarge
-                Rectangle {
-                    anchors.fill: parent
-                    opacity: 0
-                }
-                TextField {
-                    id: remainingTime1
-                    readOnly: true
-                    property int seconds
-                    anchors.horizontalCenter: parent.horizontalCenter
-                    color: Theme.secondaryHighlightColor
-                    font.pixelSize: Theme.fontSizeExtraLarge * 1.8
-                    text: "00:00:00"
-                    onClicked: {
-                        if (ticker1.running) {
-                            ticker1.stop()
-                            isPaused1 = true
-                            remainingTime1.color = Theme.secondaryColor
-                            remainingTime1.font.bold = false
-                            remainingTime1.font.underline = true
+                            ticker1.running = !ticker1.running
                             mainapp.timer1running = !mainapp.timer1running
-                        } else if (seconds1 > 0 && isPaused1) {
-                            isPaused1 = false
-                            GlobVars.myDuration = remainingTime1.text
-                            if (remainingTime1.text != "00:00:00"
-                                    || ticker1.running) {
-                                _lastTick1 = Math.round(Date.now() / 1000)
-                                ticker1.running = !ticker1.running
-                                mainapp.timer1running = !mainapp.timer1running
-                            }
-                            ticker1.start()
-                            remainingTime1.color = Theme.highlightColor
-                            remainingTime1.font.bold = true
-                            remainingTime1.font.underline = false
                         }
+                        ticker1.start()
+                        remainingTime1.color = Theme.highlightColor
+                        remainingTime1.font.bold = true
+                        remainingTime1.font.underline = false
                     }
                 }
             }
+        }
+        ProgressBar {
+            id: progressBar1
+            anchors.top: counter1.bottom
+            width: parent.width
+            maximumValue: 1
+            anchors.topMargin: 1
+            Timer {
+                interval: 100
+                repeat: true
+                onTriggered: progressBar1.value = (1 - (remainingTime1.seconds
+                                                       / _totalsecs1) + 0.001)
+                running: Qt.application.active && mainapp.timer1running
+            }
+        }
 
-            // small grey line
-            Rectangle {
-                color: "#999999"
-                opacity: 0.0
-                x: 0
-                width: parent.width
-                height: 4
-                anchors.leftMargin: 20
-                anchors.topMargin: 30
-            }
-            Row {
-                /* inner row */
-                anchors.horizontalCenter: parent.horizontalCenter
-                Button {
-                    id: dish2
-                    width: (page.width - (Theme.paddingLarge * 2)) / 2.34
-                    text: myGlobalDish2 == "Dish" ? qsTr(myGlobalDish2) + " 2" : myGlobalDish2.substring(
-                                                        0, 16)
-                    onClicked: {
-                        GlobVars.myCurrentTimer = 2
-                        GlobVars.myDish = dish2.text
-                        pageStack.push(Qt.resolvedUrl("DishPage.qml"))
-                    }
-                    onPressAndHold: {
-                        myGlobalDish2 = GlobVars.myDish = mainapp.dishText2 = qsTr("Dish") + " 2"
-                    }
+        Row {
+            /* inner row */
+            id: timerRow2
+            anchors.top: progressBar1.bottom
+            anchors.horizontalCenter: parent.horizontalCenter
+            height: page.height / page.width > 1.6 ? Theme.itemSizeMedium : Theme.itemSizeSmall
+            Button {
+                id: dish2
+                width: (page.width - (Theme.paddingLarge * 2)) / 2.34
+                text: myGlobalDish2 == "Dish" ? qsTr(
+                                                    myGlobalDish2) + " 2" : myGlobalDish2.substring(
+                                                    0, 16)
+                onClicked: {
+                    GlobVars.myCurrentTimer = 2
+                    GlobVars.myDish = dish2.text
+                    pageStack.push(Qt.resolvedUrl("DishPage.qml"))
                 }
+                onPressAndHold: {
+                    myGlobalDish2 = GlobVars.myDish = mainapp.dishText2 = qsTr(
+                                "Dish") + " 2"
+                }
+            }
             Item {
                 height: Theme.itemSizeMedium
                 width: (page.width - (Theme.paddingLarge * 2)) / 3.3
@@ -628,162 +627,161 @@ Page {
                         }
                     }
                 }
-                ProgressCircle {
-                id: progressCircle2
-                scale: Theme.paddingSmall / 3
-                opacity: 0.7
-                visible: (mainapp.timer2running || isPaused2) && (myset.value("progresscircle") == "true")
+            }
+            Button {
+                id: start2
+                width: (page.width - (Theme.paddingLarge * 2)) / 4
+                text: ticker2.running || isPaused2 ? qsTr(
+                                                         "Stop") : qsTr("Start")
+                enabled: timer2.text == "00:00:00" && start2.text != qsTr(
+                             "Stop") ? false : true
+                onClicked: {
+                    remainingTime2.text = timer2.text
+                    mainapp.timeText2 = remainingTime2.text
+                    var tt = timer2.text
+                    tt = tt.split(":")
+                    var sec = _totalsecs2 = tt[0] * 3600 + tt[1] * 60 + tt[2] * 1
+                    remainingTime2.seconds = sec
+                    GlobVars.myDuration = remainingTime2.text
+                    if (remainingTime2.text != "00:00:00" || ticker2.running) {
+                        _lastTick2 = Math.round(Date.now() / 1000)
+                        if (!isPaused2) {
+                            buttonBuzz.play()
+                            ticker2.running = !ticker2.running
+                            mainapp.timer2running = !mainapp.timer2running
+                        }
+                        if (ticker2.running) {
+                            remainingTime2.color = Theme.highlightColor
+                            remainingTime2.font.bold = true
+                        } else {
+                            remainingTime2.color = Theme.secondaryHighlightColor
+                            remainingTime2.font.bold = false
+                            remainingTime2.font.underline = false
+                        }
+                        isPaused2 = false
+                    }
+                    if (!ticker2.running) {
+                        if (insomniac2.running) {
+                            insomniac2.stop()
+                        }
+                    }
+                }
+            }
+        }
+        Timer {
+            id: ticker2
+            interval: 1000
+            running: false
+            repeat: true
+            onTriggered: {
+                var now = Math.round(Date.now() / 1000)
+                seconds2 -= now - _lastTick2
+                _lastTick2 = now
+                remainingTime2.seconds = seconds2
+                remainingTime2.text = timeFromSecs(remainingTime2.seconds)
+                mainapp.timeText2 = remainingTime2.text
+                if (remainingTime2.seconds <= 0) {
+                    ticker2.stop()
+                    remainingTime2.text = "00:00:00"
+                    remainingTime2.font.bold = false
+                    mainapp.timeText2 = remainingTime2.text
+                    //    running = false
+                    mainapp.timer2running = !mainapp.timer2running
+                    if (insomniac2.running) {
+                        insomniac2.stop()
+                    }
+                    // make sure the other timers have no highlight color left
+                    if (!ticker1.running) {
+                        remainingTime1.color = Theme.secondaryHighlightColor
+                    }
+                    if (!ticker3.running) {
+                        remainingTime3.color = Theme.secondaryHighlightColor
+                    }
+                    // sound the alarm
+                    alarm(dish2.text)
+                }
+            }
+        }
+        Item {
+            id: counter2
+            anchors.top: timerRow2.bottom
+            height: page.height / page.width > 1.6 ? Theme.itemSizeMedium : Theme.itemSizeSmall
+            anchors.horizontalCenter: parent.horizontalCenter
+            width: parent.width - Theme.paddingLarge
+            Rectangle {
+                anchors.fill: parent
+                opacity: 0.00
+            }
+            TextField {
+                id: remainingTime2
+                readOnly: true
+                property int seconds
                 anchors.horizontalCenter: parent.horizontalCenter
-                progressColor: Theme.highlightDimmerColor
-                backgroundColor: Theme.primaryColor
-
-                Timer {
-                    interval: 1000
-                    repeat: true
-                    onTriggered: progressCircle2.value = (1 - (remainingTime2.seconds / _totalsecs2) + 0.001)
-                    running: Qt.application.active && mainapp.timer2running
-                }
-                }
-}
-                Button {
-                    id: start2
-                    width: (page.width - (Theme.paddingLarge * 2)) / 4
-                    text: ticker2.running || isPaused2 ? qsTr("Stop") : qsTr("Start")
-                    enabled: timer2.text == "00:00:00" && start2.text != qsTr("Stop") ? false : true
-                    onClicked: {
-                        remainingTime2.text = timer2.text
-                        mainapp.timeText2 = remainingTime2.text
-                        var tt = timer2.text
-                        tt = tt.split(":")
-                        var sec = _totalsecs2 = tt[0] * 3600 + tt[1] * 60 + tt[2] * 1
-                        remainingTime2.seconds = sec
+                color: Theme.secondaryHighlightColor
+                font.pixelSize: Theme.fontSizeExtraLarge * 1.8
+                text: "00:00:00"
+                onClicked: {
+                    if (ticker2.running) {
+                        ticker2.stop()
+                        isPaused2 = true
+                        remainingTime2.color = Theme.secondaryColor
+                        remainingTime2.font.bold = false
+                        remainingTime2.font.underline = true
+                        mainapp.timer2running = !mainapp.timer2running
+                    } else if (seconds2 > 0 && isPaused2) {
+                        isPaused2 = false
                         GlobVars.myDuration = remainingTime2.text
                         if (remainingTime2.text != "00:00:00"
                                 || ticker2.running) {
                             _lastTick2 = Math.round(Date.now() / 1000)
-                            if (!isPaused2) {
-                                buttonBuzz.play()
-                                ticker2.running = !ticker2.running
-                                mainapp.timer2running = !mainapp.timer2running
-                            }
-                            if (ticker2.running) {
-                                remainingTime2.color = Theme.highlightColor
-                                remainingTime2.font.bold = true
-                            } else {
-                                remainingTime2.color = Theme.secondaryHighlightColor
-                                remainingTime2.font.bold = false
-                                remainingTime2.font.underline = false
-                            }
-                            isPaused2 = false
-                        }
-                        if (!ticker2.running) {
-                            if (insomniac2.running) {
-                                insomniac2.stop()
-                            }
-                        }
-                    }
-                }
-            }
-            Timer {
-                id: ticker2
-                interval: 1000
-                running: false
-                repeat: true
-                onTriggered: {
-                    var now = Math.round(Date.now() / 1000)
-                    seconds2 -= now - _lastTick2
-                    _lastTick2 = now
-                    remainingTime2.seconds = seconds2
-                    remainingTime2.text = timeFromSecs(remainingTime2.seconds)
-                    mainapp.timeText2 = remainingTime2.text
-                    if (remainingTime2.seconds <= 0) {
-                        ticker2.stop()
-                        remainingTime2.text = "00:00:00"
-                        remainingTime2.font.bold = false
-                        mainapp.timeText2 = remainingTime2.text
-                        //    running = false
-                        mainapp.timer2running = !mainapp.timer2running
-                        if (insomniac2.running) {
-                            insomniac2.stop()
-                        }
-                        // make sure the other timers have no highlight color left
-                        if (!ticker1.running) {
-                            remainingTime1.color = Theme.secondaryHighlightColor
-                        }
-                        if (!ticker3.running) {
-                            remainingTime3.color = Theme.secondaryHighlightColor
-                        }
-                        // sound the alarm
-                        alarm(dish2.text)
-                    }
-                }
-            }
-            Item {
-                height: Theme.itemSizeMedium
-                anchors.horizontalCenter: parent.horizontalCenter
-                width: parent.width - Theme.paddingLarge
-                Rectangle {
-                    anchors.fill: parent
-                    opacity: 0.00
-                }
-                TextField {
-                    id: remainingTime2
-                    readOnly: true
-                    property int seconds
-                    anchors.horizontalCenter: parent.horizontalCenter
-                    color: Theme.secondaryHighlightColor
-                    font.pixelSize: Theme.fontSizeExtraLarge * 1.8
-                    text: "00:00:00"
-                    onClicked: {
-                        if (ticker2.running) {
-                            ticker2.stop()
-                            isPaused2 = true
-                            remainingTime2.color = Theme.secondaryColor
-                            remainingTime2.font.bold = false
-                            remainingTime2.font.underline = true
+                            ticker2.running = !ticker2.running
                             mainapp.timer2running = !mainapp.timer2running
-                        } else if (seconds2 > 0 && isPaused2) {
-                            isPaused2 = false
-                            GlobVars.myDuration = remainingTime2.text
-                            if (remainingTime2.text != "00:00:00"
-                                    || ticker2.running) {
-                                _lastTick2 = Math.round(Date.now() / 1000)
-                                ticker2.running = !ticker2.running
-                                mainapp.timer2running = !mainapp.timer2running
-                            }
-                            ticker2.start()
-                            remainingTime2.color = Theme.highlightColor
-                            remainingTime2.font.bold = true
-                            remainingTime2.font.underline = false
                         }
+                        ticker2.start()
+                        remainingTime2.color = Theme.highlightColor
+                        remainingTime2.font.bold = true
+                        remainingTime2.font.underline = false
                     }
                 }
             }
-            Rectangle {
-                color: "#999999"
-                opacity: 0.0
-                x: 0
-                width: parent.width
-                height: 4
+        }
+        ProgressBar {
+            id: progressBar2
+            anchors.top: counter2.bottom
+            width: parent.width
+            maximumValue: 1
+            anchors.topMargin: 1
+            //        anchors.topMargin: counter1.height + timerRow1.height + header.height
+            Timer {
+                interval: 100
+                repeat: true
+                onTriggered: progressBar2.value = (1 - (remainingTime2.seconds
+                                                        / _totalsecs2) + 0.001)
+                running: Qt.application.active && mainapp.timer2running
             }
-
-            Row {
-                /* inner row */
-                anchors.horizontalCenter: parent.horizontalCenter
-                Button {
-                    id: dish3
-                    width: (page.width - (Theme.paddingLarge * 2)) / 2.34
-                    text: myGlobalDish3 == "Dish" ? qsTr(myGlobalDish3) + " 3" : myGlobalDish3.substring(
-                                                        0, 16)
-                    onClicked: {
-                        GlobVars.myCurrentTimer = 3
-                        GlobVars.myDish = dish3.text
-                        pageStack.push(Qt.resolvedUrl("DishPage.qml"))
-                    }
-                    onPressAndHold: {
-                        myGlobalDish3 = GlobVars.myDish = mainapp.dishText3 = qsTr("Dish") + " 3"
-                    }
+        }
+        Row {
+            /* inner row */
+            id: timerRow3
+            anchors.top: progressBar2.bottom
+            anchors.horizontalCenter: parent.horizontalCenter
+            height: page.height / page.width > 1.6 ? Theme.itemSizeMedium : Theme.itemSizeSmall
+            Button {
+                id: dish3
+                width: (page.width - (Theme.paddingLarge * 2)) / 2.34
+                text: myGlobalDish3 == "Dish" ? qsTr(
+                                                    myGlobalDish3) + " 3" : myGlobalDish3.substring(
+                                                    0, 16)
+                onClicked: {
+                    GlobVars.myCurrentTimer = 3
+                    GlobVars.myDish = dish3.text
+                    pageStack.push(Qt.resolvedUrl("DishPage.qml"))
                 }
+                onPressAndHold: {
+                    myGlobalDish3 = GlobVars.myDish = mainapp.dishText3 = qsTr(
+                                "Dish") + " 3"
+                }
+            }
             Item {
                 height: Theme.itemSizeMedium
                 width: (page.width - (Theme.paddingLarge * 2)) / 3.3
@@ -822,136 +820,136 @@ Page {
                         }
                     }
                 }
-                ProgressCircle {
-                id: progressCircle3
-                scale: Theme.paddingSmall / 3
-                opacity: 0.7
-                visible: (mainapp.timer3running || isPaused3) && (myset.value("progresscircle") == "true")
+            }
+            Button {
+                id: start3
+                width: (page.width - (Theme.paddingLarge * 2)) / 4
+                text: ticker3.running || isPaused3 ? qsTr(
+                                                         "Stop") : qsTr("Start")
+                enabled: timer3.text == "00:00:00" && start3.text != qsTr(
+                             "Stop") ? false : true
+                onClicked: {
+                    remainingTime3.text = timer3.text
+                    mainapp.timeText3 = remainingTime3.text
+                    var tt = timer3.text
+                    tt = tt.split(":")
+                    var sec = _totalsecs3 = tt[0] * 3600 + tt[1] * 60 + tt[2] * 1
+                    remainingTime3.seconds = sec
+                    GlobVars.myDuration = remainingTime3.text
+                    if (remainingTime3.text != "00:00:00" || ticker3.running) {
+                        _lastTick3 = Math.round(Date.now() / 1000)
+                        if (!isPaused3) {
+                            buttonBuzz.play()
+                            ticker3.running = !ticker3.running
+                            mainapp.timer3running = !mainapp.timer3running
+                        }
+                        if (ticker3.running) {
+                            remainingTime3.color = Theme.highlightColor
+                            remainingTime3.font.bold = true
+                        } else {
+                            remainingTime3.color = Theme.secondaryHighlightColor
+                            remainingTime3.font.bold = false
+                            remainingTime3.font.underline = false
+                        }
+                        isPaused3 = false
+                    }
+                    if (!ticker3.running) {
+                        if (insomniac3.running) {
+                            insomniac3.stop()
+                        }
+                    }
+                }
+            }
+        }
+        Timer {
+            id: ticker3
+            interval: 1000
+            running: false
+            repeat: true
+            onTriggered: {
+                var now = Math.round(Date.now() / 1000)
+                seconds3 -= now - _lastTick3
+                _lastTick3 = now
+                remainingTime3.seconds = seconds3
+                remainingTime3.text = timeFromSecs(remainingTime3.seconds)
+                mainapp.timeText3 = remainingTime3.text
+                if (remainingTime3.seconds <= 0) {
+                    ticker3.stop()
+                    remainingTime3.text = "00:00:00"
+                    remainingTime3.font.bold = false
+                    mainapp.timeText3 = remainingTime3.text
+                    //    running = false
+                    mainapp.timer3running = !mainapp.timer3running
+                    if (insomniac3.running) {
+                        insomniac3.stop()
+                    }
+                    // make sure the other timers have no highlight color left
+                    if (!ticker1.running) {
+                        remainingTime1.color = Theme.secondaryHighlightColor
+                    }
+                    if (!ticker2.running) {
+                        remainingTime2.color = Theme.secondaryHighlightColor
+                    }
+                    // sound the alarm
+                    alarm(dish3.text)
+                }
+            }
+        }
+        Item {
+            id: counter3
+            anchors.top: timerRow3.bottom
+            height: page.height / page.width > 1.6 ? Theme.itemSizeMedium : Theme.itemSizeSmall
+            anchors.horizontalCenter: parent.horizontalCenter
+            width: parent.width - Theme.paddingLarge
+            Rectangle {
+                anchors.fill: parent
+                opacity: 0.00
+            }
+            TextField {
+                id: remainingTime3
+                readOnly: true
+                property int seconds
                 anchors.horizontalCenter: parent.horizontalCenter
-                progressColor: Theme.highlightDimmerColor
-                backgroundColor: Theme.primaryColor
-
-                Timer {
-                    interval: 1000
-                    repeat: true
-                    onTriggered: progressCircle3.value = (1 - (remainingTime3.seconds / _totalsecs3) + 0.001)
-                    running: Qt.application.active && mainapp.timer3running
-                }
-                }
-}
-                Button {
-                    id: start3
-                    width: (page.width - (Theme.paddingLarge * 2)) / 4
-                    text: ticker3.running || isPaused3 ? qsTr("Stop") : qsTr("Start")
-                    enabled: timer3.text == "00:00:00" && start3.text != qsTr("Stop") ? false : true
-                    onClicked: {
-                        remainingTime3.text = timer3.text
-                        mainapp.timeText3 = remainingTime3.text
-                        var tt = timer3.text
-                        tt = tt.split(":")
-                        var sec = _totalsecs3 = tt[0] * 3600 + tt[1] * 60 + tt[2] * 1
-                        remainingTime3.seconds = sec
+                color: Theme.secondaryHighlightColor
+                font.pixelSize: Theme.fontSizeExtraLarge * 1.8
+                text: "00:00:00"
+                onClicked: {
+                    if (ticker3.running) {
+                        ticker3.stop()
+                        isPaused3 = true
+                        remainingTime3.color = Theme.secondaryColor
+                        remainingTime3.font.bold = false
+                        remainingTime3.font.underline = true
+                        mainapp.timer3running = !mainapp.timer3running
+                    } else if (seconds3 > 0 && isPaused3) {
+                        isPaused3 = false
                         GlobVars.myDuration = remainingTime3.text
                         if (remainingTime3.text != "00:00:00"
                                 || ticker3.running) {
                             _lastTick3 = Math.round(Date.now() / 1000)
-                            if (!isPaused3) {
-                                buttonBuzz.play()
-                                ticker3.running = !ticker3.running
-                                mainapp.timer3running = !mainapp.timer3running
-                            }
-                            if (ticker3.running) {
-                                remainingTime3.color = Theme.highlightColor
-                                remainingTime3.font.bold = true
-                            } else {
-                                remainingTime3.color = Theme.secondaryHighlightColor
-                                remainingTime3.font.bold = false
-                                remainingTime3.font.underline = false
-                            }
-                            isPaused3 = false
-                        }
-                        if (!ticker3.running) {
-                            if (insomniac3.running) {
-                                insomniac3.stop()
-                            }
-                        }
-                    }
-                }
-            }
-            Timer {
-                id: ticker3
-                interval: 1000
-                running: false
-                repeat: true
-                onTriggered: {
-                    var now = Math.round(Date.now() / 1000)
-                    seconds3 -= now - _lastTick3
-                    _lastTick3 = now
-                    remainingTime3.seconds = seconds3
-                    remainingTime3.text = timeFromSecs(remainingTime3.seconds)
-                    mainapp.timeText3 = remainingTime3.text
-                    if (remainingTime3.seconds <= 0) {
-                        ticker3.stop()
-                        remainingTime3.text = "00:00:00"
-                        remainingTime3.font.bold = false
-                        mainapp.timeText3 = remainingTime3.text
-                        //    running = false
-                        mainapp.timer3running = !mainapp.timer3running
-                        if (insomniac3.running) {
-                            insomniac3.stop()
-                        }
-                        // make sure the other timers have no highlight color left
-                        if (!ticker1.running) {
-                            remainingTime1.color = Theme.secondaryHighlightColor
-                        }
-                        if (!ticker2.running) {
-                            remainingTime2.color = Theme.secondaryHighlightColor
-                        }
-                        // sound the alarm
-                        alarm(dish3.text)
-                    }
-                }
-            }
-            Item {
-                height: Theme.itemSizeMedium
-                anchors.horizontalCenter: parent.horizontalCenter
-                width: parent.width - Theme.paddingLarge
-                Rectangle {
-                    anchors.fill: parent
-                    opacity: 0.00
-                }
-                TextField {
-                    id: remainingTime3
-                    readOnly: true
-                    property int seconds
-                    anchors.horizontalCenter: parent.horizontalCenter
-                    color: Theme.secondaryHighlightColor
-                    font.pixelSize: Theme.fontSizeExtraLarge * 1.8
-                    text: "00:00:00"
-                    onClicked: {
-                        if (ticker3.running) {
-                            ticker3.stop()
-                            isPaused3 = true
-                            remainingTime3.color = Theme.secondaryColor
-                            remainingTime3.font.bold = false
-                            remainingTime3.font.underline = true
+                            ticker3.running = !ticker3.running
                             mainapp.timer3running = !mainapp.timer3running
-                        } else if (seconds3 > 0 && isPaused3) {
-                            isPaused3 = false
-                            GlobVars.myDuration = remainingTime3.text
-                            if (remainingTime3.text != "00:00:00"
-                                    || ticker3.running) {
-                                _lastTick3 = Math.round(Date.now() / 1000)
-                                ticker3.running = !ticker3.running
-                                mainapp.timer3running = !mainapp.timer3running
-                            }
-                            ticker3.start()
-                            remainingTime3.color = Theme.highlightColor
-                            remainingTime3.font.bold = true
-                            remainingTime3.font.underline = false
                         }
+                        ticker3.start()
+                        remainingTime3.color = Theme.highlightColor
+                        remainingTime3.font.bold = true
+                        remainingTime3.font.underline = false
                     }
                 }
+            }
+        }
+        ProgressBar {
+            id: progressBar3
+            anchors.top: counter3.bottom
+            width: parent.width
+            maximumValue: 1
+            anchors.topMargin: 1
+            Timer {
+                interval: 100
+                repeat: true
+                onTriggered: progressBar3.value = (1 - (remainingTime3.seconds
+                                                        / _totalsecs3) + 0.001)
+                running: Qt.application.active && mainapp.timer3running
             }
         }
     }

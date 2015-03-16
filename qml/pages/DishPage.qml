@@ -31,6 +31,7 @@ Page {
         }
 
         Component.onCompleted: {
+            GlobVars.myDuration = " "
             loadDishList()
         }
         delegate: ListItem {

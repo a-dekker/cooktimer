@@ -9,7 +9,6 @@ Dialog {
     onAccepted: {
         myset.setValue("backlight", backlight.checked)
         myset.setValue("popup", popup.checked)
-        myset.setValue("progresscircle", progresscircle.checked)
         myset.sync()
     }
 
@@ -55,13 +54,6 @@ Dialog {
                 text: qsTr("Show additional banner")
                 description: qsTr("Notification banner in upper screen.")
                 checked: myset.value("popup") == "true"
-            }
-            TextSwitch {
-                id: progresscircle
-                width: parent.width
-                text: qsTr("Show progress circles")
-                description: qsTr("Indicator for total progress.")
-                checked: myset.value("progresscircle") == "true"
             }
       //      TextSwitch {
         //        id: alarm_timing
