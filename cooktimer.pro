@@ -29,7 +29,6 @@ OTHER_FILES += qml/cooktimer.qml \
     rpm/cooktimer.changes.in \
     rpm/cooktimer.spec \
     rpm/cooktimer.yaml \
-#    translations/*.ts \
     cooktimer.desktop \
     qml/pages/About.qml \
     qml/pages/MainPage.qml \
@@ -48,6 +47,14 @@ CONFIG += sailfishapp_i18n
 
 INSTALLS += translations
 
+TRANSLATIONS = translations/cooktimer-sv.ts \
+               translations/cooktimer-cs.ts \
+               translations/cooktimer-nl.ts \
+               translations/cooktimer-ru_RU.ts \
+               translations/cooktimer-fi.ts \
+               translations/cooktimer-tr_TR.ts \
+               translations/cooktimer-de_DE.ts \
+               translations/cooktimer-es.ts
 #HEADERS += \
 #    src/osread.h \
 #    src/settings.h \

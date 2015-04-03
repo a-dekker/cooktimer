@@ -21,7 +21,7 @@
     <message>
         <location filename="../qml/pages/About.qml" line="47"/>
         <source>&quot;Timers for cooking&quot;</source>
-        <translation>&quot;Wekkers voor het koken&quot;</translation>
+        <translation>&quot;Kookwekkers&quot;</translation>
     </message>
     <message>
         <location filename="../qml/pages/About.qml" line="53"/>
@@ -69,7 +69,7 @@
     <message>
         <location filename="../qml/pages/DishEdit.qml" line="163"/>
         <source>No dishes defined. Press the plus button to add one.</source>
-        <translation>Geen gerechten opgeslagen. Druk op de plusknop om er één toe te voegen.</translation>
+        <translation>Geen gerechten opgeslagen. Druk op de plusknop om er een toe te voegen.</translation>
     </message>
     <message>
         <location filename="../qml/pages/DishEdit.qml" line="174"/>
@@ -80,9 +80,9 @@
 <context>
     <name>DishPage</name>
     <message>
-        <location filename="../qml/pages/DishPage.qml" line="87"/>
+        <location filename="../qml/pages/DishPage.qml" line="88"/>
         <source>No dishes defined. Choose &quot;Edit Dishes&quot; from the pulley menu.</source>
-        <translation>Geen gerechten opgeslagen. Kies &quot;Gerechten bewerken&quot; vanuit het trekmenu.</translation>
+        <translation>Er zijn geen gerechten opgegeven. Kies &quot;Gerechten bewerken&quot; vanuit het trekmenu.</translation>
     </message>
 </context>
 <context>
@@ -94,41 +94,41 @@
         <translation>gereed</translation>
     </message>
     <message>
-        <location filename="../qml/pages/MainPage.qml" line="345"/>
+        <location filename="../qml/pages/MainPage.qml" line="346"/>
         <source>About</source>
         <translation>Over</translation>
     </message>
     <message>
-        <location filename="../qml/pages/MainPage.qml" line="349"/>
+        <location filename="../qml/pages/MainPage.qml" line="350"/>
         <source>Settings</source>
         <translation>Instellingen</translation>
     </message>
     <message>
-        <location filename="../qml/pages/MainPage.qml" line="353"/>
+        <location filename="../qml/pages/MainPage.qml" line="354"/>
         <source>Edit dishes</source>
         <translation>Gerechten bewerken</translation>
     </message>
     <message>
-        <location filename="../qml/pages/MainPage.qml" line="392"/>
-        <location filename="../qml/pages/MainPage.qml" line="590"/>
-        <location filename="../qml/pages/MainPage.qml" line="784"/>
+        <location filename="../qml/pages/MainPage.qml" line="393"/>
+        <location filename="../qml/pages/MainPage.qml" line="594"/>
+        <location filename="../qml/pages/MainPage.qml" line="792"/>
         <source>Dish</source>
         <translation>Gerecht</translation>
     </message>
     <message>
-        <location filename="../qml/pages/MainPage.qml" line="453"/>
-        <location filename="../qml/pages/MainPage.qml" line="454"/>
-        <location filename="../qml/pages/MainPage.qml" line="651"/>
-        <location filename="../qml/pages/MainPage.qml" line="652"/>
-        <location filename="../qml/pages/MainPage.qml" line="845"/>
-        <location filename="../qml/pages/MainPage.qml" line="846"/>
+        <location filename="../qml/pages/MainPage.qml" line="441"/>
+        <location filename="../qml/pages/MainPage.qml" line="443"/>
+        <location filename="../qml/pages/MainPage.qml" line="641"/>
+        <location filename="../qml/pages/MainPage.qml" line="643"/>
+        <location filename="../qml/pages/MainPage.qml" line="839"/>
+        <location filename="../qml/pages/MainPage.qml" line="841"/>
         <source>Stop</source>
         <translation>Stop</translation>
     </message>
     <message>
-        <location filename="../qml/pages/MainPage.qml" line="453"/>
-        <location filename="../qml/pages/MainPage.qml" line="651"/>
-        <location filename="../qml/pages/MainPage.qml" line="845"/>
+        <location filename="../qml/pages/MainPage.qml" line="442"/>
+        <location filename="../qml/pages/MainPage.qml" line="642"/>
+        <location filename="../qml/pages/MainPage.qml" line="840"/>
         <source>Start</source>
         <translation>Start</translation>
     </message>
@@ -136,49 +136,47 @@
 <context>
     <name>SettingPage</name>
     <message>
-        <location filename="../qml/pages/SettingPage.qml" line="37"/>
+        <location filename="../qml/pages/SettingPage.qml" line="36"/>
         <source>Save</source>
         <translation>Opslaan</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SettingPage.qml" line="38"/>
+        <location filename="../qml/pages/SettingPage.qml" line="37"/>
         <source>Cancel</source>
         <translation>Annuleren</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SettingPage.qml" line="42"/>
+        <location filename="../qml/pages/SettingPage.qml" line="41"/>
         <source>Settings</source>
         <translation>Instellingen</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SettingPage.qml" line="48"/>
+        <location filename="../qml/pages/SettingPage.qml" line="47"/>
         <source>Keep backlight on</source>
-        <translation>Schermverlichting aan laten</translation>
+        <translation>De achtergrondverlichting van het scherm aan houden</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SettingPage.qml" line="49"/>
+        <location filename="../qml/pages/SettingPage.qml" line="48"/>
         <source>Prevent screen from dimming.</source>
-        <translation>Zorg dat scherm aan blijft.</translation>
+        <translation>Voorkom dat het scherm dimt.</translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/SettingPage.qml" line="54"/>
+        <source>Show additional banner</source>
+        <translation>Extra banier weergeven</translation>
     </message>
     <message>
         <location filename="../qml/pages/SettingPage.qml" line="55"/>
-        <source>Show additional banner</source>
-        <translation>Extra meldingsbanier weergeven</translation>
-    </message>
-    <message>
-        <location filename="../qml/pages/SettingPage.qml" line="56"/>
         <source>Notification banner in upper screen.</source>
-        <translation>Meldingsbanier aan bovenkant scherm.</translation>
+        <translation>Meldingsbanier aan de bovenkant van het scherm.</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SettingPage.qml" line="63"/>
         <source>Indicator for total progress.</source>
-        <translation>Indicatie voor totale voortgang.</translation>
+        <translation type="vanished">Indicatie voor totale voortgang.</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SettingPage.qml" line="62"/>
         <source>Show progress circles</source>
-        <translation>Toon voortgangs indicator</translation>
+        <translation type="vanished">Toon voortgangsindicator</translation>
     </message>
 </context>
 <context>

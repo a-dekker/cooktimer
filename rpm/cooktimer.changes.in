@@ -8,6 +8,14 @@
 # * date Author's Name <author's email> version-release
 # - Summary of changes
 
+* tue Mar 31 2015 Jack Tar <jack.tar@example.com> 0.0.1-18
+- Added spanish translations (thanks to carmenfdezb)
+- Updated dutch translations
+- Some changes in progressbar
+
+* wed Mar 08 2015 Jack Tar <jack.tar@example.com> 0.0.1-17
+- Replaced optional progresscircles with progressbar
+
 * wed Jan 14 2015 Jack Tar <jack.tar@example.com> 0.0.1-16
 - Added French, Turkish, Finnish and German translations
 

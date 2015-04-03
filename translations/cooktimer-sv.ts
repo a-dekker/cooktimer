@@ -80,7 +80,7 @@
 <context>
     <name>DishPage</name>
     <message>
-        <location filename="../qml/pages/DishPage.qml" line="87"/>
+        <location filename="../qml/pages/DishPage.qml" line="88"/>
         <source>No dishes defined. Choose &quot;Edit Dishes&quot; from the pulley menu.</source>
         <translation>Inga maträtter definierade. Välj &quot;Redigera maträtter&quot; från drag-menyn.</translation>
     </message>
@@ -94,41 +94,41 @@
         <translation>Klar</translation>
     </message>
     <message>
-        <location filename="../qml/pages/MainPage.qml" line="345"/>
+        <location filename="../qml/pages/MainPage.qml" line="346"/>
         <source>About</source>
         <translation>Om</translation>
     </message>
     <message>
-        <location filename="../qml/pages/MainPage.qml" line="349"/>
+        <location filename="../qml/pages/MainPage.qml" line="350"/>
         <source>Settings</source>
         <translation>Inställningar</translation>
     </message>
     <message>
-        <location filename="../qml/pages/MainPage.qml" line="353"/>
+        <location filename="../qml/pages/MainPage.qml" line="354"/>
         <source>Edit dishes</source>
         <translation>Redigera maträtter</translation>
     </message>
     <message>
-        <location filename="../qml/pages/MainPage.qml" line="392"/>
-        <location filename="../qml/pages/MainPage.qml" line="590"/>
-        <location filename="../qml/pages/MainPage.qml" line="784"/>
+        <location filename="../qml/pages/MainPage.qml" line="393"/>
+        <location filename="../qml/pages/MainPage.qml" line="594"/>
+        <location filename="../qml/pages/MainPage.qml" line="792"/>
         <source>Dish</source>
         <translation>Maträtt</translation>
     </message>
     <message>
-        <location filename="../qml/pages/MainPage.qml" line="453"/>
-        <location filename="../qml/pages/MainPage.qml" line="454"/>
-        <location filename="../qml/pages/MainPage.qml" line="651"/>
-        <location filename="../qml/pages/MainPage.qml" line="652"/>
-        <location filename="../qml/pages/MainPage.qml" line="845"/>
-        <location filename="../qml/pages/MainPage.qml" line="846"/>
+        <location filename="../qml/pages/MainPage.qml" line="441"/>
+        <location filename="../qml/pages/MainPage.qml" line="443"/>
+        <location filename="../qml/pages/MainPage.qml" line="641"/>
+        <location filename="../qml/pages/MainPage.qml" line="643"/>
+        <location filename="../qml/pages/MainPage.qml" line="839"/>
+        <location filename="../qml/pages/MainPage.qml" line="841"/>
         <source>Stop</source>
         <translation>Stopp</translation>
     </message>
     <message>
-        <location filename="../qml/pages/MainPage.qml" line="453"/>
-        <location filename="../qml/pages/MainPage.qml" line="651"/>
-        <location filename="../qml/pages/MainPage.qml" line="845"/>
+        <location filename="../qml/pages/MainPage.qml" line="442"/>
+        <location filename="../qml/pages/MainPage.qml" line="642"/>
+        <location filename="../qml/pages/MainPage.qml" line="840"/>
         <source>Start</source>
         <translation>Start</translation>
     </message>
@@ -136,49 +136,47 @@
 <context>
     <name>SettingPage</name>
     <message>
-        <location filename="../qml/pages/SettingPage.qml" line="37"/>
+        <location filename="../qml/pages/SettingPage.qml" line="36"/>
         <source>Save</source>
         <translation>Spara</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SettingPage.qml" line="38"/>
+        <location filename="../qml/pages/SettingPage.qml" line="37"/>
         <source>Cancel</source>
         <translation>Avbryt</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SettingPage.qml" line="42"/>
+        <location filename="../qml/pages/SettingPage.qml" line="41"/>
         <source>Settings</source>
         <translation>Inställningar</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SettingPage.qml" line="48"/>
+        <location filename="../qml/pages/SettingPage.qml" line="47"/>
         <source>Keep backlight on</source>
         <translation>Släck inte bakgrundsbelysningen</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SettingPage.qml" line="49"/>
+        <location filename="../qml/pages/SettingPage.qml" line="48"/>
         <source>Prevent screen from dimming.</source>
         <translation>Förhindra skärmdimmer</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SettingPage.qml" line="55"/>
+        <location filename="../qml/pages/SettingPage.qml" line="54"/>
         <source>Show additional banner</source>
         <translation>Visa extra avisering</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SettingPage.qml" line="56"/>
+        <location filename="../qml/pages/SettingPage.qml" line="55"/>
         <source>Notification banner in upper screen.</source>
         <translation>Aviseringsflagga i skärmens överkant</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SettingPage.qml" line="63"/>
         <source>Indicator for total progress.</source>
-        <translation>Indikator för hela förloppet</translation>
+        <translation type="vanished">Indikator för hela förloppet</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SettingPage.qml" line="62"/>
         <source>Show progress circles</source>
-        <translation>Visa förloppscirklar</translation>
+        <translation type="vanished">Visa förloppscirklar</translation>
     </message>
 </context>
 <context>

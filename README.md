@@ -14,7 +14,7 @@ Only single timers where to be found
 
 ## Installation
 
-Using an rpm installer of via [openrepos.net](https://openrepos.net/content/ade/cooktimer)
+Using an rpm installer or via [openrepos.net](https://openrepos.net/content/ade/cooktimer)
 
 ## License
 

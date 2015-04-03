@@ -376,6 +376,7 @@ Page {
             anchors.top: header.bottom
             anchors.horizontalCenter: parent.horizontalCenter
             height: page.height / page.width > 1.6 ? Theme.itemSizeMedium : Theme.itemSizeSmall
+
             Button {
                 id: dish1
                 width: (page.width - (Theme.paddingLarge * 2)) / 2.34
@@ -426,6 +427,7 @@ Page {
                     onPressAndHold: {
                         myGlobalDuration1 = "00:00:00"
                         if (!ticker1.running) {
+                            progressBar1.value = 0
                             remainingTime1.text = "00:00:00"
                             mainapp.timeText1 = remainingTime1.text
                         }
@@ -441,6 +443,7 @@ Page {
                 enabled: timer1.text == "00:00:00" && start1.text != qsTr(
                              "Stop") ? false : true
                 onClicked: {
+                    progressBar1.value = 0
                     remainingTime1.text = timer1.text
                     mainapp.timeText1 = remainingTime1.text
                     var tt = timer1.text
@@ -503,6 +506,7 @@ Page {
                     if (!ticker3.running) {
                         remainingTime3.color = Theme.secondaryHighlightColor
                     }
+                    progressBar1.value = 0
                     // sound the alarm
                     alarm(dish1.text)
                 }
@@ -558,6 +562,8 @@ Page {
             width: parent.width
             maximumValue: 1
             anchors.topMargin: 1
+            leftMargin: Theme.paddingLarge
+            rightMargin: Theme.paddingLarge
             Timer {
                 interval: 100
                 repeat: true
@@ -622,6 +628,7 @@ Page {
                     onPressAndHold: {
                         myGlobalDuration2 = "00:00:00"
                         if (!ticker2.running) {
+                            progressBar2.value = 0
                             remainingTime2.text = "00:00:00"
                             mainapp.timeText2 = remainingTime2.text
                         }
@@ -636,6 +643,7 @@ Page {
                 enabled: timer2.text == "00:00:00" && start2.text != qsTr(
                              "Stop") ? false : true
                 onClicked: {
+                    progressBar2.value = 0
                     remainingTime2.text = timer2.text
                     mainapp.timeText2 = remainingTime2.text
                     var tt = timer2.text
@@ -697,6 +705,7 @@ Page {
                     if (!ticker3.running) {
                         remainingTime3.color = Theme.secondaryHighlightColor
                     }
+                    progressBar2.value = 0
                     // sound the alarm
                     alarm(dish2.text)
                 }
@@ -751,6 +760,8 @@ Page {
             width: parent.width
             maximumValue: 1
             anchors.topMargin: 1
+            leftMargin: Theme.paddingLarge
+            rightMargin: Theme.paddingLarge
             //        anchors.topMargin: counter1.height + timerRow1.height + header.height
             Timer {
                 interval: 100
@@ -815,6 +826,7 @@ Page {
                     onPressAndHold: {
                         myGlobalDuration3 = "00:00:00"
                         if (!ticker3.running) {
+                            progressBar3.value = 0
                             remainingTime3.text = "00:00:00"
                             mainapp.timeText3 = remainingTime3.text
                         }
@@ -829,6 +841,7 @@ Page {
                 enabled: timer3.text == "00:00:00" && start3.text != qsTr(
                              "Stop") ? false : true
                 onClicked: {
+                    progressBar3.value = 0
                     remainingTime3.text = timer3.text
                     mainapp.timeText3 = remainingTime3.text
                     var tt = timer3.text
@@ -890,6 +903,7 @@ Page {
                     if (!ticker2.running) {
                         remainingTime2.color = Theme.secondaryHighlightColor
                     }
+                    progressBar3.value = 0
                     // sound the alarm
                     alarm(dish3.text)
                 }
@@ -944,6 +958,8 @@ Page {
             width: parent.width
             maximumValue: 1
             anchors.topMargin: 1
+            leftMargin: Theme.paddingLarge
+            rightMargin: Theme.paddingLarge
             Timer {
                 interval: 100
                 repeat: true

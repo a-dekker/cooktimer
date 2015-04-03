@@ -16,11 +16,25 @@ CoverBackground {
         }
     }
     Column {
+        id: col
         width: parent.width
         anchors.leftMargin: Theme.paddingLarge
         anchors.rightMargin: Theme.paddingLarge
         anchors.fill: parent
         anchors.margins: 15
+
+// ProgressBar {
+//                id: progressBar
+//            //    anchors.verticalCenter: parent.verticalCenter
+//                width: parent.width
+//                maximumValue: 100
+//                Timer {
+//                    interval: 100
+//                    repeat: true
+//                    onTriggered: progressBar.value = (progressBar.value + 1) % 100
+//                    running: true
+//                }
+//            }
         Label {
             text: dishText1
             horizontalAlignment: Text.AlignHCenter
@@ -37,6 +51,7 @@ CoverBackground {
             font.pixelSize: Theme.fontSizeHuge
             color: timer1running ? Theme.highlightColor : Theme.secondaryHighlightColor
         }
+
         Label {
             text: dishText2
             horizontalAlignment: Text.AlignHCenter

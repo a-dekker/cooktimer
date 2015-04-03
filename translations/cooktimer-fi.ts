@@ -80,7 +80,7 @@
 <context>
     <name>DishPage</name>
     <message>
-        <location filename="../qml/pages/DishPage.qml" line="87"/>
+        <location filename="../qml/pages/DishPage.qml" line="88"/>
         <source>No dishes defined. Choose &quot;Edit Dishes&quot; from the pulley menu.</source>
         <translation>Ruokia ei määritetty. Valitse &apos;&apos;Muokkaa ruokia&apos;&apos; vetovalikosta.</translation>
     </message>
@@ -94,41 +94,41 @@
         <translation>valmis</translation>
     </message>
     <message>
-        <location filename="../qml/pages/MainPage.qml" line="345"/>
+        <location filename="../qml/pages/MainPage.qml" line="346"/>
         <source>About</source>
         <translation>Tietoja</translation>
     </message>
     <message>
-        <location filename="../qml/pages/MainPage.qml" line="349"/>
+        <location filename="../qml/pages/MainPage.qml" line="350"/>
         <source>Settings</source>
         <translation>Asetukset</translation>
     </message>
     <message>
-        <location filename="../qml/pages/MainPage.qml" line="353"/>
+        <location filename="../qml/pages/MainPage.qml" line="354"/>
         <source>Edit dishes</source>
         <translation>Muokkaa ruokia</translation>
     </message>
     <message>
-        <location filename="../qml/pages/MainPage.qml" line="392"/>
-        <location filename="../qml/pages/MainPage.qml" line="590"/>
-        <location filename="../qml/pages/MainPage.qml" line="784"/>
+        <location filename="../qml/pages/MainPage.qml" line="393"/>
+        <location filename="../qml/pages/MainPage.qml" line="594"/>
+        <location filename="../qml/pages/MainPage.qml" line="792"/>
         <source>Dish</source>
         <translation>Ruokalaji</translation>
     </message>
     <message>
-        <location filename="../qml/pages/MainPage.qml" line="453"/>
-        <location filename="../qml/pages/MainPage.qml" line="454"/>
-        <location filename="../qml/pages/MainPage.qml" line="651"/>
-        <location filename="../qml/pages/MainPage.qml" line="652"/>
-        <location filename="../qml/pages/MainPage.qml" line="845"/>
-        <location filename="../qml/pages/MainPage.qml" line="846"/>
+        <location filename="../qml/pages/MainPage.qml" line="441"/>
+        <location filename="../qml/pages/MainPage.qml" line="443"/>
+        <location filename="../qml/pages/MainPage.qml" line="641"/>
+        <location filename="../qml/pages/MainPage.qml" line="643"/>
+        <location filename="../qml/pages/MainPage.qml" line="839"/>
+        <location filename="../qml/pages/MainPage.qml" line="841"/>
         <source>Stop</source>
         <translation>Pysäytä</translation>
     </message>
     <message>
-        <location filename="../qml/pages/MainPage.qml" line="453"/>
-        <location filename="../qml/pages/MainPage.qml" line="651"/>
-        <location filename="../qml/pages/MainPage.qml" line="845"/>
+        <location filename="../qml/pages/MainPage.qml" line="442"/>
+        <location filename="../qml/pages/MainPage.qml" line="642"/>
+        <location filename="../qml/pages/MainPage.qml" line="840"/>
         <source>Start</source>
         <translation>Aloita</translation>
     </message>
@@ -136,49 +136,47 @@
 <context>
     <name>SettingPage</name>
     <message>
-        <location filename="../qml/pages/SettingPage.qml" line="37"/>
+        <location filename="../qml/pages/SettingPage.qml" line="36"/>
         <source>Save</source>
         <translation>Tallenna</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SettingPage.qml" line="38"/>
+        <location filename="../qml/pages/SettingPage.qml" line="37"/>
         <source>Cancel</source>
         <translation>Peruuta</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SettingPage.qml" line="42"/>
+        <location filename="../qml/pages/SettingPage.qml" line="41"/>
         <source>Settings</source>
         <translation>Asetukset</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SettingPage.qml" line="48"/>
+        <location filename="../qml/pages/SettingPage.qml" line="47"/>
         <source>Keep backlight on</source>
         <translation>Pidä taustavalo päällä</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SettingPage.qml" line="49"/>
+        <location filename="../qml/pages/SettingPage.qml" line="48"/>
         <source>Prevent screen from dimming.</source>
         <translation>Estä näyttöä himmenemästä</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SettingPage.qml" line="55"/>
+        <location filename="../qml/pages/SettingPage.qml" line="54"/>
         <source>Show additional banner</source>
         <translation>Näytä lisäpalkki</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SettingPage.qml" line="56"/>
+        <location filename="../qml/pages/SettingPage.qml" line="55"/>
         <source>Notification banner in upper screen.</source>
         <translation>Ilmoituspalkki ruudun yläosassa</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SettingPage.qml" line="63"/>
         <source>Indicator for total progress.</source>
-        <translation>Mittari kokonais edistykselle.</translation>
+        <translation type="vanished">Mittari kokonais edistykselle.</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SettingPage.qml" line="62"/>
         <source>Show progress circles</source>
-        <translation>Näytä edistys ympyrät.</translation>
+        <translation type="vanished">Näytä edistys ympyrät.</translation>
     </message>
 </context>
 <context>
