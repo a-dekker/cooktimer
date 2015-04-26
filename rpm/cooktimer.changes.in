@@ -8,6 +8,9 @@
 # * date Author's Name <author's email> version-release
 # - Summary of changes
 
+* tue Mar 31 2015 Jack Tar <jack.tar@example.com> 0.0.1-19
+- time indicator below progressbar
+
 * tue Mar 31 2015 Jack Tar <jack.tar@example.com> 0.0.1-18
 - Added spanish translations (thanks to carmenfdezb)
 - Updated dutch translations

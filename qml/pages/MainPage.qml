@@ -263,6 +263,7 @@ Page {
         if (passed >= _remaining1) {
             console.warn('Time1 has passed!', passed - _remaining1, 'seconds')
             remainingTime1.text = "00:00:00"
+            progressBar1.value = 0
             mainapp.timeText1 = remainingTime1.text
             mainapp.timer1running = !mainapp.timer1running
             remainingTime1.font.bold = false
@@ -286,8 +287,9 @@ Page {
 
         if (passed >= _remaining2) {
             console.warn('Time2 has passed!', passed - _remaining2, 'seconds')
-            remainingTime2.seconds = 1
+            // remainingTime2.seconds = 1
             remainingTime2.text = "00:00:00"
+            progressBar2.value = 0
             mainapp.timeText2 = remainingTime2.text
             mainapp.timer2running = !mainapp.timer2running
             remainingTime2.font.bold = false
@@ -311,8 +313,9 @@ Page {
 
         if (passed >= _remaining3) {
             console.warn('Time3 has passed!', passed - _remaining3, 'seconds')
-            remainingTime3.seconds = 1
+            // remainingTime3.seconds = 1
             remainingTime3.text = "00:00:00"
+            progressBar3.value = 0
             mainapp.timeText3 = remainingTime3.text
             mainapp.timer3running = !mainapp.timer3running
             remainingTime3.font.bold = false
@@ -444,6 +447,7 @@ Page {
                              "Stop") ? false : true
                 onClicked: {
                     progressBar1.value = 0
+                    totalTime1.text = timer1.text
                     remainingTime1.text = timer1.text
                     mainapp.timeText1 = remainingTime1.text
                     var tt = timer1.text
@@ -559,17 +563,33 @@ Page {
         ProgressBar {
             id: progressBar1
             anchors.top: counter1.bottom
-            width: parent.width
+            width: parent.width - Theme.paddingLarge * 2
+            anchors.horizontalCenter: parent.horizontalCenter
             maximumValue: 1
             anchors.topMargin: 1
-            leftMargin: Theme.paddingLarge
-            rightMargin: Theme.paddingLarge
+            leftMargin: 0
+            rightMargin: 0
             Timer {
                 interval: 100
                 repeat: true
                 onTriggered: progressBar1.value = (1 - (remainingTime1.seconds
                                                        / _totalsecs1) + 0.001)
                 running: Qt.application.active && mainapp.timer1running
+            }
+            Label {
+                id: totalTime1
+                anchors.left: parent.left
+                anchors.bottom: parent.bottom
+                color: Theme.secondaryColor
+                font.pixelSize: Theme.fontSizeExtraSmall
+                text: "00:00:00"
+            }
+            Label {
+                anchors.right: parent.right
+                anchors.bottom: parent.bottom
+                color: Theme.secondaryColor
+                font.pixelSize: Theme.fontSizeExtraSmall
+                text: "00:00:00"
             }
         }
 
@@ -644,6 +664,7 @@ Page {
                              "Stop") ? false : true
                 onClicked: {
                     progressBar2.value = 0
+                    totalTime2.text = timer2.text
                     remainingTime2.text = timer2.text
                     mainapp.timeText2 = remainingTime2.text
                     var tt = timer2.text
@@ -757,11 +778,12 @@ Page {
         ProgressBar {
             id: progressBar2
             anchors.top: counter2.bottom
-            width: parent.width
+            anchors.horizontalCenter: parent.horizontalCenter
+            width: parent.width - 2 * Theme.paddingLarge
             maximumValue: 1
             anchors.topMargin: 1
-            leftMargin: Theme.paddingLarge
-            rightMargin: Theme.paddingLarge
+            leftMargin: 0
+            rightMargin: 0
             //        anchors.topMargin: counter1.height + timerRow1.height + header.height
             Timer {
                 interval: 100
@@ -769,6 +791,21 @@ Page {
                 onTriggered: progressBar2.value = (1 - (remainingTime2.seconds
                                                         / _totalsecs2) + 0.001)
                 running: Qt.application.active && mainapp.timer2running
+            }
+            Label {
+                id: totalTime2
+                anchors.left: parent.left
+                anchors.bottom: parent.bottom
+                color: Theme.secondaryColor
+                font.pixelSize: Theme.fontSizeExtraSmall
+                text: "00:00:00"
+            }
+            Label {
+                anchors.right: parent.right
+                anchors.bottom: parent.bottom
+                color: Theme.secondaryColor
+                font.pixelSize: Theme.fontSizeExtraSmall
+                text: "00:00:00"
             }
         }
         Row {
@@ -842,6 +879,7 @@ Page {
                              "Stop") ? false : true
                 onClicked: {
                     progressBar3.value = 0
+                    totalTime3.text = timer3.text
                     remainingTime3.text = timer3.text
                     mainapp.timeText3 = remainingTime3.text
                     var tt = timer3.text
@@ -955,17 +993,33 @@ Page {
         ProgressBar {
             id: progressBar3
             anchors.top: counter3.bottom
-            width: parent.width
+            anchors.horizontalCenter: parent.horizontalCenter
+            width: parent.width - 2 * Theme.paddingLarge
             maximumValue: 1
             anchors.topMargin: 1
-            leftMargin: Theme.paddingLarge
-            rightMargin: Theme.paddingLarge
+            leftMargin: 0
+            rightMargin: 0
             Timer {
                 interval: 100
                 repeat: true
                 onTriggered: progressBar3.value = (1 - (remainingTime3.seconds
                                                         / _totalsecs3) + 0.001)
                 running: Qt.application.active && mainapp.timer3running
+            }
+            Label {
+                id: totalTime3
+                anchors.left: parent.left
+                anchors.bottom: parent.bottom
+                color: Theme.secondaryColor
+                font.pixelSize: Theme.fontSizeExtraSmall
+                text: "00:00:00"
+            }
+            Label {
+                anchors.right: parent.right
+                anchors.bottom: parent.bottom
+                color: Theme.secondaryColor
+                font.pixelSize: Theme.fontSizeExtraSmall
+                text: "00:00:00"
             }
         }
     }
