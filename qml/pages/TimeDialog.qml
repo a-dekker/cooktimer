@@ -54,17 +54,16 @@ import Sailfish.Silica 1.0
         }
 
         onAccepted: {
-            //
             hour=pickTime.hour
             second=pickTime.second
             minute=pickTime.minute
         }
 
         onRejected: {
-            //reject
+            // just reject
         }
 
-        Column{
+        Column {
             id: colSettings
             width: parent.width
             height: parent.height
@@ -72,20 +71,19 @@ import Sailfish.Silica 1.0
             PageHeader {
                 title: " "
             }
-
-            TimePickerSeconds{
-                id: pickTime
-                hour: diaTime.hour
-                minute: diaTime.minute
-                second: diaTime.second
-                anchors.horizontalCenter: parent.horizontalCenter
-            }
-            Label{
+            Label {
                 text: diaTime.infotext + ": " + pickTime.hour + " h " + pickTime.minute + " min " + pickTime.second +" sec "
                 color: Theme.secondaryColor
                 anchors.horizontalCenter: parent.horizontalCenter
                 font.pixelSize: Theme.fontSizeSmall
                 font.family: Theme.fontSizeSmall
+            }
+            TimePickerSeconds {
+                id: pickTime
+                hour: diaTime.hour
+                minute: diaTime.minute
+                second: diaTime.second
+                anchors.horizontalCenter: parent.horizontalCenter
             }
         }
 
