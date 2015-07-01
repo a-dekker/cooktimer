@@ -72,7 +72,12 @@ import Sailfish.Silica 1.0
                 title: " "
             }
             Label {
-                text: diaTime.infotext + ": " + pickTime.hour + " h " + pickTime.minute + " min " + pickTime.second +" sec "
+                text: diaTime.infotext
+                anchors.horizontalCenter: parent.horizontalCenter
+                font.pixelSize: Theme.fontSizeLarge
+            }
+            Label {
+                text: pickTime.hour + " h " + pickTime.minute + " min " + pickTime.second +" sec "
                 color: Theme.secondaryColor
                 anchors.horizontalCenter: parent.horizontalCenter
                 font.pixelSize: Theme.fontSizeSmall

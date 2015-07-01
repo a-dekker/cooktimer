@@ -71,20 +71,80 @@ int main(int argc, char *argv[])
     view->engine()->addImportPath(SailfishApp::pathTo("qml/components/").toLocalFile());
     view->engine()->addImportPath(SailfishApp::pathTo("qml/pages/").toLocalFile());
 
-    QTranslator *translator = new QTranslator;
+    // QTranslator *translator = new QTranslator;
 
-    QString locale = "cooktimer-" + QLocale::system().name();
-    qDebug() << "Translations:" << SailfishApp::pathTo("translations").toLocalFile() + "/" + locale + ".qm";
-    if(!translator->load(SailfishApp::pathTo("translations").toLocalFile() + "/" + locale + ".qm")) {
-        qDebug() << "Couldn't load translation";
+    QString locale_appname = "cooktimer-" + QLocale::system().name();
+    qDebug() << "Translations:" << SailfishApp::pathTo("translations").toLocalFile() + "/" + locale_appname + ".qm";
+
+    qmlRegisterType<Launcher>("harbour.cooktimer.Launcher", 1 , 0 , "App");
+    qmlRegisterType<Settings>("harbour.cooktimer.Settings", 1 , 0 , "MySettings");
+    qmlRegisterType<settingsPublic::Languages>("harbour.cooktimer.Settings", 1, 0, "Languages");
+    // Check if user has set language explicitly to be used in the app
+    QString locale = QLocale::system().name();
+    view->rootContext()->setContextProperty("DebugLocale",QVariant(locale));
+    // also name of conf folder
+    QCoreApplication::setOrganizationName("cooktimer");
+    QCoreApplication::setOrganizationDomain("");
+    // also name of conf file
+    QCoreApplication::setApplicationName("cooktimer");
+
+    QSettings mySets;
+    int languageNbr = mySets.value("language","0").toInt();
+
+    QTranslator translator;
+    if (settingsPublic::Languages::SYSTEM_DEFAULT != languageNbr) {
+        switch (languageNbr) {
+        // Czech
+        case settingsPublic::Languages::CS:
+            translator.load("cooktimer-cs.qm", SailfishApp::pathTo(QString("translations")).toLocalFile());
+            break;
+        // Dutch
+        case settingsPublic::Languages::NL:
+            translator.load("cooktimer-nl.qm", SailfishApp::pathTo(QString("translations")).toLocalFile());
+            break;
+        // Finnish
+        case settingsPublic::Languages::FI:
+            translator.load("cooktimer-fi.qm", SailfishApp::pathTo(QString("translations")).toLocalFile());
+            break;
+        // French
+        case settingsPublic::Languages::FR:
+            translator.load("cooktimer-fr.qm", SailfishApp::pathTo(QString("translations")).toLocalFile());
+            break;
+        // German
+        case settingsPublic::Languages::DE_DE:
+            translator.load("cooktimer-de_DE.qm", SailfishApp::pathTo(QString("translations")).toLocalFile());
+            break;
+        // Russian
+        case settingsPublic::Languages::RU_RU:
+            translator.load("cooktimer-ru_RU.qm", SailfishApp::pathTo(QString("translations")).toLocalFile());
+            break;
+        // Spanish
+        case settingsPublic::Languages::ES:
+            translator.load("cooktimer-es.qm", SailfishApp::pathTo(QString("translations")).toLocalFile());
+            break;
+        // Swedish
+        case settingsPublic::Languages::SV:
+            translator.load("cooktimer-sv.qm", SailfishApp::pathTo(QString("translations")).toLocalFile());
+            break;
+        // Greek
+        case settingsPublic::Languages::EL:
+            translator.load("cooktimer-el.qm", SailfishApp::pathTo(QString("translations")).toLocalFile());
+            break;
+        // Turkish
+        case settingsPublic::Languages::TR_TR:
+            translator.load("cooktimer-tr_TR.qm", SailfishApp::pathTo(QString("translations")).toLocalFile());
+            break;
+        // English
+        default:
+            translator.load("cooktimer.qm", SailfishApp::pathTo(QString("translations")).toLocalFile());
+            break;
+        }
+        // install translator for specific language
+        // otherwise the system language will be set by SailfishApp
+        app->installTranslator(&translator);
     }
-    app->installTranslator(translator);
-
-    qmlRegisterType<Launcher>("Launcher", 1 , 0 , "App");
-    qmlRegisterType<Settings>("Settings", 1 , 0 , "MySettings");
 
     view->setSource(SailfishApp::pathTo("qml/cooktimer.qml"));
     view->showFullScreen();
     return app->exec();
 }
-

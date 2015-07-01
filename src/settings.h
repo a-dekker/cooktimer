@@ -24,6 +24,32 @@ private:
     QSettings settings_;
 };
 
+namespace settingsPublic {
+
+class Languages : public QObject
+{
+    Q_OBJECT
+
+public:
+    Q_ENUMS(eLanguages)
+    enum eLanguages {
+        SYSTEM_DEFAULT = 0,
+        EN,    // English
+        SV,    // Swedish
+        FI,    // Finnish
+        DE_DE, // German
+        CS,    // Czech
+        NL,    // Dutch
+        ES,    // Spanish
+        FR,    // French
+        IT,    // Italian
+        RU_RU, // Russian
+        EL,    // Greek
+        TR_TR, // Turkish
+        INVALID
+    };
+};
+
+} // namespace
+
 #endif // SETTINGS_H
-
-

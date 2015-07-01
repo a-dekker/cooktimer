@@ -1,8 +1,9 @@
 import QtQuick 2.0
 import Sailfish.Silica 1.0
-import Launcher 1.0
-import Settings 1.0
+import harbour.cooktimer.Launcher 1.0
+import harbour.cooktimer.Settings 1.0
 import org.nemomobile.dbus 1.0
+import org.nemomobile.notifications 1.0
 import cooktimer.insomniac 1.0
 import QtFeedback 5.0
 import "../localdb.js" as DB
@@ -213,6 +214,13 @@ Page {
         return hh + ":" + mi + ":" + ss
     }
 
+    function banner(category, message) {
+        console.log("Notify", message)
+        notification.previewBody = "cooktimer"
+        notification.previewSummary = message
+        notification.publish()
+    }
+
     function snooze1() {
         ticker1.stop()
         _remaining1 = seconds1 - 1
@@ -240,9 +248,14 @@ Page {
         insomniac3.start()
     }
 
+    Notification {
+        id: notification
+        category: "x-jolla.alarmui.clock"
+    }
+
     function alarm(alarmtxt) {
         if (myset.value("popup") == "true") {
-            banner.notify(alarmtxt + " " + qsTr("ready"))
+            banner("info", alarmtxt + " " + qsTr("ready"))
         }
         // pageStack.push(Qt.resolvedUrl("AlarmDialogBase.qml"))
         bar.launch("timedclient-qt5 -b'TITLE=button0' -e\"APPLICATION=test;TITLE="
@@ -361,10 +374,6 @@ Page {
 
         App {
             id: bar
-        }
-
-        Popup {
-            id: banner
         }
 
         // set spacing considering the width/height ratio
