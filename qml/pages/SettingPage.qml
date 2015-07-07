@@ -81,43 +81,46 @@ Dialog {
                     label: qsTr("Language:")
                     currentIndex: toCurrentIndex(myset.value("language"))
                     menu: ContextMenu {
-                        // make sure it has the order in GlobVars.js
+                        // make sure it has the order in Vars.js
                         MenuItem {
                             text: "System default"
                         } // 0
                         MenuItem {
-                            text: "Czech"
+                            text: "Czech/Čeština"
                         } // 1
                         MenuItem {
-                            text: "Dutch"
+                            text: "Dutch/Nederlands"
                         } // 2
                         MenuItem {
-                            text: "English"
+                            text: "English/English"
                         } // 3
                         MenuItem {
-                            text: "Finnish"
+                            text: "Finnish/Suomalainen"
                         } // 4
                         MenuItem {
-                            text: "French "
+                            text: "French/Français"
                         } // 5
                         MenuItem {
-                            text: "German"
+                            text: "German/Deutsch"
                         } // 6
                         MenuItem {
-                            text: "Greek"
+                            text: "Greek/Ελληνικά"
                         } // 7
                         MenuItem {
-                            text: "Russian"
+                            text: "Polish/Polski"
                         } // 8
                         MenuItem {
-                            text: "Spanish"
+                            text: "Russian/Русский"
                         } // 9
                         MenuItem {
-                            text: "Swedish"
+                            text: "Spanish/Español"
                         } // 10
                         MenuItem {
-                            text: "Turkish"
+                            text: "Swedish/Svensk"
                         } // 11
+                        MenuItem {
+                            text: "Turkish/Türk"
+                        } // 12
                     }
                     // The next two converter functions decouple the alphabetical language list
                     // index from the internal settings index, which cannot be changed for legacy reasons
@@ -158,6 +161,9 @@ Dialog {
                         case Languages.TR_TR:
                             // Turkish
                             return GlobVars.turkish
+                        case Languages.PL:
+                            // Polish
+                            return GlobVars.polish
                         default:
                             return GlobVars.english
                         }
@@ -189,6 +195,8 @@ Dialog {
                             return Languages.RU_RU // Russian
                         case GlobVars.greek:
                             return Languages.EL // Greek
+                        case GlobVars.polish:
+                            return Languages.PL // Polish
                         default:
                             return Languages.EN // English
                         }

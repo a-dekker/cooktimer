@@ -134,6 +134,10 @@ int main(int argc, char *argv[])
         case settingsPublic::Languages::TR_TR:
             translator.load("cooktimer-tr_TR.qm", SailfishApp::pathTo(QString("translations")).toLocalFile());
             break;
+        // Polish
+        case settingsPublic::Languages::PL:
+            translator.load("cooktimer-pl.qm", SailfishApp::pathTo(QString("translations")).toLocalFile());
+            break;
         // English
         default:
             translator.load("cooktimer.qm", SailfishApp::pathTo(QString("translations")).toLocalFile());

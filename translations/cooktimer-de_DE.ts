@@ -14,17 +14,17 @@
         <translation>Info</translation>
     </message>
     <message>
-        <location filename="../qml/pages/About.qml" line="42"/>
+        <location filename="../qml/pages/About.qml" line="54"/>
         <source>Version</source>
         <translation>Version</translation>
     </message>
     <message>
-        <location filename="../qml/pages/About.qml" line="47"/>
+        <location filename="../qml/pages/About.qml" line="59"/>
         <source>&quot;Timers for cooking&quot;</source>
         <translation>Küchenuhr</translation>
     </message>
     <message>
-        <location filename="../qml/pages/About.qml" line="53"/>
+        <location filename="../qml/pages/About.qml" line="65"/>
         <source>Author</source>
         <translation>Autor</translation>
     </message>
@@ -88,47 +88,47 @@
 <context>
     <name>MainPage</name>
     <message>
-        <location filename="../qml/pages/MainPage.qml" line="245"/>
-        <location filename="../qml/pages/MainPage.qml" line="249"/>
+        <location filename="../qml/pages/MainPage.qml" line="258"/>
+        <location filename="../qml/pages/MainPage.qml" line="262"/>
         <source>ready</source>
         <translation>Fertig</translation>
     </message>
     <message>
-        <location filename="../qml/pages/MainPage.qml" line="346"/>
+        <location filename="../qml/pages/MainPage.qml" line="362"/>
         <source>About</source>
         <translation>Über</translation>
     </message>
     <message>
-        <location filename="../qml/pages/MainPage.qml" line="350"/>
+        <location filename="../qml/pages/MainPage.qml" line="366"/>
         <source>Settings</source>
         <translation>Einstellungen</translation>
     </message>
     <message>
-        <location filename="../qml/pages/MainPage.qml" line="354"/>
+        <location filename="../qml/pages/MainPage.qml" line="370"/>
         <source>Edit dishes</source>
         <translation>Gericht bearbeiten</translation>
     </message>
     <message>
-        <location filename="../qml/pages/MainPage.qml" line="393"/>
-        <location filename="../qml/pages/MainPage.qml" line="594"/>
-        <location filename="../qml/pages/MainPage.qml" line="792"/>
+        <location filename="../qml/pages/MainPage.qml" line="405"/>
+        <location filename="../qml/pages/MainPage.qml" line="623"/>
+        <location filename="../qml/pages/MainPage.qml" line="838"/>
         <source>Dish</source>
         <translation>Gericht</translation>
     </message>
     <message>
-        <location filename="../qml/pages/MainPage.qml" line="441"/>
-        <location filename="../qml/pages/MainPage.qml" line="443"/>
-        <location filename="../qml/pages/MainPage.qml" line="641"/>
-        <location filename="../qml/pages/MainPage.qml" line="643"/>
-        <location filename="../qml/pages/MainPage.qml" line="839"/>
-        <location filename="../qml/pages/MainPage.qml" line="841"/>
+        <location filename="../qml/pages/MainPage.qml" line="453"/>
+        <location filename="../qml/pages/MainPage.qml" line="455"/>
+        <location filename="../qml/pages/MainPage.qml" line="670"/>
+        <location filename="../qml/pages/MainPage.qml" line="672"/>
+        <location filename="../qml/pages/MainPage.qml" line="885"/>
+        <location filename="../qml/pages/MainPage.qml" line="887"/>
         <source>Stop</source>
         <translation>Stopp</translation>
     </message>
     <message>
-        <location filename="../qml/pages/MainPage.qml" line="442"/>
-        <location filename="../qml/pages/MainPage.qml" line="642"/>
-        <location filename="../qml/pages/MainPage.qml" line="840"/>
+        <location filename="../qml/pages/MainPage.qml" line="454"/>
+        <location filename="../qml/pages/MainPage.qml" line="671"/>
+        <location filename="../qml/pages/MainPage.qml" line="886"/>
         <source>Start</source>
         <translation>Start</translation>
     </message>
@@ -136,47 +136,49 @@
 <context>
     <name>SettingPage</name>
     <message>
-        <location filename="../qml/pages/SettingPage.qml" line="36"/>
+        <location filename="../qml/pages/SettingPage.qml" line="44"/>
         <source>Save</source>
         <translation>Speichern</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SettingPage.qml" line="37"/>
+        <location filename="../qml/pages/SettingPage.qml" line="45"/>
         <source>Cancel</source>
         <translation>Abbrechen</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SettingPage.qml" line="41"/>
+        <location filename="../qml/pages/SettingPage.qml" line="49"/>
         <source>Settings</source>
         <translation>Einstellungen</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SettingPage.qml" line="47"/>
+        <location filename="../qml/pages/SettingPage.qml" line="55"/>
         <source>Keep backlight on</source>
         <translation>Hintergrundbeleuchtung anlassen</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SettingPage.qml" line="48"/>
+        <location filename="../qml/pages/SettingPage.qml" line="56"/>
         <source>Prevent screen from dimming.</source>
         <translation>Bildschirm nicht abdunkeln</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SettingPage.qml" line="54"/>
+        <location filename="../qml/pages/SettingPage.qml" line="62"/>
         <source>Show additional banner</source>
         <translation>Zeige zusätzliches Banner</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SettingPage.qml" line="55"/>
+        <location filename="../qml/pages/SettingPage.qml" line="63"/>
         <source>Notification banner in upper screen.</source>
         <translation>Benachrichtigungsbanner im oberen Bildschirm</translation>
     </message>
     <message>
-        <source>Indicator for total progress.</source>
-        <translation type="vanished">Gesamtfortschrittsanzeige</translation>
+        <location filename="../qml/pages/SettingPage.qml" line="81"/>
+        <source>Language:</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Show progress circles</source>
-        <translation type="vanished">Fortschritt anzeigen</translation>
+        <location filename="../qml/pages/SettingPage.qml" line="211"/>
+        <source>Change of language will be active after restarting the application.</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>

@@ -1,27 +1,27 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="es">
+<TS version="2.1" language="pl">
 <context>
     <name>About</name>
     <message>
         <location filename="../qml/pages/About.qml" line="19"/>
         <source>About</source>
-        <translation>Acerca de</translation>
+        <translation>O programie</translation>
     </message>
     <message>
         <location filename="../qml/pages/About.qml" line="22"/>
         <source>Info</source>
-        <translation>Información</translation>
+        <translation>Informacja</translation>
     </message>
     <message>
         <location filename="../qml/pages/About.qml" line="54"/>
         <source>Version</source>
-        <translation>Versión</translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../qml/pages/About.qml" line="59"/>
         <source>&quot;Timers for cooking&quot;</source>
-        <translation>&quot;Temporizadores para la cocina&quot;</translation>
+        <translation>Liczniki dla gotowania</translation>
     </message>
     <message>
         <location filename="../qml/pages/About.qml" line="65"/>
@@ -34,47 +34,47 @@
     <message>
         <location filename="../qml/pages/DishEdit.qml" line="23"/>
         <source>Save</source>
-        <translation>Guardar</translation>
+        <translation>Zapisz</translation>
     </message>
     <message>
         <location filename="../qml/pages/DishEdit.qml" line="24"/>
         <source>Cancel</source>
-        <translation>Cancelar</translation>
+        <translation>Anuluj</translation>
     </message>
     <message>
         <location filename="../qml/pages/DishEdit.qml" line="54"/>
         <source>Deleting</source>
-        <translation>Borrando</translation>
+        <translation>Kasowanie</translation>
     </message>
     <message>
         <location filename="../qml/pages/DishEdit.qml" line="64"/>
         <source>Dish name</source>
-        <translation>Nombre del plato</translation>
+        <translation>Nazwa dania</translation>
     </message>
     <message>
         <location filename="../qml/pages/DishEdit.qml" line="81"/>
         <source>Hours</source>
-        <translation>Horas</translation>
+        <translation>Godziny</translation>
     </message>
     <message>
         <location filename="../qml/pages/DishEdit.qml" line="108"/>
         <source>minutes</source>
-        <translation>minutos</translation>
+        <translation>minuty</translation>
     </message>
     <message>
         <location filename="../qml/pages/DishEdit.qml" line="136"/>
         <source>seconds</source>
-        <translation>segundos</translation>
+        <translation>sekundy</translation>
     </message>
     <message>
         <location filename="../qml/pages/DishEdit.qml" line="163"/>
         <source>No dishes defined. Press the plus button to add one.</source>
-        <translation>No se ha definido ningún plato. Presiona el botón más para añadir uno.</translation>
+        <translation>Brak zdefiniowanych dań. Naciśnij plus aby dodać.</translation>
     </message>
     <message>
         <location filename="../qml/pages/DishEdit.qml" line="174"/>
         <source>New dish</source>
-        <translation>Nuevo plato</translation>
+        <translation>Nowe danie</translation>
     </message>
 </context>
 <context>
@@ -82,7 +82,7 @@
     <message>
         <location filename="../qml/pages/DishPage.qml" line="88"/>
         <source>No dishes defined. Choose &quot;Edit Dishes&quot; from the pulley menu.</source>
-        <translation>No se ha definido ningún plato. Elige &quot;Editar platos&quot; en el menú desplegable.</translation>
+        <translation>Brak zdefiniowanych dań. Wybierz &quot;Edytuj Dania&quot; z wysuwanego menu.</translation>
     </message>
 </context>
 <context>
@@ -91,29 +91,29 @@
         <location filename="../qml/pages/MainPage.qml" line="258"/>
         <location filename="../qml/pages/MainPage.qml" line="262"/>
         <source>ready</source>
-        <translation>listo</translation>
+        <translation>gotowe</translation>
     </message>
     <message>
         <location filename="../qml/pages/MainPage.qml" line="362"/>
         <source>About</source>
-        <translation>Acerca de</translation>
+        <translation>O</translation>
     </message>
     <message>
         <location filename="../qml/pages/MainPage.qml" line="366"/>
         <source>Settings</source>
-        <translation>Ajustes</translation>
+        <translation>Ustawienia</translation>
     </message>
     <message>
         <location filename="../qml/pages/MainPage.qml" line="370"/>
         <source>Edit dishes</source>
-        <translation>Editar platos</translation>
+        <translation>Edytuj dania</translation>
     </message>
     <message>
         <location filename="../qml/pages/MainPage.qml" line="405"/>
         <location filename="../qml/pages/MainPage.qml" line="623"/>
         <location filename="../qml/pages/MainPage.qml" line="838"/>
         <source>Dish</source>
-        <translation>Plato</translation>
+        <translation>Danie</translation>
     </message>
     <message>
         <location filename="../qml/pages/MainPage.qml" line="453"/>
@@ -123,14 +123,14 @@
         <location filename="../qml/pages/MainPage.qml" line="885"/>
         <location filename="../qml/pages/MainPage.qml" line="887"/>
         <source>Stop</source>
-        <translation>Parar</translation>
+        <translation>Stop</translation>
     </message>
     <message>
         <location filename="../qml/pages/MainPage.qml" line="454"/>
         <location filename="../qml/pages/MainPage.qml" line="671"/>
         <location filename="../qml/pages/MainPage.qml" line="886"/>
         <source>Start</source>
-        <translation>Iniciar</translation>
+        <translation>Start</translation>
     </message>
 </context>
 <context>
@@ -138,47 +138,47 @@
     <message>
         <location filename="../qml/pages/SettingPage.qml" line="44"/>
         <source>Save</source>
-        <translation>Guardar</translation>
+        <translation>Zapisz</translation>
     </message>
     <message>
         <location filename="../qml/pages/SettingPage.qml" line="45"/>
         <source>Cancel</source>
-        <translation>Cancelar</translation>
+        <translation>Anuluj</translation>
     </message>
     <message>
         <location filename="../qml/pages/SettingPage.qml" line="49"/>
         <source>Settings</source>
-        <translation>Ajustes</translation>
+        <translation>Ustawienia</translation>
     </message>
     <message>
         <location filename="../qml/pages/SettingPage.qml" line="55"/>
         <source>Keep backlight on</source>
-        <translation>Mantener la retroiluminación</translation>
+        <translation>Włącz podświetlenie</translation>
     </message>
     <message>
         <location filename="../qml/pages/SettingPage.qml" line="56"/>
         <source>Prevent screen from dimming.</source>
-        <translation>Evitar que la pantalla se apague.</translation>
+        <translation>Nie wygaszaj ekranu.</translation>
     </message>
     <message>
         <location filename="../qml/pages/SettingPage.qml" line="62"/>
         <source>Show additional banner</source>
-        <translation>Mostrar banner adicional</translation>
+        <translation>Pokaż dodatkowy pasek</translation>
     </message>
     <message>
         <location filename="../qml/pages/SettingPage.qml" line="63"/>
         <source>Notification banner in upper screen.</source>
-        <translation>Banner de notificación en la parte superior de la pantalla.</translation>
+        <translation>Pasek powiadomień w górnej części ekranu.</translation>
     </message>
     <message>
         <location filename="../qml/pages/SettingPage.qml" line="81"/>
         <source>Language:</source>
-        <translation>Idioma:</translation>
+        <translation>Język:</translation>
     </message>
     <message>
         <location filename="../qml/pages/SettingPage.qml" line="211"/>
         <source>Change of language will be active after restarting the application.</source>
-        <translation>El cambio de idioma se aplicará después de reiniciar la aplicación.</translation>
+        <translation>Język zostanie zmieniony po ponownym uruchomieniu programu.</translation>
     </message>
 </context>
 <context>
@@ -186,12 +186,12 @@
     <message>
         <location filename="../qml/pages/TimeDialog.qml" line="52"/>
         <source>Save</source>
-        <translation>Guardar</translation>
+        <translation>Zapisz</translation>
     </message>
     <message>
         <location filename="../qml/pages/TimeDialog.qml" line="53"/>
         <source>Cancel</source>
-        <translation>Cancelar</translation>
+        <translation>Anuluj</translation>
     </message>
 </context>
 <context>
@@ -201,7 +201,7 @@
         <location filename="../qml/cooktimer.qml" line="13"/>
         <location filename="../qml/cooktimer.qml" line="14"/>
         <source>Dish</source>
-        <translation>Plato</translation>
+        <translation>Danie</translation>
     </message>
 </context>
 </TS>
