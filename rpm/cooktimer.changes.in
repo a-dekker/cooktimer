@@ -8,71 +8,91 @@
 # * date Author's Name <author's email> version-release
 # - Summary of changes
 
-* tue Mar 31 2015 Jack Tar <jack.tar@example.com> 0.0.1-19
+* thu Jul 16 2015 Arno Dekker <jack.tar@example.com> 0.0.1-24
+- Danish translation added (thanks Peter Jespersen)
+
+* fri Jul 6 2015 Arno Dekker <jack.tar@example.com> 0.0.1-23
+- Polish translation added (thanks atlochowski)
+
+* fri Jun 26 2015 Arno Dekker <jack.tar@example.com> 0.0.1-22
+- System default language can be overruled in the settings
+- Small layout change in time adjustment screen
+- Changed popup to nemo notification
+
+* sat Jun 2 2015 Arno Dekker <jack.tar@example.com> 0.0.1-21
+- moved dish/time text in time dialog above clock for better visibility
+
+* sat May 2 2015 Arno Dekker <jack.tar@example.com> 0.0.1-20
+- added Greek language (thanks to beonex)
+
+* sat May 2 2015 Arno Dekker <jack.tar@example.com> 0.0.1-20
+- added Greek language (thanks to beonex)
+
+* tue Mar 31 2015 Arno Dekker <jack.tar@example.com> 0.0.1-19
 - time indicator below progressbar
 
-* tue Mar 31 2015 Jack Tar <jack.tar@example.com> 0.0.1-18
+* tue Mar 31 2015 Arno Dekker <jack.tar@example.com> 0.0.1-18
 - Added spanish translations (thanks to carmenfdezb)
 - Updated dutch translations
 - Some changes in progressbar
 
-* wed Mar 08 2015 Jack Tar <jack.tar@example.com> 0.0.1-17
+* wed Mar 08 2015 Arno Dekker <jack.tar@example.com> 0.0.1-17
 - Replaced optional progresscircles with progressbar
 
-* wed Jan 14 2015 Jack Tar <jack.tar@example.com> 0.0.1-16
+* wed Jan 14 2015 Arno Dekker <jack.tar@example.com> 0.0.1-16
 - Added French, Turkish, Finnish and German translations
 
-* sat Jan 10 2015 Jack Tar <jack.tar@example.com> 0.0.1-15
+* sat Jan 10 2015 Arno Dekker <jack.tar@example.com> 0.0.1-15
 - Minor changes in setup page/disable start button when applicable
 
-* sun Dec 26 2014 Jack Tar <jack.tar@example.com> 0.0.1-14
+* sun Dec 26 2014 Arno Dekker <jack.tar@example.com> 0.0.1-14
 - Russian translation completed
 
-* sun Dec 21 2014 Jack Tar <jack.tar@example.com> 0.0.1-13
+* sun Dec 21 2014 Arno Dekker <jack.tar@example.com> 0.0.1-13
 - Added Czech and Russian, Dutch updated
 - Introduced optional progress circles
 
-* wed Dec 10 2014 Jack Tar <jack.tar@example.com> 0.0.1-12
+* wed Dec 10 2014 Arno Dekker <jack.tar@example.com> 0.0.1-12
 - Added internationalization on request of eson
 - Dutch (not supported as language) and Swedish language added
 
-* sat Dec 6 2014 Jack Tar <jack.tar@example.com> 0.0.1-11
+* sat Dec 6 2014 Arno Dekker <jack.tar@example.com> 0.0.1-11
 - small haptic feedback for start/stop button
 - fix: only last executed alarm timer should have highlighted color
 - fixed wrong size of 3rd start button
 - option for additional banner when alarm rings
 
-* mon Nov 3 2014 Jack Tar <jack.tar@example.com> 0.0.1-10
+* mon Nov 3 2014 Arno Dekker <jack.tar@example.com> 0.0.1-10
 - Touching running timer will pause the timer
 - Small changes in mainscreen
 
-* sat Oct 18 2014 Jack Tar <jack.tar@example.com> 0.0.1-9
+* sat Oct 18 2014 Arno Dekker <jack.tar@example.com> 0.0.1-9
 - Adapted for other resolutions (tested on Nexus 7 v.2012)
 
-* fri Oct 17 2014 Jack Tar <jack.tar@example.com> 0.0.1-8
+* fri Oct 17 2014 Arno Dekker <jack.tar@example.com> 0.0.1-8
 - Remaining time label now always updated if timer is not running
 
-* Tue Aug 26 2014 Jack Tar <jack.tar@example.com> 0.0.1-7
+* Tue Aug 26 2014 Arno Dekker <jack.tar@example.com> 0.0.1-7
 - Cover time colors identical to main page
 - More testing/fixing of deep sleep issues
 
-* Sun Aug 24 2014 Jack Tar <jack.tar@example.com> 0.0.1-6
+* Sun Aug 24 2014 Arno Dekker <jack.tar@example.com> 0.0.1-6
 - Coverpage now shows dishes
 - Small bugfix in selecting dish
 
-* Sat Aug 23 2014 Jack Tar <jack.tar@example.com> 0.0.1-5
+* Sat Aug 23 2014 Arno Dekker <jack.tar@example.com> 0.0.1-5
 - Case insensitive sort in dishlist
 - Dish timer number added to initial dish text
 - Added background to mainpage and timer dialog
 
-* Thu Apr 21 2014 Jack Tar <jack.tar@example.com> 0.0.1-4
+* Thu Apr 21 2014 Arno Dekker <jack.tar@example.com> 0.0.1-4
 - Trying to fix deep sleep issues
 
-* Sun Apr 15 2014 Jack Tar <jack.tar@example.com> 0.0.1-3
+* Sun Apr 15 2014 Arno Dekker <jack.tar@example.com> 0.0.1-3
 - Added seconds to Edit dish screen
 
-* Sun Apr 14 2014 Jack Tar <jack.tar@example.com> 0.0.1-2
+* Sun Apr 14 2014 Arno Dekker <jack.tar@example.com> 0.0.1-2
 - Added seconds to manual time picking
 
-* Sun Apr 13 2014 Jack Tar <jack.tar@example.com> 0.0.1-1
+* Sun Apr 13 2014 Arno Dekker <jack.tar@example.com> 0.0.1-1
 - Initial version

@@ -54,14 +54,14 @@ Dialog {
                 width: parent.width
                 text: qsTr("Keep backlight on")
                 description: qsTr("Prevent screen from dimming.")
-                checked: myset.value("backlight") == "true"
+                checked: myset.value("backlight") === "true"
             }
             TextSwitch {
                 id: popup
                 width: parent.width
                 text: qsTr("Show additional banner")
                 description: qsTr("Notification banner in upper screen.")
-                checked: myset.value("popup") == "true"
+                checked: myset.value("popup") === "true"
             }
 
             //      TextSwitch {
@@ -89,38 +89,41 @@ Dialog {
                             text: "Czech/Čeština"
                         } // 1
                         MenuItem {
-                            text: "Dutch/Nederlands"
+                            text: "Danish/Danske"
                         } // 2
                         MenuItem {
-                            text: "English/English"
+                            text: "Dutch/Nederlands"
                         } // 3
                         MenuItem {
-                            text: "Finnish/Suomalainen"
+                            text: "English/English"
                         } // 4
                         MenuItem {
-                            text: "French/Français"
+                            text: "Finnish/Suomalainen"
                         } // 5
                         MenuItem {
-                            text: "German/Deutsch"
+                            text: "French/Français"
                         } // 6
                         MenuItem {
-                            text: "Greek/Ελληνικά"
+                            text: "German/Deutsch"
                         } // 7
                         MenuItem {
-                            text: "Polish/Polski"
+                            text: "Greek/Ελληνικά"
                         } // 8
                         MenuItem {
-                            text: "Russian/Русский"
+                            text: "Polish/Polski"
                         } // 9
                         MenuItem {
-                            text: "Spanish/Español"
+                            text: "Russian/Русский"
                         } // 10
                         MenuItem {
-                            text: "Swedish/Svensk"
+                            text: "Spanish/Español"
                         } // 11
                         MenuItem {
-                            text: "Turkish/Türk"
+                            text: "Swedish/Svensk"
                         } // 12
+                        MenuItem {
+                            text: "Turkish/Türk"
+                        } // 13
                     }
                     // The next two converter functions decouple the alphabetical language list
                     // index from the internal settings index, which cannot be changed for legacy reasons
@@ -143,6 +146,9 @@ Dialog {
                         case Languages.CS:
                             // Czech
                             return GlobVars.czech
+                        case Languages.DA:
+                            // Danish
+                            return GlobVars.danish
                         case Languages.NL:
                             // Dutch
                             return GlobVars.dutch
@@ -185,6 +191,8 @@ Dialog {
                             return Languages.CS // Czech
                         case GlobVars.dutch:
                             return Languages.NL // Dutch
+                        case GlobVars.danish:
+                            return Languages.DA // Danish
                         case GlobVars.spanish:
                             return Languages.ES // Spanish
                         case GlobVars.french:

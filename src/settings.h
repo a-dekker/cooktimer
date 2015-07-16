@@ -47,6 +47,7 @@ public:
         EL,    // Greek
         TR_TR, // Turkish
         PL,    // Polish
+        DA,    // Danish
         INVALID
     };
 };

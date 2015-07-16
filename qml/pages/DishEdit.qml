@@ -178,7 +178,7 @@ Dialog {
 
     onDone: {
         console.log('Done:', (result === DialogResult.Accepted))
-        if (result == DialogResult.Accepted) {
+        if (result === DialogResult.Accepted) {
             // first delete every Dish record
             DB.RemoveAllDishes()
             // Then loop though current list and save

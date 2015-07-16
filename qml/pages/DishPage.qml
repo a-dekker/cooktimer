@@ -40,13 +40,13 @@ Page {
             contentHeight: Theme.itemSizeMedium // two line delegate
             function setDish() {
                 GlobVars.myDish = Dish
-                if (GlobVars.myCurrentTimer == 1) {
+                if (GlobVars.myCurrentTimer === 1) {
                    mainapp.dishText1 = Dish
                 }
-                if (GlobVars.myCurrentTimer == 2) {
+                if (GlobVars.myCurrentTimer === 2) {
                    mainapp.dishText2 = Dish
                 }
-                if (GlobVars.myCurrentTimer == 3) {
+                if (GlobVars.myCurrentTimer === 3) {
                    mainapp.dishText3 = Dish
                 }
                 GlobVars.myDuration = Duration

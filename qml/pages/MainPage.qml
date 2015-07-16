@@ -80,7 +80,7 @@ Page {
     }
 
     onStatusChanged: {
-        if (status == PageStatus.Activating) {
+        if (status === PageStatus.Activating) {
             if (GlobVars.myCurrentTimer == "1") {
                 // User has navigated back from this page
                 myGlobalDish1 = GlobVars.myDish
@@ -193,7 +193,7 @@ Page {
         myGlobalDish3 = GlobVars.myDish
         myGlobalDuration3 = GlobVars.myDuration
         DB.initializeDB()
-        if (myset.value("backlight") == "true") {
+        if (myset.value("backlight") === "true") {
             timer.start()
         }
     }
@@ -254,7 +254,7 @@ Page {
     }
 
     function alarm(alarmtxt) {
-        if (myset.value("popup") == "true") {
+        if (myset.value("popup") === "true") {
             banner("info", alarmtxt + " " + qsTr("ready"))
         }
         // pageStack.push(Qt.resolvedUrl("AlarmDialogBase.qml"))
@@ -452,7 +452,7 @@ Page {
                 width: (page.width - (Theme.paddingLarge * 2)) / 4
                 text: ticker1.running || isPaused1 ? qsTr(
                                                          "Stop") : qsTr("Start")
-                enabled: timer1.text == "00:00:00" && start1.text != qsTr(
+                enabled: timer1.text === "00:00:00" && start1.text !== qsTr(
                              "Stop") ? false : true
                 onClicked: {
                     progressBar1.value = 0
@@ -464,7 +464,7 @@ Page {
                     var sec = _totalsecs1 = tt[0] * 3600 + tt[1] * 60 + tt[2] * 1
                     remainingTime1.seconds = sec
                     GlobVars.myDuration = remainingTime1.text
-                    if (remainingTime1.text != "00:00:00" || ticker1.running) {
+                    if (remainingTime1.text !== "00:00:00" || ticker1.running) {
                         _lastTick1 = Math.round(Date.now() / 1000)
                         if (!isPaused1) {
                             buttonBuzz.play()
@@ -555,7 +555,7 @@ Page {
                     } else if (seconds1 > 0 && isPaused1) {
                         isPaused1 = false
                         GlobVars.myDuration = remainingTime1.text
-                        if (remainingTime1.text != "00:00:00"
+                        if (remainingTime1.text !== "00:00:00"
                                 || ticker1.running) {
                             _lastTick1 = Math.round(Date.now() / 1000)
                             ticker1.running = !ticker1.running
@@ -669,7 +669,7 @@ Page {
                 width: (page.width - (Theme.paddingLarge * 2)) / 4
                 text: ticker2.running || isPaused2 ? qsTr(
                                                          "Stop") : qsTr("Start")
-                enabled: timer2.text == "00:00:00" && start2.text != qsTr(
+                enabled: timer2.text === "00:00:00" && start2.text !== qsTr(
                              "Stop") ? false : true
                 onClicked: {
                     progressBar2.value = 0
@@ -681,7 +681,7 @@ Page {
                     var sec = _totalsecs2 = tt[0] * 3600 + tt[1] * 60 + tt[2] * 1
                     remainingTime2.seconds = sec
                     GlobVars.myDuration = remainingTime2.text
-                    if (remainingTime2.text != "00:00:00" || ticker2.running) {
+                    if (remainingTime2.text !== "00:00:00" || ticker2.running) {
                         _lastTick2 = Math.round(Date.now() / 1000)
                         if (!isPaused2) {
                             buttonBuzz.play()
@@ -770,7 +770,7 @@ Page {
                     } else if (seconds2 > 0 && isPaused2) {
                         isPaused2 = false
                         GlobVars.myDuration = remainingTime2.text
-                        if (remainingTime2.text != "00:00:00"
+                        if (remainingTime2.text !== "00:00:00"
                                 || ticker2.running) {
                             _lastTick2 = Math.round(Date.now() / 1000)
                             ticker2.running = !ticker2.running
@@ -884,7 +884,7 @@ Page {
                 width: (page.width - (Theme.paddingLarge * 2)) / 4
                 text: ticker3.running || isPaused3 ? qsTr(
                                                          "Stop") : qsTr("Start")
-                enabled: timer3.text == "00:00:00" && start3.text != qsTr(
+                enabled: timer3.text === "00:00:00" && start3.text !== qsTr(
                              "Stop") ? false : true
                 onClicked: {
                     progressBar3.value = 0
@@ -896,7 +896,7 @@ Page {
                     var sec = _totalsecs3 = tt[0] * 3600 + tt[1] * 60 + tt[2] * 1
                     remainingTime3.seconds = sec
                     GlobVars.myDuration = remainingTime3.text
-                    if (remainingTime3.text != "00:00:00" || ticker3.running) {
+                    if (remainingTime3.text !== "00:00:00" || ticker3.running) {
                         _lastTick3 = Math.round(Date.now() / 1000)
                         if (!isPaused3) {
                             buttonBuzz.play()
@@ -985,7 +985,7 @@ Page {
                     } else if (seconds3 > 0 && isPaused3) {
                         isPaused3 = false
                         GlobVars.myDuration = remainingTime3.text
-                        if (remainingTime3.text != "00:00:00"
+                        if (remainingTime3.text !== "00:00:00"
                                 || ticker3.running) {
                             _lastTick3 = Math.round(Date.now() / 1000)
                             ticker3.running = !ticker3.running

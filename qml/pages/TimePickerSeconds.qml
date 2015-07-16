@@ -1,3 +1,4 @@
+
 /****************************************************************************************
 **
 ** Copyright (C) 2013 Jolla Ltd.
@@ -39,15 +40,13 @@
 ** nightsoft@outlook.com
 **
 ****************************************************************************************/
-
-
 import QtQuick 2.0
 import Sailfish.Silica 1.0
+
 
 // TODO: Investigate using one quarter of the image mirrored in two directions
 // TODO: Investigate using a scaled down version of the image
 // Nightmare TODO: reduce overall size
-
 Item {
     id: timePickerSecond
 
@@ -56,7 +55,7 @@ Item {
     property int second
     property int hourMode: DateTime.TwentyFourHours
 
-    property date time: new Date(0,0,0, hour, minute)
+    property date time: new Date(0, 0, 0, hour, minute)
     property string timeText: _formatTime()
 
     // the original dimensions = 408x408
@@ -75,7 +74,6 @@ Item {
         horizontalAlignment: Image.AlignHCenter
         verticalAlignment: Image.AlignVCenter
     }
-
 
     onHourChanged: {
         hour = (hour < 0 ? 0 : (hour > 23 ? 23 : hour))
@@ -125,9 +123,7 @@ Item {
     }
 
     function _formatTime() {
-        var fmt = (hourMode == DateTime.DefaultHours ? Formatter.TimeValue
-                                                     : (hourMode == DateTime.TwentyFourHours ? Formatter.TimeValueTwentyFourHours
-                                                                                             : Formatter.TimeValueTwelveHours))
+        var fmt = (hourMode === DateTime.DefaultHours ? Formatter.TimeValue : (hourMode === DateTime.TwentyFourHours ? Formatter.TimeValueTwentyFourHours : Formatter.TimeValueTwelveHours))
         var date = new Date()
         date.setHours(timePickerSecond.hour)
         date.setMinutes(timePickerSecond.minute)
@@ -145,13 +141,8 @@ Item {
         id: minutesCircle
         anchors.centerIn: secondsCircle
         source: "image://Theme/timepicker"
-        opacity: 0//0.1
-
+        opacity: 0 //0.1
     }
-
-
-
-
 
     GlassItem {
         id: hourIndicator
@@ -165,14 +156,17 @@ Item {
 
         transform: Translate {
             // The hours circle ends at 132px from the center
-            x: _scaleRatio*96 * _xTranslation(hourIndicator.value, 12)
-            y: -_scaleRatio*96 * _yTranslation(hourIndicator.value, 12)
+            x: _scaleRatio * 96 * _xTranslation(hourIndicator.value, 12)
+            y: -_scaleRatio * 96 * _yTranslation(hourIndicator.value, 12)
         }
 
         Behavior on value {
             id: hoursAnimation
-            SmoothedAnimation { velocity: 30 }
-            enabled: hourIndicator.animationEnabled && (!mouse.isMoving || mouse.isLagging)
+            SmoothedAnimation {
+                velocity: 30
+            }
+            enabled: hourIndicator.animationEnabled && (!mouse.isMoving
+                                                        || mouse.isLagging)
         }
     }
 
@@ -187,13 +181,15 @@ Item {
 
         transform: Translate {
             // The minutes band is 72px wide, ending at 204px from the center
-            x: _scaleRatio*168 * _xTranslation(minuteIndicator.value, 60)
-            y: -_scaleRatio*168 * _yTranslation(minuteIndicator.value, 60)
+            x: _scaleRatio * 168 * _xTranslation(minuteIndicator.value, 60)
+            y: -_scaleRatio * 168 * _yTranslation(minuteIndicator.value, 60)
         }
 
         Behavior on value {
             id: minutesAnimation
-            SmoothedAnimation { velocity: 80 }
+            SmoothedAnimation {
+                velocity: 80
+            }
             enabled: !mouse.isMoving || mouse.isLagging
         }
     }
@@ -209,13 +205,15 @@ Item {
 
         transform: Translate {
             // The minutes band is 72px wide, ending at 204px from the center
-            x: _scaleRatio*244 * _xTranslation(secondIndicator.value, 60)
-            y: -_scaleRatio*244 * _yTranslation(secondIndicator.value, 60)
+            x: _scaleRatio * 244 * _xTranslation(secondIndicator.value, 60)
+            y: -_scaleRatio * 244 * _yTranslation(secondIndicator.value, 60)
         }
 
         Behavior on value {
             id: secondAnimation
-            SmoothedAnimation { velocity: 80 }
+            SmoothedAnimation {
+                velocity: 80
+            }
             enabled: !mouse.isMoving || mouse.isLagging
         }
     }
@@ -240,7 +238,7 @@ Item {
             var result = Math.atan(y / x) / (Math.PI * 2) * 360
 
             // Adjust for various quadrants
-            if (x < 0)  {
+            if (x < 0) {
                 result += 180
             } else if (y < 0) {
                 result += 360
@@ -256,7 +254,10 @@ Item {
 
         function remapMouse(mouseX, mouseY) {
             // Return the mouse coordinates in cartesian coords relative to the circle center
-            return { x: mouseX - (width / 2), y: 0 - (mouseY - (height / 2)) }
+            return {
+                x: mouseX - (width / 2),
+                y: 0 - (mouseY - (height / 2))
+            }
         }
 
         function propertyForRadius(radius) {
@@ -265,7 +266,7 @@ Item {
                 return 1 // Hours
             } else if (radius < 204) {
                 return 2 // Minutes
-            }else if (radius < 280) {
+            } else if (radius < 280) {
                 return 3 // seconds
             }
             return 0
@@ -273,7 +274,8 @@ Item {
 
         function updateForAngle(angle) {
             // Update the selected property for the specified angular position
-            if (changingProperty == 1) { // Hours
+            if (changingProperty == 1) {
+                // Hours
                 // Map angular position to 0-11
                 var h = remapAngle(angle, 12)
                 var delta = (h - hourIndicator.value) % 12
@@ -298,7 +300,8 @@ Item {
                     target += ((-multiple + 1) * 24)
                 }
                 timePickerSecond.hour = (target % 24)
-            } else if (changingProperty == 2){ // Minutes
+            } else if (changingProperty == 2) {
+                // Minutes
                 // Map angular position to 0-59
                 var m = remapAngle(angle, 60)
                 var delta = (m - minuteIndicator.value) % 60
@@ -318,7 +321,8 @@ Item {
                 minuteIndicator.value += delta
 
                 timePickerSecond.minute = m
-            }else { // Seconds
+            } else {
+                // Seconds
                 // Map angular position to 0-59
                 var m = remapAngle(angle, 60)
                 var delta = (m - secondIndicator.value) % 60
@@ -373,4 +377,3 @@ Item {
         }
     }
 }
-
