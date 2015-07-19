@@ -8,6 +8,10 @@
 # * date Author's Name <author's email> version-release
 # - Summary of changes
 
+* sat Jul 18 2015 Arno Dekker <jack.tar@example.com> 0.0.1-25
+- Some changes in timepick screen
+- Change dishname temporarily in timepick screen
+
 * thu Jul 16 2015 Arno Dekker <jack.tar@example.com> 0.0.1-24
 - Danish translation added (thanks Peter Jespersen)
 

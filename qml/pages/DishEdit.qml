@@ -183,7 +183,7 @@ Dialog {
             DB.RemoveAllDishes()
             // Then loop though current list and save
             for (var i = 0; i < dishlist.model.count; ++i) {
-                DB.writeDish(dishlist.model.get(i).Dish, dishlist.model.get(
+                DB.writeDish(dishlist.model.get(i).Dish.trim(), dishlist.model.get(
                                  i).Duration_hours + ':' + dishlist.model.get(
                                  i).Duration_minutes + ':' + dishlist.model.get(
                                  i).Duration_seconds)

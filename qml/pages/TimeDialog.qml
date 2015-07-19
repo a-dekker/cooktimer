@@ -37,11 +37,9 @@
 import QtQuick 2.0
 import Sailfish.Silica 1.0
 
-
-
     Dialog {
         id: diaTime
-        anchors.fill: parent
+        // anchors.fill: parent
         canAccept: true
         property string infotext: ""
         property int hour: 0
@@ -57,6 +55,11 @@ import Sailfish.Silica 1.0
             hour=pickTime.hour
             second=pickTime.second
             minute=pickTime.minute
+            if (nameOfDish.text.trim() === "" ) {
+               infotext=diaTime.infotext
+            } else {
+                infotext=nameOfDish.text.substring(0, 16).trim()
+            }
         }
 
         onRejected: {
@@ -71,16 +74,32 @@ import Sailfish.Silica 1.0
             PageHeader {
                 title: " "
             }
-            Label {
-                text: diaTime.infotext
+            Item {
+                height: nameOfDish.height - Theme.paddingLarge * 2
                 anchors.horizontalCenter: parent.horizontalCenter
-                font.pixelSize: Theme.fontSizeLarge
+                width: nameOfDish.width + Theme.paddingLarge * 2
+                Rectangle {
+                    anchors.fill: parent
+                    opacity: 0.1
+                    radius: 8.0
+                }
+                TextField {
+                    id: nameOfDish
+                    color: Theme.highlightColor
+                    EnterKey.enabled: text.trim().length > 0
+                    text: diaTime.infotext
+                    anchors.horizontalCenter: parent.horizontalCenter
+                    font.pixelSize: Theme.fontSizeLarge
+                    EnterKey.onClicked: {
+                        nameOfDish.focus = false
+                    }
+                }
             }
             Label {
-                text: pickTime.hour + " h " + pickTime.minute + " min " + pickTime.second +" sec "
+                text: ('0' + pickTime.hour).slice(-2) + ":" + ('0' + pickTime.minute).slice(-2) + ":" + ('0' + pickTime.second).slice(-2)
                 color: Theme.secondaryColor
                 anchors.horizontalCenter: parent.horizontalCenter
-                font.pixelSize: Theme.fontSizeSmall
+                font.pixelSize: Theme.fontSizeLarge
                 font.family: Theme.fontSizeSmall
             }
             TimePickerSeconds {
@@ -92,6 +111,4 @@ import Sailfish.Silica 1.0
             }
         }
 
-
     }
-

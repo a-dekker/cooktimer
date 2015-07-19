@@ -110,25 +110,25 @@
     </message>
     <message>
         <location filename="../qml/pages/MainPage.qml" line="405"/>
-        <location filename="../qml/pages/MainPage.qml" line="623"/>
-        <location filename="../qml/pages/MainPage.qml" line="838"/>
+        <location filename="../qml/pages/MainPage.qml" line="624"/>
+        <location filename="../qml/pages/MainPage.qml" line="840"/>
         <source>Dish</source>
         <translation>Gerecht</translation>
     </message>
     <message>
-        <location filename="../qml/pages/MainPage.qml" line="453"/>
-        <location filename="../qml/pages/MainPage.qml" line="455"/>
-        <location filename="../qml/pages/MainPage.qml" line="670"/>
+        <location filename="../qml/pages/MainPage.qml" line="454"/>
+        <location filename="../qml/pages/MainPage.qml" line="456"/>
         <location filename="../qml/pages/MainPage.qml" line="672"/>
-        <location filename="../qml/pages/MainPage.qml" line="885"/>
-        <location filename="../qml/pages/MainPage.qml" line="887"/>
+        <location filename="../qml/pages/MainPage.qml" line="674"/>
+        <location filename="../qml/pages/MainPage.qml" line="888"/>
+        <location filename="../qml/pages/MainPage.qml" line="890"/>
         <source>Stop</source>
         <translation>Stop</translation>
     </message>
     <message>
-        <location filename="../qml/pages/MainPage.qml" line="454"/>
-        <location filename="../qml/pages/MainPage.qml" line="671"/>
-        <location filename="../qml/pages/MainPage.qml" line="886"/>
+        <location filename="../qml/pages/MainPage.qml" line="455"/>
+        <location filename="../qml/pages/MainPage.qml" line="673"/>
+        <location filename="../qml/pages/MainPage.qml" line="889"/>
         <source>Start</source>
         <translation>Start</translation>
     </message>
@@ -176,7 +176,7 @@
         <translation>Taal:</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SettingPage.qml" line="211"/>
+        <location filename="../qml/pages/SettingPage.qml" line="219"/>
         <source>Change of language will be active after restarting the application.</source>
         <translation>Taal aanpassing zal actief worden na het herstarten van de applicatie.</translation>
     </message>
@@ -184,14 +184,22 @@
 <context>
     <name>TimeDialog</name>
     <message>
-        <location filename="../qml/pages/TimeDialog.qml" line="52"/>
+        <location filename="../qml/pages/TimeDialog.qml" line="50"/>
         <source>Save</source>
         <translation>Opslaan</translation>
     </message>
     <message>
-        <location filename="../qml/pages/TimeDialog.qml" line="53"/>
+        <location filename="../qml/pages/TimeDialog.qml" line="51"/>
         <source>Cancel</source>
         <translation>Annuleren</translation>
+    </message>
+    <message>
+        <source>minutes</source>
+        <translation type="obsolete">minuten</translation>
+    </message>
+    <message>
+        <source>seconds</source>
+        <translation type="obsolete">seconden</translation>
     </message>
 </context>
 <context>

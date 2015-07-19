@@ -426,6 +426,7 @@ Page {
                                                     })
                         dialog.accepted.connect(function () {
                             GlobVars.myDuration = " "
+                            myGlobalDish1 = GlobVars.myDish = mainapp.dishText1 = dialog.infotext
                             myGlobalDuration1 = (dialog.hour > 9 ? dialog.hour : "0" + dialog.hour)
                                     + ":" + (dialog.minute > 9 ? dialog.minute : "0"
                                                                  + dialog.minute) + ":"
@@ -644,6 +645,7 @@ Page {
                                                     })
                         dialog.accepted.connect(function () {
                             GlobVars.myDuration = " "
+                            myGlobalDish2 = GlobVars.myDish = mainapp.dishText2 = dialog.infotext
                             myGlobalDuration2 = (dialog.hour > 9 ? dialog.hour : "0" + dialog.hour)
                                     + ":" + (dialog.minute > 9 ? dialog.minute : "0"
                                                                  + dialog.minute) + ":"
@@ -859,6 +861,7 @@ Page {
                                                     })
                         dialog.accepted.connect(function () {
                             GlobVars.myDuration = " "
+                            myGlobalDish3 = GlobVars.myDish = mainapp.dishText3 = dialog.infotext
                             myGlobalDuration3 = (dialog.hour > 9 ? dialog.hour : "0" + dialog.hour)
                                     + ":" + (dialog.minute > 9 ? dialog.minute : "0"
                                                                  + dialog.minute) + ":"
