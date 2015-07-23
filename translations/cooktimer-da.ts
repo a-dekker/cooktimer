@@ -82,7 +82,7 @@
     <message>
         <location filename="../qml/pages/DishPage.qml" line="88"/>
         <source>No dishes defined. Choose &quot;Edit Dishes&quot; from the pulley menu.</source>
-        <translation>Ingen retter defineret. Vælg &quot;Rediger Retter&quot; fra topmenuen..</translation>
+        <translation>Ingen retter defineret. Vælg &quot;Rediger Retter&quot; fra topmenuen.</translation>
     </message>
 </context>
 <context>
@@ -168,7 +168,7 @@
     <message>
         <location filename="../qml/pages/SettingPage.qml" line="63"/>
         <source>Notification banner in upper screen.</source>
-        <translation>Påmindelser i toppen af skærmen</translation>
+        <translation>Påmindelser i toppen af skærm.</translation>
     </message>
     <message>
         <location filename="../qml/pages/SettingPage.qml" line="81"/>
@@ -176,9 +176,9 @@
         <translation>Sprog:</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SettingPage.qml" line="219"/>
+        <location filename="../qml/pages/SettingPage.qml" line="227"/>
         <source>Change of language will be active after restarting the application.</source>
-        <translation>Ændring af sprog vil først blive aktiveret efter programgenstart.</translation>
+        <translation>Ændring af sprog vil først blive aktiveret efter genstart af program.</translation>
     </message>
 </context>
 <context>
@@ -192,14 +192,6 @@
         <location filename="../qml/pages/TimeDialog.qml" line="51"/>
         <source>Cancel</source>
         <translation>Annuller</translation>
-    </message>
-    <message>
-        <source>minutes</source>
-        <translation type="obsolete">minutter</translation>
-    </message>
-    <message>
-        <source>seconds</source>
-        <translation type="obsolete">sekunder</translation>
     </message>
 </context>
 <context>

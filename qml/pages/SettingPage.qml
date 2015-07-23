@@ -86,44 +86,47 @@ Dialog {
                             text: "System default"
                         } // 0
                         MenuItem {
-                            text: "Czech/Čeština"
+                            text: "Catalan/Català"
                         } // 1
                         MenuItem {
-                            text: "Danish/Danske"
+                            text: "Czech/Čeština"
                         } // 2
                         MenuItem {
-                            text: "Dutch/Nederlands"
+                            text: "Danish/Danske"
                         } // 3
                         MenuItem {
-                            text: "English/English"
+                            text: "Dutch/Nederlands"
                         } // 4
                         MenuItem {
-                            text: "Finnish/Suomalainen"
+                            text: "English/English"
                         } // 5
                         MenuItem {
-                            text: "French/Français"
+                            text: "Finnish/Suomalainen"
                         } // 6
                         MenuItem {
-                            text: "German/Deutsch"
+                            text: "French/Français"
                         } // 7
                         MenuItem {
-                            text: "Greek/Ελληνικά"
+                            text: "German/Deutsch"
                         } // 8
                         MenuItem {
-                            text: "Polish/Polski"
+                            text: "Greek/Ελληνικά"
                         } // 9
                         MenuItem {
-                            text: "Russian/Русский"
+                            text: "Polish/Polski"
                         } // 10
                         MenuItem {
-                            text: "Spanish/Español"
+                            text: "Russian/Русский"
                         } // 11
                         MenuItem {
-                            text: "Swedish/Svensk"
+                            text: "Spanish/Español"
                         } // 12
                         MenuItem {
-                            text: "Turkish/Türk"
+                            text: "Swedish/Svensk"
                         } // 13
+                        MenuItem {
+                            text: "Turkish/Türk"
+                        } // 14
                     }
                     // The next two converter functions decouple the alphabetical language list
                     // index from the internal settings index, which cannot be changed for legacy reasons
@@ -143,6 +146,9 @@ Dialog {
                         case Languages.DE_DE:
                             // German
                             return GlobVars.german
+                        case Languages.CA:
+                            // Catalan
+                            return GlobVars.catalan
                         case Languages.CS:
                             // Czech
                             return GlobVars.czech
@@ -187,6 +193,8 @@ Dialog {
                             return Languages.FI // Finnish
                         case GlobVars.german:
                             return Languages.DE_DE // German
+                        case GlobVars.catalan:
+                            return Languages.CA // Catalan
                         case GlobVars.czech:
                             return Languages.CS // Czech
                         case GlobVars.dutch:

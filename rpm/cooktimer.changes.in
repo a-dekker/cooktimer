@@ -8,6 +8,9 @@
 # * date Author's Name <author's email> version-release
 # - Summary of changes
 
+* thu Jul 23 2015 Arno Dekker <jack.tar@example.com> 0.0.1-26
+- Catalan translation added (thanks mjoan)
+
 * sat Jul 18 2015 Arno Dekker <jack.tar@example.com> 0.0.1-25
 - Some changes in timepick screen
 - Change dishname temporarily in timepick screen
