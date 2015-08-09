@@ -8,6 +8,10 @@
 # * date Author's Name <author's email> version-release
 # - Summary of changes
 
+* sat Aug 08 2015 Arno Dekker <jack.tar@example.com> 0.0.1-27
+- Small change in alignment in dish page
+- Other time input method in dishedit page
+
 * thu Jul 23 2015 Arno Dekker <jack.tar@example.com> 0.0.1-26
 - Catalan translation added (thanks mjoan)
 

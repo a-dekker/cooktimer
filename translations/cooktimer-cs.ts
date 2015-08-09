@@ -32,47 +32,44 @@
 <context>
     <name>DishEdit</name>
     <message>
-        <location filename="../qml/pages/DishEdit.qml" line="23"/>
+        <location filename="../qml/pages/DishEdit.qml" line="17"/>
         <source>Save</source>
         <translation>Uložit</translation>
     </message>
     <message>
-        <location filename="../qml/pages/DishEdit.qml" line="24"/>
+        <location filename="../qml/pages/DishEdit.qml" line="18"/>
         <source>Cancel</source>
         <translation>Zrušit</translation>
     </message>
     <message>
-        <location filename="../qml/pages/DishEdit.qml" line="54"/>
+        <location filename="../qml/pages/DishEdit.qml" line="47"/>
         <source>Deleting</source>
         <translation>Maže se</translation>
     </message>
     <message>
-        <location filename="../qml/pages/DishEdit.qml" line="64"/>
+        <location filename="../qml/pages/DishEdit.qml" line="57"/>
         <source>Dish name</source>
         <translation>Název pokrmu</translation>
     </message>
     <message>
-        <location filename="../qml/pages/DishEdit.qml" line="81"/>
         <source>Hours</source>
-        <translation>hodin</translation>
+        <translation type="vanished">hodin</translation>
     </message>
     <message>
-        <location filename="../qml/pages/DishEdit.qml" line="108"/>
         <source>minutes</source>
-        <translation>minut</translation>
+        <translation type="vanished">minut</translation>
     </message>
     <message>
-        <location filename="../qml/pages/DishEdit.qml" line="136"/>
         <source>seconds</source>
-        <translation>sekund</translation>
+        <translation type="vanished">sekund</translation>
     </message>
     <message>
-        <location filename="../qml/pages/DishEdit.qml" line="163"/>
+        <location filename="../qml/pages/DishEdit.qml" line="110"/>
         <source>No dishes defined. Press the plus button to add one.</source>
         <translation>Nestanoven žádný pokrm. Pro přidání pokrmu stiskněte tlačítko plus.</translation>
     </message>
     <message>
-        <location filename="../qml/pages/DishEdit.qml" line="174"/>
+        <location filename="../qml/pages/DishEdit.qml" line="121"/>
         <source>New dish</source>
         <translation>Nový pokrm</translation>
     </message>
@@ -80,7 +77,7 @@
 <context>
     <name>DishPage</name>
     <message>
-        <location filename="../qml/pages/DishPage.qml" line="88"/>
+        <location filename="../qml/pages/DishPage.qml" line="90"/>
         <source>No dishes defined. Choose &quot;Edit Dishes&quot; from the pulley menu.</source>
         <translation>Nestanoven žádný pokrm. Vyberte Upravit pokrmy ve vysunovací nabídce.</translation>
     </message>
@@ -176,7 +173,7 @@
         <translation>Jazyk:</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SettingPage.qml" line="219"/>
+        <location filename="../qml/pages/SettingPage.qml" line="227"/>
         <source>Change of language will be active after restarting the application.</source>
         <translation>Změna jazyka se projeví po opětovném spuštění programu.</translation>
     </message>

@@ -8,13 +8,7 @@ Dialog {
     function appendDish(dish, duration) {
         dishlist.model.append({
                                   Dish: dish,
-                                  Duration_hours: duration.split(":")[0].length
-                                  = 2 ? duration.split(
-                                            ":")[0] : '0' + duration.split(
-                                            ":")[0],
-                                        Duration_minutes: duration.split(
-                                            ":")[1],
-                                        Duration_seconds: duration.split(":")[2]
+                                  Duration: duration
                               })
     }
 
@@ -22,7 +16,6 @@ Dialog {
         id: header
         acceptText: qsTr("Save")
         cancelText: qsTr("Cancel")
-
     }
     SilicaListView {
         id: dishlist
@@ -63,7 +56,7 @@ Dialog {
                     font.pixelSize: Theme.fontSizeSmall
                     placeholderText: qsTr('Dish name')
                     text: Dish
-                    width: font.pixelSize * 8
+                    width: font.pixelSize * 10
                     RegExpValidator {
                         regExp: /(\w{1,10}\b)/g
                     }
@@ -74,82 +67,36 @@ Dialog {
                     }
                     EnterKey.enabled: text.trim().length > 0
                 }
-                TextField {
-                    id: hours
-                    font.pixelSize: Theme.fontSizeSmall
+                Button {
+                    id: cookTime
                     anchors.left: name.right
-                    placeholderText: qsTr('Hours')
-                    text: Duration_hours
-                    width: font.pixelSize * 3
-                    horizontalAlignment: TextInput.AlignRight
-                    inputMethodHints: Qt.ImhFormattedNumbersOnly
-                    validator: RegExpValidator {
-                        regExp: /^([0-2][0-9]){1}$/
-                    }
-                    onTextChanged: {
-                        if (text.length > 1) {
-                            dishlist.model.setProperty(index,
-                                                       'Duration_hours', text)
-                        }
-                    }
-                }
-                Label {
-                    id: separator
-                    anchors.left: hours.right
-                    text: ':'
-                    width: font.pixelSize * .01
-                    color: hours.color //Theme.secondaryHighlightColor;
-                }
-
-                TextField {
-                    id: minutes
-                    font.pixelSize: Theme.fontSizeSmall
-                    anchors.left: separator.right
-                    placeholderText: qsTr('minutes')
-                    text: Duration_minutes
-                    width: font.pixelSize * 3
-                    horizontalAlignment: TextInput.AlignRight
-                    inputMethodHints: Qt.ImhFormattedNumbersOnly
-                    validator: RegExpValidator {
-                        regExp: /^([0-5][0-9]){1}$/
-                    }
-                    onTextChanged: {
-                        if (text.length > 1) {
-                            dishlist.model.setProperty(index,
-                                                       'Duration_minutes', text)
-                        }
-                    }
-                }
-                Label {
-                    id: separator2
-                    font.pixelSize: Theme.fontSizeSmall
-                    width: font.pixelSize * .01
-                    anchors.left: minutes.right
-                    text: ':'
-                    color: minutes.color //Theme.secondaryHighlightColor;
-                }
-
-                TextField {
-                    id: seconds
-                    anchors.left: separator2.right
-                    font.pixelSize: Theme.fontSizeSmall
-                    placeholderText: qsTr('seconds')
-                    text: Duration_seconds
-                    width: font.pixelSize * 3
-                    horizontalAlignment: TextInput.AlignRight
-                    inputMethodHints: Qt.ImhFormattedNumbersOnly
-                    validator: RegExpValidator {
-                        regExp: /^([0-5][0-9]){1}$/
-                    }
-                    onTextChanged: {
-                        if (text.length > 1) {
-                            dishlist.model.setProperty(index,
-                                                       'Duration_seconds', text)
-                        }
+                    text: Duration
+                    width: (dishesDialog.width - (Theme.paddingLarge * 2)) / 3.3
+                    onClicked: {
+                        var dialog = pageStack.push(Qt.resolvedUrl(
+                                                        "TimeDialog.qml"), {
+                                                        infotext: Dish,
+                                                        hour: cookTime.text.split(
+                                                                  ":")[0],
+                                                        minute: cookTime.text.split(
+                                                                    ":")[1],
+                                                        second: cookTime.text.split(
+                                                                    ":")[2]
+                                                    })
+                        dialog.accepted.connect(function () {
+                            dishlist.model.setProperty(index, 'Dish',
+                                                       dialog.infotext.trim())
+                            dishlist.model.setProperty(
+                                        index, 'Duration',
+                                        (dialog.hour > 9 ? dialog.hour : "0" + dialog.hour) + ":"
+                                        + (dialog.minute > 9 ? dialog.minute : "0"
+                                                               + dialog.minute) + ":"
+                                        + (dialog.second > 9 ? dialog.second : "0" + dialog.second))
+                        })
                     }
                 }
                 IconButton {
-                    anchors.left: seconds.right
+                    anchors.left: cookTime.right
                     icon.source: 'image://theme/icon-m-delete'
                     onClicked: remove()
                 }
@@ -183,10 +130,8 @@ Dialog {
             DB.RemoveAllDishes()
             // Then loop though current list and save
             for (var i = 0; i < dishlist.model.count; ++i) {
-                DB.writeDish(dishlist.model.get(i).Dish.trim(), dishlist.model.get(
-                                 i).Duration_hours + ':' + dishlist.model.get(
-                                 i).Duration_minutes + ':' + dishlist.model.get(
-                                 i).Duration_seconds)
+                DB.writeDish(dishlist.model.get(i).Dish.trim(),
+                             dishlist.model.get(i).Duration)
             }
         }
     }

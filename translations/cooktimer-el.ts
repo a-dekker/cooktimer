@@ -32,47 +32,44 @@
 <context>
     <name>DishEdit</name>
     <message>
-        <location filename="../qml/pages/DishEdit.qml" line="23"/>
+        <location filename="../qml/pages/DishEdit.qml" line="17"/>
         <source>Save</source>
         <translation>Αποθήκευση</translation>
     </message>
     <message>
-        <location filename="../qml/pages/DishEdit.qml" line="24"/>
+        <location filename="../qml/pages/DishEdit.qml" line="18"/>
         <source>Cancel</source>
         <translation>Ακύρωση</translation>
     </message>
     <message>
-        <location filename="../qml/pages/DishEdit.qml" line="54"/>
+        <location filename="../qml/pages/DishEdit.qml" line="47"/>
         <source>Deleting</source>
         <translation>Διαγραφή</translation>
     </message>
     <message>
-        <location filename="../qml/pages/DishEdit.qml" line="64"/>
+        <location filename="../qml/pages/DishEdit.qml" line="57"/>
         <source>Dish name</source>
         <translation>Ονομα φαγητου</translation>
     </message>
     <message>
-        <location filename="../qml/pages/DishEdit.qml" line="81"/>
         <source>Hours</source>
-        <translation>Ωρες</translation>
+        <translation type="vanished">Ωρες</translation>
     </message>
     <message>
-        <location filename="../qml/pages/DishEdit.qml" line="108"/>
         <source>minutes</source>
-        <translation>λεπτα</translation>
+        <translation type="vanished">λεπτα</translation>
     </message>
     <message>
-        <location filename="../qml/pages/DishEdit.qml" line="136"/>
         <source>seconds</source>
-        <translation>δευτερολεπτα</translation>
+        <translation type="vanished">δευτερολεπτα</translation>
     </message>
     <message>
-        <location filename="../qml/pages/DishEdit.qml" line="163"/>
+        <location filename="../qml/pages/DishEdit.qml" line="110"/>
         <source>No dishes defined. Press the plus button to add one.</source>
         <translation>Δεν υπάρχουν φαγητά που ορίζονται. Πατήστε το κουμπί συν για να προσθέσετε ένα.</translation>
     </message>
     <message>
-        <location filename="../qml/pages/DishEdit.qml" line="174"/>
+        <location filename="../qml/pages/DishEdit.qml" line="121"/>
         <source>New dish</source>
         <translation>Νεο φαγητο</translation>
     </message>
@@ -80,7 +77,7 @@
 <context>
     <name>DishPage</name>
     <message>
-        <location filename="../qml/pages/DishPage.qml" line="88"/>
+        <location filename="../qml/pages/DishPage.qml" line="90"/>
         <source>No dishes defined. Choose &quot;Edit Dishes&quot; from the pulley menu.</source>
         <translation>Δεν υπάρχουν φαγητά που ορίζονται. Επιλέξτε &quot;Επεξεργασία φαγητων&quot; από το μενού τροχαλίας.</translation>
     </message>
@@ -176,7 +173,7 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/SettingPage.qml" line="219"/>
+        <location filename="../qml/pages/SettingPage.qml" line="227"/>
         <source>Change of language will be active after restarting the application.</source>
         <translation type="unfinished"></translation>
     </message>

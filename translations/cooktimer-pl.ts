@@ -32,47 +32,44 @@
 <context>
     <name>DishEdit</name>
     <message>
-        <location filename="../qml/pages/DishEdit.qml" line="23"/>
+        <location filename="../qml/pages/DishEdit.qml" line="17"/>
         <source>Save</source>
         <translation>Zapisz</translation>
     </message>
     <message>
-        <location filename="../qml/pages/DishEdit.qml" line="24"/>
+        <location filename="../qml/pages/DishEdit.qml" line="18"/>
         <source>Cancel</source>
         <translation>Anuluj</translation>
     </message>
     <message>
-        <location filename="../qml/pages/DishEdit.qml" line="54"/>
+        <location filename="../qml/pages/DishEdit.qml" line="47"/>
         <source>Deleting</source>
         <translation>Kasowanie</translation>
     </message>
     <message>
-        <location filename="../qml/pages/DishEdit.qml" line="64"/>
+        <location filename="../qml/pages/DishEdit.qml" line="57"/>
         <source>Dish name</source>
         <translation>Nazwa dania</translation>
     </message>
     <message>
-        <location filename="../qml/pages/DishEdit.qml" line="81"/>
         <source>Hours</source>
-        <translation>Godziny</translation>
+        <translation type="vanished">Godziny</translation>
     </message>
     <message>
-        <location filename="../qml/pages/DishEdit.qml" line="108"/>
         <source>minutes</source>
-        <translation>minuty</translation>
+        <translation type="vanished">minuty</translation>
     </message>
     <message>
-        <location filename="../qml/pages/DishEdit.qml" line="136"/>
         <source>seconds</source>
-        <translation>sekundy</translation>
+        <translation type="vanished">sekundy</translation>
     </message>
     <message>
-        <location filename="../qml/pages/DishEdit.qml" line="163"/>
+        <location filename="../qml/pages/DishEdit.qml" line="110"/>
         <source>No dishes defined. Press the plus button to add one.</source>
         <translation>Brak zdefiniowanych dań. Naciśnij plus aby dodać.</translation>
     </message>
     <message>
-        <location filename="../qml/pages/DishEdit.qml" line="174"/>
+        <location filename="../qml/pages/DishEdit.qml" line="121"/>
         <source>New dish</source>
         <translation>Nowe danie</translation>
     </message>
@@ -80,7 +77,7 @@
 <context>
     <name>DishPage</name>
     <message>
-        <location filename="../qml/pages/DishPage.qml" line="88"/>
+        <location filename="../qml/pages/DishPage.qml" line="90"/>
         <source>No dishes defined. Choose &quot;Edit Dishes&quot; from the pulley menu.</source>
         <translation>Brak zdefiniowanych dań. Wybierz &quot;Edytuj Dania&quot; z wysuwanego menu.</translation>
     </message>
@@ -176,7 +173,7 @@
         <translation>Język:</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SettingPage.qml" line="219"/>
+        <location filename="../qml/pages/SettingPage.qml" line="227"/>
         <source>Change of language will be active after restarting the application.</source>
         <translation>Język zostanie zmieniony po ponownym uruchomieniu programu.</translation>
     </message>

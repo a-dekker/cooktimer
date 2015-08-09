@@ -13,7 +13,6 @@ Page {
                               })
     }
 
-
     SilicaListView {
         id: dishlist
         width: parent.width
@@ -41,13 +40,13 @@ Page {
             function setDish() {
                 GlobVars.myDish = Dish
                 if (GlobVars.myCurrentTimer === 1) {
-                   mainapp.dishText1 = Dish
+                    mainapp.dishText1 = Dish
                 }
                 if (GlobVars.myCurrentTimer === 2) {
-                   mainapp.dishText2 = Dish
+                    mainapp.dishText2 = Dish
                 }
                 if (GlobVars.myCurrentTimer === 3) {
-                   mainapp.dishText3 = Dish
+                    mainapp.dishText3 = Dish
                 }
                 GlobVars.myDuration = Duration
                 pageStack.pop()
@@ -61,23 +60,26 @@ Page {
                 visible: !(index & 1)
             }
 
-
-            Label {
-                id: label
-                opacity: (index & 1) ? 0.7 : 0.9
-                text: Dish
+            Item {
+                anchors.horizontalCenter: parent.horizontalCenter
                 anchors.verticalCenter: parent.verticalCenter
-                anchors.horizontalCenter: parent.horizontalCenter
-                font.pixelSize: Theme.fontSizeMedium
-                font.bold: true
-                color: listItem.highlighted ? Theme.highlightColor : Theme.primaryColor
-            }
-            Label {
-                anchors.top: label.bottom
-                text: Duration
-                font.pixelSize: Theme.fontSizeExtraSmall
-                color: listItem.highlighted ? Theme.highlightColor : Theme.secondaryColor
-                anchors.horizontalCenter: parent.horizontalCenter
+                Label {
+                    id: label
+                    opacity: (index & 1) ? 0.7 : 0.9
+                    anchors.bottom: sublabel.top
+                    text: Dish
+                    anchors.horizontalCenter: parent.horizontalCenter
+                    font.pixelSize: Theme.fontSizeMedium
+                    font.bold: true
+                    color: listItem.highlighted ? Theme.highlightColor : Theme.primaryColor
+                }
+                Label {
+                    id: sublabel
+                    text: Duration
+                    font.pixelSize: Theme.fontSizeExtraSmall
+                    color: listItem.highlighted ? Theme.highlightColor : Theme.secondaryColor
+                    anchors.horizontalCenter: parent.horizontalCenter
+                }
             }
             onClicked: {
                 setDish()

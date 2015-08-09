@@ -32,47 +32,44 @@
 <context>
     <name>DishEdit</name>
     <message>
-        <location filename="../qml/pages/DishEdit.qml" line="23"/>
+        <location filename="../qml/pages/DishEdit.qml" line="17"/>
         <source>Save</source>
         <translation>Guardar</translation>
     </message>
     <message>
-        <location filename="../qml/pages/DishEdit.qml" line="24"/>
+        <location filename="../qml/pages/DishEdit.qml" line="18"/>
         <source>Cancel</source>
         <translation>Cancelar</translation>
     </message>
     <message>
-        <location filename="../qml/pages/DishEdit.qml" line="54"/>
+        <location filename="../qml/pages/DishEdit.qml" line="47"/>
         <source>Deleting</source>
         <translation>Borrando</translation>
     </message>
     <message>
-        <location filename="../qml/pages/DishEdit.qml" line="64"/>
+        <location filename="../qml/pages/DishEdit.qml" line="57"/>
         <source>Dish name</source>
         <translation>Nombre del plato</translation>
     </message>
     <message>
-        <location filename="../qml/pages/DishEdit.qml" line="81"/>
         <source>Hours</source>
-        <translation>Horas</translation>
+        <translation type="vanished">Horas</translation>
     </message>
     <message>
-        <location filename="../qml/pages/DishEdit.qml" line="108"/>
         <source>minutes</source>
-        <translation>minutos</translation>
+        <translation type="vanished">minutos</translation>
     </message>
     <message>
-        <location filename="../qml/pages/DishEdit.qml" line="136"/>
         <source>seconds</source>
-        <translation>segundos</translation>
+        <translation type="vanished">segundos</translation>
     </message>
     <message>
-        <location filename="../qml/pages/DishEdit.qml" line="163"/>
+        <location filename="../qml/pages/DishEdit.qml" line="110"/>
         <source>No dishes defined. Press the plus button to add one.</source>
         <translation>No se ha definido ningún plato. Presiona el botón más para añadir uno.</translation>
     </message>
     <message>
-        <location filename="../qml/pages/DishEdit.qml" line="174"/>
+        <location filename="../qml/pages/DishEdit.qml" line="121"/>
         <source>New dish</source>
         <translation>Nuevo plato</translation>
     </message>
@@ -80,7 +77,7 @@
 <context>
     <name>DishPage</name>
     <message>
-        <location filename="../qml/pages/DishPage.qml" line="88"/>
+        <location filename="../qml/pages/DishPage.qml" line="90"/>
         <source>No dishes defined. Choose &quot;Edit Dishes&quot; from the pulley menu.</source>
         <translation>No se ha definido ningún plato. Elige &quot;Editar platos&quot; en el menú desplegable.</translation>
     </message>
@@ -176,7 +173,7 @@
         <translation>Idioma:</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SettingPage.qml" line="219"/>
+        <location filename="../qml/pages/SettingPage.qml" line="227"/>
         <source>Change of language will be active after restarting the application.</source>
         <translation>El cambio de idioma se aplicará después de reiniciar la aplicación.</translation>
     </message>

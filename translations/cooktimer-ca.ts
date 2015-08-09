@@ -32,47 +32,44 @@
 <context>
     <name>DishEdit</name>
     <message>
-        <location filename="../qml/pages/DishEdit.qml" line="23"/>
+        <location filename="../qml/pages/DishEdit.qml" line="17"/>
         <source>Save</source>
         <translation>Desar</translation>
     </message>
     <message>
-        <location filename="../qml/pages/DishEdit.qml" line="24"/>
+        <location filename="../qml/pages/DishEdit.qml" line="18"/>
         <source>Cancel</source>
         <translation>Cancel·lar</translation>
     </message>
     <message>
-        <location filename="../qml/pages/DishEdit.qml" line="54"/>
+        <location filename="../qml/pages/DishEdit.qml" line="47"/>
         <source>Deleting</source>
         <translation>Esborrant</translation>
     </message>
     <message>
-        <location filename="../qml/pages/DishEdit.qml" line="64"/>
+        <location filename="../qml/pages/DishEdit.qml" line="57"/>
         <source>Dish name</source>
         <translation>Nom del Plat</translation>
     </message>
     <message>
-        <location filename="../qml/pages/DishEdit.qml" line="81"/>
         <source>Hours</source>
-        <translation>Hores</translation>
+        <translation type="vanished">Hores</translation>
     </message>
     <message>
-        <location filename="../qml/pages/DishEdit.qml" line="108"/>
         <source>minutes</source>
-        <translation>Minuts</translation>
+        <translation type="vanished">Minuts</translation>
     </message>
     <message>
-        <location filename="../qml/pages/DishEdit.qml" line="136"/>
         <source>seconds</source>
-        <translation>Segons</translation>
+        <translation type="vanished">Segons</translation>
     </message>
     <message>
-        <location filename="../qml/pages/DishEdit.qml" line="163"/>
+        <location filename="../qml/pages/DishEdit.qml" line="110"/>
         <source>No dishes defined. Press the plus button to add one.</source>
         <translation>Cap Plat definit. Prem el botó &quot;més&quot; per afegir-ne un.</translation>
     </message>
     <message>
-        <location filename="../qml/pages/DishEdit.qml" line="174"/>
+        <location filename="../qml/pages/DishEdit.qml" line="121"/>
         <source>New dish</source>
         <translation>Nou Plat</translation>
     </message>
@@ -80,7 +77,7 @@
 <context>
     <name>DishPage</name>
     <message>
-        <location filename="../qml/pages/DishPage.qml" line="88"/>
+        <location filename="../qml/pages/DishPage.qml" line="90"/>
         <source>No dishes defined. Choose &quot;Edit Dishes&quot; from the pulley menu.</source>
         <translation>Cap Plat definit. Selecciona &quot;Editar Plats&quot; des del menú extensible.</translation>
     </message>
