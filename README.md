@@ -1,6 +1,6 @@
 ## Synopsis
 
-Timer app for Sailfish OS, offering three timers. Inspired by my Fremantle (Maemo 5) cooktimer version.
+Timer app for Sailfish OS, offering three timers. Inspired by my Fremantle (Maemo 5) cooktimer edition.
 
 Supports hours/minutes/seconds. Alarms are displayed via the default Sailfish alarm screen.
 

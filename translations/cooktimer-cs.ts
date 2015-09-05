@@ -14,17 +14,17 @@
         <translation>Informace</translation>
     </message>
     <message>
-        <location filename="../qml/pages/About.qml" line="54"/>
+        <location filename="../qml/pages/About.qml" line="51"/>
         <source>Version</source>
         <translation>Verze</translation>
     </message>
     <message>
-        <location filename="../qml/pages/About.qml" line="59"/>
+        <location filename="../qml/pages/About.qml" line="56"/>
         <source>&quot;Timers for cooking&quot;</source>
         <translation>Časomíra pro vaření</translation>
     </message>
     <message>
-        <location filename="../qml/pages/About.qml" line="65"/>
+        <location filename="../qml/pages/About.qml" line="62"/>
         <source>Author</source>
         <translation>Autor</translation>
     </message>
@@ -50,18 +50,6 @@
         <location filename="../qml/pages/DishEdit.qml" line="57"/>
         <source>Dish name</source>
         <translation>Název pokrmu</translation>
-    </message>
-    <message>
-        <source>Hours</source>
-        <translation type="vanished">hodin</translation>
-    </message>
-    <message>
-        <source>minutes</source>
-        <translation type="vanished">minut</translation>
-    </message>
-    <message>
-        <source>seconds</source>
-        <translation type="vanished">sekund</translation>
     </message>
     <message>
         <location filename="../qml/pages/DishEdit.qml" line="110"/>
@@ -189,14 +177,6 @@
         <location filename="../qml/pages/TimeDialog.qml" line="51"/>
         <source>Cancel</source>
         <translation>Zrušit</translation>
-    </message>
-    <message>
-        <source>minutes</source>
-        <translation type="obsolete">minut</translation>
-    </message>
-    <message>
-        <source>seconds</source>
-        <translation type="obsolete">sekund</translation>
     </message>
 </context>
 <context>

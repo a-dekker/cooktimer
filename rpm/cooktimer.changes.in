@@ -8,6 +8,9 @@
 # * date Author's Name <author's email> version-release
 # - Summary of changes
 
+* sun Sep 05 2015 Arno Dekker <jack.tar@example.com> 0.0.1-28
+- Fix timepicker broken in SailfishOS 1.1.9.27
+
 * sat Aug 08 2015 Arno Dekker <jack.tar@example.com> 0.0.1-27
 - Small change in alignment in dish page
 - Other time input method in dishedit page

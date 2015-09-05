@@ -28,7 +28,6 @@ OTHER_FILES += qml/cooktimer.qml \
     qml/cover/CoverPage.qml \
     rpm/cooktimer.changes.in \
     rpm/cooktimer.spec \
-    rpm/cooktimer.yaml \
     cooktimer.desktop \
     qml/pages/About.qml \
     qml/pages/MainPage.qml \
@@ -36,10 +35,13 @@ OTHER_FILES += qml/cooktimer.qml \
     qml/pages/SettingPage.qml \
     qml/pages/Vars.js \
     qml/pages/DishPage.qml \
-    qml/pages/Popup.qml \
     qml/pages/TimePickerSeconds.qml \
     qml/pages/TimeDialog.qml \
+    qml/images/coverbg.png \
+    qml/images/timepicker.png \
+    qml/images/TimePickerSeconds.png \
     qml/localdb.js \
+    qml/common/SilicaLabel.qml \
 
 # to disable building translations every time, comment out the
 # following CONFIG line
@@ -50,10 +52,15 @@ INSTALLS += translations
 TRANSLATIONS = translations/cooktimer-sv.ts \
                translations/cooktimer-cs.ts \
                translations/cooktimer-nl.ts \
+               translations/cooktimer-da.ts \
                translations/cooktimer-ru_RU.ts \
+               translations/cooktimer-el.ts \
                translations/cooktimer-fi.ts \
+               translations/cooktimer-fr.ts \
                translations/cooktimer-tr_TR.ts \
                translations/cooktimer-de_DE.ts \
+               translations/cooktimer-pl.ts \
+               translations/cooktimer-ca.ts \
                translations/cooktimer-es.ts
 #HEADERS += \
 #    src/osread.h \

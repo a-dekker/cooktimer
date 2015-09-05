@@ -14,17 +14,17 @@
         <translation>Bilgi</translation>
     </message>
     <message>
-        <location filename="../qml/pages/About.qml" line="54"/>
+        <location filename="../qml/pages/About.qml" line="51"/>
         <source>Version</source>
         <translation>Versiyon</translation>
     </message>
     <message>
-        <location filename="../qml/pages/About.qml" line="59"/>
+        <location filename="../qml/pages/About.qml" line="56"/>
         <source>&quot;Timers for cooking&quot;</source>
         <translation>&quot;Yemek pişirmek için zamanlayıcı&quot;</translation>
     </message>
     <message>
-        <location filename="../qml/pages/About.qml" line="65"/>
+        <location filename="../qml/pages/About.qml" line="62"/>
         <source>Author</source>
         <translation>Yapımcı</translation>
     </message>
@@ -50,18 +50,6 @@
         <location filename="../qml/pages/DishEdit.qml" line="57"/>
         <source>Dish name</source>
         <translation>Yemeğin adı</translation>
-    </message>
-    <message>
-        <source>Hours</source>
-        <translation type="vanished">Saat</translation>
-    </message>
-    <message>
-        <source>minutes</source>
-        <translation type="vanished">dakika</translation>
-    </message>
-    <message>
-        <source>seconds</source>
-        <translation type="vanished">saniye</translation>
     </message>
     <message>
         <location filename="../qml/pages/DishEdit.qml" line="110"/>
@@ -189,14 +177,6 @@
         <location filename="../qml/pages/TimeDialog.qml" line="51"/>
         <source>Cancel</source>
         <translation>İptal</translation>
-    </message>
-    <message>
-        <source>minutes</source>
-        <translation type="obsolete">dakika</translation>
-    </message>
-    <message>
-        <source>seconds</source>
-        <translation type="obsolete">saniye</translation>
     </message>
 </context>
 <context>

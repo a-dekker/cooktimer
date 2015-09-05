@@ -21,13 +21,11 @@ Page {
             SectionHeader {
                 text: qsTr("Info")
             }
-            Rectangle {
-                color: "#999999"
-                x: Theme.paddingLarge * 3
-                width: parent.width - Theme.paddingLarge * 3 * 2
-                height: 2
-                anchors.leftMargin: 20
-                anchors.topMargin: 30
+            Separator {
+                color: Theme.primaryColor
+                width: parent.width
+                anchors.horizontalCenter: parent.horizontalCenter
+                horizontalAlignment: Qt.AlignHCenter
             }
             Label {
                 text: "cooktimer"
@@ -39,15 +37,14 @@ Page {
                 height: width
                 radius: 100
                 anchors.horizontalCenter: parent.horizontalCenter
-                NumberAnimation on rotation
-                {
+                NumberAnimation on rotation {
                     from: 0
                     to: 360
                     duration: 5000
                     loops: 1
                 }
                 Image {
-                   source: "/usr/share/icons/hicolor/86x86/apps/cooktimer.png"
+                    source: "/usr/share/icons/hicolor/86x86/apps/cooktimer.png"
                 }
             }
             Label {
@@ -64,13 +61,11 @@ Page {
             SectionHeader {
                 text: qsTr("Author")
             }
-            Rectangle {
-                color: "#999999"
-                x: Theme.paddingLarge * 3
-                width: parent.width - Theme.paddingLarge * 3 * 2
-                height: 2
-                anchors.leftMargin: 20
-                anchors.topMargin: 30
+            Separator {
+                color: Theme.primaryColor
+                width: parent.width
+                anchors.horizontalCenter: parent.horizontalCenter
+                horizontalAlignment: Qt.AlignHCenter
             }
             Label {
                 text: "© Arno Dekker 2014-2015"

@@ -14,17 +14,17 @@
         <translation>Info</translation>
     </message>
     <message>
-        <location filename="../qml/pages/About.qml" line="54"/>
+        <location filename="../qml/pages/About.qml" line="51"/>
         <source>Version</source>
         <translation>Version</translation>
     </message>
     <message>
-        <location filename="../qml/pages/About.qml" line="59"/>
+        <location filename="../qml/pages/About.qml" line="56"/>
         <source>&quot;Timers for cooking&quot;</source>
         <translation>&quot;Timere til madlavning&quot;</translation>
     </message>
     <message>
-        <location filename="../qml/pages/About.qml" line="65"/>
+        <location filename="../qml/pages/About.qml" line="62"/>
         <source>Author</source>
         <translation>Udvikler</translation>
     </message>
@@ -50,18 +50,6 @@
         <location filename="../qml/pages/DishEdit.qml" line="57"/>
         <source>Dish name</source>
         <translation>Navn på ret</translation>
-    </message>
-    <message>
-        <source>Hours</source>
-        <translation type="vanished">Timer</translation>
-    </message>
-    <message>
-        <source>minutes</source>
-        <translation type="vanished">minutter</translation>
-    </message>
-    <message>
-        <source>seconds</source>
-        <translation type="vanished">sekunder</translation>
     </message>
     <message>
         <location filename="../qml/pages/DishEdit.qml" line="110"/>

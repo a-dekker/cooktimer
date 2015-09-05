@@ -14,17 +14,17 @@
         <translation>Πληροφορίες</translation>
     </message>
     <message>
-        <location filename="../qml/pages/About.qml" line="54"/>
+        <location filename="../qml/pages/About.qml" line="51"/>
         <source>Version</source>
         <translation>Έκδοση</translation>
     </message>
     <message>
-        <location filename="../qml/pages/About.qml" line="59"/>
+        <location filename="../qml/pages/About.qml" line="56"/>
         <source>&quot;Timers for cooking&quot;</source>
         <translation>&quot;Χρονοδιακόπτες για μαγείρεμα&quot;</translation>
     </message>
     <message>
-        <location filename="../qml/pages/About.qml" line="65"/>
+        <location filename="../qml/pages/About.qml" line="62"/>
         <source>Author</source>
         <translation>Δημιουργος</translation>
     </message>
@@ -50,18 +50,6 @@
         <location filename="../qml/pages/DishEdit.qml" line="57"/>
         <source>Dish name</source>
         <translation>Ονομα φαγητου</translation>
-    </message>
-    <message>
-        <source>Hours</source>
-        <translation type="vanished">Ωρες</translation>
-    </message>
-    <message>
-        <source>minutes</source>
-        <translation type="vanished">λεπτα</translation>
-    </message>
-    <message>
-        <source>seconds</source>
-        <translation type="vanished">δευτερολεπτα</translation>
     </message>
     <message>
         <location filename="../qml/pages/DishEdit.qml" line="110"/>
@@ -189,14 +177,6 @@
         <location filename="../qml/pages/TimeDialog.qml" line="51"/>
         <source>Cancel</source>
         <translation>Ακύρωση</translation>
-    </message>
-    <message>
-        <source>minutes</source>
-        <translation type="obsolete">λεπτα</translation>
-    </message>
-    <message>
-        <source>seconds</source>
-        <translation type="obsolete">δευτερολεπτα</translation>
     </message>
 </context>
 <context>
