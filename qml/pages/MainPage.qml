@@ -20,7 +20,9 @@ Page {
     property string myGlobalDuration2
     property string myGlobalDish3
     property string myGlobalDuration3
-    property bool viewable: cover.status === Cover.Active || applicationActive
+    property bool viewable: cover.status === Cover.Active
+                            || cover.status === Cover.Activating
+                             || applicationActive;
     property bool isRunning1: ticker1.running || insomniac1.running
     property bool isRunning2: ticker2.running || insomniac2.running
     property bool isRunning3: ticker3.running || insomniac3.running
@@ -40,7 +42,6 @@ Page {
     property int _totalsecs1: 0
     property int _totalsecs2: 0
     property int _totalsecs3: 0
-
     ThemeEffect {
         id: buttonBuzz
         effect: ThemeEffect.Press
@@ -114,6 +115,7 @@ Page {
                     mainapp.timeText3 = remainingTime3.text
                 }
             }
+            GlobVars.myCurrentTimer = ""
         }
     }
 
@@ -345,7 +347,7 @@ Page {
         anchors.fill: parent
         fillMode: Image.PreserveAspectFit
         source: "../images/coverbg.png"
-        opacity: 0.1
+        opacity: 0.07
         horizontalAlignment: Image.AlignHCenter
         verticalAlignment: Image.AlignVCenter
     }
@@ -399,12 +401,17 @@ Page {
                     GlobVars.myCurrentTimer = 1
                     GlobVars.myDish = dish1.text
                     pageStack.push(Qt.resolvedUrl("DishPage.qml"))
-             //       mainapp.dishText1 = GlobVars.myDish // = Dish
                 }
                 onPressAndHold: {
                     myGlobalDish1 = GlobVars.myDish = mainapp.dishText1 = qsTr(
                                 "Dish") + " 1"
                 }
+            }
+            Rectangle {
+                // some whitespace
+                width: Theme.paddingSmall
+                height: 1
+                opacity: 0
             }
             Item {
                 height: Theme.itemSizeMedium
@@ -426,7 +433,7 @@ Page {
                                                     })
                         dialog.accepted.connect(function () {
                             GlobVars.myDuration = " "
-                            myGlobalDish1 = GlobVars.myDish = mainapp.dishText1 = dialog.infotext
+                            myGlobalDish1 = mainapp.dishText1 = dialog.infotext
                             myGlobalDuration1 = (dialog.hour > 9 ? dialog.hour : "0" + dialog.hour)
                                     + ":" + (dialog.minute > 9 ? dialog.minute : "0"
                                                                  + dialog.minute) + ":"
@@ -447,6 +454,12 @@ Page {
                     }
                 }
 
+            }
+            Rectangle {
+                // some whitespace
+                width: Theme.paddingSmall
+                height: 1
+                opacity: 0
             }
             Button {
                 id: start1
@@ -582,9 +595,9 @@ Page {
             Timer {
                 interval: 100
                 repeat: true
-                onTriggered: progressBar1.value = (1 - (remainingTime1.seconds
+                onTriggered: progressBar1.value = mainapp.progressValue1 = (1 - (remainingTime1.seconds
                                                        / _totalsecs1) + 0.001)
-                running: Qt.application.active && mainapp.timer1running
+                running: (Qt.application.active && mainapp.timer1running) || (viewable)
             }
             Label {
                 id: totalTime1
@@ -625,6 +638,12 @@ Page {
                                 "Dish") + " 2"
                 }
             }
+            Rectangle {
+                // some whitespace
+                width: Theme.paddingSmall
+                height: 1
+                opacity: 0
+            }
             Item {
                 height: Theme.itemSizeMedium
                 width: (page.width - (Theme.paddingLarge * 2)) / 3.3
@@ -645,7 +664,7 @@ Page {
                                                     })
                         dialog.accepted.connect(function () {
                             GlobVars.myDuration = " "
-                            myGlobalDish2 = GlobVars.myDish = mainapp.dishText2 = dialog.infotext
+                            myGlobalDish2 = mainapp.dishText2 = dialog.infotext
                             myGlobalDuration2 = (dialog.hour > 9 ? dialog.hour : "0" + dialog.hour)
                                     + ":" + (dialog.minute > 9 ? dialog.minute : "0"
                                                                  + dialog.minute) + ":"
@@ -665,6 +684,12 @@ Page {
                         }
                     }
                 }
+            }
+            Rectangle {
+                // some whitespace
+                width: Theme.paddingSmall
+                height: 1
+                opacity: 0
             }
             Button {
                 id: start2
@@ -799,9 +824,9 @@ Page {
             Timer {
                 interval: 100
                 repeat: true
-                onTriggered: progressBar2.value = (1 - (remainingTime2.seconds
+                onTriggered: progressBar2.value = mainapp.progressValue2 = (1 - (remainingTime2.seconds
                                                         / _totalsecs2) + 0.001)
-                running: Qt.application.active && mainapp.timer2running
+                running: (Qt.application.active && mainapp.timer2running) || (viewable)
             }
             Label {
                 id: totalTime2
@@ -841,6 +866,12 @@ Page {
                                 "Dish") + " 3"
                 }
             }
+            Rectangle {
+                // some whitespace
+                width: Theme.paddingSmall
+                height: 1
+                opacity: 0
+            }
             Item {
                 height: Theme.itemSizeMedium
                 width: (page.width - (Theme.paddingLarge * 2)) / 3.3
@@ -861,7 +892,7 @@ Page {
                                                     })
                         dialog.accepted.connect(function () {
                             GlobVars.myDuration = " "
-                            myGlobalDish3 = GlobVars.myDish = mainapp.dishText3 = dialog.infotext
+                            myGlobalDish3 = mainapp.dishText3 = dialog.infotext
                             myGlobalDuration3 = (dialog.hour > 9 ? dialog.hour : "0" + dialog.hour)
                                     + ":" + (dialog.minute > 9 ? dialog.minute : "0"
                                                                  + dialog.minute) + ":"
@@ -881,6 +912,12 @@ Page {
                         }
                     }
                 }
+            }
+            Rectangle {
+                // some whitespace
+                width: Theme.paddingSmall
+                height: 1
+                opacity: 0
             }
             Button {
                 id: start3
@@ -1009,14 +1046,15 @@ Page {
             width: parent.width - 2 * Theme.paddingLarge
             maximumValue: 1
             anchors.topMargin: 1
+            anchors.bottomMargin: 1
             leftMargin: 0
             rightMargin: 0
             Timer {
                 interval: 100
                 repeat: true
-                onTriggered: progressBar3.value = (1 - (remainingTime3.seconds
+                onTriggered: progressBar3.value = mainapp.progressValue3 = (1 - (remainingTime3.seconds
                                                         / _totalsecs3) + 0.001)
-                running: Qt.application.active && mainapp.timer3running
+                running: (Qt.application.active && mainapp.timer3running) || (viewable)
             }
             Label {
                 id: totalTime3

@@ -65,7 +65,7 @@
 <context>
     <name>DishPage</name>
     <message>
-        <location filename="../qml/pages/DishPage.qml" line="90"/>
+        <location filename="../qml/pages/DishPage.qml" line="96"/>
         <source>No dishes defined. Choose &quot;Edit Dishes&quot; from the pulley menu.</source>
         <translation>Nestanoven žádný pokrm. Vyberte Upravit pokrmy ve vysunovací nabídce.</translation>
     </message>
@@ -73,47 +73,47 @@
 <context>
     <name>MainPage</name>
     <message>
-        <location filename="../qml/pages/MainPage.qml" line="258"/>
-        <location filename="../qml/pages/MainPage.qml" line="262"/>
+        <location filename="../qml/pages/MainPage.qml" line="260"/>
+        <location filename="../qml/pages/MainPage.qml" line="264"/>
         <source>ready</source>
         <translation>Připraven</translation>
     </message>
     <message>
-        <location filename="../qml/pages/MainPage.qml" line="362"/>
+        <location filename="../qml/pages/MainPage.qml" line="364"/>
         <source>About</source>
         <translation>O</translation>
     </message>
     <message>
-        <location filename="../qml/pages/MainPage.qml" line="366"/>
+        <location filename="../qml/pages/MainPage.qml" line="368"/>
         <source>Settings</source>
         <translation>Nastavení</translation>
     </message>
     <message>
-        <location filename="../qml/pages/MainPage.qml" line="370"/>
+        <location filename="../qml/pages/MainPage.qml" line="372"/>
         <source>Edit dishes</source>
         <translation>Upravit pokrmy</translation>
     </message>
     <message>
-        <location filename="../qml/pages/MainPage.qml" line="405"/>
-        <location filename="../qml/pages/MainPage.qml" line="624"/>
-        <location filename="../qml/pages/MainPage.qml" line="840"/>
+        <location filename="../qml/pages/MainPage.qml" line="406"/>
+        <location filename="../qml/pages/MainPage.qml" line="637"/>
+        <location filename="../qml/pages/MainPage.qml" line="865"/>
         <source>Dish</source>
         <translation>Pokrm</translation>
     </message>
     <message>
-        <location filename="../qml/pages/MainPage.qml" line="454"/>
-        <location filename="../qml/pages/MainPage.qml" line="456"/>
-        <location filename="../qml/pages/MainPage.qml" line="672"/>
-        <location filename="../qml/pages/MainPage.qml" line="674"/>
-        <location filename="../qml/pages/MainPage.qml" line="888"/>
-        <location filename="../qml/pages/MainPage.qml" line="890"/>
+        <location filename="../qml/pages/MainPage.qml" line="467"/>
+        <location filename="../qml/pages/MainPage.qml" line="469"/>
+        <location filename="../qml/pages/MainPage.qml" line="697"/>
+        <location filename="../qml/pages/MainPage.qml" line="699"/>
+        <location filename="../qml/pages/MainPage.qml" line="925"/>
+        <location filename="../qml/pages/MainPage.qml" line="927"/>
         <source>Stop</source>
         <translation>Zastavit</translation>
     </message>
     <message>
-        <location filename="../qml/pages/MainPage.qml" line="455"/>
-        <location filename="../qml/pages/MainPage.qml" line="673"/>
-        <location filename="../qml/pages/MainPage.qml" line="889"/>
+        <location filename="../qml/pages/MainPage.qml" line="468"/>
+        <location filename="../qml/pages/MainPage.qml" line="698"/>
+        <location filename="../qml/pages/MainPage.qml" line="926"/>
         <source>Start</source>
         <translation>Spustit</translation>
     </message>
@@ -182,9 +182,9 @@
 <context>
     <name>cooktimer</name>
     <message>
-        <location filename="../qml/cooktimer.qml" line="12"/>
-        <location filename="../qml/cooktimer.qml" line="13"/>
-        <location filename="../qml/cooktimer.qml" line="14"/>
+        <location filename="../qml/cooktimer.qml" line="15"/>
+        <location filename="../qml/cooktimer.qml" line="16"/>
+        <location filename="../qml/cooktimer.qml" line="17"/>
         <source>Dish</source>
         <translation>Pokrm</translation>
     </message>

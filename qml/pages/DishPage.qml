@@ -51,13 +51,20 @@ Page {
                 GlobVars.myDuration = Duration
                 pageStack.pop()
             }
-            Rectangle {
-                id: timeRect
-                width: parent.width
-                height: parent.height
-                color: Theme.primaryColor
-                opacity: 0.05
-                visible: !(index & 1)
+            Item { // background element with diagonal gradient
+                anchors.fill: parent
+                clip: true
+                Rectangle {
+                    rotation: 9
+                    height: parent.height
+                    x: -dishlist.width
+                    width: dishlist.width*2
+
+                    gradient: Gradient {
+                        GradientStop { position: 0.0; color: Theme.rgba(Theme.primaryColor, 0) }
+                        GradientStop { position: 1.0; color: Theme.rgba(Theme.primaryColor, 0.1) }
+                    }
+                }
             }
 
             Item {
@@ -65,7 +72,6 @@ Page {
                 anchors.verticalCenter: parent.verticalCenter
                 Label {
                     id: label
-                    opacity: (index & 1) ? 0.7 : 0.9
                     anchors.bottom: sublabel.top
                     text: Dish
                     anchors.horizontalCenter: parent.horizontalCenter

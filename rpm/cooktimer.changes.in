@@ -8,6 +8,15 @@
 # * date Author's Name <author's email> version-release
 # - Summary of changes
 
+* sun Sep 17 2015 Arno Dekker <jack.tar@example.com> 0.0.1-31
+- Progressbar on coverpage
+
+* sun Sep 17 2015 Arno Dekker <jack.tar@example.com> 0.0.1-30
+- Cosmetic fixes (e.g. small space between new SailfishOS 2.0 buttons)
+
+* sun Sep 13 2015 Arno Dekker <jack.tar@example.com> 0.0.1-29
+- Fixed bug in setting dishname in timepicker screen
+
 * sun Sep 05 2015 Arno Dekker <jack.tar@example.com> 0.0.1-28
 - Fix timepicker broken in SailfishOS 1.1.9.27
 
