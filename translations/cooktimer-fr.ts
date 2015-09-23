@@ -158,12 +158,12 @@
     <message>
         <location filename="../qml/pages/SettingPage.qml" line="81"/>
         <source>Language:</source>
-        <translation type="unfinished"></translation>
+        <translation>Langue :</translation>
     </message>
     <message>
         <location filename="../qml/pages/SettingPage.qml" line="227"/>
         <source>Change of language will be active after restarting the application.</source>
-        <translation type="unfinished"></translation>
+        <translation>Le changement de langue sera actif après redémarrage de l&apos;application.</translation>
     </message>
 </context>
 <context>

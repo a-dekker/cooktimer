@@ -16,7 +16,7 @@
     <message>
         <location filename="../qml/pages/About.qml" line="51"/>
         <source>Version</source>
-        <translation></translation>
+        <translation>Wersja</translation>
     </message>
     <message>
         <location filename="../qml/pages/About.qml" line="56"/>

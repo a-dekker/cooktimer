@@ -138,7 +138,7 @@
     <message>
         <location filename="../qml/pages/SettingPage.qml" line="55"/>
         <source>Keep backlight on</source>
-        <translation>Mantenir la retroiluminació</translation>
+        <translation>Mantenir la retroil·luminació</translation>
     </message>
     <message>
         <location filename="../qml/pages/SettingPage.qml" line="56"/>
@@ -148,7 +148,7 @@
     <message>
         <location filename="../qml/pages/SettingPage.qml" line="62"/>
         <source>Show additional banner</source>
-        <translation>Mostrar panell adicional</translation>
+        <translation>Mostrar panell addicional</translation>
     </message>
     <message>
         <location filename="../qml/pages/SettingPage.qml" line="63"/>
