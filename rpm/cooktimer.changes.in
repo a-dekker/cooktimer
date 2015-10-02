@@ -8,6 +8,9 @@
 # * date Author's Name <author's email> version-release
 # - Summary of changes
 
+* fri Oct 01 2015 Arno Dekker <jack.tar@example.com> 0.0.1-33
+- Updated popup notification to behavior change in SFOF 2.0
+
 * wed Sep 23 2015 Arno Dekker <jack.tar@example.com> 0.0.1-32
 - Updates in Catalan, French and Polish
 

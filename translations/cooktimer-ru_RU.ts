@@ -73,47 +73,47 @@
 <context>
     <name>MainPage</name>
     <message>
-        <location filename="../qml/pages/MainPage.qml" line="260"/>
-        <location filename="../qml/pages/MainPage.qml" line="264"/>
+        <location filename="../qml/pages/MainPage.qml" line="269"/>
+        <location filename="../qml/pages/MainPage.qml" line="273"/>
         <source>ready</source>
         <translation>готово</translation>
     </message>
     <message>
-        <location filename="../qml/pages/MainPage.qml" line="364"/>
+        <location filename="../qml/pages/MainPage.qml" line="373"/>
         <source>About</source>
         <translation>О программе</translation>
     </message>
     <message>
-        <location filename="../qml/pages/MainPage.qml" line="368"/>
+        <location filename="../qml/pages/MainPage.qml" line="377"/>
         <source>Settings</source>
         <translation>Настройки</translation>
     </message>
     <message>
-        <location filename="../qml/pages/MainPage.qml" line="372"/>
+        <location filename="../qml/pages/MainPage.qml" line="381"/>
         <source>Edit dishes</source>
         <translation>Редактировать блюда</translation>
     </message>
     <message>
-        <location filename="../qml/pages/MainPage.qml" line="406"/>
-        <location filename="../qml/pages/MainPage.qml" line="637"/>
-        <location filename="../qml/pages/MainPage.qml" line="865"/>
+        <location filename="../qml/pages/MainPage.qml" line="415"/>
+        <location filename="../qml/pages/MainPage.qml" line="646"/>
+        <location filename="../qml/pages/MainPage.qml" line="874"/>
         <source>Dish</source>
         <translation>Блюдо</translation>
     </message>
     <message>
-        <location filename="../qml/pages/MainPage.qml" line="467"/>
-        <location filename="../qml/pages/MainPage.qml" line="469"/>
-        <location filename="../qml/pages/MainPage.qml" line="697"/>
-        <location filename="../qml/pages/MainPage.qml" line="699"/>
-        <location filename="../qml/pages/MainPage.qml" line="925"/>
-        <location filename="../qml/pages/MainPage.qml" line="927"/>
+        <location filename="../qml/pages/MainPage.qml" line="476"/>
+        <location filename="../qml/pages/MainPage.qml" line="478"/>
+        <location filename="../qml/pages/MainPage.qml" line="706"/>
+        <location filename="../qml/pages/MainPage.qml" line="708"/>
+        <location filename="../qml/pages/MainPage.qml" line="934"/>
+        <location filename="../qml/pages/MainPage.qml" line="936"/>
         <source>Stop</source>
         <translation>Стоп</translation>
     </message>
     <message>
-        <location filename="../qml/pages/MainPage.qml" line="468"/>
-        <location filename="../qml/pages/MainPage.qml" line="698"/>
-        <location filename="../qml/pages/MainPage.qml" line="926"/>
+        <location filename="../qml/pages/MainPage.qml" line="477"/>
+        <location filename="../qml/pages/MainPage.qml" line="707"/>
+        <location filename="../qml/pages/MainPage.qml" line="935"/>
         <source>Start</source>
         <translation>Старт</translation>
     </message>

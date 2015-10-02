@@ -200,6 +200,8 @@ Page {
         }
     }
 
+    Component.onDestruction: notification.close()
+
     function timeFromSecs(seconds) {
         var hh = Math.floor(((seconds / 86400) % 1) * 24)
         if (hh < 10) {
@@ -217,7 +219,14 @@ Page {
     }
 
     function banner(category, message) {
-        console.log("Notify", message)
+        notification.close()
+        var notificationCategory
+        switch(category) {
+        case "INFO":
+            notificationCategory = "x-jolla.alarmui.clock"
+            break
+        }
+        notification.category = notificationCategory
         notification.previewBody = "cooktimer"
         notification.previewSummary = message
         notification.publish()
@@ -252,12 +261,12 @@ Page {
 
     Notification {
         id: notification
-        category: "x-jolla.alarmui.clock"
+        itemCount: 1
     }
 
     function alarm(alarmtxt) {
         if (myset.value("popup") === "true") {
-            banner("info", alarmtxt + " " + qsTr("ready"))
+            banner("INFO", alarmtxt + " " + qsTr("ready"))
         }
         // pageStack.push(Qt.resolvedUrl("AlarmDialogBase.qml"))
         bar.launch("timedclient-qt5 -b'TITLE=button0' -e\"APPLICATION=test;TITLE="
