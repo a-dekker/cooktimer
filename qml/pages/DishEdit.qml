@@ -4,6 +4,7 @@ import "../localdb.js" as DB
 
 Dialog {
     id: dishesDialog
+    allowedOrientations: mainapp.orientationSetting
 
     function appendDish(dish, duration) {
         dishlist.model.append({
@@ -56,7 +57,7 @@ Dialog {
                     font.pixelSize: Theme.fontSizeSmall
                     placeholderText: qsTr('Dish name')
                     text: Dish
-                    width: font.pixelSize * 10
+                    width: isPortrait ? font.pixelSize * 10 : font.pixelSize * 20
                     RegExpValidator {
                         regExp: /(\w{1,10}\b)/g
                     }

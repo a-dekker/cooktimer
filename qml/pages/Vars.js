@@ -20,3 +20,7 @@ var russian = 11
 var spanish = 12
 var swedish = 13
 var turkish = 14
+
+var orientation_portrait = 0
+var orientation_landscape = 1
+var orientation_dynamic = 2

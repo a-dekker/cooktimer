@@ -13,6 +13,7 @@ import "Vars.js" as GlobVars
 // database in /home/nemo/.local/share/cooktimer/cooktimer/QML/OfflineStorage/Databases
 Page {
     id: page
+    allowedOrientations: mainapp.orientationSetting
 
     property string myGlobalDish1
     property string myGlobalDuration1
@@ -392,13 +393,17 @@ Page {
         PageHeader {
             id: header
             title: "cooktimer"
+            visible: isPortrait
         }
         Row {
             /* inner row */
             id: timerRow1
-            anchors.top: header.bottom
+            spacing: Theme.paddingSmall
+            anchors.top: isPortrait ? header.bottom  : header.top
+            anchors.topMargin: isPortrait ? 0  : Theme.paddingSmall
             anchors.horizontalCenter: parent.horizontalCenter
-            height: page.height / page.width > 1.6 ? Theme.itemSizeMedium : Theme.itemSizeSmall
+            height: isPortrait ? (
+                 page.height / page.width > 1.6 ? Theme.itemSizeMedium : Theme.itemSizeSmall) : Theme.paddingLarge * 1.6
 
             Button {
                 id: dish1
@@ -415,12 +420,6 @@ Page {
                     myGlobalDish1 = GlobVars.myDish = mainapp.dishText1 = qsTr(
                                 "Dish") + " 1"
                 }
-            }
-            Rectangle {
-                // some whitespace
-                width: Theme.paddingSmall
-                height: 1
-                opacity: 0
             }
             Item {
                 height: Theme.itemSizeMedium
@@ -463,12 +462,6 @@ Page {
                     }
                 }
 
-            }
-            Rectangle {
-                // some whitespace
-                width: Theme.paddingSmall
-                height: 1
-                opacity: 0
             }
             Button {
                 id: start1
@@ -551,7 +544,8 @@ Page {
         Item {
             id: counter1
             anchors.top: timerRow1.bottom
-            height: page.height / page.width > 1.6 ? Theme.itemSizeMedium : Theme.itemSizeSmall
+            height: isPortrait ? (
+                page.height / page.width > 1.6 ? Theme.itemSizeMedium : Theme.itemSizeSmall) : Theme.itemSizeSmall
             anchors.horizontalCenter: parent.horizontalCenter
             width: parent.width - Theme.paddingLarge
             Rectangle {
@@ -596,6 +590,7 @@ Page {
             id: progressBar1
             anchors.top: counter1.bottom
             width: parent.width - Theme.paddingLarge * 2
+            height: Theme.paddingLarge * 2.5
             anchors.horizontalCenter: parent.horizontalCenter
             maximumValue: 1
             anchors.topMargin: 1
@@ -629,8 +624,10 @@ Page {
             /* inner row */
             id: timerRow2
             anchors.top: progressBar1.bottom
+            spacing: Theme.paddingSmall
             anchors.horizontalCenter: parent.horizontalCenter
-            height: page.height / page.width > 1.6 ? Theme.itemSizeMedium : Theme.itemSizeSmall
+            height: isPortrait ? (
+                 page.height / page.width > 1.6 ? Theme.itemSizeMedium : Theme.itemSizeSmall) : Theme.paddingLarge * 1.6
             Button {
                 id: dish2
                 width: (page.width - (Theme.paddingLarge * 2)) / 2.34
@@ -646,12 +643,6 @@ Page {
                     myGlobalDish2 = GlobVars.myDish = mainapp.dishText2 = qsTr(
                                 "Dish") + " 2"
                 }
-            }
-            Rectangle {
-                // some whitespace
-                width: Theme.paddingSmall
-                height: 1
-                opacity: 0
             }
             Item {
                 height: Theme.itemSizeMedium
@@ -693,12 +684,6 @@ Page {
                         }
                     }
                 }
-            }
-            Rectangle {
-                // some whitespace
-                width: Theme.paddingSmall
-                height: 1
-                opacity: 0
             }
             Button {
                 id: start2
@@ -780,12 +765,13 @@ Page {
         Item {
             id: counter2
             anchors.top: timerRow2.bottom
-            height: page.height / page.width > 1.6 ? Theme.itemSizeMedium : Theme.itemSizeSmall
+            height: isPortrait ? (
+                page.height / page.width > 1.6 ? Theme.itemSizeMedium : Theme.itemSizeSmall) : Theme.itemSizeSmall
             anchors.horizontalCenter: parent.horizontalCenter
             width: parent.width - Theme.paddingLarge
             Rectangle {
                 anchors.fill: parent
-                opacity: 0.00
+                opacity: 0
             }
             TextField {
                 id: remainingTime2
@@ -825,11 +811,11 @@ Page {
             anchors.top: counter2.bottom
             anchors.horizontalCenter: parent.horizontalCenter
             width: parent.width - 2 * Theme.paddingLarge
+            height: Theme.paddingLarge * 2.5
             maximumValue: 1
             anchors.topMargin: 1
             leftMargin: 0
             rightMargin: 0
-            //        anchors.topMargin: counter1.height + timerRow1.height + header.height
             Timer {
                 interval: 100
                 repeat: true
@@ -857,8 +843,10 @@ Page {
             /* inner row */
             id: timerRow3
             anchors.top: progressBar2.bottom
+            spacing: Theme.paddingSmall
             anchors.horizontalCenter: parent.horizontalCenter
-            height: page.height / page.width > 1.6 ? Theme.itemSizeMedium : Theme.itemSizeSmall
+            height: isPortrait ? (
+                 page.height / page.width > 1.6 ? Theme.itemSizeMedium : Theme.itemSizeSmall) : Theme.paddingLarge * 1.6
             Button {
                 id: dish3
                 width: (page.width - (Theme.paddingLarge * 2)) / 2.34
@@ -874,12 +862,6 @@ Page {
                     myGlobalDish3 = GlobVars.myDish = mainapp.dishText3 = qsTr(
                                 "Dish") + " 3"
                 }
-            }
-            Rectangle {
-                // some whitespace
-                width: Theme.paddingSmall
-                height: 1
-                opacity: 0
             }
             Item {
                 height: Theme.itemSizeMedium
@@ -921,12 +903,6 @@ Page {
                         }
                     }
                 }
-            }
-            Rectangle {
-                // some whitespace
-                width: Theme.paddingSmall
-                height: 1
-                opacity: 0
             }
             Button {
                 id: start3
@@ -1053,6 +1029,7 @@ Page {
             anchors.top: counter3.bottom
             anchors.horizontalCenter: parent.horizontalCenter
             width: parent.width - 2 * Theme.paddingLarge
+            height: Theme.paddingLarge * 2.5
             maximumValue: 1
             anchors.topMargin: 1
             anchors.bottomMargin: 1

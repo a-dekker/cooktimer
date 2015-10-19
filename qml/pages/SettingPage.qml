@@ -7,8 +7,10 @@ import "Vars.js" as GlobVars
 Dialog {
     id: page
     canAccept: true
+    allowedOrientations: mainapp.orientationSetting
 
     property int langNbrToSave: -1
+    property int orientationNbrToSave: -1
 
     onAccepted: {
         myset.setValue("backlight", backlight.checked)
@@ -16,6 +18,22 @@ Dialog {
         // languagenumber is not index, but enum number!
         if (langNbrToSave !== -1)
             myset.setValue("language", langNbrToSave)
+        if (orientationNbrToSave !== -1) {
+            myset.setValue("orientation", orientationNbrToSave)
+            mainapp.orientationSetting = Qt.binding(function () {
+                switch (orientationNbrToSave) {
+                case 0:
+                    return Orientation.Portrait
+                case 1:
+                    return Orientation.Landscape
+                case 2:
+                    return (Orientation.Portrait | Orientation.Landscape
+                            | Orientation.LandscapeInverted)
+                default:
+                    return Orientation.Portrait
+                }
+            })
+        }
         myset.sync()
     }
 
@@ -43,10 +61,10 @@ Dialog {
 
                 acceptText: qsTr("Save")
                 cancelText: qsTr("Cancel")
-                //          title: qsTr("Settings")
             }
             SectionHeader {
                 text: qsTr("Settings")
+                visible: isPortrait
             }
 
             TextSwitch {
@@ -224,7 +242,65 @@ Dialog {
                 }
 
                 SilicaLabel {
-                    text: qsTr("Change of language will be active after restarting the application.")
+                    text: qsTr(
+                              "Change of language will be active after restarting the application.")
+                    font.pixelSize: Theme.fontSizeExtraSmall
+                    color: Theme.secondaryColor
+                }
+
+                ComboBox {
+                    id: orientation
+                    width: page.width
+                    label: qsTr("Orientation:")
+                    currentIndex: toCurrentIndex(myset.value("orientation"))
+                    menu: ContextMenu {
+                        // make sure it has the order in Vars.js
+                        MenuItem {
+                            text: qsTr("Portrait")
+                        } // 0
+                        MenuItem {
+                            text: qsTr("Landscape")
+                        } // 1
+                        MenuItem {
+                            text: qsTr("Dynamic")
+                        } // 2
+                    }
+                    // The next two converter functions decouple the alphabetical list
+                    // index from the internal settings index, which cannot be changed for legacy reasons
+                    function toCurrentIndex(value) {
+                        switch (parseInt(value)) {
+                        case 0:
+                            return GlobVars.orientation_portrait
+                        case 1:
+                            return GlobVars.orientation_landscape
+                        case 2:
+                            return GlobVars.orientation_dynamic
+                        default:
+                            return GlobVars.orientation_portrait
+                        }
+                    }
+
+                    function toSettingsIndex(value) {
+                        switch (value) {
+                        case GlobVars.orientation_potrait:
+                            return 0 // portrait
+                        case GlobVars.orientation_landscape:
+                            return 1 // landscape
+                        case GlobVars.orientation_dynamic:
+                            return 2 // dynamic
+                        default:
+                            return 0 // Portrait
+                        }
+                    }
+
+                    onCurrentIndexChanged: {
+                        orientationNbrToSave = toSettingsIndex(
+                                    orientation.currentIndex)
+                    }
+                }
+
+                SilicaLabel {
+                    text: qsTr("Sets the preferred screen orientation.")
                     font.pixelSize: Theme.fontSizeExtraSmall
                     color: Theme.secondaryColor
                 }

@@ -5,6 +5,7 @@ import "Vars.js" as GlobVars
 
 Page {
     id: dishPage
+    allowedOrientations: mainapp.orientationSetting
 
     function appendDish(dish, duration) {
         dishlist.model.append({
@@ -55,7 +56,7 @@ Page {
                 anchors.fill: parent
                 clip: true
                 Rectangle {
-                    rotation: 9
+                    rotation: isPortrait ? 9 : 5
                     height: parent.height
                     x: -dishlist.width
                     width: dishlist.width*2

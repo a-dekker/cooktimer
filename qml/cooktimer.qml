@@ -1,5 +1,6 @@
 import QtQuick 2.0
 import Sailfish.Silica 1.0
+import harbour.cooktimer.Settings 1.0
 import "pages"
 import "cover"
 
@@ -18,9 +19,29 @@ ApplicationWindow
     property bool timer1running: false
     property bool timer2running: false
     property bool timer3running: false
+    property int orientationSetting: (Orientation.Portrait | Orientation.Landscape | Orientation.LandscapeInverted)
     initialPage: Component { MainPage { } }
 
     cover: CoverPage {
        id: cover
+    }
+    MySettings {
+        id: myset
+    }
+
+    Component.onCompleted: {
+        // This binds the setting for allowed orientations to the property which is used on all sub-pages
+        orientationSetting = Qt.binding(function() {
+            switch (parseInt(myset.value("orientation"))) {
+                case 0:
+                    return Orientation.Portrait
+                case 1:
+                    return Orientation.Landscape
+                case 2:
+                    return (Orientation.Portrait | Orientation.Landscape | Orientation.LandscapeInverted)
+                default:
+                    return Orientation.Portrait
+            }
+        })
     }
 }
