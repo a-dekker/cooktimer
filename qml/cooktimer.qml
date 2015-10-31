@@ -20,7 +20,13 @@ ApplicationWindow
     property bool timer2running: false
     property bool timer3running: false
     property int orientationSetting: (Orientation.Portrait | Orientation.Landscape | Orientation.LandscapeInverted)
-    initialPage: Component { MainPage { } }
+    initialPage: mainPage
+    // initialPage: Component { MainPage { } }
+
+    MainPage{
+            id:mainPage
+        }
+
 
     cover: CoverPage {
        id: cover

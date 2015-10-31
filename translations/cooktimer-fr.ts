@@ -73,47 +73,47 @@
 <context>
     <name>MainPage</name>
     <message>
-        <location filename="../qml/pages/MainPage.qml" line="270"/>
-        <location filename="../qml/pages/MainPage.qml" line="274"/>
+        <location filename="../qml/pages/MainPage.qml" line="372"/>
+        <location filename="../qml/pages/MainPage.qml" line="376"/>
         <source>ready</source>
         <translation>prêt</translation>
     </message>
     <message>
-        <location filename="../qml/pages/MainPage.qml" line="374"/>
+        <location filename="../qml/pages/MainPage.qml" line="476"/>
         <source>About</source>
         <translation>À propos</translation>
     </message>
     <message>
-        <location filename="../qml/pages/MainPage.qml" line="378"/>
+        <location filename="../qml/pages/MainPage.qml" line="480"/>
         <source>Settings</source>
         <translation>Paramètres</translation>
     </message>
     <message>
-        <location filename="../qml/pages/MainPage.qml" line="382"/>
+        <location filename="../qml/pages/MainPage.qml" line="484"/>
         <source>Edit dishes</source>
         <translation>Editer les plats</translation>
     </message>
     <message>
-        <location filename="../qml/pages/MainPage.qml" line="420"/>
-        <location filename="../qml/pages/MainPage.qml" line="643"/>
-        <location filename="../qml/pages/MainPage.qml" line="862"/>
+        <location filename="../qml/pages/MainPage.qml" line="522"/>
+        <location filename="../qml/pages/MainPage.qml" line="715"/>
+        <location filename="../qml/pages/MainPage.qml" line="904"/>
         <source>Dish</source>
         <translation>Plat</translation>
     </message>
     <message>
-        <location filename="../qml/pages/MainPage.qml" line="469"/>
-        <location filename="../qml/pages/MainPage.qml" line="471"/>
-        <location filename="../qml/pages/MainPage.qml" line="691"/>
-        <location filename="../qml/pages/MainPage.qml" line="693"/>
-        <location filename="../qml/pages/MainPage.qml" line="910"/>
-        <location filename="../qml/pages/MainPage.qml" line="912"/>
+        <location filename="../qml/pages/MainPage.qml" line="571"/>
+        <location filename="../qml/pages/MainPage.qml" line="573"/>
+        <location filename="../qml/pages/MainPage.qml" line="763"/>
+        <location filename="../qml/pages/MainPage.qml" line="765"/>
+        <location filename="../qml/pages/MainPage.qml" line="952"/>
+        <location filename="../qml/pages/MainPage.qml" line="954"/>
         <source>Stop</source>
         <translation>Stop</translation>
     </message>
     <message>
-        <location filename="../qml/pages/MainPage.qml" line="470"/>
-        <location filename="../qml/pages/MainPage.qml" line="692"/>
-        <location filename="../qml/pages/MainPage.qml" line="911"/>
+        <location filename="../qml/pages/MainPage.qml" line="572"/>
+        <location filename="../qml/pages/MainPage.qml" line="764"/>
+        <location filename="../qml/pages/MainPage.qml" line="953"/>
         <source>Start</source>
         <translation>Départ</translation>
     </message>

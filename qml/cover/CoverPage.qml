@@ -38,8 +38,9 @@ CoverBackground {
             width: parent.width
             font.pixelSize: Theme.fontSizeHuge
             color: timer1running ? Theme.highlightColor : Theme.secondaryHighlightColor
-            anchors.topMargin: 1
-            anchors.bottomMargin: 1
+            // anchors.topMargin: 0
+            anchors.topMargin: -Theme.paddingSmall
+            anchors.bottomMargin: 0
             anchors.top: dishname1.bottom
         }
         ProgressBar {
@@ -52,7 +53,7 @@ CoverBackground {
             anchors.topMargin: 20
             anchors.bottomMargin: 1
             anchors.top: dishtime1.bottom
-            value : mainapp.progressValue1
+            value: mainapp.progressValue1
             height: Theme.paddingMedium
             visible: timer1running
         }
@@ -65,13 +66,15 @@ CoverBackground {
             font.pixelSize: Theme.fontSizeSmall
             color: Theme.primaryColor
             anchors.top: dishtime1.bottom
-            anchors.topMargin: 1
+            anchors.topMargin: -Theme.paddingSmall
+            // anchors.topMargin: 1
         }
         Label {
             id: dishtime2
             text: timeText2
             horizontalAlignment: Text.AlignHCenter
             width: parent.width
+            anchors.topMargin: -Theme.paddingSmall
             font.pixelSize: Theme.fontSizeHuge
             color: timer2running ? Theme.highlightColor : Theme.secondaryHighlightColor
             anchors.top: dishname2.bottom
@@ -86,7 +89,7 @@ CoverBackground {
             anchors.topMargin: 20
             anchors.bottomMargin: 1
             anchors.top: dishtime2.bottom
-            value : mainapp.progressValue2
+            value: mainapp.progressValue2
             height: Theme.paddingMedium
             visible: timer2running
         }
@@ -98,10 +101,12 @@ CoverBackground {
             font.pixelSize: Theme.fontSizeSmall
             color: Theme.primaryColor
             anchors.top: dishtime2.bottom
+            anchors.topMargin: -Theme.paddingSmall
         }
         Label {
             id: dishtime3
             text: timeText3
+            anchors.topMargin: -Theme.paddingSmall
             horizontalAlignment: Text.AlignHCenter
             width: parent.width
             font.pixelSize: Theme.fontSizeHuge
@@ -118,9 +123,31 @@ CoverBackground {
             anchors.topMargin: 20
             anchors.bottomMargin: 1
             anchors.top: dishtime3.bottom
-            value : mainapp.progressValue3
+            value: mainapp.progressValue3
             height: Theme.paddingMedium
             visible: timer3running
+        }
+    }
+    CoverActionList {
+        id: coverAction
+
+        CoverAction {
+            iconSource: timer1running ? "../images/icon-cover-stop.png" : "image://theme/icon-cover-play"
+            onTriggered: {
+                mainPage.toggleTimer1()
+            }
+        }
+        CoverAction {
+            iconSource: timer2running ? "../images/icon-cover-stop.png" : "image://theme/icon-cover-play"
+            onTriggered: {
+                mainPage.toggleTimer2()
+            }
+        }
+        CoverAction {
+            iconSource: timer3running ? "../images/icon-cover-stop.png" : "image://theme/icon-cover-play"
+            onTriggered: {
+                mainPage.toggleTimer3()
+            }
         }
     }
 }

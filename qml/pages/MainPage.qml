@@ -219,6 +219,108 @@ Page {
         return hh + ":" + mi + ":" + ss
     }
 
+    function toggleTimer1() {
+        progressBar1.value = 0
+        totalTime1.text = timer1.text
+        remainingTime1.text = timer1.text
+        mainapp.timeText1 = remainingTime1.text
+        var tt = timer1.text
+        tt = tt.split(":")
+        var sec = _totalsecs1 = tt[0] * 3600 + tt[1] * 60 + tt[2] * 1
+        remainingTime1.seconds = sec
+        GlobVars.myDuration = remainingTime1.text
+        if (remainingTime1.text !== "00:00:00" || ticker1.running) {
+            _lastTick1 = Math.round(Date.now() / 1000)
+            if (!isPaused1) {
+                buttonBuzz.play()
+                ticker1.running = !ticker1.running
+                mainapp.timer1running = !mainapp.timer1running
+            }
+            if (ticker1.running) {
+                remainingTime1.color = Theme.highlightColor
+                remainingTime1.font.bold = true
+            } else {
+                remainingTime1.color = Theme.secondaryHighlightColor
+                remainingTime1.font.bold = false
+                remainingTime1.font.underline = false
+            }
+            isPaused1 = false
+        }
+        if (!ticker1.running) {
+            if (insomniac1.running) {
+                insomniac1.stop()
+            }
+        }
+    }
+
+    function toggleTimer2() {
+        progressBar2.value = 0
+        totalTime2.text = timer2.text
+        remainingTime2.text = timer2.text
+        mainapp.timeText2 = remainingTime2.text
+        var tt = timer2.text
+        tt = tt.split(":")
+        var sec = _totalsecs2 = tt[0] * 3600 + tt[1] * 60 + tt[2] * 1
+        remainingTime2.seconds = sec
+        GlobVars.myDuration = remainingTime2.text
+        if (remainingTime2.text !== "00:00:00" || ticker2.running) {
+            _lastTick2 = Math.round(Date.now() / 1000)
+            if (!isPaused2) {
+                buttonBuzz.play()
+                ticker2.running = !ticker2.running
+                mainapp.timer2running = !mainapp.timer2running
+            }
+            if (ticker2.running) {
+                remainingTime2.color = Theme.highlightColor
+                remainingTime2.font.bold = true
+            } else {
+                remainingTime2.color = Theme.secondaryHighlightColor
+                remainingTime2.font.bold = false
+                remainingTime2.font.underline = false
+            }
+            isPaused2 = false
+        }
+        if (!ticker2.running) {
+            if (insomniac2.running) {
+                insomniac2.stop()
+            }
+        }
+    }
+
+    function toggleTimer3() {
+        progressBar3.value = 0
+        totalTime3.text = timer3.text
+        remainingTime3.text = timer3.text
+        mainapp.timeText3 = remainingTime3.text
+        var tt = timer3.text
+        tt = tt.split(":")
+        var sec = _totalsecs3 = tt[0] * 3600 + tt[1] * 60 + tt[2] * 1
+        remainingTime3.seconds = sec
+        GlobVars.myDuration = remainingTime3.text
+        if (remainingTime3.text !== "00:00:00" || ticker3.running) {
+            _lastTick3 = Math.round(Date.now() / 1000)
+            if (!isPaused3) {
+                buttonBuzz.play()
+                ticker3.running = !ticker3.running
+                mainapp.timer3running = !mainapp.timer3running
+            }
+            if (ticker3.running) {
+                remainingTime3.color = Theme.highlightColor
+                remainingTime3.font.bold = true
+            } else {
+                remainingTime3.color = Theme.secondaryHighlightColor
+                remainingTime3.font.bold = false
+                remainingTime3.font.underline = false
+            }
+            isPaused3 = false
+        }
+        if (!ticker3.running) {
+            if (insomniac3.running) {
+                insomniac3.stop()
+            }
+        }
+    }
+
     function banner(category, message) {
         notification.close()
         var notificationCategory
@@ -470,38 +572,8 @@ Page {
                                                          "Stop") : qsTr("Start")
                 enabled: timer1.text === "00:00:00" && start1.text !== qsTr(
                              "Stop") ? false : true
-                onClicked: {
-                    progressBar1.value = 0
-                    totalTime1.text = timer1.text
-                    remainingTime1.text = timer1.text
-                    mainapp.timeText1 = remainingTime1.text
-                    var tt = timer1.text
-                    tt = tt.split(":")
-                    var sec = _totalsecs1 = tt[0] * 3600 + tt[1] * 60 + tt[2] * 1
-                    remainingTime1.seconds = sec
-                    GlobVars.myDuration = remainingTime1.text
-                    if (remainingTime1.text !== "00:00:00" || ticker1.running) {
-                        _lastTick1 = Math.round(Date.now() / 1000)
-                        if (!isPaused1) {
-                            buttonBuzz.play()
-                            ticker1.running = !ticker1.running
-                            mainapp.timer1running = !mainapp.timer1running
-                        }
-                        if (ticker1.running) {
-                            remainingTime1.color = Theme.highlightColor
-                            remainingTime1.font.bold = true
-                        } else {
-                            remainingTime1.color = Theme.secondaryHighlightColor
-                            remainingTime1.font.bold = false
-                            remainingTime1.font.underline = false
-                        }
-                        isPaused1 = false
-                    }
-                    if (!ticker1.running) {
-                        if (insomniac1.running) {
-                            insomniac1.stop()
-                        }
-                    }
+                             onClicked: {
+                                 toggleTimer1()
                 }
             }
         }
@@ -692,38 +764,8 @@ Page {
                                                          "Stop") : qsTr("Start")
                 enabled: timer2.text === "00:00:00" && start2.text !== qsTr(
                              "Stop") ? false : true
-                onClicked: {
-                    progressBar2.value = 0
-                    totalTime2.text = timer2.text
-                    remainingTime2.text = timer2.text
-                    mainapp.timeText2 = remainingTime2.text
-                    var tt = timer2.text
-                    tt = tt.split(":")
-                    var sec = _totalsecs2 = tt[0] * 3600 + tt[1] * 60 + tt[2] * 1
-                    remainingTime2.seconds = sec
-                    GlobVars.myDuration = remainingTime2.text
-                    if (remainingTime2.text !== "00:00:00" || ticker2.running) {
-                        _lastTick2 = Math.round(Date.now() / 1000)
-                        if (!isPaused2) {
-                            buttonBuzz.play()
-                            ticker2.running = !ticker2.running
-                            mainapp.timer2running = !mainapp.timer2running
-                        }
-                        if (ticker2.running) {
-                            remainingTime2.color = Theme.highlightColor
-                            remainingTime2.font.bold = true
-                        } else {
-                            remainingTime2.color = Theme.secondaryHighlightColor
-                            remainingTime2.font.bold = false
-                            remainingTime2.font.underline = false
-                        }
-                        isPaused2 = false
-                    }
-                    if (!ticker2.running) {
-                        if (insomniac2.running) {
-                            insomniac2.stop()
-                        }
-                    }
+                             onClicked: {
+                                 toggleTimer2()
                 }
             }
         }
@@ -911,38 +953,8 @@ Page {
                                                          "Stop") : qsTr("Start")
                 enabled: timer3.text === "00:00:00" && start3.text !== qsTr(
                              "Stop") ? false : true
-                onClicked: {
-                    progressBar3.value = 0
-                    totalTime3.text = timer3.text
-                    remainingTime3.text = timer3.text
-                    mainapp.timeText3 = remainingTime3.text
-                    var tt = timer3.text
-                    tt = tt.split(":")
-                    var sec = _totalsecs3 = tt[0] * 3600 + tt[1] * 60 + tt[2] * 1
-                    remainingTime3.seconds = sec
-                    GlobVars.myDuration = remainingTime3.text
-                    if (remainingTime3.text !== "00:00:00" || ticker3.running) {
-                        _lastTick3 = Math.round(Date.now() / 1000)
-                        if (!isPaused3) {
-                            buttonBuzz.play()
-                            ticker3.running = !ticker3.running
-                            mainapp.timer3running = !mainapp.timer3running
-                        }
-                        if (ticker3.running) {
-                            remainingTime3.color = Theme.highlightColor
-                            remainingTime3.font.bold = true
-                        } else {
-                            remainingTime3.color = Theme.secondaryHighlightColor
-                            remainingTime3.font.bold = false
-                            remainingTime3.font.underline = false
-                        }
-                        isPaused3 = false
-                    }
-                    if (!ticker3.running) {
-                        if (insomniac3.running) {
-                            insomniac3.stop()
-                        }
-                    }
+                             onClicked: {
+                                 toggleTimer3()
                 }
             }
         }

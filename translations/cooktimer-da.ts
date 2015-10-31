@@ -73,47 +73,47 @@
 <context>
     <name>MainPage</name>
     <message>
-        <location filename="../qml/pages/MainPage.qml" line="270"/>
-        <location filename="../qml/pages/MainPage.qml" line="274"/>
+        <location filename="../qml/pages/MainPage.qml" line="372"/>
+        <location filename="../qml/pages/MainPage.qml" line="376"/>
         <source>ready</source>
         <translation>klar</translation>
     </message>
     <message>
-        <location filename="../qml/pages/MainPage.qml" line="374"/>
+        <location filename="../qml/pages/MainPage.qml" line="476"/>
         <source>About</source>
         <translation>Om</translation>
     </message>
     <message>
-        <location filename="../qml/pages/MainPage.qml" line="378"/>
+        <location filename="../qml/pages/MainPage.qml" line="480"/>
         <source>Settings</source>
         <translation>Indstillinger</translation>
     </message>
     <message>
-        <location filename="../qml/pages/MainPage.qml" line="382"/>
+        <location filename="../qml/pages/MainPage.qml" line="484"/>
         <source>Edit dishes</source>
         <translation>Rediger retter</translation>
     </message>
     <message>
-        <location filename="../qml/pages/MainPage.qml" line="420"/>
-        <location filename="../qml/pages/MainPage.qml" line="643"/>
-        <location filename="../qml/pages/MainPage.qml" line="862"/>
+        <location filename="../qml/pages/MainPage.qml" line="522"/>
+        <location filename="../qml/pages/MainPage.qml" line="715"/>
+        <location filename="../qml/pages/MainPage.qml" line="904"/>
         <source>Dish</source>
         <translation>Ret</translation>
     </message>
     <message>
-        <location filename="../qml/pages/MainPage.qml" line="469"/>
-        <location filename="../qml/pages/MainPage.qml" line="471"/>
-        <location filename="../qml/pages/MainPage.qml" line="691"/>
-        <location filename="../qml/pages/MainPage.qml" line="693"/>
-        <location filename="../qml/pages/MainPage.qml" line="910"/>
-        <location filename="../qml/pages/MainPage.qml" line="912"/>
+        <location filename="../qml/pages/MainPage.qml" line="571"/>
+        <location filename="../qml/pages/MainPage.qml" line="573"/>
+        <location filename="../qml/pages/MainPage.qml" line="763"/>
+        <location filename="../qml/pages/MainPage.qml" line="765"/>
+        <location filename="../qml/pages/MainPage.qml" line="952"/>
+        <location filename="../qml/pages/MainPage.qml" line="954"/>
         <source>Stop</source>
         <translation>Stop</translation>
     </message>
     <message>
-        <location filename="../qml/pages/MainPage.qml" line="470"/>
-        <location filename="../qml/pages/MainPage.qml" line="692"/>
-        <location filename="../qml/pages/MainPage.qml" line="911"/>
+        <location filename="../qml/pages/MainPage.qml" line="572"/>
+        <location filename="../qml/pages/MainPage.qml" line="764"/>
+        <location filename="../qml/pages/MainPage.qml" line="953"/>
         <source>Start</source>
         <translation>Start</translation>
     </message>
@@ -168,27 +168,27 @@
     <message>
         <location filename="../qml/pages/SettingPage.qml" line="254"/>
         <source>Orientation:</source>
-        <translation type="unfinished"></translation>
+        <translation>Orientering:</translation>
     </message>
     <message>
         <location filename="../qml/pages/SettingPage.qml" line="259"/>
         <source>Portrait</source>
-        <translation type="unfinished"></translation>
+        <translation>Portræt</translation>
     </message>
     <message>
         <location filename="../qml/pages/SettingPage.qml" line="262"/>
         <source>Landscape</source>
-        <translation type="unfinished"></translation>
+        <translation>Landskab</translation>
     </message>
     <message>
         <location filename="../qml/pages/SettingPage.qml" line="265"/>
         <source>Dynamic</source>
-        <translation type="unfinished"></translation>
+        <translation>Dynamisk</translation>
     </message>
     <message>
         <location filename="../qml/pages/SettingPage.qml" line="303"/>
         <source>Sets the preferred screen orientation.</source>
-        <translation type="unfinished"></translation>
+        <translation>Sætter den foretrukne skærmorientering.</translation>
     </message>
 </context>
 <context>
@@ -206,7 +206,7 @@
     <message>
         <location filename="../qml/pages/TimeDialog.qml" line="91"/>
         <source>Dish</source>
-        <translation type="unfinished">Ret</translation>
+        <translation>Ret</translation>
     </message>
 </context>
 <context>
