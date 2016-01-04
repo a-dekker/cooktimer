@@ -44,6 +44,20 @@ OTHER_FILES += qml/cooktimer.qml \
     qml/localdb.js \
     qml/common/SilicaLabel.qml \
 
+icon86.files += icons/86x86/cooktimer.png
+icon86.path = /usr/share/icons/hicolor/86x86/apps
+
+icon108.files += icons/108x108/cooktimer.png
+icon108.path = /usr/share/icons/hicolor/108x108/apps
+
+icon128.files += icons/128x128/cooktimer.png
+icon128.path = /usr/share/icons/hicolor/128x128/apps
+
+icon256.files += icons/256x256/cooktimer.png
+icon256.path = /usr/share/icons/hicolor/256x256/apps
+
+INSTALLS += icon86 icon108 icon128 icon256
+
 # to disable building translations every time, comment out the
 # following CONFIG line
 CONFIG += sailfishapp_i18n

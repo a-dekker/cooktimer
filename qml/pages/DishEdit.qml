@@ -117,7 +117,6 @@ Dialog {
         anchors.right: dishlist.right
         anchors.rightMargin: Theme.paddingMedium
         icon.source: 'image://theme/icon-m-add'
-        visible: dishlist.count < 20
         onClicked: {
             appendDish(qsTr('New dish'), '00:00:00')
             dishlist.positionViewAtEnd()

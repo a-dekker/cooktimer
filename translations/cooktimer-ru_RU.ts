@@ -57,7 +57,7 @@
         <translation>Не обнаружено ни одного блюда. Нажмите кнопку &quot;+&quot;, чтобы добавить.</translation>
     </message>
     <message>
-        <location filename="../qml/pages/DishEdit.qml" line="122"/>
+        <location filename="../qml/pages/DishEdit.qml" line="121"/>
         <source>New dish</source>
         <translation>Новое блюдо</translation>
     </message>

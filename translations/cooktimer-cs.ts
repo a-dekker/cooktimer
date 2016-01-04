@@ -57,7 +57,7 @@
         <translation>Nestanoven žádný pokrm. Pro přidání pokrmu stiskněte tlačítko plus.</translation>
     </message>
     <message>
-        <location filename="../qml/pages/DishEdit.qml" line="122"/>
+        <location filename="../qml/pages/DishEdit.qml" line="121"/>
         <source>New dish</source>
         <translation>Nový pokrm</translation>
     </message>

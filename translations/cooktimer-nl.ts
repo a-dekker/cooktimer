@@ -57,7 +57,7 @@
         <translation>Geen gerechten opgeslagen. Druk op de plusknop om er een toe te voegen.</translation>
     </message>
     <message>
-        <location filename="../qml/pages/DishEdit.qml" line="122"/>
+        <location filename="../qml/pages/DishEdit.qml" line="121"/>
         <source>New dish</source>
         <translation>Nieuw gerecht</translation>
     </message>

@@ -8,6 +8,10 @@
 # * date Author's Name <author's email> version-release
 # - Summary of changes
 
+* mon Jan 04 2016 Arno Dekker <jack.tar@example.com> 0.0.1-36
+- Removed limitations on amount of predefined dishes
+- Icon changes
+
 * mon Oct 31 2015 Arno Dekker <jack.tar@example.com> 0.0.1-35
 - Added 3 cover buttons for start/stop of timers
 

@@ -57,7 +57,7 @@
         <translation>Inga maträtter definierade. Tryck på plus för att lägga till en.</translation>
     </message>
     <message>
-        <location filename="../qml/pages/DishEdit.qml" line="122"/>
+        <location filename="../qml/pages/DishEdit.qml" line="121"/>
         <source>New dish</source>
         <translation>Ny maträtt</translation>
     </message>

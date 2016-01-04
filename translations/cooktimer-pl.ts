@@ -57,7 +57,7 @@
         <translation>Brak zdefiniowanych dań. Naciśnij plus aby dodać.</translation>
     </message>
     <message>
-        <location filename="../qml/pages/DishEdit.qml" line="122"/>
+        <location filename="../qml/pages/DishEdit.qml" line="121"/>
         <source>New dish</source>
         <translation>Nowe danie</translation>
     </message>

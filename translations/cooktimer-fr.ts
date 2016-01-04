@@ -57,7 +57,7 @@
         <translation>Aucun plat défini. Appuyer sur le bouton plus pour en ajouter un.</translation>
     </message>
     <message>
-        <location filename="../qml/pages/DishEdit.qml" line="122"/>
+        <location filename="../qml/pages/DishEdit.qml" line="121"/>
         <source>New dish</source>
         <translation>Nouveau plat</translation>
     </message>

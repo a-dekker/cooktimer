@@ -57,7 +57,7 @@
         <translation>Δεν υπάρχουν φαγητά που ορίζονται. Πατήστε το κουμπί συν για να προσθέσετε ένα.</translation>
     </message>
     <message>
-        <location filename="../qml/pages/DishEdit.qml" line="122"/>
+        <location filename="../qml/pages/DishEdit.qml" line="121"/>
         <source>New dish</source>
         <translation>Νεο φαγητο</translation>
     </message>

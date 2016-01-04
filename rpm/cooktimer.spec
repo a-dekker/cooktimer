@@ -14,10 +14,10 @@ Name:       cooktimer
 %{?qtc_builddir:%define _builddir %qtc_builddir}
 Summary:    Three timers for cooking
 Version:    0.1
-Release:    35
+Release:    36
 Group:      Qt/Qt
-License:    LICENSE
-URL:        https://openrepos.net/content/ade/cooktimer
+License:    LGPL
+URL:        https://github.com/a-dekker/cooktimer
 Source0:    %{name}-%{version}.tar.bz2
 Requires:   sailfishsilica-qt5 >= 0.10.9
 Requires:   timed-qt5-tools
@@ -68,6 +68,9 @@ desktop-file-install --delete-original       \
 %{_datadir}/%{name}/qml
 %{_datadir}/applications/%{name}.desktop
 %{_datadir}/icons/hicolor/86x86/apps/%{name}.png
+%{_datadir}/icons/hicolor/108x108/apps/%{name}.png
+%{_datadir}/icons/hicolor/128x128/apps/%{name}.png
+%{_datadir}/icons/hicolor/256x256/apps/%{name}.png
 %{_datadir}/%{name}/translations
 %{_datadir}/%{name}/lib/
 %{_datadir}/%{name}/lib/cooktimer
@@ -76,3 +79,6 @@ desktop-file-install --delete-original       \
 /usr/share/cooktimer
 /usr/share/applications
 /usr/share/icons/hicolor/86x86/apps
+/usr/share/icons/hicolor/108x108/apps
+/usr/share/icons/hicolor/128x128/apps
+/usr/share/icons/hicolor/256x256/apps
