@@ -2,6 +2,7 @@
 .pragma library
 var myDish = "Dish"
 var myDuration = "00:00:00"
+var myComment = ""
 var myCurrentTimer = "0"
 
 // The index list below must be the same as the order of language menu items in settings dialog

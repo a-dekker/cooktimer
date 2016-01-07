@@ -18,8 +18,14 @@ function initializeDB() {
     db.transaction(function (tx) {
         // create table
         tx.executeSql(
-                    "CREATE TABLE IF NOT EXISTS dishes(Dish TEXT, Duration TEXT)")
+                    "CREATE TABLE IF NOT EXISTS dishes(Dish TEXT, Duration TEXT, Comment Text)")
         tx.executeSql("CREATE UNIQUE INDEX IF NOT EXISTS uid ON dishes(Dish)")
+        // add Comment column if not present
+        var result = tx.executeSql("SELECT * FROM sqlite_master where sql like('%Comment%');")
+        if (result.rows.length === 0) {
+            // must be an old table definition, lets add a column
+            tx.executeSql("alter table dishes add Comment TEXT default '';")
+        }
     })
     return db
 }
@@ -36,7 +42,8 @@ function readDishes() {
         var result = tx.executeSql("SELECT * FROM dishes ORDER BY Dish COLLATE NOCASE;")
         for (var i = 0; i < result.rows.length; i++) {
             dishPage.appendDish(result.rows.item(i).Dish,
-                                result.rows.item(i).Duration)
+                                result.rows.item(i).Duration,
+                                result.rows.item(i).Comment)
         }
     })
 }
@@ -48,7 +55,8 @@ function readDishesEdit() {
         var result = tx.executeSql("SELECT * FROM dishes ORDER BY Dish COLLATE NOCASE;")
         for (var i = 0; i < result.rows.length; i++) {
             dishesDialog.appendDish(result.rows.item(i).Dish,
-                                    result.rows.item(i).Duration)
+                                    result.rows.item(i).Duration,
+                                    result.rows.item(i).Comment)
         }
     })
 }
@@ -63,14 +71,14 @@ function RemoveAllDishes() {
 }
 
 // save dish
-function writeDish(dish, duration) {
+function writeDish(dish, duration,comment) {
     var db = connectDB()
     var result
 
     try {
         db.transaction(function (tx) {
-            tx.executeSql("INSERT INTO dishes (Dish, Duration) VALUES (?, ?);",
-                          [dish, duration])
+            tx.executeSql("INSERT INTO dishes (Dish, Duration, Comment) VALUES (?, ?, ?);",
+                          [dish, duration, comment])
             tx.executeSql("COMMIT;")
             result = tx.executeSql("SELECT Dish FROM dishes WHERE Dish=?;",
                                    [dish])

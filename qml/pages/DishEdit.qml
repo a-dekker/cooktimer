@@ -6,10 +6,11 @@ Dialog {
     id: dishesDialog
     allowedOrientations: mainapp.orientationSetting
 
-    function appendDish(dish, duration) {
+    function appendDish(dish, duration, comment) {
         dishlist.model.append({
                                   Dish: dish,
-                                  Duration: duration
+                                  Duration: duration,
+                                  Comment: comment
                               })
     }
 
@@ -57,7 +58,7 @@ Dialog {
                     font.pixelSize: Theme.fontSizeSmall
                     placeholderText: qsTr('Dish name')
                     text: Dish
-                    width: isPortrait ? font.pixelSize * 10 : font.pixelSize * 20
+                    width: isPortrait ? font.pixelSize * 9 : font.pixelSize * 18
                     RegExpValidator {
                         regExp: /(\w{1,10}\b)/g
                     }
@@ -97,7 +98,22 @@ Dialog {
                     }
                 }
                 IconButton {
+                    id: commentButton
                     anchors.left: cookTime.right
+                    icon.source: 'image://theme/icon-m-note'
+                    onClicked: {
+                        var dialog = pageStack.push(Qt.resolvedUrl(
+                                                        "CommentPage.qml"), {
+                                                        commenttext: Comment
+                                                    })
+                        dialog.accepted.connect(function () {
+                            dishlist.model.setProperty(index, 'Comment',
+                                                       dialog.commenttext.trim())
+                        })
+                    }
+                }
+                IconButton {
+                    anchors.left: commentButton.right
                     icon.source: 'image://theme/icon-m-delete'
                     onClicked: remove()
                 }
@@ -131,7 +147,8 @@ Dialog {
             // Then loop though current list and save
             for (var i = 0; i < dishlist.model.count; ++i) {
                 DB.writeDish(dishlist.model.get(i).Dish.trim(),
-                             dishlist.model.get(i).Duration)
+                             dishlist.model.get(i).Duration,
+                             dishlist.model.get(i).Comment)
             }
         }
     }

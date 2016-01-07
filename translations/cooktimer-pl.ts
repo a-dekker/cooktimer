@@ -30,34 +30,52 @@
     </message>
 </context>
 <context>
+    <name>CommentPage</name>
+    <message>
+        <location filename="../qml/pages/CommentPage.qml" line="16"/>
+        <source>Done</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/CommentPage.qml" line="17"/>
+        <source>Cancel</source>
+        <translation type="unfinished">Anuluj</translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/CommentPage.qml" line="23"/>
+        <source>Enter small note here</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
     <name>DishEdit</name>
     <message>
-        <location filename="../qml/pages/DishEdit.qml" line="18"/>
+        <location filename="../qml/pages/DishEdit.qml" line="19"/>
         <source>Save</source>
         <translation>Zapisz</translation>
     </message>
     <message>
-        <location filename="../qml/pages/DishEdit.qml" line="19"/>
+        <location filename="../qml/pages/DishEdit.qml" line="20"/>
         <source>Cancel</source>
         <translation>Anuluj</translation>
     </message>
     <message>
-        <location filename="../qml/pages/DishEdit.qml" line="48"/>
+        <location filename="../qml/pages/DishEdit.qml" line="49"/>
         <source>Deleting</source>
         <translation>Kasowanie</translation>
     </message>
     <message>
-        <location filename="../qml/pages/DishEdit.qml" line="58"/>
+        <location filename="../qml/pages/DishEdit.qml" line="59"/>
         <source>Dish name</source>
         <translation>Nazwa dania</translation>
     </message>
     <message>
-        <location filename="../qml/pages/DishEdit.qml" line="111"/>
+        <location filename="../qml/pages/DishEdit.qml" line="127"/>
         <source>No dishes defined. Press the plus button to add one.</source>
         <translation>Brak zdefiniowanych dań. Naciśnij plus aby dodać.</translation>
     </message>
     <message>
-        <location filename="../qml/pages/DishEdit.qml" line="121"/>
+        <location filename="../qml/pages/DishEdit.qml" line="137"/>
         <source>New dish</source>
         <translation>Nowe danie</translation>
     </message>
@@ -65,7 +83,7 @@
 <context>
     <name>DishPage</name>
     <message>
-        <location filename="../qml/pages/DishPage.qml" line="97"/>
+        <location filename="../qml/pages/DishPage.qml" line="99"/>
         <source>No dishes defined. Choose &quot;Edit Dishes&quot; from the pulley menu.</source>
         <translation>Brak zdefiniowanych dań. Wybierz &quot;Edytuj Dania&quot; z wysuwanego menu.</translation>
     </message>
@@ -73,47 +91,47 @@
 <context>
     <name>MainPage</name>
     <message>
-        <location filename="../qml/pages/MainPage.qml" line="372"/>
-        <location filename="../qml/pages/MainPage.qml" line="376"/>
+        <location filename="../qml/pages/MainPage.qml" line="381"/>
+        <location filename="../qml/pages/MainPage.qml" line="385"/>
         <source>ready</source>
         <translation>gotowe</translation>
     </message>
     <message>
-        <location filename="../qml/pages/MainPage.qml" line="476"/>
+        <location filename="../qml/pages/MainPage.qml" line="497"/>
         <source>About</source>
-        <translation>O</translation>
+        <translation>O programie</translation>
     </message>
     <message>
-        <location filename="../qml/pages/MainPage.qml" line="480"/>
+        <location filename="../qml/pages/MainPage.qml" line="501"/>
         <source>Settings</source>
         <translation>Ustawienia</translation>
     </message>
     <message>
-        <location filename="../qml/pages/MainPage.qml" line="484"/>
+        <location filename="../qml/pages/MainPage.qml" line="505"/>
         <source>Edit dishes</source>
         <translation>Edytuj dania</translation>
     </message>
     <message>
-        <location filename="../qml/pages/MainPage.qml" line="522"/>
-        <location filename="../qml/pages/MainPage.qml" line="715"/>
-        <location filename="../qml/pages/MainPage.qml" line="904"/>
+        <location filename="../qml/pages/MainPage.qml" line="543"/>
+        <location filename="../qml/pages/MainPage.qml" line="746"/>
+        <location filename="../qml/pages/MainPage.qml" line="945"/>
         <source>Dish</source>
         <translation>Danie</translation>
     </message>
     <message>
-        <location filename="../qml/pages/MainPage.qml" line="571"/>
-        <location filename="../qml/pages/MainPage.qml" line="573"/>
-        <location filename="../qml/pages/MainPage.qml" line="763"/>
-        <location filename="../qml/pages/MainPage.qml" line="765"/>
-        <location filename="../qml/pages/MainPage.qml" line="952"/>
-        <location filename="../qml/pages/MainPage.qml" line="954"/>
+        <location filename="../qml/pages/MainPage.qml" line="593"/>
+        <location filename="../qml/pages/MainPage.qml" line="595"/>
+        <location filename="../qml/pages/MainPage.qml" line="795"/>
+        <location filename="../qml/pages/MainPage.qml" line="797"/>
+        <location filename="../qml/pages/MainPage.qml" line="994"/>
+        <location filename="../qml/pages/MainPage.qml" line="996"/>
         <source>Stop</source>
         <translation>Stop</translation>
     </message>
     <message>
-        <location filename="../qml/pages/MainPage.qml" line="572"/>
-        <location filename="../qml/pages/MainPage.qml" line="764"/>
-        <location filename="../qml/pages/MainPage.qml" line="953"/>
+        <location filename="../qml/pages/MainPage.qml" line="594"/>
+        <location filename="../qml/pages/MainPage.qml" line="796"/>
+        <location filename="../qml/pages/MainPage.qml" line="995"/>
         <source>Start</source>
         <translation>Start</translation>
     </message>
@@ -168,27 +186,27 @@
     <message>
         <location filename="../qml/pages/SettingPage.qml" line="254"/>
         <source>Orientation:</source>
-        <translation type="unfinished"></translation>
+        <translation>Orientacja:</translation>
     </message>
     <message>
         <location filename="../qml/pages/SettingPage.qml" line="259"/>
         <source>Portrait</source>
-        <translation type="unfinished"></translation>
+        <translation>Pionowa</translation>
     </message>
     <message>
         <location filename="../qml/pages/SettingPage.qml" line="262"/>
         <source>Landscape</source>
-        <translation type="unfinished"></translation>
+        <translation>Pozioma</translation>
     </message>
     <message>
         <location filename="../qml/pages/SettingPage.qml" line="265"/>
         <source>Dynamic</source>
-        <translation type="unfinished"></translation>
+        <translation>Dynamiczna</translation>
     </message>
     <message>
         <location filename="../qml/pages/SettingPage.qml" line="303"/>
         <source>Sets the preferred screen orientation.</source>
-        <translation type="unfinished"></translation>
+        <translation>Ustaw preferowaną orientację ekranu.</translation>
     </message>
 </context>
 <context>
@@ -206,7 +224,7 @@
     <message>
         <location filename="../qml/pages/TimeDialog.qml" line="91"/>
         <source>Dish</source>
-        <translation type="unfinished">Danie</translation>
+        <translation>Danie</translation>
     </message>
 </context>
 <context>

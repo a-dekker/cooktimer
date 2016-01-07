@@ -35,6 +35,7 @@ OTHER_FILES += qml/cooktimer.qml \
     qml/pages/SettingPage.qml \
     qml/pages/Vars.js \
     qml/pages/DishPage.qml \
+    qml/pages/CommentPage.qml \
     qml/pages/TimePickerSeconds.qml \
     qml/pages/TimeDialog.qml \
     qml/images/coverbg.png \
@@ -43,6 +44,7 @@ OTHER_FILES += qml/cooktimer.qml \
     qml/images/icon-cover-stop.png \
     qml/localdb.js \
     qml/common/SilicaLabel.qml \
+    qml/common/DishInfoPanel.qml
 
 icon86.files += icons/86x86/cooktimer.png
 icon86.path = /usr/share/icons/hicolor/86x86/apps

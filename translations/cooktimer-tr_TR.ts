@@ -30,34 +30,52 @@
     </message>
 </context>
 <context>
+    <name>CommentPage</name>
+    <message>
+        <location filename="../qml/pages/CommentPage.qml" line="16"/>
+        <source>Done</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/CommentPage.qml" line="17"/>
+        <source>Cancel</source>
+        <translation type="unfinished">İptal</translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/CommentPage.qml" line="23"/>
+        <source>Enter small note here</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
     <name>DishEdit</name>
     <message>
-        <location filename="../qml/pages/DishEdit.qml" line="18"/>
+        <location filename="../qml/pages/DishEdit.qml" line="19"/>
         <source>Save</source>
         <translation>Kaydet</translation>
     </message>
     <message>
-        <location filename="../qml/pages/DishEdit.qml" line="19"/>
+        <location filename="../qml/pages/DishEdit.qml" line="20"/>
         <source>Cancel</source>
         <translation>İptal</translation>
     </message>
     <message>
-        <location filename="../qml/pages/DishEdit.qml" line="48"/>
+        <location filename="../qml/pages/DishEdit.qml" line="49"/>
         <source>Deleting</source>
         <translation>Siliniyor</translation>
     </message>
     <message>
-        <location filename="../qml/pages/DishEdit.qml" line="58"/>
+        <location filename="../qml/pages/DishEdit.qml" line="59"/>
         <source>Dish name</source>
         <translation>Yemeğin adı</translation>
     </message>
     <message>
-        <location filename="../qml/pages/DishEdit.qml" line="111"/>
+        <location filename="../qml/pages/DishEdit.qml" line="127"/>
         <source>No dishes defined. Press the plus button to add one.</source>
         <translation>Yemek adı tanımlanmadı. Artı butonuna basarak ekleyin.</translation>
     </message>
     <message>
-        <location filename="../qml/pages/DishEdit.qml" line="121"/>
+        <location filename="../qml/pages/DishEdit.qml" line="137"/>
         <source>New dish</source>
         <translation>Yeni yemek</translation>
     </message>
@@ -65,7 +83,7 @@
 <context>
     <name>DishPage</name>
     <message>
-        <location filename="../qml/pages/DishPage.qml" line="97"/>
+        <location filename="../qml/pages/DishPage.qml" line="99"/>
         <source>No dishes defined. Choose &quot;Edit Dishes&quot; from the pulley menu.</source>
         <translation>Yemek adı tanımlanmadı. Yemeği düzenle seçeneğini menüden seçin.</translation>
     </message>
@@ -73,47 +91,47 @@
 <context>
     <name>MainPage</name>
     <message>
-        <location filename="../qml/pages/MainPage.qml" line="372"/>
-        <location filename="../qml/pages/MainPage.qml" line="376"/>
+        <location filename="../qml/pages/MainPage.qml" line="381"/>
+        <location filename="../qml/pages/MainPage.qml" line="385"/>
         <source>ready</source>
         <translation>hazır</translation>
     </message>
     <message>
-        <location filename="../qml/pages/MainPage.qml" line="476"/>
+        <location filename="../qml/pages/MainPage.qml" line="497"/>
         <source>About</source>
         <translation>Hakkında</translation>
     </message>
     <message>
-        <location filename="../qml/pages/MainPage.qml" line="480"/>
+        <location filename="../qml/pages/MainPage.qml" line="501"/>
         <source>Settings</source>
         <translation>Ayarlar</translation>
     </message>
     <message>
-        <location filename="../qml/pages/MainPage.qml" line="484"/>
+        <location filename="../qml/pages/MainPage.qml" line="505"/>
         <source>Edit dishes</source>
         <translation>Yemeği düzenle</translation>
     </message>
     <message>
-        <location filename="../qml/pages/MainPage.qml" line="522"/>
-        <location filename="../qml/pages/MainPage.qml" line="715"/>
-        <location filename="../qml/pages/MainPage.qml" line="904"/>
+        <location filename="../qml/pages/MainPage.qml" line="543"/>
+        <location filename="../qml/pages/MainPage.qml" line="746"/>
+        <location filename="../qml/pages/MainPage.qml" line="945"/>
         <source>Dish</source>
         <translation>Yemek</translation>
     </message>
     <message>
-        <location filename="../qml/pages/MainPage.qml" line="571"/>
-        <location filename="../qml/pages/MainPage.qml" line="573"/>
-        <location filename="../qml/pages/MainPage.qml" line="763"/>
-        <location filename="../qml/pages/MainPage.qml" line="765"/>
-        <location filename="../qml/pages/MainPage.qml" line="952"/>
-        <location filename="../qml/pages/MainPage.qml" line="954"/>
+        <location filename="../qml/pages/MainPage.qml" line="593"/>
+        <location filename="../qml/pages/MainPage.qml" line="595"/>
+        <location filename="../qml/pages/MainPage.qml" line="795"/>
+        <location filename="../qml/pages/MainPage.qml" line="797"/>
+        <location filename="../qml/pages/MainPage.qml" line="994"/>
+        <location filename="../qml/pages/MainPage.qml" line="996"/>
         <source>Stop</source>
         <translation>Durdur</translation>
     </message>
     <message>
-        <location filename="../qml/pages/MainPage.qml" line="572"/>
-        <location filename="../qml/pages/MainPage.qml" line="764"/>
-        <location filename="../qml/pages/MainPage.qml" line="953"/>
+        <location filename="../qml/pages/MainPage.qml" line="594"/>
+        <location filename="../qml/pages/MainPage.qml" line="796"/>
+        <location filename="../qml/pages/MainPage.qml" line="995"/>
         <source>Start</source>
         <translation>Başlat</translation>
     </message>
@@ -123,37 +141,37 @@
     <message>
         <location filename="../qml/pages/SettingPage.qml" line="62"/>
         <source>Save</source>
-        <translation type="unfinished">Kaydet</translation>
+        <translation>Kaydet</translation>
     </message>
     <message>
         <location filename="../qml/pages/SettingPage.qml" line="63"/>
         <source>Cancel</source>
-        <translation type="unfinished">İptal</translation>
+        <translation>İptal</translation>
     </message>
     <message>
         <location filename="../qml/pages/SettingPage.qml" line="66"/>
         <source>Settings</source>
-        <translation type="unfinished">Ayarlar</translation>
+        <translation>Ayarlar</translation>
     </message>
     <message>
         <location filename="../qml/pages/SettingPage.qml" line="73"/>
         <source>Keep backlight on</source>
-        <translation type="unfinished"></translation>
+        <translation>Arka ışık açık</translation>
     </message>
     <message>
         <location filename="../qml/pages/SettingPage.qml" line="74"/>
         <source>Prevent screen from dimming.</source>
-        <translation type="unfinished"></translation>
+        <translation>Ekran karatmayı önle</translation>
     </message>
     <message>
         <location filename="../qml/pages/SettingPage.qml" line="80"/>
         <source>Show additional banner</source>
-        <translation type="unfinished"></translation>
+        <translation>Ek başlık göster</translation>
     </message>
     <message>
         <location filename="../qml/pages/SettingPage.qml" line="81"/>
         <source>Notification banner in upper screen.</source>
-        <translation type="unfinished"></translation>
+        <translation>Ekranın üstünden bildirim.</translation>
     </message>
     <message>
         <location filename="../qml/pages/SettingPage.qml" line="99"/>
@@ -216,7 +234,7 @@
         <location filename="../qml/cooktimer.qml" line="17"/>
         <location filename="../qml/cooktimer.qml" line="18"/>
         <source>Dish</source>
-        <translation type="unfinished">Yemek</translation>
+        <translation>Yemek</translation>
     </message>
 </context>
 </TS>

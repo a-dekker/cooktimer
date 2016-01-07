@@ -30,34 +30,52 @@
     </message>
 </context>
 <context>
+    <name>CommentPage</name>
+    <message>
+        <location filename="../qml/pages/CommentPage.qml" line="16"/>
+        <source>Done</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/CommentPage.qml" line="17"/>
+        <source>Cancel</source>
+        <translation type="unfinished">Ακύρωση</translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/CommentPage.qml" line="23"/>
+        <source>Enter small note here</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
     <name>DishEdit</name>
     <message>
-        <location filename="../qml/pages/DishEdit.qml" line="18"/>
+        <location filename="../qml/pages/DishEdit.qml" line="19"/>
         <source>Save</source>
         <translation>Αποθήκευση</translation>
     </message>
     <message>
-        <location filename="../qml/pages/DishEdit.qml" line="19"/>
+        <location filename="../qml/pages/DishEdit.qml" line="20"/>
         <source>Cancel</source>
         <translation>Ακύρωση</translation>
     </message>
     <message>
-        <location filename="../qml/pages/DishEdit.qml" line="48"/>
+        <location filename="../qml/pages/DishEdit.qml" line="49"/>
         <source>Deleting</source>
         <translation>Διαγραφή</translation>
     </message>
     <message>
-        <location filename="../qml/pages/DishEdit.qml" line="58"/>
+        <location filename="../qml/pages/DishEdit.qml" line="59"/>
         <source>Dish name</source>
         <translation>Ονομα φαγητου</translation>
     </message>
     <message>
-        <location filename="../qml/pages/DishEdit.qml" line="111"/>
+        <location filename="../qml/pages/DishEdit.qml" line="127"/>
         <source>No dishes defined. Press the plus button to add one.</source>
         <translation>Δεν υπάρχουν φαγητά που ορίζονται. Πατήστε το κουμπί συν για να προσθέσετε ένα.</translation>
     </message>
     <message>
-        <location filename="../qml/pages/DishEdit.qml" line="121"/>
+        <location filename="../qml/pages/DishEdit.qml" line="137"/>
         <source>New dish</source>
         <translation>Νεο φαγητο</translation>
     </message>
@@ -65,7 +83,7 @@
 <context>
     <name>DishPage</name>
     <message>
-        <location filename="../qml/pages/DishPage.qml" line="97"/>
+        <location filename="../qml/pages/DishPage.qml" line="99"/>
         <source>No dishes defined. Choose &quot;Edit Dishes&quot; from the pulley menu.</source>
         <translation>Δεν υπάρχουν φαγητά που ορίζονται. Επιλέξτε &quot;Επεξεργασία φαγητων&quot; από το μενού τροχαλίας.</translation>
     </message>
@@ -73,47 +91,47 @@
 <context>
     <name>MainPage</name>
     <message>
-        <location filename="../qml/pages/MainPage.qml" line="372"/>
-        <location filename="../qml/pages/MainPage.qml" line="376"/>
+        <location filename="../qml/pages/MainPage.qml" line="381"/>
+        <location filename="../qml/pages/MainPage.qml" line="385"/>
         <source>ready</source>
         <translation>έτοιμο</translation>
     </message>
     <message>
-        <location filename="../qml/pages/MainPage.qml" line="476"/>
+        <location filename="../qml/pages/MainPage.qml" line="497"/>
         <source>About</source>
         <translation>Σχετικά με</translation>
     </message>
     <message>
-        <location filename="../qml/pages/MainPage.qml" line="480"/>
+        <location filename="../qml/pages/MainPage.qml" line="501"/>
         <source>Settings</source>
         <translation>Ρυθμίσεις</translation>
     </message>
     <message>
-        <location filename="../qml/pages/MainPage.qml" line="484"/>
+        <location filename="../qml/pages/MainPage.qml" line="505"/>
         <source>Edit dishes</source>
         <translation>Επεξεργασία φαγητων</translation>
     </message>
     <message>
-        <location filename="../qml/pages/MainPage.qml" line="522"/>
-        <location filename="../qml/pages/MainPage.qml" line="715"/>
-        <location filename="../qml/pages/MainPage.qml" line="904"/>
+        <location filename="../qml/pages/MainPage.qml" line="543"/>
+        <location filename="../qml/pages/MainPage.qml" line="746"/>
+        <location filename="../qml/pages/MainPage.qml" line="945"/>
         <source>Dish</source>
         <translation>Φαγητο</translation>
     </message>
     <message>
-        <location filename="../qml/pages/MainPage.qml" line="571"/>
-        <location filename="../qml/pages/MainPage.qml" line="573"/>
-        <location filename="../qml/pages/MainPage.qml" line="763"/>
-        <location filename="../qml/pages/MainPage.qml" line="765"/>
-        <location filename="../qml/pages/MainPage.qml" line="952"/>
-        <location filename="../qml/pages/MainPage.qml" line="954"/>
+        <location filename="../qml/pages/MainPage.qml" line="593"/>
+        <location filename="../qml/pages/MainPage.qml" line="595"/>
+        <location filename="../qml/pages/MainPage.qml" line="795"/>
+        <location filename="../qml/pages/MainPage.qml" line="797"/>
+        <location filename="../qml/pages/MainPage.qml" line="994"/>
+        <location filename="../qml/pages/MainPage.qml" line="996"/>
         <source>Stop</source>
         <translation>Στοπ</translation>
     </message>
     <message>
-        <location filename="../qml/pages/MainPage.qml" line="572"/>
-        <location filename="../qml/pages/MainPage.qml" line="764"/>
-        <location filename="../qml/pages/MainPage.qml" line="953"/>
+        <location filename="../qml/pages/MainPage.qml" line="594"/>
+        <location filename="../qml/pages/MainPage.qml" line="796"/>
+        <location filename="../qml/pages/MainPage.qml" line="995"/>
         <source>Start</source>
         <translation>Εναρξη</translation>
     </message>
@@ -123,37 +141,37 @@
     <message>
         <location filename="../qml/pages/SettingPage.qml" line="62"/>
         <source>Save</source>
-        <translation type="unfinished">Αποθήκευση</translation>
+        <translation>Αποθήκευση</translation>
     </message>
     <message>
         <location filename="../qml/pages/SettingPage.qml" line="63"/>
         <source>Cancel</source>
-        <translation type="unfinished">Ακύρωση</translation>
+        <translation>Ακύρωση</translation>
     </message>
     <message>
         <location filename="../qml/pages/SettingPage.qml" line="66"/>
         <source>Settings</source>
-        <translation type="unfinished">Ρυθμίσεις</translation>
+        <translation>Ρυθμίσεις</translation>
     </message>
     <message>
         <location filename="../qml/pages/SettingPage.qml" line="73"/>
         <source>Keep backlight on</source>
-        <translation type="unfinished"></translation>
+        <translation>Ενεργοποιηση διατηρησης φωτισμου </translation>
     </message>
     <message>
         <location filename="../qml/pages/SettingPage.qml" line="74"/>
         <source>Prevent screen from dimming.</source>
-        <translation type="unfinished"></translation>
+        <translation>Αποτροπή οθόνης από εξασθένιση.</translation>
     </message>
     <message>
         <location filename="../qml/pages/SettingPage.qml" line="80"/>
         <source>Show additional banner</source>
-        <translation type="unfinished"></translation>
+        <translation>Εμφάνιση πρόσθετων διαφημιστικων</translation>
     </message>
     <message>
         <location filename="../qml/pages/SettingPage.qml" line="81"/>
         <source>Notification banner in upper screen.</source>
-        <translation type="unfinished"></translation>
+        <translation>Κοινοποίηση διαφημισης στην επάνω οθόνη.</translation>
     </message>
     <message>
         <location filename="../qml/pages/SettingPage.qml" line="99"/>
@@ -216,7 +234,7 @@
         <location filename="../qml/cooktimer.qml" line="17"/>
         <location filename="../qml/cooktimer.qml" line="18"/>
         <source>Dish</source>
-        <translation type="unfinished">Φαγητο</translation>
+        <translation>Φαγητο</translation>
     </message>
 </context>
 </TS>

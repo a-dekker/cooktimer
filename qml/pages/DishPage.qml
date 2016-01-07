@@ -7,10 +7,11 @@ Page {
     id: dishPage
     allowedOrientations: mainapp.orientationSetting
 
-    function appendDish(dish, duration) {
+    function appendDish(dish, duration, comment) {
         dishlist.model.append({
                                   Dish: dish,
-                                  Duration: duration
+                                  Duration: duration,
+                                  Comment: comment
                               })
     }
 
@@ -39,7 +40,6 @@ Page {
             //         menu: contextMenu
             contentHeight: Theme.itemSizeMedium // two line delegate
             function setDish() {
-                GlobVars.myDish = Dish
                 if (GlobVars.myCurrentTimer === 1) {
                     mainapp.dishText1 = Dish
                 }
@@ -49,7 +49,9 @@ Page {
                 if (GlobVars.myCurrentTimer === 3) {
                     mainapp.dishText3 = Dish
                 }
+                GlobVars.myDish = Dish
                 GlobVars.myDuration = Duration
+                GlobVars.myComment = Comment
                 pageStack.pop()
             }
             Item { // background element with diagonal gradient

@@ -17,10 +17,13 @@ Page {
 
     property string myGlobalDish1
     property string myGlobalDuration1
+    property string myGlobalComment1
     property string myGlobalDish2
     property string myGlobalDuration2
+    property string myGlobalComment2
     property string myGlobalDish3
     property string myGlobalDuration3
+    property string myGlobalComment3
     property bool viewable: cover.status === Cover.Active
                             || cover.status === Cover.Activating
                              || applicationActive;
@@ -86,6 +89,7 @@ Page {
             if (GlobVars.myCurrentTimer == "1") {
                 // User has navigated back from this page
                 myGlobalDish1 = GlobVars.myDish
+                myGlobalComment1 = GlobVars.myComment
                 // do not update if time has been changed
                 if (GlobVars.myDuration != " ")
                     myGlobalDuration1 = GlobVars.myDuration
@@ -97,6 +101,7 @@ Page {
             if (GlobVars.myCurrentTimer == "2") {
                 // User has navigated back from this page
                 myGlobalDish2 = GlobVars.myDish
+                myGlobalComment2 = GlobVars.myComment
                 // do not update if time has been changed
                 if (GlobVars.myDuration != " ")
                     myGlobalDuration2 = GlobVars.myDuration
@@ -108,6 +113,7 @@ Page {
             if (GlobVars.myCurrentTimer == "3") {
                 // User has navigated back from this page
                 myGlobalDish3 = GlobVars.myDish
+                myGlobalComment3 = GlobVars.myComment
                 // do not update if time has been changed
                 if (GlobVars.myDuration != " ")
                     myGlobalDuration3 = GlobVars.myDuration
@@ -191,10 +197,13 @@ Page {
     Component.onCompleted: {
         myGlobalDish1 = GlobVars.myDish
         myGlobalDuration1 = GlobVars.myDuration
+        myGlobalComment1 = GlobVars.myComment
         myGlobalDish2 = GlobVars.myDish
         myGlobalDuration2 = GlobVars.myDuration
+        myGlobalComment2 = GlobVars.myComment
         myGlobalDish3 = GlobVars.myDish
         myGlobalDuration3 = GlobVars.myDuration
+        myGlobalComment3 = GlobVars.myComment
         DB.initializeDB()
         if (myset.value("backlight") === "true") {
             timer.start()
@@ -454,6 +463,18 @@ Page {
         }
     }
 
+    function _showDishInfo(dish_name,comment_text) {
+        infoPanelLoader.source = Qt.resolvedUrl("../common/DishInfoPanel.qml")
+        infoPanelLoader.item.parent = page
+        infoPanelLoader.item.dish = dish_name
+        infoPanelLoader.item.comment = comment_text
+        infoPanelLoader.item.showDishInfo()
+    }
+
+    Loader {
+        id: infoPanelLoader
+    }
+
     Image {
         id: coverBgImage
         anchors.fill: parent
@@ -520,7 +541,8 @@ Page {
                 }
                 onPressAndHold: {
                     myGlobalDish1 = GlobVars.myDish = mainapp.dishText1 = qsTr(
-                                "Dish") + " 1"
+                        "Dish") + " 1"
+                    myGlobalComment1 = ""
                 }
             }
             Item {
@@ -657,6 +679,15 @@ Page {
                     }
                 }
             }
+            IconButton {
+                anchors.left: remainingTime1.right
+                y: Theme.paddingLarge
+                icon.source: 'image://theme/icon-m-note'
+                visible: myGlobalComment1 !== ""
+                onClicked: {
+                    page._showDishInfo(dish1.text,myGlobalComment1)
+                }
+            }
         }
         ProgressBar {
             id: progressBar1
@@ -714,6 +745,7 @@ Page {
                 onPressAndHold: {
                     myGlobalDish2 = GlobVars.myDish = mainapp.dishText2 = qsTr(
                                 "Dish") + " 2"
+                    myGlobalComment2 = ""
                 }
             }
             Item {
@@ -847,6 +879,15 @@ Page {
                     }
                 }
             }
+            IconButton {
+                anchors.left: remainingTime2.right
+                y: Theme.paddingLarge
+                icon.source: 'image://theme/icon-m-note'
+                visible: myGlobalComment2 !== ""
+                onClicked: {
+                    page._showDishInfo(dish2.text,myGlobalComment2)
+                }
+            }
         }
         ProgressBar {
             id: progressBar2
@@ -903,6 +944,7 @@ Page {
                 onPressAndHold: {
                     myGlobalDish3 = GlobVars.myDish = mainapp.dishText3 = qsTr(
                                 "Dish") + " 3"
+                    myGlobalComment3 = ""
                 }
             }
             Item {
@@ -1033,6 +1075,15 @@ Page {
                         remainingTime3.font.bold = true
                         remainingTime3.font.underline = false
                     }
+                }
+            }
+            IconButton {
+                anchors.left: remainingTime3.right
+                y: Theme.paddingLarge
+                icon.source: 'image://theme/icon-m-note'
+                visible: myGlobalComment3 !== ""
+                onClicked: {
+                    page._showDishInfo(dish3.text,myGlobalComment3)
                 }
             }
         }
