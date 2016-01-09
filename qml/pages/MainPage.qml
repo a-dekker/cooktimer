@@ -537,6 +537,7 @@ Page {
                 onClicked: {
                     GlobVars.myCurrentTimer = 1
                     GlobVars.myDish = dish1.text
+                    GlobVars.myComment = myGlobalComment1
                     pageStack.push(Qt.resolvedUrl("DishPage.qml"))
                 }
                 onPressAndHold: {
@@ -740,6 +741,7 @@ Page {
                 onClicked: {
                     GlobVars.myCurrentTimer = 2
                     GlobVars.myDish = dish2.text
+                    GlobVars.myComment = myGlobalComment2
                     pageStack.push(Qt.resolvedUrl("DishPage.qml"))
                 }
                 onPressAndHold: {
@@ -939,6 +941,7 @@ Page {
                 onClicked: {
                     GlobVars.myCurrentTimer = 3
                     GlobVars.myDish = dish3.text
+                    GlobVars.myComment = myGlobalComment3
                     pageStack.push(Qt.resolvedUrl("DishPage.qml"))
                 }
                 onPressAndHold: {
