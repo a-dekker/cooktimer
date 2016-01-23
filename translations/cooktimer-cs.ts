@@ -34,17 +34,17 @@
     <message>
         <location filename="../qml/pages/CommentPage.qml" line="16"/>
         <source>Done</source>
-        <translation type="unfinished"></translation>
+        <translation>Hotovo</translation>
     </message>
     <message>
         <location filename="../qml/pages/CommentPage.qml" line="17"/>
         <source>Cancel</source>
-        <translation type="unfinished">Zrušit</translation>
+        <translation>Zrušit</translation>
     </message>
     <message>
         <location filename="../qml/pages/CommentPage.qml" line="23"/>
         <source>Enter small note here</source>
-        <translation type="unfinished"></translation>
+        <translation>Zde zadejte malou poznámku</translation>
     </message>
 </context>
 <context>
@@ -186,27 +186,27 @@
     <message>
         <location filename="../qml/pages/SettingPage.qml" line="254"/>
         <source>Orientation:</source>
-        <translation type="unfinished"></translation>
+        <translation>Natočení:</translation>
     </message>
     <message>
         <location filename="../qml/pages/SettingPage.qml" line="259"/>
         <source>Portrait</source>
-        <translation type="unfinished"></translation>
+        <translation>Na výšku</translation>
     </message>
     <message>
         <location filename="../qml/pages/SettingPage.qml" line="262"/>
         <source>Landscape</source>
-        <translation type="unfinished"></translation>
+        <translation>Na šířku</translation>
     </message>
     <message>
         <location filename="../qml/pages/SettingPage.qml" line="265"/>
         <source>Dynamic</source>
-        <translation type="unfinished"></translation>
+        <translation>Dynamicky</translation>
     </message>
     <message>
         <location filename="../qml/pages/SettingPage.qml" line="303"/>
         <source>Sets the preferred screen orientation.</source>
-        <translation type="unfinished"></translation>
+        <translation>Nastaví upřednostňované natočení obrazovky.</translation>
     </message>
 </context>
 <context>
@@ -224,7 +224,7 @@
     <message>
         <location filename="../qml/pages/TimeDialog.qml" line="91"/>
         <source>Dish</source>
-        <translation type="unfinished">Pokrm</translation>
+        <translation>Pokrm</translation>
     </message>
 </context>
 <context>

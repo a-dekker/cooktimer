@@ -34,17 +34,17 @@
     <message>
         <location filename="../qml/pages/CommentPage.qml" line="16"/>
         <source>Done</source>
-        <translation type="unfinished"></translation>
+        <translation>Готово</translation>
     </message>
     <message>
         <location filename="../qml/pages/CommentPage.qml" line="17"/>
         <source>Cancel</source>
-        <translation type="unfinished">Отмена</translation>
+        <translation>Отмена</translation>
     </message>
     <message>
         <location filename="../qml/pages/CommentPage.qml" line="23"/>
         <source>Enter small note here</source>
-        <translation type="unfinished"></translation>
+        <translation>Введите небольшую заметку</translation>
     </message>
 </context>
 <context>
@@ -206,7 +206,7 @@
     <message>
         <location filename="../qml/pages/SettingPage.qml" line="303"/>
         <source>Sets the preferred screen orientation.</source>
-        <translation type="unfinished"></translation>
+        <translation>Установите предпочитаемую ориентацию экрана.</translation>
     </message>
 </context>
 <context>

@@ -12,6 +12,8 @@ DockedPanel {
     contentHeight: height
     dock: Dock.Bottom
 
+
+
     function showDishInfo() {
         if (expanded) {
             hide()
@@ -28,9 +30,16 @@ DockedPanel {
     property int _headerWidth: 125
     property int _textWidth: width - _headerWidth - Theme.paddingLarge
 
+
+
     Rectangle {
         anchors.fill: parent
-        color: Theme.rgba(Theme.primaryHighlightColor, 0.8)
+        color: Theme.rgba(Theme.primaryHighlightColor, 0.7)
+
+        Image {
+            width: parent.width
+            source: "image://theme/graphic-system-gradient"
+        }
 
         Column {
             id: infoColumn
@@ -42,13 +51,14 @@ DockedPanel {
                 text: dish
                 color: Theme.secondaryColor
                 width: parent.width - 2 * Theme.paddingMedium
-                font.pixelSize: Theme.fontSizeSmall
+                font.pixelSize: Theme.fontSizeMedium
                 horizontalAlignment: Text.AlignHCenter
                 anchors.horizontalCenter: parent.horizontalCenter
             }
             Separator {
                 color: Theme.primaryColor
                 width: parent.width
+                opacity: 0.5
                 anchors.horizontalCenter: parent.horizontalCenter
                 horizontalAlignment: Qt.AlignHCenter
             }

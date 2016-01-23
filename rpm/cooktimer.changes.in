@@ -8,6 +8,10 @@
 # * date Author's Name <author's email> version-release
 # - Summary of changes
 
+* tue Jan 12 2016 Arno Dekker <jack.tar@example.com> 0.0.1-39
+- minor change in popup panel
+- various translation updates
+
 * sat Jan 9 2016 Arno Dekker <jack.tar@example.com> 0.0.1-38
 - fixed bug in notes when not selecting a dish
 - spanish translation update
