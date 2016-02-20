@@ -1,4 +1,6 @@
-<?xml version="1.0" ?><!DOCTYPE TS><TS language="fr" version="2.1">
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE TS>
+<TS version="2.1" language="fr">
 <context>
     <name>About</name>
     <message>
@@ -111,25 +113,25 @@
     </message>
     <message>
         <location filename="../qml/pages/MainPage.qml" line="543"/>
-        <location filename="../qml/pages/MainPage.qml" line="746"/>
-        <location filename="../qml/pages/MainPage.qml" line="945"/>
+        <location filename="../qml/pages/MainPage.qml" line="792"/>
+        <location filename="../qml/pages/MainPage.qml" line="1038"/>
         <source>Dish</source>
         <translation>Plat</translation>
     </message>
     <message>
-        <location filename="../qml/pages/MainPage.qml" line="593"/>
-        <location filename="../qml/pages/MainPage.qml" line="595"/>
-        <location filename="../qml/pages/MainPage.qml" line="795"/>
-        <location filename="../qml/pages/MainPage.qml" line="797"/>
-        <location filename="../qml/pages/MainPage.qml" line="994"/>
-        <location filename="../qml/pages/MainPage.qml" line="996"/>
+        <location filename="../qml/pages/MainPage.qml" line="592"/>
+        <location filename="../qml/pages/MainPage.qml" line="594"/>
+        <location filename="../qml/pages/MainPage.qml" line="841"/>
+        <location filename="../qml/pages/MainPage.qml" line="843"/>
+        <location filename="../qml/pages/MainPage.qml" line="1087"/>
+        <location filename="../qml/pages/MainPage.qml" line="1089"/>
         <source>Stop</source>
         <translation>Stop</translation>
     </message>
     <message>
-        <location filename="../qml/pages/MainPage.qml" line="594"/>
-        <location filename="../qml/pages/MainPage.qml" line="796"/>
-        <location filename="../qml/pages/MainPage.qml" line="995"/>
+        <location filename="../qml/pages/MainPage.qml" line="593"/>
+        <location filename="../qml/pages/MainPage.qml" line="842"/>
+        <location filename="../qml/pages/MainPage.qml" line="1088"/>
         <source>Start</source>
         <translation>Départ</translation>
     </message>

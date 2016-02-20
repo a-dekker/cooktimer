@@ -8,6 +8,9 @@
 # * date Author's Name <author's email> version-release
 # - Summary of changes
 
+* tue Jan 12 2016 Arno Dekker <jack.tar@example.com> 0.0.1-40
+- added small buttons for quickly increase or decrease minutes
+
 * tue Jan 12 2016 Arno Dekker <jack.tar@example.com> 0.0.1-39
 - minor change in popup panel
 - various translation updates

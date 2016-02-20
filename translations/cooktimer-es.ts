@@ -112,26 +112,26 @@
         <translation>Editar platos</translation>
     </message>
     <message>
-        <location filename="../qml/pages/MainPage.qml" line="544"/>
-        <location filename="../qml/pages/MainPage.qml" line="748"/>
-        <location filename="../qml/pages/MainPage.qml" line="948"/>
+        <location filename="../qml/pages/MainPage.qml" line="543"/>
+        <location filename="../qml/pages/MainPage.qml" line="792"/>
+        <location filename="../qml/pages/MainPage.qml" line="1038"/>
         <source>Dish</source>
         <translation>Plato</translation>
     </message>
     <message>
+        <location filename="../qml/pages/MainPage.qml" line="592"/>
         <location filename="../qml/pages/MainPage.qml" line="594"/>
-        <location filename="../qml/pages/MainPage.qml" line="596"/>
-        <location filename="../qml/pages/MainPage.qml" line="797"/>
-        <location filename="../qml/pages/MainPage.qml" line="799"/>
-        <location filename="../qml/pages/MainPage.qml" line="997"/>
-        <location filename="../qml/pages/MainPage.qml" line="999"/>
+        <location filename="../qml/pages/MainPage.qml" line="841"/>
+        <location filename="../qml/pages/MainPage.qml" line="843"/>
+        <location filename="../qml/pages/MainPage.qml" line="1087"/>
+        <location filename="../qml/pages/MainPage.qml" line="1089"/>
         <source>Stop</source>
         <translation>Parar</translation>
     </message>
     <message>
-        <location filename="../qml/pages/MainPage.qml" line="595"/>
-        <location filename="../qml/pages/MainPage.qml" line="798"/>
-        <location filename="../qml/pages/MainPage.qml" line="998"/>
+        <location filename="../qml/pages/MainPage.qml" line="593"/>
+        <location filename="../qml/pages/MainPage.qml" line="842"/>
+        <location filename="../qml/pages/MainPage.qml" line="1088"/>
         <source>Start</source>
         <translation>Iniciar</translation>
     </message>

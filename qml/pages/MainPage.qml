@@ -26,7 +26,7 @@ Page {
     property string myGlobalComment3
     property bool viewable: cover.status === Cover.Active
                             || cover.status === Cover.Activating
-                             || applicationActive;
+                            || applicationActive
     property bool isRunning1: ticker1.running || insomniac1.running
     property bool isRunning2: ticker2.running || insomniac2.running
     property bool isRunning3: ticker3.running || insomniac3.running
@@ -333,7 +333,7 @@ Page {
     function banner(category, message) {
         notification.close()
         var notificationCategory
-        switch(category) {
+        switch (category) {
         case "INFO":
             notificationCategory = "x-jolla.alarmui.clock"
             break
@@ -463,7 +463,7 @@ Page {
         }
     }
 
-    function _showDishInfo(dish_name,comment_text) {
+    function _showDishInfo(dish_name, comment_text) {
         infoPanelLoader.source = Qt.resolvedUrl("../common/DishInfoPanel.qml")
         infoPanelLoader.item.parent = page
         infoPanelLoader.item.dish = dish_name
@@ -522,11 +522,10 @@ Page {
             /* inner row */
             id: timerRow1
             spacing: Theme.paddingSmall
-            anchors.top: isPortrait ? header.bottom  : header.top
-            anchors.topMargin: isPortrait ? 0  : Theme.paddingSmall
+            anchors.top: isPortrait ? header.bottom : header.top
+            anchors.topMargin: isPortrait ? 0 : Theme.paddingSmall
             anchors.horizontalCenter: parent.horizontalCenter
-            height: isPortrait ? (
-                 page.height / page.width > 1.6 ? Theme.itemSizeMedium : Theme.itemSizeSmall) : Theme.paddingLarge * 1.6
+            height: isPortrait ? (page.height / page.width > 1.6 ? Theme.itemSizeMedium : Theme.itemSizeSmall) : Theme.paddingLarge * 1.6
 
             Button {
                 id: dish1
@@ -542,7 +541,7 @@ Page {
                 }
                 onPressAndHold: {
                     myGlobalDish1 = GlobVars.myDish = mainapp.dishText1 = qsTr(
-                        "Dish") + " 1"
+                                "Dish") + " 1"
                     myGlobalComment1 = ""
                 }
             }
@@ -586,7 +585,6 @@ Page {
                         }
                     }
                 }
-
             }
             Button {
                 id: start1
@@ -595,8 +593,8 @@ Page {
                                                          "Stop") : qsTr("Start")
                 enabled: timer1.text === "00:00:00" && start1.text !== qsTr(
                              "Stop") ? false : true
-                             onClicked: {
-                                 toggleTimer1()
+                onClicked: {
+                    toggleTimer1()
                 }
             }
         }
@@ -639,13 +637,32 @@ Page {
         Item {
             id: counter1
             anchors.top: timerRow1.bottom
-            height: isPortrait ? (
-                page.height / page.width > 1.6 ? Theme.itemSizeMedium : Theme.itemSizeSmall) : Theme.itemSizeSmall
+            height: isPortrait ? (page.height / page.width > 1.6 ? Theme.itemSizeMedium : Theme.itemSizeSmall) : Theme.itemSizeSmall
             anchors.horizontalCenter: parent.horizontalCenter
             width: parent.width - Theme.paddingLarge
             Rectangle {
                 anchors.fill: parent
                 opacity: 0
+            }
+            IconButton {
+                anchors.right: remainingTime1.left
+                y: Theme.paddingLarge
+                icon.source: '../images/icon-m-min.png'
+                onClicked: {
+                    var button_minute = parseInt(timer1.text.split(":")[1], 10)
+                    if (button_minute > 0) {
+                        button_minute = button_minute - 1
+                        myGlobalDuration1 = myGlobalDuration1.split(
+                                    ":")[0] + ":"
+                                + (button_minute > 9 ? button_minute : "0" + button_minute)
+                                + ":" + myGlobalDuration1.split(":")[2]
+                        buttonBuzz.play()
+                        if (!ticker1.running && !isPaused1) {
+                            remainingTime1.text = timer1.text
+                            mainapp.timeText1 = remainingTime1.text
+                        }
+                    }
+                }
             }
             TextField {
                 anchors.bottomMargin: 1
@@ -681,12 +698,39 @@ Page {
                 }
             }
             IconButton {
+                id: plusButton1
                 anchors.left: remainingTime1.right
+                y: Theme.paddingLarge
+                icon.source: 'image://theme/icon-m-add'
+                visible: myGlobalComment1 === "" || isLandscape
+                onClicked: {
+                    var button_minute = parseInt(timer1.text.split(":")[1], 10)
+                    if (button_minute < 59) {
+                        button_minute = button_minute + 1
+                        myGlobalDuration1 = myGlobalDuration1.split(
+                                    ":")[0] + ":"
+                                + (button_minute > 9 ? button_minute : "0" + button_minute)
+                                + ":" + myGlobalDuration1.split(":")[2]
+                        buttonBuzz.play()
+                        if (!ticker1.running && !isPaused1) {
+                            remainingTime1.text = timer1.text
+                            mainapp.timeText1 = remainingTime1.text
+                        }
+                    }
+                }
+            }
+            IconButton {
+                anchors.left: isPortrait ? remainingTime1.right : plusButton1.right
                 y: Theme.paddingLarge
                 icon.source: 'image://theme/icon-m-note'
                 visible: myGlobalComment1 !== ""
                 onClicked: {
-                    page._showDishInfo(dish1.text,myGlobalComment1)
+                    page._showDishInfo(dish1.text, myGlobalComment1)
+                }
+                onPressAndHold: {
+                    if (isPortrait) {
+                        myGlobalComment1 = ""
+                    }
                 }
             }
         }
@@ -703,9 +747,10 @@ Page {
             Timer {
                 interval: 100
                 repeat: true
-                onTriggered: progressBar1.value = mainapp.progressValue1 = (1 - (remainingTime1.seconds
-                                                       / _totalsecs1) + 0.001)
-                running: (Qt.application.active && mainapp.timer1running) || (viewable)
+                onTriggered: progressBar1.value = mainapp.progressValue1
+                             = (1 - (remainingTime1.seconds / _totalsecs1) + 0.001)
+                running: (Qt.application.active && mainapp.timer1running)
+                         || (viewable)
             }
             Label {
                 id: totalTime1
@@ -730,8 +775,7 @@ Page {
             anchors.top: progressBar1.bottom
             spacing: Theme.paddingSmall
             anchors.horizontalCenter: parent.horizontalCenter
-            height: isPortrait ? (
-                 page.height / page.width > 1.6 ? Theme.itemSizeMedium : Theme.itemSizeSmall) : Theme.paddingLarge * 1.6
+            height: isPortrait ? (page.height / page.width > 1.6 ? Theme.itemSizeMedium : Theme.itemSizeSmall) : Theme.paddingLarge * 1.6
             Button {
                 id: dish2
                 width: (page.width - (Theme.paddingLarge * 2)) / 2.34
@@ -798,8 +842,8 @@ Page {
                                                          "Stop") : qsTr("Start")
                 enabled: timer2.text === "00:00:00" && start2.text !== qsTr(
                              "Stop") ? false : true
-                             onClicked: {
-                                 toggleTimer2()
+                onClicked: {
+                    toggleTimer2()
                 }
             }
         }
@@ -841,13 +885,32 @@ Page {
         Item {
             id: counter2
             anchors.top: timerRow2.bottom
-            height: isPortrait ? (
-                page.height / page.width > 1.6 ? Theme.itemSizeMedium : Theme.itemSizeSmall) : Theme.itemSizeSmall
+            height: isPortrait ? (page.height / page.width > 1.6 ? Theme.itemSizeMedium : Theme.itemSizeSmall) : Theme.itemSizeSmall
             anchors.horizontalCenter: parent.horizontalCenter
             width: parent.width - Theme.paddingLarge
             Rectangle {
                 anchors.fill: parent
                 opacity: 0
+            }
+            IconButton {
+                anchors.right: remainingTime2.left
+                y: Theme.paddingLarge
+                icon.source: '../images/icon-m-min.png'
+                onClicked: {
+                    var button_minute = parseInt(timer2.text.split(":")[1], 10)
+                    if (button_minute > 0) {
+                        button_minute = button_minute - 1
+                        myGlobalDuration2 = myGlobalDuration2.split(
+                                    ":")[0] + ":"
+                                + (button_minute > 9 ? button_minute : "0" + button_minute)
+                                + ":" + myGlobalDuration2.split(":")[2]
+                        buttonBuzz.play()
+                        if (!ticker2.running && !isPaused2) {
+                            remainingTime2.text = timer2.text
+                            mainapp.timeText2 = remainingTime2.text
+                        }
+                    }
+                }
             }
             TextField {
                 id: remainingTime2
@@ -882,12 +945,39 @@ Page {
                 }
             }
             IconButton {
+                id: plusButton2
                 anchors.left: remainingTime2.right
+                y: Theme.paddingLarge
+                icon.source: 'image://theme/icon-m-add'
+                visible: myGlobalComment2 === "" || isLandscape
+                onClicked: {
+                    var button_minute = parseInt(timer2.text.split(":")[1], 10)
+                    if (button_minute < 59) {
+                        button_minute = button_minute + 1
+                        myGlobalDuration2 = myGlobalDuration2.split(
+                                    ":")[0] + ":"
+                                + (button_minute > 9 ? button_minute : "0" + button_minute)
+                                + ":" + myGlobalDuration2.split(":")[2]
+                        buttonBuzz.play()
+                        if (!ticker2.running && !isPaused2) {
+                            remainingTime2.text = timer2.text
+                            mainapp.timeText2 = remainingTime2.text
+                        }
+                    }
+                }
+            }
+            IconButton {
+                anchors.left: isPortrait ? remainingTime2.right : plusButton2.right
                 y: Theme.paddingLarge
                 icon.source: 'image://theme/icon-m-note'
                 visible: myGlobalComment2 !== ""
                 onClicked: {
-                    page._showDishInfo(dish2.text,myGlobalComment2)
+                    page._showDishInfo(dish2.text, myGlobalComment2)
+                }
+                onPressAndHold: {
+                    if (isPortrait) {
+                        myGlobalComment2 = ""
+                    }
                 }
             }
         }
@@ -904,9 +994,10 @@ Page {
             Timer {
                 interval: 100
                 repeat: true
-                onTriggered: progressBar2.value = mainapp.progressValue2 = (1 - (remainingTime2.seconds
-                                                        / _totalsecs2) + 0.001)
-                running: (Qt.application.active && mainapp.timer2running) || (viewable)
+                onTriggered: progressBar2.value = mainapp.progressValue2
+                             = (1 - (remainingTime2.seconds / _totalsecs2) + 0.001)
+                running: (Qt.application.active && mainapp.timer2running)
+                         || (viewable)
             }
             Label {
                 id: totalTime2
@@ -930,8 +1021,7 @@ Page {
             anchors.top: progressBar2.bottom
             spacing: Theme.paddingSmall
             anchors.horizontalCenter: parent.horizontalCenter
-            height: isPortrait ? (
-                 page.height / page.width > 1.6 ? Theme.itemSizeMedium : Theme.itemSizeSmall) : Theme.paddingLarge * 1.6
+            height: isPortrait ? (page.height / page.width > 1.6 ? Theme.itemSizeMedium : Theme.itemSizeSmall) : Theme.paddingLarge * 1.6
             Button {
                 id: dish3
                 width: (page.width - (Theme.paddingLarge * 2)) / 2.34
@@ -998,8 +1088,8 @@ Page {
                                                          "Stop") : qsTr("Start")
                 enabled: timer3.text === "00:00:00" && start3.text !== qsTr(
                              "Stop") ? false : true
-                             onClicked: {
-                                 toggleTimer3()
+                onClicked: {
+                    toggleTimer3()
                 }
             }
         }
@@ -1048,6 +1138,26 @@ Page {
                 anchors.fill: parent
                 opacity: 0.00
             }
+            IconButton {
+                anchors.right: remainingTime3.left
+                y: Theme.paddingLarge
+                icon.source: '../images/icon-m-min.png'
+                onClicked: {
+                    var button_minute = parseInt(timer3.text.split(":")[1], 10)
+                    if (button_minute > 0) {
+                        button_minute = button_minute - 1
+                        myGlobalDuration3 = myGlobalDuration3.split(
+                                    ":")[0] + ":"
+                                + (button_minute > 9 ? button_minute : "0" + button_minute)
+                                + ":" + myGlobalDuration3.split(":")[2]
+                        buttonBuzz.play()
+                        if (!ticker3.running && !isPaused3) {
+                            remainingTime3.text = timer3.text
+                            mainapp.timeText3 = remainingTime3.text
+                        }
+                    }
+                }
+            }
             TextField {
                 id: remainingTime3
                 readOnly: true
@@ -1081,12 +1191,39 @@ Page {
                 }
             }
             IconButton {
+                id: plusButton3
                 anchors.left: remainingTime3.right
+                y: Theme.paddingLarge
+                icon.source: 'image://theme/icon-m-add'
+                visible: myGlobalComment3 === "" || isLandscape
+                onClicked: {
+                    var button_minute = parseInt(timer3.text.split(":")[1], 10)
+                    if (button_minute < 59) {
+                        button_minute = button_minute + 1
+                        myGlobalDuration3 = myGlobalDuration3.split(
+                                    ":")[0] + ":"
+                                + (button_minute > 9 ? button_minute : "0" + button_minute)
+                                + ":" + myGlobalDuration3.split(":")[2]
+                        buttonBuzz.play()
+                        if (!ticker3.running && !isPaused3) {
+                            remainingTime3.text = timer3.text
+                            mainapp.timeText3 = remainingTime3.text
+                        }
+                    }
+                }
+            }
+            IconButton {
+                anchors.left: isPortrait ? remainingTime3.right : plusButton3.right
                 y: Theme.paddingLarge
                 icon.source: 'image://theme/icon-m-note'
                 visible: myGlobalComment3 !== ""
                 onClicked: {
-                    page._showDishInfo(dish3.text,myGlobalComment3)
+                    page._showDishInfo(dish3.text, myGlobalComment3)
+                }
+                onPressAndHold: {
+                    if (isPortrait) {
+                        myGlobalComment3 = ""
+                    }
                 }
             }
         }
@@ -1104,9 +1241,10 @@ Page {
             Timer {
                 interval: 100
                 repeat: true
-                onTriggered: progressBar3.value = mainapp.progressValue3 = (1 - (remainingTime3.seconds
-                                                        / _totalsecs3) + 0.001)
-                running: (Qt.application.active && mainapp.timer3running) || (viewable)
+                onTriggered: progressBar3.value = mainapp.progressValue3
+                             = (1 - (remainingTime3.seconds / _totalsecs3) + 0.001)
+                running: (Qt.application.active && mainapp.timer3running)
+                         || (viewable)
             }
             Label {
                 id: totalTime3

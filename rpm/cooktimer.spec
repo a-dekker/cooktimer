@@ -14,7 +14,7 @@ Name:       cooktimer
 %{?qtc_builddir:%define _builddir %qtc_builddir}
 Summary:    Three timers for cooking
 Version:    0.1
-Release:    39
+Release:    40
 Group:      Qt/Qt
 License:    LGPL
 URL:        https://github.com/a-dekker/cooktimer
