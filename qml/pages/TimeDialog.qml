@@ -45,6 +45,8 @@ Dialog {
     property int hour: 0
     property int minute: 0
     property int second: 0
+    property bool largeScreen: Screen.sizeCategory === Screen.Large ||
+                               Screen.sizeCategory === Screen.ExtraLarge
 
     DialogHeader {
         acceptText: qsTr("Save")
@@ -125,7 +127,7 @@ Dialog {
     }
     TimePickerSeconds {
         id: pickTime
-        y: isLandscape ? Theme.paddingLarge * 1.4 : diaTime.height / 3
+        y: isLandscape ? (largeScreen ? diaTime.height / 3 : Theme.paddingLarge * 1.4) : diaTime.height / 3
         hour: diaTime.hour
         minute: diaTime.minute
         second: diaTime.second
@@ -134,6 +136,7 @@ Dialog {
     Item {
         id: dish_name_landscape
         anchors.left: pickTime.right
+        anchors.leftMargin: largeScreen ? Theme.itemSizeLarge * 2 : 0
         height: nameOfDish.height - Theme.paddingLarge * 2
         anchors.verticalCenter: parent.verticalCenter
         width: nameOfDish.width + Theme.paddingLarge * 2

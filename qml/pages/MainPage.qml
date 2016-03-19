@@ -15,6 +15,9 @@ Page {
     id: page
     allowedOrientations: mainapp.orientationSetting
 
+    property bool largeScreen: Screen.sizeCategory === Screen.Large ||
+                               Screen.sizeCategory === Screen.ExtraLarge
+
     property string myGlobalDish1
     property string myGlobalDuration1
     property string myGlobalComment1
@@ -480,7 +483,7 @@ Page {
         anchors.fill: parent
         fillMode: Image.PreserveAspectFit
         source: "../images/coverbg.png"
-        opacity: 0.07
+        opacity: largeScreen ? 0.03 : 0.07
         horizontalAlignment: Image.AlignHCenter
         verticalAlignment: Image.AlignVCenter
     }
@@ -516,16 +519,16 @@ Page {
         PageHeader {
             id: header
             title: "cooktimer"
-            visible: isPortrait
+            visible: isPortrait || largeScreen
         }
         Row {
             /* inner row */
             id: timerRow1
-            spacing: Theme.paddingSmall
-            anchors.top: isPortrait ? header.bottom : header.top
-            anchors.topMargin: isPortrait ? 0 : Theme.paddingSmall
+            spacing: largeScreen ? Theme.paddingMedium : Theme.paddingSmall
+            anchors.top: isPortrait || largeScreen ? header.bottom : header.top
+            anchors.topMargin: isPortrait ? (largeScreen ? Theme.paddingLarge : 0) : Theme.paddingSmall
             anchors.horizontalCenter: parent.horizontalCenter
-            height: isPortrait ? (page.height / page.width > 1.6 ? Theme.itemSizeMedium : Theme.itemSizeSmall) : Theme.paddingLarge * 1.6
+            height: isPortrait ? (largeScreen ? page.height/12 : Theme.itemSizeMedium) : (largeScreen ? Theme.itemSizeExtraLarge : Theme.paddingLarge * 1.6)
 
             Button {
                 id: dish1
@@ -637,7 +640,7 @@ Page {
         Item {
             id: counter1
             anchors.top: timerRow1.bottom
-            height: isPortrait ? (page.height / page.width > 1.6 ? Theme.itemSizeMedium : Theme.itemSizeSmall) : Theme.itemSizeSmall
+            height: isPortrait ? (largeScreen ? page.height/12 : Theme.itemSizeMedium) : Theme.itemSizeSmall
             anchors.horizontalCenter: parent.horizontalCenter
             width: parent.width - Theme.paddingLarge
             Rectangle {
@@ -646,8 +649,10 @@ Page {
             }
             IconButton {
                 anchors.right: remainingTime1.left
+                anchors.verticalCenter: remainingTime1.top
+                anchors.verticalCenterOffset: largeScreen ? Theme.itemSizeSmall : Theme.itemSizeExtraSmall
                 y: Theme.paddingLarge
-                icon.source: '../images/icon-m-min.png'
+                icon.source: largeScreen ? '../images/icon-l-min.png' : '../images/icon-m-min.png'
                 onClicked: {
                     var button_minute = parseInt(timer1.text.split(":")[1], 10)
                     if (button_minute > 0) {
@@ -670,8 +675,10 @@ Page {
                 readOnly: true
                 property int seconds
                 anchors.horizontalCenter: parent.horizontalCenter
+                anchors.verticalCenter: largeScreen ? parent.verticalCenter : parent.bottom
+                anchors.verticalCenterOffset: isLandscape ? Theme.paddingSmall : 0
                 color: Theme.secondaryHighlightColor
-                font.pixelSize: Theme.fontSizeExtraLarge * 1.8
+                font.pixelSize: largeScreen ? Theme.fontSizeExtraLarge * 2.5 : Theme.fontSizeExtraLarge * 1.8
                 text: "00:00:00"
                 onClicked: {
                     if (ticker1.running) {
@@ -701,8 +708,10 @@ Page {
                 id: plusButton1
                 anchors.left: remainingTime1.right
                 y: Theme.paddingLarge
-                icon.source: 'image://theme/icon-m-add'
-                visible: myGlobalComment1 === "" || isLandscape
+                anchors.verticalCenter: remainingTime1.top
+                anchors.verticalCenterOffset: largeScreen ? Theme.itemSizeSmall : Theme.itemSizeExtraSmall
+                icon.source: largeScreen ? 'image://theme/icon-l-add' : 'image://theme/icon-m-add'
+                visible: myGlobalComment1 === "" || isLandscape || largeScreen
                 onClicked: {
                     var button_minute = parseInt(timer1.text.split(":")[1], 10)
                     if (button_minute < 59) {
@@ -720,7 +729,7 @@ Page {
                 }
             }
             IconButton {
-                anchors.left: isPortrait ? remainingTime1.right : plusButton1.right
+                anchors.left: isPortrait ? (largeScreen ? plusButton1.right : remainingTime1.right) : plusButton1.right
                 y: Theme.paddingLarge
                 icon.source: 'image://theme/icon-m-note'
                 visible: myGlobalComment1 !== ""
@@ -728,7 +737,7 @@ Page {
                     page._showDishInfo(dish1.text, myGlobalComment1)
                 }
                 onPressAndHold: {
-                    if (isPortrait) {
+                    if (isPortrait && !largeScreen) {
                         myGlobalComment1 = ""
                     }
                 }
@@ -773,9 +782,10 @@ Page {
             /* inner row */
             id: timerRow2
             anchors.top: progressBar1.bottom
-            spacing: Theme.paddingSmall
+            anchors.topMargin: isPortrait ? (largeScreen ? Theme.paddingLarge : 0) : 0
+            spacing: largeScreen ? Theme.paddingMedium : Theme.paddingSmall
             anchors.horizontalCenter: parent.horizontalCenter
-            height: isPortrait ? (page.height / page.width > 1.6 ? Theme.itemSizeMedium : Theme.itemSizeSmall) : Theme.paddingLarge * 1.6
+            height: isPortrait ? (largeScreen ? page.height/12 : Theme.itemSizeMedium) : (largeScreen ? page.height / 7 : Theme.paddingLarge * 1.6)
             Button {
                 id: dish2
                 width: (page.width - (Theme.paddingLarge * 2)) / 2.34
@@ -885,7 +895,7 @@ Page {
         Item {
             id: counter2
             anchors.top: timerRow2.bottom
-            height: isPortrait ? (page.height / page.width > 1.6 ? Theme.itemSizeMedium : Theme.itemSizeSmall) : Theme.itemSizeSmall
+            height: isPortrait ? (largeScreen ? page.height/12 : Theme.itemSizeMedium) : Theme.itemSizeSmall
             anchors.horizontalCenter: parent.horizontalCenter
             width: parent.width - Theme.paddingLarge
             Rectangle {
@@ -894,8 +904,10 @@ Page {
             }
             IconButton {
                 anchors.right: remainingTime2.left
+                anchors.verticalCenter: remainingTime2.top
+                anchors.verticalCenterOffset: largeScreen ? Theme.itemSizeSmall : Theme.itemSizeExtraSmall
                 y: Theme.paddingLarge
-                icon.source: '../images/icon-m-min.png'
+                icon.source: largeScreen ? '../images/icon-l-min.png' : '../images/icon-m-min.png'
                 onClicked: {
                     var button_minute = parseInt(timer2.text.split(":")[1], 10)
                     if (button_minute > 0) {
@@ -917,8 +929,10 @@ Page {
                 readOnly: true
                 property int seconds
                 anchors.horizontalCenter: parent.horizontalCenter
+                anchors.verticalCenter: largeScreen ? parent.verticalCenter : parent.bottom
+                anchors.verticalCenterOffset: isLandscape ? Theme.paddingSmall : 0
                 color: Theme.secondaryHighlightColor
-                font.pixelSize: Theme.fontSizeExtraLarge * 1.8
+                font.pixelSize: largeScreen ? Theme.fontSizeExtraLarge * 2.5 : Theme.fontSizeExtraLarge * 1.8
                 text: "00:00:00"
                 onClicked: {
                     if (ticker2.running) {
@@ -948,8 +962,10 @@ Page {
                 id: plusButton2
                 anchors.left: remainingTime2.right
                 y: Theme.paddingLarge
-                icon.source: 'image://theme/icon-m-add'
-                visible: myGlobalComment2 === "" || isLandscape
+                anchors.verticalCenter: remainingTime2.top
+                anchors.verticalCenterOffset: largeScreen ? Theme.itemSizeSmall : Theme.itemSizeExtraSmall
+                icon.source: largeScreen ? 'image://theme/icon-l-add' : 'image://theme/icon-m-add'
+                visible: myGlobalComment2 === "" || isLandscape || largeScreen
                 onClicked: {
                     var button_minute = parseInt(timer2.text.split(":")[1], 10)
                     if (button_minute < 59) {
@@ -967,7 +983,7 @@ Page {
                 }
             }
             IconButton {
-                anchors.left: isPortrait ? remainingTime2.right : plusButton2.right
+                anchors.left: isPortrait ? (largeScreen ? plusButton2.right : remainingTime2.right) : plusButton2.right
                 y: Theme.paddingLarge
                 icon.source: 'image://theme/icon-m-note'
                 visible: myGlobalComment2 !== ""
@@ -975,7 +991,7 @@ Page {
                     page._showDishInfo(dish2.text, myGlobalComment2)
                 }
                 onPressAndHold: {
-                    if (isPortrait) {
+                    if (isPortrait && !largeScreen) {
                         myGlobalComment2 = ""
                     }
                 }
@@ -1019,9 +1035,10 @@ Page {
             /* inner row */
             id: timerRow3
             anchors.top: progressBar2.bottom
-            spacing: Theme.paddingSmall
+            anchors.topMargin: isPortrait ? (largeScreen ? Theme.paddingLarge : 0) : 0
+            spacing: largeScreen ? Theme.paddingMedium : Theme.paddingSmall
             anchors.horizontalCenter: parent.horizontalCenter
-            height: isPortrait ? (page.height / page.width > 1.6 ? Theme.itemSizeMedium : Theme.itemSizeSmall) : Theme.paddingLarge * 1.6
+            height: isPortrait ? (largeScreen ? page.height/12 : Theme.itemSizeMedium) : (largeScreen ? page.height / 7 : Theme.paddingLarge * 1.6)
             Button {
                 id: dish3
                 width: (page.width - (Theme.paddingLarge * 2)) / 2.34
@@ -1131,17 +1148,19 @@ Page {
         Item {
             id: counter3
             anchors.top: timerRow3.bottom
-            height: page.height / page.width > 1.6 ? Theme.itemSizeMedium : Theme.itemSizeSmall
+            height: isPortrait ? (largeScreen ? page.height/12 : Theme.itemSizeMedium) : Theme.itemSizeSmall
             anchors.horizontalCenter: parent.horizontalCenter
             width: parent.width - Theme.paddingLarge
             Rectangle {
                 anchors.fill: parent
-                opacity: 0.00
+                opacity: 0
             }
             IconButton {
                 anchors.right: remainingTime3.left
+                anchors.verticalCenter: remainingTime3.top
+                anchors.verticalCenterOffset: largeScreen ? Theme.itemSizeSmall : Theme.itemSizeExtraSmall
                 y: Theme.paddingLarge
-                icon.source: '../images/icon-m-min.png'
+                icon.source: largeScreen ? '../images/icon-l-min.png' : '../images/icon-m-min.png'
                 onClicked: {
                     var button_minute = parseInt(timer3.text.split(":")[1], 10)
                     if (button_minute > 0) {
@@ -1163,8 +1182,10 @@ Page {
                 readOnly: true
                 property int seconds
                 anchors.horizontalCenter: parent.horizontalCenter
+                anchors.verticalCenter: largeScreen ? parent.verticalCenter : parent.bottom
+                anchors.verticalCenterOffset: isLandscape ? Theme.paddingSmall : 0
                 color: Theme.secondaryHighlightColor
-                font.pixelSize: Theme.fontSizeExtraLarge * 1.8
+                font.pixelSize: largeScreen ? Theme.fontSizeExtraLarge * 2.5 : Theme.fontSizeExtraLarge * 1.8
                 text: "00:00:00"
                 onClicked: {
                     if (ticker3.running) {
@@ -1194,8 +1215,10 @@ Page {
                 id: plusButton3
                 anchors.left: remainingTime3.right
                 y: Theme.paddingLarge
-                icon.source: 'image://theme/icon-m-add'
-                visible: myGlobalComment3 === "" || isLandscape
+                anchors.verticalCenter: remainingTime3.top
+                anchors.verticalCenterOffset: largeScreen ? Theme.itemSizeSmall : Theme.itemSizeExtraSmall
+                icon.source: largeScreen ? 'image://theme/icon-l-add' : 'image://theme/icon-m-add'
+                visible: myGlobalComment3 === "" || isLandscape || largeScreen
                 onClicked: {
                     var button_minute = parseInt(timer3.text.split(":")[1], 10)
                     if (button_minute < 59) {
@@ -1213,7 +1236,7 @@ Page {
                 }
             }
             IconButton {
-                anchors.left: isPortrait ? remainingTime3.right : plusButton3.right
+                anchors.left: isPortrait ? (largeScreen ? plusButton3.right : remainingTime3.right) : plusButton3.right
                 y: Theme.paddingLarge
                 icon.source: 'image://theme/icon-m-note'
                 visible: myGlobalComment3 !== ""
@@ -1221,7 +1244,7 @@ Page {
                     page._showDishInfo(dish3.text, myGlobalComment3)
                 }
                 onPressAndHold: {
-                    if (isPortrait) {
+                    if (isPortrait && !largeScreen) {
                         myGlobalComment3 = ""
                     }
                 }

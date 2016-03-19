@@ -8,6 +8,10 @@
 # * date Author's Name <author's email> version-release
 # - Summary of changes
 
+* sat Mar 19 2016 Arno Dekker <jack.tar@example.com> 0.0.2-0
+- Fully Optimized for Jolla tablet
+- Fix bug with initial empty comment
+
 * tue Jan 12 2016 Arno Dekker <jack.tar@example.com> 0.0.1-40
 - added small buttons for quickly increase or decrease minutes
 

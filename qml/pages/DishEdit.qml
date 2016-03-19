@@ -58,7 +58,7 @@ Dialog {
                     font.pixelSize: Theme.fontSizeSmall
                     placeholderText: qsTr('Dish name')
                     text: Dish
-                    width: isPortrait ? font.pixelSize * 9 : font.pixelSize * 18
+                    width: dishlist.width / 2.2
                     RegExpValidator {
                         regExp: /(\w{1,10}\b)/g
                     }
@@ -134,7 +134,7 @@ Dialog {
         anchors.rightMargin: Theme.paddingMedium
         icon.source: 'image://theme/icon-m-add'
         onClicked: {
-            appendDish(qsTr('New dish'), '00:00:00')
+            appendDish(qsTr('New dish'), '00:00:00', '')
             dishlist.positionViewAtEnd()
         }
     }

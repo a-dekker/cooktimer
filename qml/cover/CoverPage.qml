@@ -1,7 +1,10 @@
 import QtQuick 2.0
 import Sailfish.Silica 1.0
 
+
 CoverBackground {
+    property bool largeScreen: Screen.sizeCategory === Screen.Large ||
+                               Screen.sizeCategory === Screen.ExtraLarge
     BackgroundItem {
         anchors.fill: parent
 
@@ -10,7 +13,7 @@ CoverBackground {
             anchors.fill: parent
             fillMode: Image.PreserveAspectFit
             source: "../images/coverbg.png"
-            opacity: 0.1
+            opacity: largeScreen ? 0.05 : 0.1
             horizontalAlignment: Image.AlignHCenter
             verticalAlignment: Image.AlignVCenter
         }

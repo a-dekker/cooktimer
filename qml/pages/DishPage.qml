@@ -7,6 +7,9 @@ Page {
     id: dishPage
     allowedOrientations: mainapp.orientationSetting
 
+    property bool largeScreen: Screen.sizeCategory === Screen.Large ||
+                               Screen.sizeCategory === Screen.ExtraLarge
+
     function appendDish(dish, duration, comment) {
         dishlist.model.append({
                                   Dish: dish,
@@ -58,7 +61,7 @@ Page {
                 anchors.fill: parent
                 clip: true
                 Rectangle {
-                    rotation: isPortrait ? 9 : 5
+                    rotation: isPortrait ? (largeScreen ? parent.width/260 : parent.width/60) : 5
                     height: parent.height
                     x: -dishlist.width
                     width: dishlist.width*2
@@ -78,14 +81,14 @@ Page {
                     anchors.bottom: sublabel.top
                     text: Dish
                     anchors.horizontalCenter: parent.horizontalCenter
-                    font.pixelSize: Theme.fontSizeMedium
+                    font.pixelSize: largeScreen ? Theme.fontSizeLarge : Theme.fontSizeMedium
                     font.bold: true
                     color: listItem.highlighted ? Theme.highlightColor : Theme.primaryColor
                 }
                 Label {
                     id: sublabel
                     text: Duration
-                    font.pixelSize: Theme.fontSizeExtraSmall
+                    font.pixelSize: largeScreen ? Theme.fontSizeSmall : Theme.fontSizeExtraSmall
                     color: listItem.highlighted ? Theme.highlightColor : Theme.secondaryColor
                     anchors.horizontalCenter: parent.horizontalCenter
                 }

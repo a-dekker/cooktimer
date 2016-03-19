@@ -4,27 +4,27 @@
 <context>
     <name>About</name>
     <message>
-        <location filename="../qml/pages/About.qml" line="20"/>
+        <location filename="../qml/pages/About.qml" line="23"/>
         <source>About</source>
         <translation>O programie</translation>
     </message>
     <message>
-        <location filename="../qml/pages/About.qml" line="23"/>
+        <location filename="../qml/pages/About.qml" line="26"/>
         <source>Info</source>
         <translation>Informacja</translation>
     </message>
     <message>
-        <location filename="../qml/pages/About.qml" line="53"/>
+        <location filename="../qml/pages/About.qml" line="57"/>
         <source>Version</source>
         <translation>Wersja</translation>
     </message>
     <message>
-        <location filename="../qml/pages/About.qml" line="58"/>
+        <location filename="../qml/pages/About.qml" line="62"/>
         <source>&quot;Timers for cooking&quot;</source>
         <translation>Liczniki dla gotowania</translation>
     </message>
     <message>
-        <location filename="../qml/pages/About.qml" line="64"/>
+        <location filename="../qml/pages/About.qml" line="68"/>
         <source>Author</source>
         <translation>Autor</translation>
     </message>
@@ -83,7 +83,7 @@
 <context>
     <name>DishPage</name>
     <message>
-        <location filename="../qml/pages/DishPage.qml" line="99"/>
+        <location filename="../qml/pages/DishPage.qml" line="102"/>
         <source>No dishes defined. Choose &quot;Edit Dishes&quot; from the pulley menu.</source>
         <translation>Brak zdefiniowanych dań. Wybierz &quot;Edytuj Dania&quot; z wysuwanego menu.</translation>
     </message>
@@ -91,47 +91,47 @@
 <context>
     <name>MainPage</name>
     <message>
-        <location filename="../qml/pages/MainPage.qml" line="381"/>
-        <location filename="../qml/pages/MainPage.qml" line="385"/>
+        <location filename="../qml/pages/MainPage.qml" line="384"/>
+        <location filename="../qml/pages/MainPage.qml" line="388"/>
         <source>ready</source>
         <translation>gotowe</translation>
     </message>
     <message>
-        <location filename="../qml/pages/MainPage.qml" line="497"/>
+        <location filename="../qml/pages/MainPage.qml" line="500"/>
         <source>About</source>
         <translation>O programie</translation>
     </message>
     <message>
-        <location filename="../qml/pages/MainPage.qml" line="501"/>
+        <location filename="../qml/pages/MainPage.qml" line="504"/>
         <source>Settings</source>
         <translation>Ustawienia</translation>
     </message>
     <message>
-        <location filename="../qml/pages/MainPage.qml" line="505"/>
+        <location filename="../qml/pages/MainPage.qml" line="508"/>
         <source>Edit dishes</source>
         <translation>Edytuj dania</translation>
     </message>
     <message>
-        <location filename="../qml/pages/MainPage.qml" line="543"/>
-        <location filename="../qml/pages/MainPage.qml" line="792"/>
-        <location filename="../qml/pages/MainPage.qml" line="1038"/>
+        <location filename="../qml/pages/MainPage.qml" line="546"/>
+        <location filename="../qml/pages/MainPage.qml" line="802"/>
+        <location filename="../qml/pages/MainPage.qml" line="1055"/>
         <source>Dish</source>
         <translation>Danie</translation>
     </message>
     <message>
-        <location filename="../qml/pages/MainPage.qml" line="592"/>
-        <location filename="../qml/pages/MainPage.qml" line="594"/>
-        <location filename="../qml/pages/MainPage.qml" line="841"/>
-        <location filename="../qml/pages/MainPage.qml" line="843"/>
-        <location filename="../qml/pages/MainPage.qml" line="1087"/>
-        <location filename="../qml/pages/MainPage.qml" line="1089"/>
+        <location filename="../qml/pages/MainPage.qml" line="595"/>
+        <location filename="../qml/pages/MainPage.qml" line="597"/>
+        <location filename="../qml/pages/MainPage.qml" line="851"/>
+        <location filename="../qml/pages/MainPage.qml" line="853"/>
+        <location filename="../qml/pages/MainPage.qml" line="1104"/>
+        <location filename="../qml/pages/MainPage.qml" line="1106"/>
         <source>Stop</source>
         <translation>Stop</translation>
     </message>
     <message>
-        <location filename="../qml/pages/MainPage.qml" line="593"/>
-        <location filename="../qml/pages/MainPage.qml" line="842"/>
-        <location filename="../qml/pages/MainPage.qml" line="1088"/>
+        <location filename="../qml/pages/MainPage.qml" line="596"/>
+        <location filename="../qml/pages/MainPage.qml" line="852"/>
+        <location filename="../qml/pages/MainPage.qml" line="1105"/>
         <source>Start</source>
         <translation>Start</translation>
     </message>
@@ -212,17 +212,17 @@
 <context>
     <name>TimeDialog</name>
     <message>
-        <location filename="../qml/pages/TimeDialog.qml" line="50"/>
+        <location filename="../qml/pages/TimeDialog.qml" line="52"/>
         <source>Save</source>
         <translation>Zapisz</translation>
     </message>
     <message>
-        <location filename="../qml/pages/TimeDialog.qml" line="51"/>
+        <location filename="../qml/pages/TimeDialog.qml" line="53"/>
         <source>Cancel</source>
         <translation>Anuluj</translation>
     </message>
     <message>
-        <location filename="../qml/pages/TimeDialog.qml" line="91"/>
+        <location filename="../qml/pages/TimeDialog.qml" line="93"/>
         <source>Dish</source>
         <translation>Danie</translation>
     </message>

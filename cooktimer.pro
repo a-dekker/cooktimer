@@ -41,6 +41,8 @@ OTHER_FILES += qml/cooktimer.qml \
     qml/images/coverbg.png \
     qml/images/timepicker.png \
     qml/images/TimePickerSeconds.png \
+    qml/images/icon-l-min.png \
+    qml/images/icon-m-min.png \
     qml/images/icon-cover-stop.png \
     qml/localdb.js \
     qml/common/SilicaLabel.qml \

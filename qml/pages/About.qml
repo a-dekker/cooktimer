@@ -4,6 +4,9 @@ import Sailfish.Silica 1.0
 Page {
     id: aboutpage
     allowedOrientations: mainapp.orientationSetting
+
+    property bool largeScreen: Screen.sizeCategory === Screen.Large ||
+                               Screen.sizeCategory === Screen.ExtraLarge
     SilicaFlickable {
         anchors.fill: parent
         contentWidth: parent.width
@@ -31,13 +34,13 @@ Page {
             }
             Label {
                 text: "cooktimer"
-                font.pixelSize: Theme.fontSizeExtraLarge
+                font.pixelSize: largeScreen ? Theme.fontSizeHuge : Theme.fontSizeExtraLarge
                 anchors.horizontalCenter: parent.horizontalCenter
             }
             Rectangle {
-                width: 80
+                width: largeScreen ? 250 : 80
                 height: width
-                radius: 100
+                radius: 200
                 anchors.horizontalCenter: parent.horizontalCenter
                 NumberAnimation on rotation {
                     from: 0
@@ -46,10 +49,11 @@ Page {
                     loops: 1
                 }
                 Image {
-                    source: "/usr/share/icons/hicolor/86x86/apps/cooktimer.png"
+                    source: largeScreen ? "/usr/share/icons/hicolor/256x256/apps/cooktimer.png" : "/usr/share/icons/hicolor/86x86/apps/cooktimer.png"
                 }
             }
             Label {
+                font.pixelSize: largeScreen ? Theme.fontSizeLarge : Theme.fontSizeMedium
                 text: qsTr("Version") + " " + version
                 anchors.horizontalCenter: parent.horizontalCenter
                 color: Theme.secondaryHighlightColor

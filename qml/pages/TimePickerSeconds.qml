@@ -61,7 +61,10 @@ Item {
     // the original dimensions = 408x408
     property real _scaleRatio: minutesCircle.width / 408
 
-    scale: 0.8 //1 is to big
+    property bool largeScreen: Screen.sizeCategory === Screen.Large ||
+                               Screen.sizeCategory === Screen.ExtraLarge
+
+    scale: largeScreen ? 1.9 : 0.8 //1 is to big
     width: secondsCircle.width
     height: secondsCircle.height
 
