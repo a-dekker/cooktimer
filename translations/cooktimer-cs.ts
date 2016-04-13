@@ -179,32 +179,32 @@
         <translation>Jazyk:</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SettingPage.qml" line="245"/>
+        <location filename="../qml/pages/SettingPage.qml" line="253"/>
         <source>Change of language will be active after restarting the application.</source>
         <translation>Změna jazyka se projeví po opětovném spuštění programu.</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SettingPage.qml" line="254"/>
+        <location filename="../qml/pages/SettingPage.qml" line="262"/>
         <source>Orientation:</source>
         <translation>Natočení:</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SettingPage.qml" line="259"/>
+        <location filename="../qml/pages/SettingPage.qml" line="267"/>
         <source>Portrait</source>
         <translation>Na výšku</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SettingPage.qml" line="262"/>
+        <location filename="../qml/pages/SettingPage.qml" line="270"/>
         <source>Landscape</source>
         <translation>Na šířku</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SettingPage.qml" line="265"/>
+        <location filename="../qml/pages/SettingPage.qml" line="273"/>
         <source>Dynamic</source>
         <translation>Dynamicky</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SettingPage.qml" line="303"/>
+        <location filename="../qml/pages/SettingPage.qml" line="311"/>
         <source>Sets the preferred screen orientation.</source>
         <translation>Nastaví upřednostňované natočení obrazovky.</translation>
     </message>
@@ -222,7 +222,7 @@
         <translation>Zrušit</translation>
     </message>
     <message>
-        <location filename="../qml/pages/TimeDialog.qml" line="93"/>
+        <location filename="../qml/pages/TimeDialog.qml" line="92"/>
         <source>Dish</source>
         <translation>Pokrm</translation>
     </message>

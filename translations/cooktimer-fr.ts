@@ -179,32 +179,32 @@
         <translation>Langue :</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SettingPage.qml" line="245"/>
+        <location filename="../qml/pages/SettingPage.qml" line="253"/>
         <source>Change of language will be active after restarting the application.</source>
         <translation>Le changement de langue sera actif après redémarrage de l&apos;application.</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SettingPage.qml" line="254"/>
+        <location filename="../qml/pages/SettingPage.qml" line="262"/>
         <source>Orientation:</source>
         <translation>Orientation :</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SettingPage.qml" line="259"/>
+        <location filename="../qml/pages/SettingPage.qml" line="267"/>
         <source>Portrait</source>
         <translation>Portrait</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SettingPage.qml" line="262"/>
+        <location filename="../qml/pages/SettingPage.qml" line="270"/>
         <source>Landscape</source>
         <translation>Paysage</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SettingPage.qml" line="265"/>
+        <location filename="../qml/pages/SettingPage.qml" line="273"/>
         <source>Dynamic</source>
         <translation>Dynamique</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SettingPage.qml" line="303"/>
+        <location filename="../qml/pages/SettingPage.qml" line="311"/>
         <source>Sets the preferred screen orientation.</source>
         <translation>Définir l&apos;orientation préférée</translation>
     </message>
@@ -222,7 +222,7 @@
         <translation>Annuler</translation>
     </message>
     <message>
-        <location filename="../qml/pages/TimeDialog.qml" line="93"/>
+        <location filename="../qml/pages/TimeDialog.qml" line="92"/>
         <source>Dish</source>
         <translation>Plat</translation>
     </message>

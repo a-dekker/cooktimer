@@ -179,32 +179,32 @@
         <translation>Język:</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SettingPage.qml" line="245"/>
+        <location filename="../qml/pages/SettingPage.qml" line="253"/>
         <source>Change of language will be active after restarting the application.</source>
         <translation>Język zostanie zmieniony po ponownym uruchomieniu programu.</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SettingPage.qml" line="254"/>
+        <location filename="../qml/pages/SettingPage.qml" line="262"/>
         <source>Orientation:</source>
         <translation>Orientacja:</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SettingPage.qml" line="259"/>
+        <location filename="../qml/pages/SettingPage.qml" line="267"/>
         <source>Portrait</source>
         <translation>Pionowa</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SettingPage.qml" line="262"/>
+        <location filename="../qml/pages/SettingPage.qml" line="270"/>
         <source>Landscape</source>
         <translation>Pozioma</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SettingPage.qml" line="265"/>
+        <location filename="../qml/pages/SettingPage.qml" line="273"/>
         <source>Dynamic</source>
         <translation>Dynamiczna</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SettingPage.qml" line="303"/>
+        <location filename="../qml/pages/SettingPage.qml" line="311"/>
         <source>Sets the preferred screen orientation.</source>
         <translation>Ustaw preferowaną orientację ekranu.</translation>
     </message>
@@ -222,7 +222,7 @@
         <translation>Anuluj</translation>
     </message>
     <message>
-        <location filename="../qml/pages/TimeDialog.qml" line="93"/>
+        <location filename="../qml/pages/TimeDialog.qml" line="92"/>
         <source>Dish</source>
         <translation>Danie</translation>
     </message>

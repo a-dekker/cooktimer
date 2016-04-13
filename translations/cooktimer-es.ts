@@ -179,32 +179,32 @@
         <translation>Idioma:</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SettingPage.qml" line="245"/>
+        <location filename="../qml/pages/SettingPage.qml" line="253"/>
         <source>Change of language will be active after restarting the application.</source>
         <translation>El cambio de idioma se aplicará después de reiniciar la aplicación.</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SettingPage.qml" line="254"/>
+        <location filename="../qml/pages/SettingPage.qml" line="262"/>
         <source>Orientation:</source>
         <translation>Orientación:</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SettingPage.qml" line="259"/>
+        <location filename="../qml/pages/SettingPage.qml" line="267"/>
         <source>Portrait</source>
         <translation>Vertical</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SettingPage.qml" line="262"/>
+        <location filename="../qml/pages/SettingPage.qml" line="270"/>
         <source>Landscape</source>
         <translation>Apaisado</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SettingPage.qml" line="265"/>
+        <location filename="../qml/pages/SettingPage.qml" line="273"/>
         <source>Dynamic</source>
         <translation>Dinámico</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SettingPage.qml" line="303"/>
+        <location filename="../qml/pages/SettingPage.qml" line="311"/>
         <source>Sets the preferred screen orientation.</source>
         <translation>Establece la orientación preferida de la pantalla.</translation>
     </message>
@@ -222,7 +222,7 @@
         <translation>Cancelar</translation>
     </message>
     <message>
-        <location filename="../qml/pages/TimeDialog.qml" line="93"/>
+        <location filename="../qml/pages/TimeDialog.qml" line="92"/>
         <source>Dish</source>
         <translation>Plato</translation>
     </message>

@@ -8,6 +8,9 @@
 # * date Author's Name <author's email> version-release
 # - Summary of changes
 
+* wed Apr 13 2016 Arno Dekker <jack.tar@example.com> 0.0.2-1
+- Added Arabic language
+
 * sat Mar 19 2016 Arno Dekker <jack.tar@example.com> 0.0.2-0
 - Fully Optimized for Jolla tablet
 - Fix bug with initial empty comment
@@ -21,7 +24,7 @@
 
 * sat Jan 9 2016 Arno Dekker <jack.tar@example.com> 0.0.1-38
 - fixed bug in notes when not selecting a dish
-- spanish translation update
+- Spanish translation update
 
 * thu Jan 7 2016 Arno Dekker <jack.tar@example.com> 0.0.1-37
 - Added note field for additional dish notes

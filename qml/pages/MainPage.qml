@@ -731,7 +731,7 @@ Page {
             IconButton {
                 anchors.left: isPortrait ? (largeScreen ? plusButton1.right : remainingTime1.right) : plusButton1.right
                 y: Theme.paddingLarge
-                icon.source: 'image://theme/icon-m-note'
+                icon.source: largeScreen ? 'image://theme/icon-l-document' : 'image://theme/icon-m-note'
                 visible: myGlobalComment1 !== ""
                 onClicked: {
                     page._showDishInfo(dish1.text, myGlobalComment1)
@@ -985,7 +985,7 @@ Page {
             IconButton {
                 anchors.left: isPortrait ? (largeScreen ? plusButton2.right : remainingTime2.right) : plusButton2.right
                 y: Theme.paddingLarge
-                icon.source: 'image://theme/icon-m-note'
+                icon.source: largeScreen ? 'image://theme/icon-l-document' : 'image://theme/icon-m-note'
                 visible: myGlobalComment2 !== ""
                 onClicked: {
                     page._showDishInfo(dish2.text, myGlobalComment2)
@@ -1238,7 +1238,7 @@ Page {
             IconButton {
                 anchors.left: isPortrait ? (largeScreen ? plusButton3.right : remainingTime3.right) : plusButton3.right
                 y: Theme.paddingLarge
-                icon.source: 'image://theme/icon-m-note'
+                icon.source: largeScreen ? 'image://theme/icon-l-document' : 'image://theme/icon-m-note'
                 visible: myGlobalComment3 !== ""
                 onClicked: {
                     page._showDishInfo(dish3.text, myGlobalComment3)

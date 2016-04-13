@@ -80,6 +80,7 @@ TRANSLATIONS = translations/cooktimer-sv.ts \
                translations/cooktimer-de_DE.ts \
                translations/cooktimer-pl.ts \
                translations/cooktimer-ca.ts \
+               translations/cooktimer-ar.ts \
                translations/cooktimer-es.ts
 #HEADERS += \
 #    src/osread.h \

@@ -65,7 +65,6 @@ Dialog {
     }
 
     onRejected: {
-
         // just reject
     }
 

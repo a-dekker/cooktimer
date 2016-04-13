@@ -49,6 +49,7 @@ namespace settingsPublic {
                     PL,    // Polish
                     DA,    // Danish
                     CA,    // Catalan
+                    AR,    // Arabic
                     INVALID
                 };
     };
