@@ -8,6 +8,11 @@
 # * date Author's Name <author's email> version-release
 # - Summary of changes
 
+* mon Nov 07 2016 Arno Dekker <jack.tar@example.com> 0.0.2-2
+- Pause text from underlined to italic
+- Dutch language corrections by pljmn
+- Breton language added by Wanibzh29
+
 * wed Apr 13 2016 Arno Dekker <jack.tar@example.com> 0.0.2-1
 - Added Arabic language
 

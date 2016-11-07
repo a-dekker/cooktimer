@@ -150,6 +150,10 @@ int main(int argc, char *argv[])
         case settingsPublic::Languages::AR:
             translator.load("cooktimer-ar.qm", SailfishApp::pathTo(QString("translations")).toLocalFile());
             break;
+        // Breton
+        case settingsPublic::Languages::BR:
+            translator.load("cooktimer-br.qm", SailfishApp::pathTo(QString("translations")).toLocalFile());
+            break;
         // English
         default:
             translator.load("cooktimer.qm", SailfishApp::pathTo(QString("translations")).toLocalFile());

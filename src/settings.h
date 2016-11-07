@@ -50,6 +50,7 @@ namespace settingsPublic {
                     DA,    // Danish
                     CA,    // Catalan
                     AR,    // Arabic
+                    BR,    // Breton
                     INVALID
                 };
     };

@@ -24,7 +24,7 @@ Page {
             }
             SectionHeader {
                 text: qsTr("Info")
-                visible: isPortrait
+                visible: isPortrait || largeScreen
             }
             Separator {
                 color: Theme.primaryColor
@@ -66,7 +66,7 @@ Page {
             }
             SectionHeader {
                 text: qsTr("Author")
-                visible: isPortrait
+                visible: isPortrait || largeScreen
             }
             Separator {
                 color: Theme.primaryColor

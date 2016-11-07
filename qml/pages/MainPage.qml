@@ -2,7 +2,7 @@ import QtQuick 2.0
 import Sailfish.Silica 1.0
 import harbour.cooktimer.Launcher 1.0
 import harbour.cooktimer.Settings 1.0
-import org.nemomobile.dbus 1.0
+import org.nemomobile.dbus 2.0
 import org.nemomobile.notifications 1.0
 import cooktimer.insomniac 1.0
 import QtFeedback 5.0
@@ -150,11 +150,11 @@ Page {
         property DBusInterface _dbus: DBusInterface {
                                           id: dbus
 
-                                          destination: "com.nokia.mce"
+                                          service: "com.nokia.mce"
                                           path: "/com/nokia/mce/request"
                                           iface: "com.nokia.mce.request"
 
-                                          busType: DBusInterface.SystemBus
+                                          bus: DBusInterface.SystemBus
                                       }
     }
 
@@ -254,7 +254,7 @@ Page {
             } else {
                 remainingTime1.color = Theme.secondaryHighlightColor
                 remainingTime1.font.bold = false
-                remainingTime1.font.underline = false
+                remainingTime1.font.italic = false
             }
             isPaused1 = false
         }
@@ -288,7 +288,7 @@ Page {
             } else {
                 remainingTime2.color = Theme.secondaryHighlightColor
                 remainingTime2.font.bold = false
-                remainingTime2.font.underline = false
+                remainingTime2.font.italic = false
             }
             isPaused2 = false
         }
@@ -322,7 +322,7 @@ Page {
             } else {
                 remainingTime3.color = Theme.secondaryHighlightColor
                 remainingTime3.font.bold = false
-                remainingTime3.font.underline = false
+                remainingTime3.font.italic = false
             }
             isPaused3 = false
         }
@@ -686,7 +686,7 @@ Page {
                         isPaused1 = true
                         remainingTime1.color = Theme.secondaryColor
                         remainingTime1.font.bold = false
-                        remainingTime1.font.underline = true
+                        remainingTime1.font.italic = true
                         mainapp.timer1running = !mainapp.timer1running
                     } else if (seconds1 > 0 && isPaused1) {
                         isPaused1 = false
@@ -700,7 +700,7 @@ Page {
                         ticker1.start()
                         remainingTime1.color = Theme.highlightColor
                         remainingTime1.font.bold = true
-                        remainingTime1.font.underline = false
+                        remainingTime1.font.italic = false
                     }
                 }
             }
@@ -940,7 +940,7 @@ Page {
                         isPaused2 = true
                         remainingTime2.color = Theme.secondaryColor
                         remainingTime2.font.bold = false
-                        remainingTime2.font.underline = true
+                        remainingTime2.font.italic = true
                         mainapp.timer2running = !mainapp.timer2running
                     } else if (seconds2 > 0 && isPaused2) {
                         isPaused2 = false
@@ -954,7 +954,7 @@ Page {
                         ticker2.start()
                         remainingTime2.color = Theme.highlightColor
                         remainingTime2.font.bold = true
-                        remainingTime2.font.underline = false
+                        remainingTime2.font.italic = false
                     }
                 }
             }
@@ -1193,7 +1193,7 @@ Page {
                         isPaused3 = true
                         remainingTime3.color = Theme.secondaryColor
                         remainingTime3.font.bold = false
-                        remainingTime3.font.underline = true
+                        remainingTime3.font.italic = true
                         mainapp.timer3running = !mainapp.timer3running
                     } else if (seconds3 > 0 && isPaused3) {
                         isPaused3 = false
@@ -1207,7 +1207,7 @@ Page {
                         ticker3.start()
                         remainingTime3.color = Theme.highlightColor
                         remainingTime3.font.bold = true
-                        remainingTime3.font.underline = false
+                        remainingTime3.font.italic = false
                     }
                 }
             }

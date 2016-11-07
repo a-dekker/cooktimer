@@ -107,47 +107,50 @@ Dialog {
                             text: "Arabic/العربية"
                         } // 1
                         MenuItem {
-                            text: "Catalan/Català"
+                            text: "Breton/Brezhoneg"
                         } // 2
                         MenuItem {
-                            text: "Czech/Čeština"
+                            text: "Catalan/Català"
                         } // 3
                         MenuItem {
-                            text: "Danish/Danske"
+                            text: "Czech/Čeština"
                         } // 4
                         MenuItem {
-                            text: "Dutch/Nederlands"
+                            text: "Danish/Danske"
                         } // 5
                         MenuItem {
-                            text: "English/English"
+                            text: "Dutch/Nederlands"
                         } // 6
                         MenuItem {
-                            text: "Finnish/Suomalainen"
+                            text: "English/English"
                         } // 7
                         MenuItem {
-                            text: "French/Français"
+                            text: "Finnish/Suomalainen"
                         } // 8
                         MenuItem {
-                            text: "German/Deutsch"
+                            text: "French/Français"
                         } // 9
                         MenuItem {
-                            text: "Greek/Ελληνικά"
+                            text: "German/Deutsch"
                         } // 10
                         MenuItem {
-                            text: "Polish/Polski"
+                            text: "Greek/Ελληνικά"
                         } // 11
                         MenuItem {
-                            text: "Russian/Русский"
+                            text: "Polish/Polski"
                         } // 12
                         MenuItem {
-                            text: "Spanish/Español"
+                            text: "Russian/Русский"
                         } // 13
                         MenuItem {
-                            text: "Swedish/Svensk"
+                            text: "Spanish/Español"
                         } // 14
                         MenuItem {
-                            text: "Turkish/Türk"
+                            text: "Swedish/Svensk"
                         } // 15
+                        MenuItem {
+                            text: "Turkish/Türk"
+                        } // 16
                     }
                     // The next two converter functions decouple the alphabetical language list
                     // index from the internal settings index, which cannot be changed for legacy reasons
@@ -200,6 +203,9 @@ Dialog {
                         case Languages.PL:
                             // Polish
                             return GlobVars.polish
+                        case Languages.BR:
+                            // Breton
+                            return GlobVars.breton
                         default:
                             return GlobVars.english
                         }
@@ -239,6 +245,8 @@ Dialog {
                             return Languages.PL // Polish
                         case GlobVars.arabic:
                             return Languages.AR // Arabic
+                        case GlobVars.breton:
+                            return Languages.BR // Arabic
                         default:
                             return Languages.EN // English
                         }
