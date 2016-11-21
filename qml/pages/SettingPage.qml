@@ -140,17 +140,20 @@ Dialog {
                             text: "Polish/Polski"
                         } // 12
                         MenuItem {
-                            text: "Russian/Русский"
+                            text: "Portuguese (Brazil)/Português brasileiro"
                         } // 13
                         MenuItem {
-                            text: "Spanish/Español"
+                            text: "Russian/Русский"
                         } // 14
                         MenuItem {
-                            text: "Swedish/Svensk"
+                            text: "Spanish/Español"
                         } // 15
                         MenuItem {
-                            text: "Turkish/Türk"
+                            text: "Swedish/Svensk"
                         } // 16
+                        MenuItem {
+                            text: "Turkish/Türk"
+                        } // 17
                     }
                     // The next two converter functions decouple the alphabetical language list
                     // index from the internal settings index, which cannot be changed for legacy reasons
@@ -206,6 +209,9 @@ Dialog {
                         case Languages.BR:
                             // Breton
                             return GlobVars.breton
+                        case Languages.PT_BR:
+                            // brazilian_portuguese
+                            return GlobVars.portuguese_brazil
                         default:
                             return GlobVars.english
                         }
@@ -246,7 +252,9 @@ Dialog {
                         case GlobVars.arabic:
                             return Languages.AR // Arabic
                         case GlobVars.breton:
-                            return Languages.BR // Arabic
+                            return Languages.BR // Breton
+                        case GlobVars.portuguese_brazil:
+                            return Languages.PT_BR // Portuguese (Brazil)
                         default:
                             return Languages.EN // English
                         }

@@ -51,6 +51,7 @@ namespace settingsPublic {
                     CA,    // Catalan
                     AR,    // Arabic
                     BR,    // Breton
+                    PT_BR, // Portuguese (Brazil)
                     INVALID
                 };
     };

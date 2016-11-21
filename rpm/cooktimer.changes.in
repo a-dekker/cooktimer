@@ -8,6 +8,9 @@
 # * date Author's Name <author's email> version-release
 # - Summary of changes
 
+* tue Nov 22 2016 Arno Dekker <jack.tar@example.com> 0.0.2-3
+- Portuguese (Brazil) translation by Lucas Elder Neves
+
 * mon Nov 07 2016 Arno Dekker <jack.tar@example.com> 0.0.2-2
 - Pause text from underlined to italic
 - Dutch language corrections by pljmn
