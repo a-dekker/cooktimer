@@ -1,32 +1,32 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="es">
+<TS version="2.1" language="sl_SI">
 <context>
     <name>About</name>
     <message>
         <location filename="../qml/pages/About.qml" line="23"/>
         <source>About</source>
-        <translation>Acerca de</translation>
+        <translation>O programu</translation>
     </message>
     <message>
         <location filename="../qml/pages/About.qml" line="26"/>
         <source>Info</source>
-        <translation>Información</translation>
+        <translation>Informacije</translation>
     </message>
     <message>
         <location filename="../qml/pages/About.qml" line="57"/>
         <source>Version</source>
-        <translation>Versión</translation>
+        <translation>Različica</translation>
     </message>
     <message>
         <location filename="../qml/pages/About.qml" line="62"/>
         <source>&quot;Timers for cooking&quot;</source>
-        <translation>&quot;Temporizadores para la cocina&quot;</translation>
+        <translation>&quot;Časovniki za kuhanje&quot;</translation>
     </message>
     <message>
         <location filename="../qml/pages/About.qml" line="68"/>
         <source>Author</source>
-        <translation>Autor</translation>
+        <translation>Avtor</translation>
     </message>
 </context>
 <context>
@@ -34,17 +34,17 @@
     <message>
         <location filename="../qml/pages/CommentPage.qml" line="16"/>
         <source>Done</source>
-        <translation>Hecho</translation>
+        <translation>Končano</translation>
     </message>
     <message>
         <location filename="../qml/pages/CommentPage.qml" line="17"/>
         <source>Cancel</source>
-        <translation>Cancelar</translation>
+        <translation>Prekliči</translation>
     </message>
     <message>
         <location filename="../qml/pages/CommentPage.qml" line="23"/>
         <source>Enter small note here</source>
-        <translation>Introduce aquí una breve nota</translation>
+        <translation>Vnesi krajšo beležko</translation>
     </message>
 </context>
 <context>
@@ -52,32 +52,32 @@
     <message>
         <location filename="../qml/pages/DishEdit.qml" line="19"/>
         <source>Save</source>
-        <translation>Guardar</translation>
+        <translation>Shrani</translation>
     </message>
     <message>
         <location filename="../qml/pages/DishEdit.qml" line="20"/>
         <source>Cancel</source>
-        <translation>Cancelar</translation>
+        <translation>Prekliči</translation>
     </message>
     <message>
         <location filename="../qml/pages/DishEdit.qml" line="49"/>
         <source>Deleting</source>
-        <translation>Borrando</translation>
+        <translation>Brisanje</translation>
     </message>
     <message>
         <location filename="../qml/pages/DishEdit.qml" line="59"/>
         <source>Dish name</source>
-        <translation>Nombre del plato</translation>
+        <translation>Ime jedi</translation>
     </message>
     <message>
         <location filename="../qml/pages/DishEdit.qml" line="127"/>
         <source>No dishes defined. Press the plus button to add one.</source>
-        <translation>No se ha definido ningún plato. Presiona el botón más para añadir uno.</translation>
+        <translation>Ni definiranih jedi. Za dodajanje pritisni gumb s plusom.</translation>
     </message>
     <message>
         <location filename="../qml/pages/DishEdit.qml" line="137"/>
         <source>New dish</source>
-        <translation>Nuevo plato</translation>
+        <translation>Nova jed</translation>
     </message>
 </context>
 <context>
@@ -85,7 +85,7 @@
     <message>
         <location filename="../qml/pages/DishPage.qml" line="102"/>
         <source>No dishes defined. Choose &quot;Edit Dishes&quot; from the pulley menu.</source>
-        <translation>No se ha definido ningún plato. Elige &quot;Editar platos&quot; en el menú desplegable.</translation>
+        <translation>Ni definiranih jedi. Iz poteznega menija izberi &quot;Uredi jedi&quot;.</translation>
     </message>
 </context>
 <context>
@@ -94,29 +94,29 @@
         <location filename="../qml/pages/MainPage.qml" line="384"/>
         <location filename="../qml/pages/MainPage.qml" line="388"/>
         <source>ready</source>
-        <translation>listo</translation>
+        <translation>pripravljeno</translation>
     </message>
     <message>
         <location filename="../qml/pages/MainPage.qml" line="500"/>
         <source>About</source>
-        <translation>Acerca de</translation>
+        <translation>O programu</translation>
     </message>
     <message>
         <location filename="../qml/pages/MainPage.qml" line="504"/>
         <source>Settings</source>
-        <translation>Ajustes</translation>
+        <translation>Nastavitve</translation>
     </message>
     <message>
         <location filename="../qml/pages/MainPage.qml" line="508"/>
         <source>Edit dishes</source>
-        <translation>Editar platos</translation>
+        <translation>Uredi jedi</translation>
     </message>
     <message>
         <location filename="../qml/pages/MainPage.qml" line="546"/>
         <location filename="../qml/pages/MainPage.qml" line="802"/>
         <location filename="../qml/pages/MainPage.qml" line="1055"/>
         <source>Dish</source>
-        <translation>Plato</translation>
+        <translation>Jed</translation>
     </message>
     <message>
         <location filename="../qml/pages/MainPage.qml" line="595"/>
@@ -126,14 +126,14 @@
         <location filename="../qml/pages/MainPage.qml" line="1104"/>
         <location filename="../qml/pages/MainPage.qml" line="1106"/>
         <source>Stop</source>
-        <translation>Parar</translation>
+        <translation>Ustavi</translation>
     </message>
     <message>
         <location filename="../qml/pages/MainPage.qml" line="596"/>
         <location filename="../qml/pages/MainPage.qml" line="852"/>
         <location filename="../qml/pages/MainPage.qml" line="1105"/>
         <source>Start</source>
-        <translation>Iniciar</translation>
+        <translation>Začni</translation>
     </message>
 </context>
 <context>
@@ -141,72 +141,72 @@
     <message>
         <location filename="../qml/pages/SettingPage.qml" line="62"/>
         <source>Save</source>
-        <translation>Guardar</translation>
+        <translation>Shrani</translation>
     </message>
     <message>
         <location filename="../qml/pages/SettingPage.qml" line="63"/>
         <source>Cancel</source>
-        <translation>Cancelar</translation>
+        <translation>Prekliči</translation>
     </message>
     <message>
         <location filename="../qml/pages/SettingPage.qml" line="66"/>
         <source>Settings</source>
-        <translation>Ajustes</translation>
+        <translation>Nastavitve</translation>
     </message>
     <message>
         <location filename="../qml/pages/SettingPage.qml" line="73"/>
         <source>Keep backlight on</source>
-        <translation>Mantener la retroiluminación</translation>
+        <translation>Ohrani osvetlitev zaslona</translation>
     </message>
     <message>
         <location filename="../qml/pages/SettingPage.qml" line="74"/>
         <source>Prevent screen from dimming.</source>
-        <translation>Evitar que la pantalla se apague.</translation>
+        <translation>Prepreči zatemnitev zaslona.</translation>
     </message>
     <message>
         <location filename="../qml/pages/SettingPage.qml" line="80"/>
         <source>Show additional banner</source>
-        <translation>Mostrar banner adicional</translation>
+        <translation>Prikaži dodatno pasico</translation>
     </message>
     <message>
         <location filename="../qml/pages/SettingPage.qml" line="81"/>
         <source>Notification banner in upper screen.</source>
-        <translation>Banner de notificación en la parte superior de la pantalla.</translation>
+        <translation>Pasica z obvestili na zaslonu zgoraj.</translation>
     </message>
     <message>
         <location filename="../qml/pages/SettingPage.qml" line="99"/>
         <source>Language:</source>
-        <translation>Idioma:</translation>
+        <translation>Jezik:</translation>
     </message>
     <message>
         <location filename="../qml/pages/SettingPage.qml" line="277"/>
         <source>Change of language will be active after restarting the application.</source>
-        <translation>El cambio de idioma se aplicará después de reiniciar la aplicación.</translation>
+        <translation>Sprememba jezika bo aktivna po ponovnem zagonu programa. </translation>
     </message>
     <message>
         <location filename="../qml/pages/SettingPage.qml" line="286"/>
         <source>Orientation:</source>
-        <translation>Orientación:</translation>
+        <translation>Usmerjenost zaslona:</translation>
     </message>
     <message>
         <location filename="../qml/pages/SettingPage.qml" line="291"/>
         <source>Portrait</source>
-        <translation>Vertical</translation>
+        <translation>Pokončno</translation>
     </message>
     <message>
         <location filename="../qml/pages/SettingPage.qml" line="294"/>
         <source>Landscape</source>
-        <translation>Apaisado</translation>
+        <translation>Ležeče</translation>
     </message>
     <message>
         <location filename="../qml/pages/SettingPage.qml" line="297"/>
         <source>Dynamic</source>
-        <translation>Dinámico</translation>
+        <translation>Dinamično</translation>
     </message>
     <message>
         <location filename="../qml/pages/SettingPage.qml" line="335"/>
         <source>Sets the preferred screen orientation.</source>
-        <translation>Establece la orientación preferida de la pantalla.</translation>
+        <translation>Nastavi želeno usmerjenost zaslona.</translation>
     </message>
 </context>
 <context>
@@ -214,17 +214,17 @@
     <message>
         <location filename="../qml/pages/TimeDialog.qml" line="52"/>
         <source>Save</source>
-        <translation>Guardar</translation>
+        <translation>Shrani</translation>
     </message>
     <message>
         <location filename="../qml/pages/TimeDialog.qml" line="53"/>
         <source>Cancel</source>
-        <translation>Cancelar</translation>
+        <translation>Prekliči</translation>
     </message>
     <message>
         <location filename="../qml/pages/TimeDialog.qml" line="92"/>
         <source>Dish</source>
-        <translation>Plato</translation>
+        <translation>Jed</translation>
     </message>
 </context>
 <context>
@@ -234,7 +234,7 @@
         <location filename="../qml/cooktimer.qml" line="17"/>
         <location filename="../qml/cooktimer.qml" line="18"/>
         <source>Dish</source>
-        <translation>Plato</translation>
+        <translation>Jed</translation>
     </message>
 </context>
 </TS>

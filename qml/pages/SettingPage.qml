@@ -146,14 +146,17 @@ Dialog {
                             text: "Russian/Русский"
                         } // 14
                         MenuItem {
-                            text: "Spanish/Español"
+                            text: "Slovenian/Slovenski"
                         } // 15
                         MenuItem {
-                            text: "Swedish/Svensk"
+                            text: "Spanish/Español"
                         } // 16
                         MenuItem {
-                            text: "Turkish/Türk"
+                            text: "Swedish/Svensk"
                         } // 17
+                        MenuItem {
+                            text: "Turkish/Türk"
+                        } // 18
                     }
                     // The next two converter functions decouple the alphabetical language list
                     // index from the internal settings index, which cannot be changed for legacy reasons
@@ -212,6 +215,9 @@ Dialog {
                         case Languages.PT_BR:
                             // brazilian_portuguese
                             return GlobVars.portuguese_brazil
+                        case Languages.SL_SI:
+                            // slovenian
+                            return GlobVars.slovenian
                         default:
                             return GlobVars.english
                         }
@@ -255,6 +261,8 @@ Dialog {
                             return Languages.BR // Breton
                         case GlobVars.portuguese_brazil:
                             return Languages.PT_BR // Portuguese (Brazil)
+                        case GlobVars.slovenian:
+                            return Languages.SL_SI // Slovenian
                         default:
                             return Languages.EN // English
                         }

@@ -179,32 +179,32 @@
         <translation>Sprache</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SettingPage.qml" line="269"/>
+        <location filename="../qml/pages/SettingPage.qml" line="277"/>
         <source>Change of language will be active after restarting the application.</source>
         <translation>Die geänderte Sprache wird nach einem Neustart der Anwendung aktiviert.</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SettingPage.qml" line="278"/>
+        <location filename="../qml/pages/SettingPage.qml" line="286"/>
         <source>Orientation:</source>
         <translation>Orientierung</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SettingPage.qml" line="283"/>
+        <location filename="../qml/pages/SettingPage.qml" line="291"/>
         <source>Portrait</source>
         <translation>Hochformat</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SettingPage.qml" line="286"/>
+        <location filename="../qml/pages/SettingPage.qml" line="294"/>
         <source>Landscape</source>
         <translation>Querformat</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SettingPage.qml" line="289"/>
+        <location filename="../qml/pages/SettingPage.qml" line="297"/>
         <source>Dynamic</source>
         <translation>Dynamisch</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SettingPage.qml" line="327"/>
+        <location filename="../qml/pages/SettingPage.qml" line="335"/>
         <source>Sets the preferred screen orientation.</source>
         <translation>Legt die bevorzugte Bildschirmausrichtung fest.</translation>
     </message>

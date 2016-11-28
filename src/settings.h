@@ -52,6 +52,7 @@ namespace settingsPublic {
                     AR,    // Arabic
                     BR,    // Breton
                     PT_BR, // Portuguese (Brazil)
+                    SL_SI, // Slovenian
                     INVALID
                 };
     };
