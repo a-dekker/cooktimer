@@ -384,9 +384,9 @@ Page {
             banner("INFO", alarmtxt + " " + qsTr("ready"))
         }
         // pageStack.push(Qt.resolvedUrl("AlarmDialogBase.qml"))
-        bar.launch("timedclient-qt5 -b'TITLE=button0' -e\"APPLICATION=test;TITLE="
+        bar.launch("timedclient-qt5 -b'TITLE=button0' -e\"APPLICATION=nemoalarms;TITLE="
                    + alarmtxt + "\n" + qsTr("ready")
-                   + ";ticker=0;type=countdown;suppressTimeoutSnooze;hideSnoozeButton1\"")
+                   + ";ticker=0;timeOfDay=0;triggerTime=1395217218;;type=countdown;suppressTimeoutSnooze;hideSnoozeButton1\"")
     }
 
     function wakeUp1() {
@@ -467,10 +467,12 @@ Page {
     }
 
     function _showDishInfo(dish_name, comment_text) {
-        infoPanelLoader.source = Qt.resolvedUrl("../common/DishInfoPanel.qml")
-        infoPanelLoader.item.parent = page
-        infoPanelLoader.item.dish = dish_name
-        infoPanelLoader.item.comment = comment_text
+        if (infoPanelLoader.status === Loader.Null) {
+            infoPanelLoader.source = Qt.resolvedUrl("../common/DishInfoPanel.qml")
+            infoPanelLoader.item.parent = page
+            infoPanelLoader.item.dish = dish_name
+            infoPanelLoader.item.comment = comment_text
+        }
         infoPanelLoader.item.showDishInfo()
     }
 

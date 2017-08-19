@@ -83,7 +83,7 @@
 <context>
     <name>DishPage</name>
     <message>
-        <location filename="../qml/pages/DishPage.qml" line="102"/>
+        <location filename="../qml/pages/DishPage.qml" line="106"/>
         <source>No dishes defined. Choose &quot;Edit Dishes&quot; from the pulley menu.</source>
         <translation>Nestanoven žádný pokrm. Vyberte Upravit pokrmy ve vysunovací nabídce.</translation>
     </message>
@@ -97,41 +97,41 @@
         <translation>Připraven</translation>
     </message>
     <message>
-        <location filename="../qml/pages/MainPage.qml" line="500"/>
+        <location filename="../qml/pages/MainPage.qml" line="502"/>
         <source>About</source>
         <translation>O</translation>
     </message>
     <message>
-        <location filename="../qml/pages/MainPage.qml" line="504"/>
+        <location filename="../qml/pages/MainPage.qml" line="506"/>
         <source>Settings</source>
         <translation>Nastavení</translation>
     </message>
     <message>
-        <location filename="../qml/pages/MainPage.qml" line="508"/>
+        <location filename="../qml/pages/MainPage.qml" line="510"/>
         <source>Edit dishes</source>
         <translation>Upravit pokrmy</translation>
     </message>
     <message>
-        <location filename="../qml/pages/MainPage.qml" line="546"/>
-        <location filename="../qml/pages/MainPage.qml" line="802"/>
-        <location filename="../qml/pages/MainPage.qml" line="1055"/>
+        <location filename="../qml/pages/MainPage.qml" line="548"/>
+        <location filename="../qml/pages/MainPage.qml" line="804"/>
+        <location filename="../qml/pages/MainPage.qml" line="1057"/>
         <source>Dish</source>
         <translation>Pokrm</translation>
     </message>
     <message>
-        <location filename="../qml/pages/MainPage.qml" line="595"/>
         <location filename="../qml/pages/MainPage.qml" line="597"/>
-        <location filename="../qml/pages/MainPage.qml" line="851"/>
+        <location filename="../qml/pages/MainPage.qml" line="599"/>
         <location filename="../qml/pages/MainPage.qml" line="853"/>
-        <location filename="../qml/pages/MainPage.qml" line="1104"/>
+        <location filename="../qml/pages/MainPage.qml" line="855"/>
         <location filename="../qml/pages/MainPage.qml" line="1106"/>
+        <location filename="../qml/pages/MainPage.qml" line="1108"/>
         <source>Stop</source>
         <translation>Zastavit</translation>
     </message>
     <message>
-        <location filename="../qml/pages/MainPage.qml" line="596"/>
-        <location filename="../qml/pages/MainPage.qml" line="852"/>
-        <location filename="../qml/pages/MainPage.qml" line="1105"/>
+        <location filename="../qml/pages/MainPage.qml" line="598"/>
+        <location filename="../qml/pages/MainPage.qml" line="854"/>
+        <location filename="../qml/pages/MainPage.qml" line="1107"/>
         <source>Start</source>
         <translation>Spustit</translation>
     </message>
@@ -139,72 +139,72 @@
 <context>
     <name>SettingPage</name>
     <message>
-        <location filename="../qml/pages/SettingPage.qml" line="62"/>
+        <location filename="../qml/pages/SettingPage.qml" line="73"/>
         <source>Save</source>
         <translation>Uložit</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SettingPage.qml" line="63"/>
+        <location filename="../qml/pages/SettingPage.qml" line="74"/>
         <source>Cancel</source>
         <translation>Zrušit</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SettingPage.qml" line="66"/>
+        <location filename="../qml/pages/SettingPage.qml" line="77"/>
         <source>Settings</source>
         <translation>Nastavení</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SettingPage.qml" line="73"/>
+        <location filename="../qml/pages/SettingPage.qml" line="84"/>
         <source>Keep backlight on</source>
         <translation>Ponechat zadní osvětlení zapnuto</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SettingPage.qml" line="74"/>
+        <location filename="../qml/pages/SettingPage.qml" line="85"/>
         <source>Prevent screen from dimming.</source>
         <translation>Zabránit obrazovce v pohasnutí</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SettingPage.qml" line="80"/>
+        <location filename="../qml/pages/SettingPage.qml" line="91"/>
         <source>Show additional banner</source>
         <translation>Ukázat dodatečný proužek</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SettingPage.qml" line="81"/>
+        <location filename="../qml/pages/SettingPage.qml" line="92"/>
         <source>Notification banner in upper screen.</source>
         <translation>Oznamovací proužek v horní části obrazovky.</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SettingPage.qml" line="99"/>
+        <location filename="../qml/pages/SettingPage.qml" line="110"/>
         <source>Language:</source>
         <translation>Jazyk:</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SettingPage.qml" line="277"/>
+        <location filename="../qml/pages/SettingPage.qml" line="288"/>
         <source>Change of language will be active after restarting the application.</source>
         <translation>Změna jazyka se projeví po opětovném spuštění programu.</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SettingPage.qml" line="286"/>
+        <location filename="../qml/pages/SettingPage.qml" line="297"/>
         <source>Orientation:</source>
         <translation>Natočení:</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SettingPage.qml" line="291"/>
+        <location filename="../qml/pages/SettingPage.qml" line="302"/>
         <source>Portrait</source>
         <translation>Na výšku</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SettingPage.qml" line="294"/>
+        <location filename="../qml/pages/SettingPage.qml" line="305"/>
         <source>Landscape</source>
         <translation>Na šířku</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SettingPage.qml" line="297"/>
+        <location filename="../qml/pages/SettingPage.qml" line="308"/>
         <source>Dynamic</source>
         <translation>Dynamicky</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SettingPage.qml" line="335"/>
+        <location filename="../qml/pages/SettingPage.qml" line="346"/>
         <source>Sets the preferred screen orientation.</source>
         <translation>Nastaví upřednostňované natočení obrazovky.</translation>
     </message>

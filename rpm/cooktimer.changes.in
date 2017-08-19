@@ -8,6 +8,10 @@
 # * date Author's Name <author's email> version-release
 # - Summary of changes
 
+* thu Jun 1 2017 Arno Dekker <jack.tar@example.com> 0.0.2-5
+- Removed time indication on alarmscreen
+- Fixed issue on settingspage
+
 * mon Nov 28 2016 Arno Dekker <jack.tar@example.com> 0.0.2-4
 - Slovenian added by sponka
 

@@ -83,7 +83,7 @@
 <context>
     <name>DishPage</name>
     <message>
-        <location filename="../qml/pages/DishPage.qml" line="102"/>
+        <location filename="../qml/pages/DishPage.qml" line="106"/>
         <source>No dishes defined. Choose &quot;Edit Dishes&quot; from the pulley menu.</source>
         <translation>Plad ebet termenet. Dibabit &quot;Kemm ar Plad&quot; diouzh ar roll-pol.</translation>
     </message>
@@ -97,41 +97,41 @@
         <translation>prest</translation>
     </message>
     <message>
-        <location filename="../qml/pages/MainPage.qml" line="500"/>
+        <location filename="../qml/pages/MainPage.qml" line="502"/>
         <source>About</source>
         <translation>Diwar-benn</translation>
     </message>
     <message>
-        <location filename="../qml/pages/MainPage.qml" line="504"/>
+        <location filename="../qml/pages/MainPage.qml" line="506"/>
         <source>Settings</source>
         <translation>Dibarzhioù</translation>
     </message>
     <message>
-        <location filename="../qml/pages/MainPage.qml" line="508"/>
+        <location filename="../qml/pages/MainPage.qml" line="510"/>
         <source>Edit dishes</source>
         <translation>Kemm ar plad</translation>
     </message>
     <message>
-        <location filename="../qml/pages/MainPage.qml" line="546"/>
-        <location filename="../qml/pages/MainPage.qml" line="802"/>
-        <location filename="../qml/pages/MainPage.qml" line="1055"/>
+        <location filename="../qml/pages/MainPage.qml" line="548"/>
+        <location filename="../qml/pages/MainPage.qml" line="804"/>
+        <location filename="../qml/pages/MainPage.qml" line="1057"/>
         <source>Dish</source>
         <translation>Plad</translation>
     </message>
     <message>
-        <location filename="../qml/pages/MainPage.qml" line="595"/>
         <location filename="../qml/pages/MainPage.qml" line="597"/>
-        <location filename="../qml/pages/MainPage.qml" line="851"/>
+        <location filename="../qml/pages/MainPage.qml" line="599"/>
         <location filename="../qml/pages/MainPage.qml" line="853"/>
-        <location filename="../qml/pages/MainPage.qml" line="1104"/>
+        <location filename="../qml/pages/MainPage.qml" line="855"/>
         <location filename="../qml/pages/MainPage.qml" line="1106"/>
+        <location filename="../qml/pages/MainPage.qml" line="1108"/>
         <source>Stop</source>
         <translation>Paouez</translation>
     </message>
     <message>
-        <location filename="../qml/pages/MainPage.qml" line="596"/>
-        <location filename="../qml/pages/MainPage.qml" line="852"/>
-        <location filename="../qml/pages/MainPage.qml" line="1105"/>
+        <location filename="../qml/pages/MainPage.qml" line="598"/>
+        <location filename="../qml/pages/MainPage.qml" line="854"/>
+        <location filename="../qml/pages/MainPage.qml" line="1107"/>
         <source>Start</source>
         <translation>Kregiñ ganti</translation>
     </message>
@@ -139,72 +139,72 @@
 <context>
     <name>SettingPage</name>
     <message>
-        <location filename="../qml/pages/SettingPage.qml" line="62"/>
+        <location filename="../qml/pages/SettingPage.qml" line="73"/>
         <source>Save</source>
         <translation>Enrollañ</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SettingPage.qml" line="63"/>
+        <location filename="../qml/pages/SettingPage.qml" line="74"/>
         <source>Cancel</source>
         <translation>Nullañ</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SettingPage.qml" line="66"/>
+        <location filename="../qml/pages/SettingPage.qml" line="77"/>
         <source>Settings</source>
         <translation>Dibarzhioù</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SettingPage.qml" line="73"/>
+        <location filename="../qml/pages/SettingPage.qml" line="84"/>
         <source>Keep backlight on</source>
         <translation>Mirout al luc&apos;hgouloù enaouet</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SettingPage.qml" line="74"/>
+        <location filename="../qml/pages/SettingPage.qml" line="85"/>
         <source>Prevent screen from dimming.</source>
         <translation>Mirout ouzh ar skramm da wanaat.</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SettingPage.qml" line="80"/>
+        <location filename="../qml/pages/SettingPage.qml" line="91"/>
         <source>Show additional banner</source>
         <translation>Diskouez ur pannell ouzhpenn</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SettingPage.qml" line="81"/>
+        <location filename="../qml/pages/SettingPage.qml" line="92"/>
         <source>Notification banner in upper screen.</source>
         <translation>Pannell ar c&apos;hemennadennoù er skramm-uhel.</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SettingPage.qml" line="99"/>
+        <location filename="../qml/pages/SettingPage.qml" line="110"/>
         <source>Language:</source>
         <translation>Yezh:</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SettingPage.qml" line="277"/>
+        <location filename="../qml/pages/SettingPage.qml" line="288"/>
         <source>Change of language will be active after restarting the application.</source>
         <translation>Ar cheñchamant yezh a vo hegerzus goude bezañ bet adloc&apos;het gant an arload.</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SettingPage.qml" line="286"/>
+        <location filename="../qml/pages/SettingPage.qml" line="297"/>
         <source>Orientation:</source>
         <translation>Reteradur:</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SettingPage.qml" line="291"/>
+        <location filename="../qml/pages/SettingPage.qml" line="302"/>
         <source>Portrait</source>
         <translation>Poltred</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SettingPage.qml" line="294"/>
+        <location filename="../qml/pages/SettingPage.qml" line="305"/>
         <source>Landscape</source>
         <translation>Gweledva</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SettingPage.qml" line="297"/>
+        <location filename="../qml/pages/SettingPage.qml" line="308"/>
         <source>Dynamic</source>
         <translation>Buhezek</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SettingPage.qml" line="335"/>
+        <location filename="../qml/pages/SettingPage.qml" line="346"/>
         <source>Sets the preferred screen orientation.</source>
         <translation>Lakaat ar reteradur skramm karetañ. </translation>
     </message>

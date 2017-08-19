@@ -34,17 +34,17 @@
     <message>
         <location filename="../qml/pages/CommentPage.qml" line="16"/>
         <source>Done</source>
-        <translation type="unfinished"></translation>
+        <translation>Zrobione</translation>
     </message>
     <message>
         <location filename="../qml/pages/CommentPage.qml" line="17"/>
         <source>Cancel</source>
-        <translation type="unfinished">Anuluj</translation>
+        <translation>Anuluj</translation>
     </message>
     <message>
         <location filename="../qml/pages/CommentPage.qml" line="23"/>
         <source>Enter small note here</source>
-        <translation type="unfinished"></translation>
+        <translation>Wprowadź krótką notatkę</translation>
     </message>
 </context>
 <context>
@@ -83,7 +83,7 @@
 <context>
     <name>DishPage</name>
     <message>
-        <location filename="../qml/pages/DishPage.qml" line="102"/>
+        <location filename="../qml/pages/DishPage.qml" line="106"/>
         <source>No dishes defined. Choose &quot;Edit Dishes&quot; from the pulley menu.</source>
         <translation>Brak zdefiniowanych dań. Wybierz &quot;Edytuj Dania&quot; z wysuwanego menu.</translation>
     </message>
@@ -97,41 +97,41 @@
         <translation>gotowe</translation>
     </message>
     <message>
-        <location filename="../qml/pages/MainPage.qml" line="500"/>
+        <location filename="../qml/pages/MainPage.qml" line="502"/>
         <source>About</source>
         <translation>O programie</translation>
     </message>
     <message>
-        <location filename="../qml/pages/MainPage.qml" line="504"/>
+        <location filename="../qml/pages/MainPage.qml" line="506"/>
         <source>Settings</source>
         <translation>Ustawienia</translation>
     </message>
     <message>
-        <location filename="../qml/pages/MainPage.qml" line="508"/>
+        <location filename="../qml/pages/MainPage.qml" line="510"/>
         <source>Edit dishes</source>
         <translation>Edytuj dania</translation>
     </message>
     <message>
-        <location filename="../qml/pages/MainPage.qml" line="546"/>
-        <location filename="../qml/pages/MainPage.qml" line="802"/>
-        <location filename="../qml/pages/MainPage.qml" line="1055"/>
+        <location filename="../qml/pages/MainPage.qml" line="548"/>
+        <location filename="../qml/pages/MainPage.qml" line="804"/>
+        <location filename="../qml/pages/MainPage.qml" line="1057"/>
         <source>Dish</source>
         <translation>Danie</translation>
     </message>
     <message>
-        <location filename="../qml/pages/MainPage.qml" line="595"/>
         <location filename="../qml/pages/MainPage.qml" line="597"/>
-        <location filename="../qml/pages/MainPage.qml" line="851"/>
+        <location filename="../qml/pages/MainPage.qml" line="599"/>
         <location filename="../qml/pages/MainPage.qml" line="853"/>
-        <location filename="../qml/pages/MainPage.qml" line="1104"/>
+        <location filename="../qml/pages/MainPage.qml" line="855"/>
         <location filename="../qml/pages/MainPage.qml" line="1106"/>
+        <location filename="../qml/pages/MainPage.qml" line="1108"/>
         <source>Stop</source>
         <translation>Stop</translation>
     </message>
     <message>
-        <location filename="../qml/pages/MainPage.qml" line="596"/>
-        <location filename="../qml/pages/MainPage.qml" line="852"/>
-        <location filename="../qml/pages/MainPage.qml" line="1105"/>
+        <location filename="../qml/pages/MainPage.qml" line="598"/>
+        <location filename="../qml/pages/MainPage.qml" line="854"/>
+        <location filename="../qml/pages/MainPage.qml" line="1107"/>
         <source>Start</source>
         <translation>Start</translation>
     </message>
@@ -139,72 +139,72 @@
 <context>
     <name>SettingPage</name>
     <message>
-        <location filename="../qml/pages/SettingPage.qml" line="62"/>
+        <location filename="../qml/pages/SettingPage.qml" line="73"/>
         <source>Save</source>
         <translation>Zapisz</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SettingPage.qml" line="63"/>
+        <location filename="../qml/pages/SettingPage.qml" line="74"/>
         <source>Cancel</source>
         <translation>Anuluj</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SettingPage.qml" line="66"/>
+        <location filename="../qml/pages/SettingPage.qml" line="77"/>
         <source>Settings</source>
         <translation>Ustawienia</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SettingPage.qml" line="73"/>
+        <location filename="../qml/pages/SettingPage.qml" line="84"/>
         <source>Keep backlight on</source>
         <translation>Włącz podświetlenie</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SettingPage.qml" line="74"/>
+        <location filename="../qml/pages/SettingPage.qml" line="85"/>
         <source>Prevent screen from dimming.</source>
         <translation>Nie wygaszaj ekranu.</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SettingPage.qml" line="80"/>
+        <location filename="../qml/pages/SettingPage.qml" line="91"/>
         <source>Show additional banner</source>
         <translation>Pokaż dodatkowy pasek</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SettingPage.qml" line="81"/>
+        <location filename="../qml/pages/SettingPage.qml" line="92"/>
         <source>Notification banner in upper screen.</source>
         <translation>Pasek powiadomień w górnej części ekranu.</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SettingPage.qml" line="99"/>
+        <location filename="../qml/pages/SettingPage.qml" line="110"/>
         <source>Language:</source>
         <translation>Język:</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SettingPage.qml" line="277"/>
+        <location filename="../qml/pages/SettingPage.qml" line="288"/>
         <source>Change of language will be active after restarting the application.</source>
         <translation>Język zostanie zmieniony po ponownym uruchomieniu programu.</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SettingPage.qml" line="286"/>
+        <location filename="../qml/pages/SettingPage.qml" line="297"/>
         <source>Orientation:</source>
         <translation>Orientacja:</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SettingPage.qml" line="291"/>
+        <location filename="../qml/pages/SettingPage.qml" line="302"/>
         <source>Portrait</source>
         <translation>Pionowa</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SettingPage.qml" line="294"/>
+        <location filename="../qml/pages/SettingPage.qml" line="305"/>
         <source>Landscape</source>
         <translation>Pozioma</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SettingPage.qml" line="297"/>
+        <location filename="../qml/pages/SettingPage.qml" line="308"/>
         <source>Dynamic</source>
         <translation>Dynamiczna</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SettingPage.qml" line="335"/>
+        <location filename="../qml/pages/SettingPage.qml" line="346"/>
         <source>Sets the preferred screen orientation.</source>
         <translation>Ustaw preferowaną orientację ekranu.</translation>
     </message>

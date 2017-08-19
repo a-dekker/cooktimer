@@ -61,15 +61,19 @@ Page {
                 anchors.fill: parent
                 clip: true
                 Rectangle {
-                    rotation: isPortrait ? (largeScreen ? parent.width/260 : parent.width/60) : 5
-                    height: parent.height
+                    id: itemLine
                     x: -dishlist.width
+                    anchors.verticalCenter: parent.verticalCenter
+                    height: parent.height
                     width: dishlist.width*2
-
-                    gradient: Gradient {
-                        GradientStop { position: 0.0; color: Theme.rgba(Theme.primaryColor, 0) }
-                        GradientStop { position: 1.0; color: Theme.rgba(Theme.primaryColor, 0.1) }
-                    }
+                    color: "white"
+                }
+                OpacityRampEffect {
+                    sourceItem: itemLine
+                    slope: 0.25
+                    offset: 0.0
+                    clampFactor: -0.85
+                    direction: OpacityRamp.BottomToTop
                 }
             }
 

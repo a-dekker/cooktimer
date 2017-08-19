@@ -5,16 +5,33 @@ import "../common"
 import "Vars.js" as GlobVars
 
 Dialog {
-    id: page
+    id: settingsPage
+
     canAccept: true
     allowedOrientations: mainapp.orientationSetting
 
     property int langNbrToSave: -1
     property int orientationNbrToSave: -1
+    property string lampje: "true"
+    property string pop: "true"
+
+    MySettings {
+        id: myset
+    }
+
+    objectName: "SettingPage"
 
     onAccepted: {
-        myset.setValue("backlight", backlight.checked)
-        myset.setValue("popup", popup.checked)
+        if (backlightswitch.checked) {
+            myset.setValue("backlight", "true")
+        } else {
+            myset.setValue("backlight", "false")
+        }
+        if (popupswitch.checked) {
+            myset.setValue("popup", "true")
+        } else {
+            myset.setValue("popup", "false")
+        }
         // languagenumber is not index, but enum number!
         if (langNbrToSave !== -1)
             myset.setValue("language", langNbrToSave)
@@ -37,16 +54,10 @@ Dialog {
         myset.sync()
     }
 
-    objectName: "SettingPage"
-
     SilicaFlickable {
         anchors.fill: parent
         contentWidth: parent.width
         contentHeight: col.height
-
-        MySettings {
-            id: myset
-        }
 
         clip: true
 
@@ -68,14 +79,14 @@ Dialog {
             }
 
             TextSwitch {
-                id: backlight
+                id: backlightswitch
                 width: parent.width
                 text: qsTr("Keep backlight on")
                 description: qsTr("Prevent screen from dimming.")
                 checked: myset.value("backlight") === "true"
             }
             TextSwitch {
-                id: popup
+                id: popupswitch
                 width: parent.width
                 text: qsTr("Show additional banner")
                 description: qsTr("Notification banner in upper screen.")
@@ -95,7 +106,7 @@ Dialog {
 
                 ComboBox {
                     id: language
-                    width: page.width
+                    width: settingsPage.width
                     label: qsTr("Language:")
                     currentIndex: toCurrentIndex(myset.value("language"))
                     menu: ContextMenu {
@@ -282,7 +293,7 @@ Dialog {
 
                 ComboBox {
                     id: orientation
-                    width: page.width
+                    width: settingsPage.width
                     label: qsTr("Orientation:")
                     currentIndex: toCurrentIndex(myset.value("orientation"))
                     menu: ContextMenu {
