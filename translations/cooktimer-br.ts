@@ -179,32 +179,32 @@
         <translation>Yezh:</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SettingPage.qml" line="288"/>
+        <location filename="../qml/pages/SettingPage.qml" line="296"/>
         <source>Change of language will be active after restarting the application.</source>
         <translation>Ar cheñchamant yezh a vo hegerzus goude bezañ bet adloc&apos;het gant an arload.</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SettingPage.qml" line="297"/>
+        <location filename="../qml/pages/SettingPage.qml" line="305"/>
         <source>Orientation:</source>
         <translation>Reteradur:</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SettingPage.qml" line="302"/>
+        <location filename="../qml/pages/SettingPage.qml" line="310"/>
         <source>Portrait</source>
         <translation>Poltred</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SettingPage.qml" line="305"/>
+        <location filename="../qml/pages/SettingPage.qml" line="313"/>
         <source>Landscape</source>
         <translation>Gweledva</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SettingPage.qml" line="308"/>
+        <location filename="../qml/pages/SettingPage.qml" line="316"/>
         <source>Dynamic</source>
         <translation>Buhezek</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SettingPage.qml" line="346"/>
+        <location filename="../qml/pages/SettingPage.qml" line="354"/>
         <source>Sets the preferred screen orientation.</source>
         <translation>Lakaat ar reteradur skramm karetañ. </translation>
     </message>

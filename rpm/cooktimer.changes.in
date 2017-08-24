@@ -8,6 +8,9 @@
 # * date Author's Name <author's email> version-release
 # - Summary of changes
 
+* thu Aug 24 2017 Arno Dekker <jack.tar@example.com> 0.0.2-6
+- Albaninan translation by Benard Sulejmani
+
 * thu Jun 1 2017 Arno Dekker <jack.tar@example.com> 0.0.2-5
 - Removed time indication on alarmscreen
 - Fixed issue on settingspage

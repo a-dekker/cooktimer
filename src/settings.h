@@ -53,6 +53,7 @@ namespace settingsPublic {
                     BR,    // Breton
                     PT_BR, // Portuguese (Brazil)
                     SL_SI, // Slovenian
+                    SQ_AL, // Albanian
                     INVALID
                 };
     };

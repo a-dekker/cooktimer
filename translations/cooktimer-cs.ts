@@ -179,32 +179,32 @@
         <translation>Jazyk:</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SettingPage.qml" line="288"/>
+        <location filename="../qml/pages/SettingPage.qml" line="296"/>
         <source>Change of language will be active after restarting the application.</source>
         <translation>Změna jazyka se projeví po opětovném spuštění programu.</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SettingPage.qml" line="297"/>
+        <location filename="../qml/pages/SettingPage.qml" line="305"/>
         <source>Orientation:</source>
         <translation>Natočení:</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SettingPage.qml" line="302"/>
+        <location filename="../qml/pages/SettingPage.qml" line="310"/>
         <source>Portrait</source>
         <translation>Na výšku</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SettingPage.qml" line="305"/>
+        <location filename="../qml/pages/SettingPage.qml" line="313"/>
         <source>Landscape</source>
         <translation>Na šířku</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SettingPage.qml" line="308"/>
+        <location filename="../qml/pages/SettingPage.qml" line="316"/>
         <source>Dynamic</source>
         <translation>Dynamicky</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SettingPage.qml" line="346"/>
+        <location filename="../qml/pages/SettingPage.qml" line="354"/>
         <source>Sets the preferred screen orientation.</source>
         <translation>Nastaví upřednostňované natočení obrazovky.</translation>
     </message>

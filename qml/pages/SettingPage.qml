@@ -115,59 +115,62 @@ Dialog {
                             text: "System default"
                         } // 0
                         MenuItem {
-                            text: "Arabic/العربية"
+                            text: "Albanian/Shqiptar"
                         } // 1
                         MenuItem {
-                            text: "Breton/Brezhoneg"
+                            text: "Arabic/العربية"
                         } // 2
                         MenuItem {
-                            text: "Catalan/Català"
+                            text: "Breton/Brezhoneg"
                         } // 3
                         MenuItem {
-                            text: "Czech/Čeština"
+                            text: "Catalan/Català"
                         } // 4
                         MenuItem {
-                            text: "Danish/Danske"
+                            text: "Czech/Čeština"
                         } // 5
                         MenuItem {
-                            text: "Dutch/Nederlands"
+                            text: "Danish/Danske"
                         } // 6
                         MenuItem {
-                            text: "English/English"
+                            text: "Dutch/Nederlands"
                         } // 7
                         MenuItem {
-                            text: "Finnish/Suomalainen"
+                            text: "English/English"
                         } // 8
                         MenuItem {
-                            text: "French/Français"
+                            text: "Finnish/Suomalainen"
                         } // 9
                         MenuItem {
-                            text: "German/Deutsch"
+                            text: "French/Français"
                         } // 10
                         MenuItem {
-                            text: "Greek/Ελληνικά"
+                            text: "German/Deutsch"
                         } // 11
                         MenuItem {
-                            text: "Polish/Polski"
+                            text: "Greek/Ελληνικά"
                         } // 12
                         MenuItem {
-                            text: "Portuguese (Brazil)/Português brasileiro"
+                            text: "Polish/Polski"
                         } // 13
                         MenuItem {
-                            text: "Russian/Русский"
+                            text: "Portuguese (Brazil)/Português brasileiro"
                         } // 14
                         MenuItem {
-                            text: "Slovenian/Slovenski"
+                            text: "Russian/Русский"
                         } // 15
                         MenuItem {
-                            text: "Spanish/Español"
+                            text: "Slovenian/Slovenski"
                         } // 16
                         MenuItem {
-                            text: "Swedish/Svensk"
+                            text: "Spanish/Español"
                         } // 17
                         MenuItem {
-                            text: "Turkish/Türk"
+                            text: "Swedish/Svensk"
                         } // 18
+                        MenuItem {
+                            text: "Turkish/Türk"
+                        } // 19
                     }
                     // The next two converter functions decouple the alphabetical language list
                     // index from the internal settings index, which cannot be changed for legacy reasons
@@ -229,6 +232,9 @@ Dialog {
                         case Languages.SL_SI:
                             // slovenian
                             return GlobVars.slovenian
+                        case Languages.SQ_AL:
+                            // albanian
+                            return GlobVars.albanian
                         default:
                             return GlobVars.english
                         }
@@ -274,6 +280,8 @@ Dialog {
                             return Languages.PT_BR // Portuguese (Brazil)
                         case GlobVars.slovenian:
                             return Languages.SL_SI // Slovenian
+                        case GlobVars.albanian:
+                            return Languages.SQ_AL // Albanian
                         default:
                             return Languages.EN // English
                         }
