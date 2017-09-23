@@ -126,16 +126,17 @@ Dialog {
     }
     TimePickerSeconds {
         id: pickTime
-        y: isLandscape ? (largeScreen ? diaTime.height / 3 : Theme.paddingLarge * 1.4) : diaTime.height / 3
+        y: isLandscape ? (largeScreen ? diaTime.height / 3 : diaTime.height /3.5 ) : diaTime.height / 3
         hour: diaTime.hour
         minute: diaTime.minute
         second: diaTime.second
         anchors.horizontalCenter: isPortrait ? parent.horizontalCenter : parent.horizontalDummy
+        anchors.verticalCenter: isLandscape ? parent.verticalCenter : parent.verticalDummy
     }
     Item {
         id: dish_name_landscape
         anchors.left: pickTime.right
-        anchors.leftMargin: largeScreen ? Theme.itemSizeLarge * 2 : 0
+        anchors.leftMargin: largeScreen ? Theme.itemSizeLarge * 2 : Theme.itemSizeLarge
         height: nameOfDish.height - Theme.paddingLarge * 2
         anchors.verticalCenter: parent.verticalCenter
         width: nameOfDish.width + Theme.paddingLarge * 2

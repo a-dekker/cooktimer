@@ -64,7 +64,7 @@ Item {
     property bool largeScreen: Screen.sizeCategory === Screen.Large ||
                                Screen.sizeCategory === Screen.ExtraLarge
 
-    scale: largeScreen ? 1.9 : 0.8 //1 is to big
+    scale: largeScreen ? 1.9 : (isPortrait? parent.width / 675 : parent.width / 1200)
     width: secondsCircle.width
     height: secondsCircle.height
 
