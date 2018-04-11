@@ -8,6 +8,9 @@
 # * date Author's Name <author's email> version-release
 # - Summary of changes
 
+* sat Sep 23 2017 Arno Dekker <jack.tar@example.com> 0.0.2-8
+- Added Flemish (Dutch Belgium) by Nathan Follens
+
 * sat Sep 23 2017 Arno Dekker <jack.tar@example.com> 0.0.2-7
 - Better scaling of minus button
 - Better scaling of timepicker

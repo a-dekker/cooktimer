@@ -40,6 +40,7 @@ namespace settingsPublic {
                     DE_DE, // German
                     CS,    // Czech
                     NL,    // Dutch
+                    NL_BE, // Flemish
                     ES,    // Spanish
                     FR,    // French
                     IT,    // Italian

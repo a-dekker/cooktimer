@@ -71,6 +71,7 @@ INSTALLS += translations
 TRANSLATIONS = translations/cooktimer-sv.ts \
                translations/cooktimer-cs.ts \
                translations/cooktimer-nl.ts \
+               translations/cooktimer-nl_BE.ts \
                translations/cooktimer-da.ts \
                translations/cooktimer-ru_RU.ts \
                translations/cooktimer-el.ts \

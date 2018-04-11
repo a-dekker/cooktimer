@@ -136,41 +136,44 @@ Dialog {
                             text: "Dutch/Nederlands"
                         } // 7
                         MenuItem {
-                            text: "English/English"
+                            text: "Flemish (Dutch Belgium)/Vlaams"
                         } // 8
                         MenuItem {
-                            text: "Finnish/Suomalainen"
+                            text: "English/English"
                         } // 9
                         MenuItem {
-                            text: "French/Français"
+                            text: "Finnish/Suomalainen"
                         } // 10
                         MenuItem {
-                            text: "German/Deutsch"
+                            text: "French/Français"
                         } // 11
                         MenuItem {
-                            text: "Greek/Ελληνικά"
+                            text: "German/Deutsch"
                         } // 12
                         MenuItem {
-                            text: "Polish/Polski"
+                            text: "Greek/Ελληνικά"
                         } // 13
                         MenuItem {
-                            text: "Portuguese (Brazil)/Português brasileiro"
+                            text: "Polish/Polski"
                         } // 14
                         MenuItem {
-                            text: "Russian/Русский"
+                            text: "Portuguese (Brazil)/Português brasileiro"
                         } // 15
                         MenuItem {
-                            text: "Slovenian/Slovenski"
+                            text: "Russian/Русский"
                         } // 16
                         MenuItem {
-                            text: "Spanish/Español"
+                            text: "Slovenian/Slovenski"
                         } // 17
                         MenuItem {
-                            text: "Swedish/Svensk"
+                            text: "Spanish/Español"
                         } // 18
                         MenuItem {
-                            text: "Turkish/Türk"
+                            text: "Swedish/Svensk"
                         } // 19
+                        MenuItem {
+                            text: "Turkish/Türk"
+                        } // 20
                     }
                     // The next two converter functions decouple the alphabetical language list
                     // index from the internal settings index, which cannot be changed for legacy reasons
@@ -202,6 +205,9 @@ Dialog {
                         case Languages.NL:
                             // Dutch
                             return GlobVars.dutch
+                        case Languages.NL_BE:
+                            // Flemish
+                            return GlobVars.flemish
                         case Languages.ES:
                             // Spanish
                             return GlobVars.spanish
@@ -258,6 +264,8 @@ Dialog {
                             return Languages.CS // Czech
                         case GlobVars.dutch:
                             return Languages.NL // Dutch
+                        case GlobVars.flemish:
+                            return Languages.NL_BE // Flemish
                         case GlobVars.danish:
                             return Languages.DA // Danish
                         case GlobVars.spanish:

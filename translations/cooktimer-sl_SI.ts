@@ -4,12 +4,12 @@
 <context>
     <name>About</name>
     <message>
-        <location filename="../qml/pages/About.qml" line="23"/>
+        <location filename="../qml/pages/About.qml" line="22"/>
         <source>About</source>
         <translation>O programu</translation>
     </message>
     <message>
-        <location filename="../qml/pages/About.qml" line="26"/>
+        <location filename="../qml/pages/About.qml" line="25"/>
         <source>Info</source>
         <translation>Informacije</translation>
     </message>
@@ -179,32 +179,32 @@
         <translation>Jezik:</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SettingPage.qml" line="296"/>
+        <location filename="../qml/pages/SettingPage.qml" line="304"/>
         <source>Change of language will be active after restarting the application.</source>
         <translation>Sprememba jezika bo aktivna po ponovnem zagonu programa. </translation>
     </message>
     <message>
-        <location filename="../qml/pages/SettingPage.qml" line="305"/>
+        <location filename="../qml/pages/SettingPage.qml" line="313"/>
         <source>Orientation:</source>
         <translation>Usmerjenost zaslona:</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SettingPage.qml" line="310"/>
+        <location filename="../qml/pages/SettingPage.qml" line="318"/>
         <source>Portrait</source>
         <translation>Pokončno</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SettingPage.qml" line="313"/>
+        <location filename="../qml/pages/SettingPage.qml" line="321"/>
         <source>Landscape</source>
         <translation>Ležeče</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SettingPage.qml" line="316"/>
+        <location filename="../qml/pages/SettingPage.qml" line="324"/>
         <source>Dynamic</source>
         <translation>Dinamično</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SettingPage.qml" line="354"/>
+        <location filename="../qml/pages/SettingPage.qml" line="362"/>
         <source>Sets the preferred screen orientation.</source>
         <translation>Nastavi želeno usmerjenost zaslona.</translation>
     </message>

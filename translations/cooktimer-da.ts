@@ -4,12 +4,12 @@
 <context>
     <name>About</name>
     <message>
-        <location filename="../qml/pages/About.qml" line="23"/>
+        <location filename="../qml/pages/About.qml" line="22"/>
         <source>About</source>
         <translation>Om</translation>
     </message>
     <message>
-        <location filename="../qml/pages/About.qml" line="26"/>
+        <location filename="../qml/pages/About.qml" line="25"/>
         <source>Info</source>
         <translation>Info</translation>
     </message>
@@ -179,32 +179,32 @@
         <translation>Sprog:</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SettingPage.qml" line="296"/>
+        <location filename="../qml/pages/SettingPage.qml" line="304"/>
         <source>Change of language will be active after restarting the application.</source>
         <translation>Ændring af sprog vil først blive aktiveret efter genstart af program.</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SettingPage.qml" line="305"/>
+        <location filename="../qml/pages/SettingPage.qml" line="313"/>
         <source>Orientation:</source>
         <translation>Orientering:</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SettingPage.qml" line="310"/>
+        <location filename="../qml/pages/SettingPage.qml" line="318"/>
         <source>Portrait</source>
         <translation>Portræt</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SettingPage.qml" line="313"/>
+        <location filename="../qml/pages/SettingPage.qml" line="321"/>
         <source>Landscape</source>
         <translation>Landskab</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SettingPage.qml" line="316"/>
+        <location filename="../qml/pages/SettingPage.qml" line="324"/>
         <source>Dynamic</source>
         <translation>Dynamisk</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SettingPage.qml" line="354"/>
+        <location filename="../qml/pages/SettingPage.qml" line="362"/>
         <source>Sets the preferred screen orientation.</source>
         <translation>Sætter den foretrukne skærmorientering.</translation>
     </message>

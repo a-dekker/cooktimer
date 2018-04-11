@@ -4,12 +4,12 @@
 <context>
     <name>About</name>
     <message>
-        <location filename="../qml/pages/About.qml" line="23"/>
+        <location filename="../qml/pages/About.qml" line="22"/>
         <source>About</source>
         <translation>Over</translation>
     </message>
     <message>
-        <location filename="../qml/pages/About.qml" line="26"/>
+        <location filename="../qml/pages/About.qml" line="25"/>
         <source>Info</source>
         <translation>Informatie</translation>
     </message>
@@ -21,7 +21,7 @@
     <message>
         <location filename="../qml/pages/About.qml" line="62"/>
         <source>&quot;Timers for cooking&quot;</source>
-        <translation>&quot;Kookwekkers&quot;</translation>
+        <translation>‘Kookwekkers’</translation>
     </message>
     <message>
         <location filename="../qml/pages/About.qml" line="68"/>
@@ -85,7 +85,7 @@
     <message>
         <location filename="../qml/pages/DishPage.qml" line="106"/>
         <source>No dishes defined. Choose &quot;Edit Dishes&quot; from the pulley menu.</source>
-        <translation>Er zijn geen gerechten opgegeven. Kies &quot;Gerechten bewerken&quot; vanuit het trekmenu.</translation>
+        <translation>Er zijn geen gerechten opgegeven. Kies ‘Gerechten bewerken’ vanuit het uittrekmenu.</translation>
     </message>
 </context>
 <context>
@@ -179,32 +179,32 @@
         <translation>Taal:</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SettingPage.qml" line="296"/>
+        <location filename="../qml/pages/SettingPage.qml" line="304"/>
         <source>Change of language will be active after restarting the application.</source>
         <translation>Taalaanpassing zal actief worden na het herstarten van de applicatie.</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SettingPage.qml" line="305"/>
+        <location filename="../qml/pages/SettingPage.qml" line="313"/>
         <source>Orientation:</source>
         <translation>Orientatie:</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SettingPage.qml" line="310"/>
+        <location filename="../qml/pages/SettingPage.qml" line="318"/>
         <source>Portrait</source>
         <translation>Staand</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SettingPage.qml" line="313"/>
+        <location filename="../qml/pages/SettingPage.qml" line="321"/>
         <source>Landscape</source>
         <translation>Liggend</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SettingPage.qml" line="316"/>
+        <location filename="../qml/pages/SettingPage.qml" line="324"/>
         <source>Dynamic</source>
         <translation>Dynamisch</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SettingPage.qml" line="354"/>
+        <location filename="../qml/pages/SettingPage.qml" line="362"/>
         <source>Sets the preferred screen orientation.</source>
         <translation>Stel de gewenste schermoriëntatie in.</translation>
     </message>

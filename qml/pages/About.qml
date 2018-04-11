@@ -5,8 +5,7 @@ Page {
     id: aboutpage
     allowedOrientations: mainapp.orientationSetting
 
-    property bool largeScreen: Screen.sizeCategory === Screen.Large ||
-                               Screen.sizeCategory === Screen.ExtraLarge
+    property bool largeScreen: screen.width >= 1080
     SilicaFlickable {
         anchors.fill: parent
         contentWidth: parent.width
@@ -24,13 +23,14 @@ Page {
             }
             SectionHeader {
                 text: qsTr("Info")
-                visible: isPortrait || largeScreen
+                visible: isPortrait || (largeScreen && screen.width > 1080)
             }
             Separator {
                 color: Theme.primaryColor
                 width: parent.width
                 anchors.horizontalCenter: parent.horizontalCenter
                 horizontalAlignment: Qt.AlignHCenter
+                visible: isPortrait || (largeScreen && screen.width > 1080) || screen.width < 1080
             }
             Label {
                 text: "cooktimer"
@@ -66,16 +66,17 @@ Page {
             }
             SectionHeader {
                 text: qsTr("Author")
-                visible: isPortrait || largeScreen
+                visible: isPortrait || (largeScreen && screen.width > 1080)
             }
             Separator {
                 color: Theme.primaryColor
                 width: parent.width
                 anchors.horizontalCenter: parent.horizontalCenter
                 horizontalAlignment: Qt.AlignHCenter
+                visible: isPortrait || (largeScreen && screen.width > 1080) || screen.width < 1080
             }
             Label {
-                text: "© Arno Dekker 2014-2017"
+                text: "© Arno Dekker 2014-2018"
                 anchors.horizontalCenter: parent.horizontalCenter
             }
         }
