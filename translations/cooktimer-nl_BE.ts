@@ -179,32 +179,32 @@
         <translation>Taal:</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SettingPage.qml" line="304"/>
+        <location filename="../qml/pages/SettingPage.qml" line="312"/>
         <source>Change of language will be active after restarting the application.</source>
         <translation>Taalaanpassing zal actief worden na het herstarten van de toepassing.</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SettingPage.qml" line="313"/>
+        <location filename="../qml/pages/SettingPage.qml" line="321"/>
         <source>Orientation:</source>
         <translation>Orientatie:</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SettingPage.qml" line="318"/>
+        <location filename="../qml/pages/SettingPage.qml" line="326"/>
         <source>Portrait</source>
         <translation>Staand</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SettingPage.qml" line="321"/>
+        <location filename="../qml/pages/SettingPage.qml" line="329"/>
         <source>Landscape</source>
         <translation>Liggend</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SettingPage.qml" line="324"/>
+        <location filename="../qml/pages/SettingPage.qml" line="332"/>
         <source>Dynamic</source>
         <translation>Dynamisch</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SettingPage.qml" line="362"/>
+        <location filename="../qml/pages/SettingPage.qml" line="370"/>
         <source>Sets the preferred screen orientation.</source>
         <translation>Stel de gewenste schermoriëntatie in.</translation>
     </message>

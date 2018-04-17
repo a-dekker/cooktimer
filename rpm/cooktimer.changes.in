@@ -8,7 +8,10 @@
 # * date Author's Name <author's email> version-release
 # - Summary of changes
 
-* sat Sep 23 2017 Arno Dekker <jack.tar@example.com> 0.0.2-8
+* tue Apr 17 2018 Arno Dekker <jack.tar@example.com> 0.0.2-9
+- Added Hungarian by Szabó G.
+
+* sat Apr 14 2018 Arno Dekker <jack.tar@example.com> 0.0.2-8
 - Added Flemish (Dutch Belgium) by Nathan Follens
 
 * sat Sep 23 2017 Arno Dekker <jack.tar@example.com> 0.0.2-7

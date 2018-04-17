@@ -1,32 +1,32 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="da">
+<TS version="2.1" language="hu">
 <context>
     <name>About</name>
     <message>
         <location filename="../qml/pages/About.qml" line="22"/>
         <source>About</source>
-        <translation>Om</translation>
+        <translation>Névjegy</translation>
     </message>
     <message>
         <location filename="../qml/pages/About.qml" line="25"/>
         <source>Info</source>
-        <translation>Info</translation>
+        <translation>Infó</translation>
     </message>
     <message>
         <location filename="../qml/pages/About.qml" line="57"/>
         <source>Version</source>
-        <translation>Version</translation>
+        <translation>Verzió</translation>
     </message>
     <message>
         <location filename="../qml/pages/About.qml" line="62"/>
         <source>&quot;Timers for cooking&quot;</source>
-        <translation>&quot;Timere til madlavning&quot;</translation>
+        <translation>&quot;Időzítők főzéshez&quot;</translation>
     </message>
     <message>
         <location filename="../qml/pages/About.qml" line="68"/>
         <source>Author</source>
-        <translation>Udvikler</translation>
+        <translation>Szerző</translation>
     </message>
 </context>
 <context>
@@ -34,17 +34,17 @@
     <message>
         <location filename="../qml/pages/CommentPage.qml" line="16"/>
         <source>Done</source>
-        <translation>Færdig</translation>
+        <translation>Kész</translation>
     </message>
     <message>
         <location filename="../qml/pages/CommentPage.qml" line="17"/>
         <source>Cancel</source>
-        <translation>Annuller</translation>
+        <translation>Mégse</translation>
     </message>
     <message>
         <location filename="../qml/pages/CommentPage.qml" line="23"/>
         <source>Enter small note here</source>
-        <translation>Tilføj kort note her</translation>
+        <translation>Írj be egy rövid megjegyzést</translation>
     </message>
 </context>
 <context>
@@ -52,32 +52,32 @@
     <message>
         <location filename="../qml/pages/DishEdit.qml" line="19"/>
         <source>Save</source>
-        <translation>Gem</translation>
+        <translation>Mentés</translation>
     </message>
     <message>
         <location filename="../qml/pages/DishEdit.qml" line="20"/>
         <source>Cancel</source>
-        <translation>Annuller</translation>
+        <translation>Mégse</translation>
     </message>
     <message>
         <location filename="../qml/pages/DishEdit.qml" line="49"/>
         <source>Deleting</source>
-        <translation>Sletter</translation>
+        <translation>Törlés</translation>
     </message>
     <message>
         <location filename="../qml/pages/DishEdit.qml" line="59"/>
         <source>Dish name</source>
-        <translation>Navn på ret</translation>
+        <translation>Étel neve</translation>
     </message>
     <message>
         <location filename="../qml/pages/DishEdit.qml" line="127"/>
         <source>No dishes defined. Press the plus button to add one.</source>
-        <translation>Ingen retter defineret. Tryk på plus-knappen for at tilføje en.</translation>
+        <translation>Nincsenek ételek meghatározva. Érintsd meg a plusz gombot a hozzáadáshoz.</translation>
     </message>
     <message>
         <location filename="../qml/pages/DishEdit.qml" line="137"/>
         <source>New dish</source>
-        <translation>Ny ret</translation>
+        <translation>Új étel</translation>
     </message>
 </context>
 <context>
@@ -85,7 +85,7 @@
     <message>
         <location filename="../qml/pages/DishPage.qml" line="106"/>
         <source>No dishes defined. Choose &quot;Edit Dishes&quot; from the pulley menu.</source>
-        <translation>Ingen retter defineret. Vælg &quot;Rediger Retter&quot; fra topmenuen.</translation>
+        <translation>Nincsenek ételek meghatározva. Válaszd az &quot;Ételek szerkesztése&quot;-t a lehúzható menüből</translation>
     </message>
 </context>
 <context>
@@ -94,29 +94,29 @@
         <location filename="../qml/pages/MainPage.qml" line="384"/>
         <location filename="../qml/pages/MainPage.qml" line="388"/>
         <source>ready</source>
-        <translation>klar</translation>
+        <translation>kész</translation>
     </message>
     <message>
         <location filename="../qml/pages/MainPage.qml" line="502"/>
         <source>About</source>
-        <translation>Om</translation>
+        <translation>Névjegy</translation>
     </message>
     <message>
         <location filename="../qml/pages/MainPage.qml" line="506"/>
         <source>Settings</source>
-        <translation>Indstillinger</translation>
+        <translation>Beállítások</translation>
     </message>
     <message>
         <location filename="../qml/pages/MainPage.qml" line="510"/>
         <source>Edit dishes</source>
-        <translation>Rediger retter</translation>
+        <translation>Ételek szerkesztése</translation>
     </message>
     <message>
         <location filename="../qml/pages/MainPage.qml" line="548"/>
         <location filename="../qml/pages/MainPage.qml" line="804"/>
         <location filename="../qml/pages/MainPage.qml" line="1057"/>
         <source>Dish</source>
-        <translation>Ret</translation>
+        <translation>Étel</translation>
     </message>
     <message>
         <location filename="../qml/pages/MainPage.qml" line="597"/>
@@ -126,14 +126,14 @@
         <location filename="../qml/pages/MainPage.qml" line="1106"/>
         <location filename="../qml/pages/MainPage.qml" line="1108"/>
         <source>Stop</source>
-        <translation>Stop</translation>
+        <translation>Állj</translation>
     </message>
     <message>
         <location filename="../qml/pages/MainPage.qml" line="598"/>
         <location filename="../qml/pages/MainPage.qml" line="854"/>
         <location filename="../qml/pages/MainPage.qml" line="1107"/>
         <source>Start</source>
-        <translation>Start</translation>
+        <translation>Kezdés</translation>
     </message>
 </context>
 <context>
@@ -141,72 +141,72 @@
     <message>
         <location filename="../qml/pages/SettingPage.qml" line="73"/>
         <source>Save</source>
-        <translation>Gem</translation>
+        <translation>Mentés</translation>
     </message>
     <message>
         <location filename="../qml/pages/SettingPage.qml" line="74"/>
         <source>Cancel</source>
-        <translation>Annuller</translation>
+        <translation>Mégse</translation>
     </message>
     <message>
         <location filename="../qml/pages/SettingPage.qml" line="77"/>
         <source>Settings</source>
-        <translation>Indstillinger</translation>
+        <translation>Beállítások</translation>
     </message>
     <message>
         <location filename="../qml/pages/SettingPage.qml" line="84"/>
         <source>Keep backlight on</source>
-        <translation>Hold baggrundslyset tændt</translation>
+        <translation>Maradjon bekapcsolva a háttérvilágítás</translation>
     </message>
     <message>
         <location filename="../qml/pages/SettingPage.qml" line="85"/>
         <source>Prevent screen from dimming.</source>
-        <translation>Undgå dæmpning af skærm.</translation>
+        <translation>A képernyő elhalványulásának megakadályozása.</translation>
     </message>
     <message>
         <location filename="../qml/pages/SettingPage.qml" line="91"/>
         <source>Show additional banner</source>
-        <translation>Vis flere bannere</translation>
+        <translation>További szalag megjelenítése</translation>
     </message>
     <message>
         <location filename="../qml/pages/SettingPage.qml" line="92"/>
         <source>Notification banner in upper screen.</source>
-        <translation>Påmindelser i toppen af skærm.</translation>
+        <translation>Értesítési szalag a képernyő felső részén.</translation>
     </message>
     <message>
         <location filename="../qml/pages/SettingPage.qml" line="110"/>
         <source>Language:</source>
-        <translation>Sprog:</translation>
+        <translation>Nyelv:</translation>
     </message>
     <message>
         <location filename="../qml/pages/SettingPage.qml" line="312"/>
         <source>Change of language will be active after restarting the application.</source>
-        <translation>Ændring af sprog vil først blive aktiveret efter genstart af program.</translation>
+        <translation>A nyelv megváltoztatása az alkalmazás újraindítása után történik meg.</translation>
     </message>
     <message>
         <location filename="../qml/pages/SettingPage.qml" line="321"/>
         <source>Orientation:</source>
-        <translation>Orientering:</translation>
+        <translation>Tájolás:</translation>
     </message>
     <message>
         <location filename="../qml/pages/SettingPage.qml" line="326"/>
         <source>Portrait</source>
-        <translation>Portræt</translation>
+        <translation>Álló</translation>
     </message>
     <message>
         <location filename="../qml/pages/SettingPage.qml" line="329"/>
         <source>Landscape</source>
-        <translation>Landskab</translation>
+        <translation>Fekvő</translation>
     </message>
     <message>
         <location filename="../qml/pages/SettingPage.qml" line="332"/>
         <source>Dynamic</source>
-        <translation>Dynamisk</translation>
+        <translation>Dinamikus</translation>
     </message>
     <message>
         <location filename="../qml/pages/SettingPage.qml" line="370"/>
         <source>Sets the preferred screen orientation.</source>
-        <translation>Sætter den foretrukne skærmorientering.</translation>
+        <translation>Beállítja az előnyben részesített képernyőtájolást.</translation>
     </message>
 </context>
 <context>
@@ -214,17 +214,17 @@
     <message>
         <location filename="../qml/pages/TimeDialog.qml" line="52"/>
         <source>Save</source>
-        <translation>Gem</translation>
+        <translation>Mentés</translation>
     </message>
     <message>
         <location filename="../qml/pages/TimeDialog.qml" line="53"/>
         <source>Cancel</source>
-        <translation>Annuller</translation>
+        <translation>Mégse</translation>
     </message>
     <message>
         <location filename="../qml/pages/TimeDialog.qml" line="92"/>
         <source>Dish</source>
-        <translation>Ret</translation>
+        <translation>Étel</translation>
     </message>
 </context>
 <context>
@@ -234,7 +234,7 @@
         <location filename="../qml/cooktimer.qml" line="17"/>
         <location filename="../qml/cooktimer.qml" line="18"/>
         <source>Dish</source>
-        <translation>Ret</translation>
+        <translation>Étel</translation>
     </message>
 </context>
 </TS>

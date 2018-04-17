@@ -154,26 +154,29 @@ Dialog {
                             text: "Greek/Ελληνικά"
                         } // 13
                         MenuItem {
-                            text: "Polish/Polski"
+                            text: "Hungarian/Magyar"
                         } // 14
                         MenuItem {
-                            text: "Portuguese (Brazil)/Português brasileiro"
+                            text: "Polish/Polski"
                         } // 15
                         MenuItem {
-                            text: "Russian/Русский"
+                            text: "Portuguese (Brazil)/Português brasileiro"
                         } // 16
                         MenuItem {
-                            text: "Slovenian/Slovenski"
+                            text: "Russian/Русский"
                         } // 17
                         MenuItem {
-                            text: "Spanish/Español"
+                            text: "Slovenian/Slovenski"
                         } // 18
                         MenuItem {
-                            text: "Swedish/Svensk"
+                            text: "Spanish/Español"
                         } // 19
                         MenuItem {
-                            text: "Turkish/Türk"
+                            text: "Swedish/Svensk"
                         } // 20
+                        MenuItem {
+                            text: "Turkish/Türk"
+                        } // 21
                     }
                     // The next two converter functions decouple the alphabetical language list
                     // index from the internal settings index, which cannot be changed for legacy reasons
@@ -241,6 +244,9 @@ Dialog {
                         case Languages.SQ_AL:
                             // albanian
                             return GlobVars.albanian
+                        case Languages.HU:
+                            // hungarian
+                            return GlobVars.hungarian
                         default:
                             return GlobVars.english
                         }
@@ -290,6 +296,8 @@ Dialog {
                             return Languages.SL_SI // Slovenian
                         case GlobVars.albanian:
                             return Languages.SQ_AL // Albanian
+                        case GlobVars.hungarian:
+                            return Languages.HU // Hungarian
                         default:
                             return Languages.EN // English
                         }
