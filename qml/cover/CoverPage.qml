@@ -41,7 +41,6 @@ CoverBackground {
             width: parent.width
             font.pixelSize: Theme.fontSizeHuge
             color: timer1running ? Theme.highlightColor : Theme.secondaryHighlightColor
-            // anchors.topMargin: 0
             anchors.topMargin: -Theme.paddingSmall
             anchors.bottomMargin: 0
             anchors.top: dishname1.bottom
@@ -53,7 +52,7 @@ CoverBackground {
             maximumValue: 1
             leftMargin: 0
             rightMargin: 0
-            anchors.topMargin: 20
+            anchors.topMargin: -Theme.paddingLarge
             anchors.bottomMargin: 1
             anchors.top: dishtime1.bottom
             value: mainapp.progressValue1
@@ -69,8 +68,7 @@ CoverBackground {
             font.pixelSize: Theme.fontSizeSmall
             color: Theme.primaryColor
             anchors.top: dishtime1.bottom
-            anchors.topMargin: -Theme.paddingSmall
-            // anchors.topMargin: 1
+            anchors.topMargin: 0
         }
         Label {
             id: dishtime2
@@ -89,7 +87,7 @@ CoverBackground {
             maximumValue: 1
             leftMargin: 0
             rightMargin: 0
-            anchors.topMargin: 20
+            anchors.topMargin: -Theme.paddingLarge
             anchors.bottomMargin: 1
             anchors.top: dishtime2.bottom
             value: mainapp.progressValue2
@@ -123,7 +121,7 @@ CoverBackground {
             maximumValue: 1
             leftMargin: 0
             rightMargin: 0
-            anchors.topMargin: 20
+            anchors.topMargin: -Theme.paddingLarge
             anchors.bottomMargin: 1
             anchors.top: dishtime3.bottom
             value: mainapp.progressValue3

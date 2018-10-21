@@ -108,6 +108,7 @@ Dialog {
                     id: language
                     width: settingsPage.width
                     label: qsTr("Language:")
+                    description: qsTr("Change of language will be active after restarting the application.")
                     currentIndex: toCurrentIndex(myset.value("language"))
                     menu: ContextMenu {
                         // make sure it has the order in Vars.js
@@ -308,17 +309,11 @@ Dialog {
                     }
                 }
 
-                SilicaLabel {
-                    text: qsTr(
-                              "Change of language will be active after restarting the application.")
-                    font.pixelSize: Theme.fontSizeExtraSmall
-                    color: Theme.secondaryColor
-                }
-
                 ComboBox {
                     id: orientation
                     width: settingsPage.width
                     label: qsTr("Orientation:")
+                    description: qsTr("Sets the preferred screen orientation.")
                     currentIndex: toCurrentIndex(myset.value("orientation"))
                     menu: ContextMenu {
                         // make sure it has the order in Vars.js
@@ -364,12 +359,6 @@ Dialog {
                         orientationNbrToSave = toSettingsIndex(
                                     orientation.currentIndex)
                     }
-                }
-
-                SilicaLabel {
-                    text: qsTr("Sets the preferred screen orientation.")
-                    font.pixelSize: Theme.fontSizeExtraSmall
-                    color: Theme.secondaryColor
                 }
             }
         }

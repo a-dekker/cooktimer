@@ -8,6 +8,9 @@
 # * date Author's Name <author's email> version-release
 # - Summary of changes
 
+* sat Oct 20 2018 Arno Dekker <jack.tar@example.com> 0.0.2-10
+- Small fixes on settings and coverpage
+
 * tue Apr 17 2018 Arno Dekker <jack.tar@example.com> 0.0.2-9
 - Added Hungarian by Szabó G.
 

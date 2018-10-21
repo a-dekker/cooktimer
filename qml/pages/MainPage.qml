@@ -520,7 +520,7 @@ Page {
         // spacing: page.height / page.width > 1.6 ? Theme.paddingLarge : Theme.paddingMedium
         PageHeader {
             id: header
-            title: "cooktimer"
+            title: "Cooktimer"
             visible: isPortrait || largeScreen
         }
         Row {
