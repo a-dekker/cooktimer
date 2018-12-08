@@ -128,56 +128,59 @@ Dialog {
                             text: "Catalan/Català"
                         } // 4
                         MenuItem {
-                            text: "Czech/Čeština"
+                            text: "Chinese/中文"
                         } // 5
                         MenuItem {
-                            text: "Danish/Danske"
+                            text: "Czech/Čeština"
                         } // 6
                         MenuItem {
-                            text: "Dutch/Nederlands"
+                            text: "Danish/Danske"
                         } // 7
                         MenuItem {
-                            text: "Flemish (Dutch Belgium)/Vlaams"
+                            text: "Dutch/Nederlands"
                         } // 8
                         MenuItem {
-                            text: "English/English"
+                            text: "Flemish (Dutch Belgium)/Vlaams"
                         } // 9
                         MenuItem {
-                            text: "Finnish/Suomalainen"
+                            text: "English/English"
                         } // 10
                         MenuItem {
-                            text: "French/Français"
+                            text: "Finnish/Suomalainen"
                         } // 11
                         MenuItem {
-                            text: "German/Deutsch"
+                            text: "French/Français"
                         } // 12
                         MenuItem {
-                            text: "Greek/Ελληνικά"
+                            text: "German/Deutsch"
                         } // 13
                         MenuItem {
-                            text: "Hungarian/Magyar"
+                            text: "Greek/Ελληνικά"
                         } // 14
                         MenuItem {
-                            text: "Polish/Polski"
+                            text: "Hungarian/Magyar"
                         } // 15
                         MenuItem {
-                            text: "Portuguese (Brazil)/Português brasileiro"
+                            text: "Polish/Polski"
                         } // 16
                         MenuItem {
-                            text: "Russian/Русский"
+                            text: "Portuguese (Brazil)/Português brasileiro"
                         } // 17
                         MenuItem {
-                            text: "Slovenian/Slovenski"
+                            text: "Russian/Русский"
                         } // 18
                         MenuItem {
-                            text: "Spanish/Español"
+                            text: "Slovenian/Slovenski"
                         } // 19
                         MenuItem {
-                            text: "Swedish/Svensk"
+                            text: "Spanish/Español"
                         } // 20
                         MenuItem {
-                            text: "Turkish/Türk"
+                            text: "Swedish/Svensk"
                         } // 21
+                        MenuItem {
+                            text: "Turkish/Türk"
+                        } // 22
                     }
                     // The next two converter functions decouple the alphabetical language list
                     // index from the internal settings index, which cannot be changed for legacy reasons
@@ -248,6 +251,9 @@ Dialog {
                         case Languages.HU:
                             // hungarian
                             return GlobVars.hungarian
+                        case Languages.ZH_CN:
+                            // Chinese
+                            return GlobVars.chinese
                         default:
                             return GlobVars.english
                         }
@@ -299,6 +305,8 @@ Dialog {
                             return Languages.SQ_AL // Albanian
                         case GlobVars.hungarian:
                             return Languages.HU // Hungarian
+                        case GlobVars.chinese:
+                            return Languages.ZH_CN // Chinese
                         default:
                             return Languages.EN // English
                         }

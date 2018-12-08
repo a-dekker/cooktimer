@@ -143,7 +143,7 @@ Dialog {
         console.log('Done:', (result === DialogResult.Accepted))
         if (result === DialogResult.Accepted) {
             // first delete every Dish record
-            DB.RemoveAllDishes()
+            DB.removeAllDishes()
             // Then loop though current list and save
             for (var i = 0; i < dishlist.model.count; ++i) {
                 DB.writeDish(dishlist.model.get(i).Dish.trim(),

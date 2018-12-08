@@ -72,7 +72,7 @@ Item {
         id: coverBgImage
         anchors.fill: parent
         fillMode: Image.PreserveAspectFit
-        source: "../images/coverbg.png"
+        source: mainapp.isLightTheme ? "../images/coverbg-rev.png" : "../images/coverbg.png"
         opacity: 0.2
         horizontalAlignment: Image.AlignHCenter
         verticalAlignment: Image.AlignVCenter

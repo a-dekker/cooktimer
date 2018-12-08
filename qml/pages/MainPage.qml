@@ -484,7 +484,7 @@ Page {
         id: coverBgImage
         anchors.fill: parent
         fillMode: Image.PreserveAspectFit
-        source: "../images/coverbg.png"
+        source: mainapp.isLightTheme ? "../images/coverbg-rev.png" : "../images/coverbg.png"
         opacity: largeScreen ? 0.03 : 0.07
         horizontalAlignment: Image.AlignHCenter
         verticalAlignment: Image.AlignVCenter
@@ -654,7 +654,8 @@ Page {
                 anchors.verticalCenter: remainingTime1.top
                 anchors.verticalCenterOffset: largeScreen ? Theme.itemSizeSmall : Theme.itemSizeExtraSmall
                 y: Theme.paddingLarge
-                icon.source: largeScreen ? '../images/icon-l-min.png' : 'image://theme/icon-m-remove'
+                icon.source: 'image://theme/icon-m-remove'
+                scale: largeScreen ? 2 : 1
                 onClicked: {
                     var button_minute = parseInt(timer1.text.split(":")[1], 10)
                     if (button_minute > 0) {
@@ -909,7 +910,8 @@ Page {
                 anchors.verticalCenter: remainingTime2.top
                 anchors.verticalCenterOffset: largeScreen ? Theme.itemSizeSmall : Theme.itemSizeExtraSmall
                 y: Theme.paddingLarge
-                icon.source: largeScreen ? '../images/icon-l-min.png' : 'image://theme/icon-m-remove'
+                scale: largeScreen ? 2 : 1
+                icon.source: 'image://theme/icon-m-remove'
                 onClicked: {
                     var button_minute = parseInt(timer2.text.split(":")[1], 10)
                     if (button_minute > 0) {
@@ -1162,7 +1164,8 @@ Page {
                 anchors.verticalCenter: remainingTime3.top
                 anchors.verticalCenterOffset: largeScreen ? Theme.itemSizeSmall : Theme.itemSizeExtraSmall
                 y: Theme.paddingLarge
-                icon.source: largeScreen ? '../images/icon-l-min.png' : 'image://theme/icon-m-remove'
+                icon.source: 'image://theme/icon-m-remove'
+                scale: largeScreen ? 2 : 1
                 onClicked: {
                     var button_minute = parseInt(timer3.text.split(":")[1], 10)
                     if (button_minute > 0) {

@@ -113,25 +113,25 @@
     </message>
     <message>
         <location filename="../qml/pages/MainPage.qml" line="548"/>
-        <location filename="../qml/pages/MainPage.qml" line="804"/>
-        <location filename="../qml/pages/MainPage.qml" line="1057"/>
+        <location filename="../qml/pages/MainPage.qml" line="805"/>
+        <location filename="../qml/pages/MainPage.qml" line="1059"/>
         <source>Dish</source>
         <translation>طبَق</translation>
     </message>
     <message>
         <location filename="../qml/pages/MainPage.qml" line="597"/>
         <location filename="../qml/pages/MainPage.qml" line="599"/>
-        <location filename="../qml/pages/MainPage.qml" line="853"/>
-        <location filename="../qml/pages/MainPage.qml" line="855"/>
-        <location filename="../qml/pages/MainPage.qml" line="1106"/>
+        <location filename="../qml/pages/MainPage.qml" line="854"/>
+        <location filename="../qml/pages/MainPage.qml" line="856"/>
         <location filename="../qml/pages/MainPage.qml" line="1108"/>
+        <location filename="../qml/pages/MainPage.qml" line="1110"/>
         <source>Stop</source>
         <translation>أوقف</translation>
     </message>
     <message>
         <location filename="../qml/pages/MainPage.qml" line="598"/>
-        <location filename="../qml/pages/MainPage.qml" line="854"/>
-        <location filename="../qml/pages/MainPage.qml" line="1107"/>
+        <location filename="../qml/pages/MainPage.qml" line="855"/>
+        <location filename="../qml/pages/MainPage.qml" line="1109"/>
         <source>Start</source>
         <translation>ابدأ</translation>
     </message>
@@ -184,27 +184,27 @@
         <translation>تغيير اللغة سيتم تطبيقه بعد إعادة تشغيل البرنامج</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SettingPage.qml" line="315"/>
+        <location filename="../qml/pages/SettingPage.qml" line="323"/>
         <source>Orientation:</source>
         <translation>التوجه:</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SettingPage.qml" line="321"/>
+        <location filename="../qml/pages/SettingPage.qml" line="329"/>
         <source>Portrait</source>
         <translation>طولي</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SettingPage.qml" line="324"/>
+        <location filename="../qml/pages/SettingPage.qml" line="332"/>
         <source>Landscape</source>
         <translation>مناظر الطبيعة</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SettingPage.qml" line="327"/>
+        <location filename="../qml/pages/SettingPage.qml" line="335"/>
         <source>Dynamic</source>
         <translation>حركي</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SettingPage.qml" line="316"/>
+        <location filename="../qml/pages/SettingPage.qml" line="324"/>
         <source>Sets the preferred screen orientation.</source>
         <translation>يثبت شاشة التوجه المفضلة.</translation>
     </message>

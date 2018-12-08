@@ -14,7 +14,7 @@ Name:       cooktimer
 %{?qtc_builddir:%define _builddir %qtc_builddir}
 Summary:    Multiple timers for cooking
 Version:    0.2
-Release:    10
+Release:    11
 Group:      Qt/Qt
 License:    LGPL
 URL:        https://github.com/a-dekker/cooktimer
@@ -70,6 +70,7 @@ desktop-file-install --delete-original       \
 %{_datadir}/icons/hicolor/86x86/apps/%{name}.png
 %{_datadir}/icons/hicolor/108x108/apps/%{name}.png
 %{_datadir}/icons/hicolor/128x128/apps/%{name}.png
+%{_datadir}/icons/hicolor/172x172/apps/%{name}.png
 %{_datadir}/icons/hicolor/256x256/apps/%{name}.png
 %{_datadir}/%{name}/translations
 %{_datadir}/%{name}/lib/

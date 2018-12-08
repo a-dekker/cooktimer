@@ -74,7 +74,7 @@ function readDishesEdit() {
     })
 }
 
-function RemoveAllDishes() {
+function removeAllDishes() {
     var db = connectDB()
 
     db.transaction(function (tx) {

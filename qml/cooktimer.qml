@@ -20,13 +20,16 @@ ApplicationWindow
     property bool timer2running: false
     property bool timer3running: false
     property int orientationSetting: (Orientation.Portrait | Orientation.Landscape | Orientation.LandscapeInverted)
+    property bool isLightTheme: {
+        if (Theme.colorScheme == Theme.LightOnDark) return false
+        else return true
+    }
+
     initialPage: mainPage
-    // initialPage: Component { MainPage { } }
 
-    MainPage{
-            id:mainPage
-        }
-
+    MainPage {
+            id: mainPage
+    }
 
     cover: CoverPage {
        id: cover

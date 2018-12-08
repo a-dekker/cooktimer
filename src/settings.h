@@ -56,6 +56,7 @@ namespace settingsPublic {
                     SL_SI, // Slovenian
                     SQ_AL, // Albanian
                     HU,    // Hungarian
+                    ZH_CN, // Chinese
                     INVALID
                 };
     };

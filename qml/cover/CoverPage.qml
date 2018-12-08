@@ -1,10 +1,9 @@
 import QtQuick 2.0
 import Sailfish.Silica 1.0
 
-
 CoverBackground {
-    property bool largeScreen: Screen.sizeCategory === Screen.Large ||
-                               Screen.sizeCategory === Screen.ExtraLarge
+    property bool largeScreen: Screen.sizeCategory === Screen.Large
+                               || Screen.sizeCategory === Screen.ExtraLarge
     BackgroundItem {
         anchors.fill: parent
 
@@ -12,7 +11,7 @@ CoverBackground {
             id: coverBgImage
             anchors.fill: parent
             fillMode: Image.PreserveAspectFit
-            source: "../images/coverbg.png"
+            source: mainapp.isLightTheme ? "../images/coverbg-rev.png" : "../images/coverbg.png"
             opacity: largeScreen ? 0.05 : 0.1
             horizontalAlignment: Image.AlignHCenter
             verticalAlignment: Image.AlignVCenter
@@ -52,8 +51,8 @@ CoverBackground {
             maximumValue: 1
             leftMargin: 0
             rightMargin: 0
-            anchors.topMargin: -Theme.paddingLarge
             anchors.bottomMargin: 1
+            anchors.topMargin: mainapp.isLightTheme ? - 2.5 * Theme.paddingLarge : - 2 * Theme.paddingLarge
             anchors.top: dishtime1.bottom
             value: mainapp.progressValue1
             height: Theme.paddingMedium
@@ -87,7 +86,7 @@ CoverBackground {
             maximumValue: 1
             leftMargin: 0
             rightMargin: 0
-            anchors.topMargin: -Theme.paddingLarge
+            anchors.topMargin: mainapp.isLightTheme ? - 2.5 * Theme.paddingLarge : - 2 * Theme.paddingLarge
             anchors.bottomMargin: 1
             anchors.top: dishtime2.bottom
             value: mainapp.progressValue2
@@ -121,7 +120,7 @@ CoverBackground {
             maximumValue: 1
             leftMargin: 0
             rightMargin: 0
-            anchors.topMargin: -Theme.paddingLarge
+            anchors.topMargin: mainapp.isLightTheme ? - 2.5 * Theme.paddingLarge : - 2 * Theme.paddingLarge
             anchors.bottomMargin: 1
             anchors.top: dishtime3.bottom
             value: mainapp.progressValue3
@@ -133,19 +132,19 @@ CoverBackground {
         id: coverAction
 
         CoverAction {
-            iconSource: timer1running ? "../images/icon-cover-stop.png" : "image://theme/icon-cover-play"
+            iconSource: timer1running ? (mainapp.isLightTheme ? "../images/icon-cover-stop-rev.png" : "../images/icon-cover-stop.png") : "image://theme/icon-cover-play"
             onTriggered: {
                 mainPage.toggleTimer1()
             }
         }
         CoverAction {
-            iconSource: timer2running ? "../images/icon-cover-stop.png" : "image://theme/icon-cover-play"
+            iconSource: timer2running ? (mainapp.isLightTheme ? "../images/icon-cover-stop-rev.png" : "../images/icon-cover-stop.png") : "image://theme/icon-cover-play"
             onTriggered: {
                 mainPage.toggleTimer2()
             }
         }
         CoverAction {
-            iconSource: timer3running ? "../images/icon-cover-stop.png" : "image://theme/icon-cover-play"
+            iconSource: timer3running ? (mainapp.isLightTheme ? "../images/icon-cover-stop-rev.png" : "../images/icon-cover-stop.png") : "image://theme/icon-cover-play"
             onTriggered: {
                 mainPage.toggleTimer3()
             }

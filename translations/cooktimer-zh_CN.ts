@@ -1,32 +1,32 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="sv">
+<TS version="2.1" language="zh_CN">
 <context>
     <name>About</name>
     <message>
         <location filename="../qml/pages/About.qml" line="22"/>
         <source>About</source>
-        <translation>Om</translation>
+        <translation>关于</translation>
     </message>
     <message>
         <location filename="../qml/pages/About.qml" line="25"/>
         <source>Info</source>
-        <translation>Info</translation>
+        <translation>信息</translation>
     </message>
     <message>
         <location filename="../qml/pages/About.qml" line="57"/>
         <source>Version</source>
-        <translation>Version</translation>
+        <translation>版本</translation>
     </message>
     <message>
         <location filename="../qml/pages/About.qml" line="62"/>
         <source>&quot;Timers for cooking&quot;</source>
-        <translation>&quot;Tidur för matlagning&quot;</translation>
+        <translation>&quot;烹饪计时器&quot;</translation>
     </message>
     <message>
         <location filename="../qml/pages/About.qml" line="68"/>
         <source>Author</source>
-        <translation>Utvecklare</translation>
+        <translation>作者</translation>
     </message>
 </context>
 <context>
@@ -34,17 +34,17 @@
     <message>
         <location filename="../qml/pages/CommentPage.qml" line="16"/>
         <source>Done</source>
-        <translation>Klart</translation>
+        <translation>完成</translation>
     </message>
     <message>
         <location filename="../qml/pages/CommentPage.qml" line="17"/>
         <source>Cancel</source>
-        <translation>Avbryt</translation>
+        <translation>取消</translation>
     </message>
     <message>
         <location filename="../qml/pages/CommentPage.qml" line="23"/>
         <source>Enter small note here</source>
-        <translation>Skriv en kort notis här</translation>
+        <translation>在此处输入小注释</translation>
     </message>
 </context>
 <context>
@@ -52,32 +52,32 @@
     <message>
         <location filename="../qml/pages/DishEdit.qml" line="19"/>
         <source>Save</source>
-        <translation>Spara</translation>
+        <translation>保存</translation>
     </message>
     <message>
         <location filename="../qml/pages/DishEdit.qml" line="20"/>
         <source>Cancel</source>
-        <translation>Avbryt</translation>
+        <translation>取消</translation>
     </message>
     <message>
         <location filename="../qml/pages/DishEdit.qml" line="49"/>
         <source>Deleting</source>
-        <translation>Tar bort</translation>
+        <translation>删除中</translation>
     </message>
     <message>
         <location filename="../qml/pages/DishEdit.qml" line="59"/>
         <source>Dish name</source>
-        <translation>Maträtt</translation>
+        <translation>菜名</translation>
     </message>
     <message>
         <location filename="../qml/pages/DishEdit.qml" line="127"/>
         <source>No dishes defined. Press the plus button to add one.</source>
-        <translation>Inga maträtter definierade. Tryck på plus för att lägga till en.</translation>
+        <translation>没有确定的菜式。按加号按钮添加一个。</translation>
     </message>
     <message>
         <location filename="../qml/pages/DishEdit.qml" line="137"/>
         <source>New dish</source>
-        <translation>Ny maträtt</translation>
+        <translation>新菜式</translation>
     </message>
 </context>
 <context>
@@ -85,7 +85,7 @@
     <message>
         <location filename="../qml/pages/DishPage.qml" line="106"/>
         <source>No dishes defined. Choose &quot;Edit Dishes&quot; from the pulley menu.</source>
-        <translation>Inga maträtter definierade. Välj &quot;Redigera maträtter&quot; från drag-menyn.</translation>
+        <translation>没有确定的菜式。从滚轮菜单中选择 &quot;编辑菜式&quot;。</translation>
     </message>
 </context>
 <context>
@@ -94,29 +94,29 @@
         <location filename="../qml/pages/MainPage.qml" line="384"/>
         <location filename="../qml/pages/MainPage.qml" line="388"/>
         <source>ready</source>
-        <translation>Klar</translation>
+        <translation>已就绪</translation>
     </message>
     <message>
         <location filename="../qml/pages/MainPage.qml" line="502"/>
         <source>About</source>
-        <translation>Om</translation>
+        <translation>关于</translation>
     </message>
     <message>
         <location filename="../qml/pages/MainPage.qml" line="506"/>
         <source>Settings</source>
-        <translation>Inställningar</translation>
+        <translation>设置</translation>
     </message>
     <message>
         <location filename="../qml/pages/MainPage.qml" line="510"/>
         <source>Edit dishes</source>
-        <translation>Redigera maträtter</translation>
+        <translation>编辑菜式</translation>
     </message>
     <message>
         <location filename="../qml/pages/MainPage.qml" line="548"/>
         <location filename="../qml/pages/MainPage.qml" line="805"/>
         <location filename="../qml/pages/MainPage.qml" line="1059"/>
         <source>Dish</source>
-        <translation>Maträtt</translation>
+        <translation>菜式</translation>
     </message>
     <message>
         <location filename="../qml/pages/MainPage.qml" line="597"/>
@@ -126,14 +126,14 @@
         <location filename="../qml/pages/MainPage.qml" line="1108"/>
         <location filename="../qml/pages/MainPage.qml" line="1110"/>
         <source>Stop</source>
-        <translation>Stopp</translation>
+        <translation>停止</translation>
     </message>
     <message>
         <location filename="../qml/pages/MainPage.qml" line="598"/>
         <location filename="../qml/pages/MainPage.qml" line="855"/>
         <location filename="../qml/pages/MainPage.qml" line="1109"/>
         <source>Start</source>
-        <translation>Start</translation>
+        <translation>开始</translation>
     </message>
 </context>
 <context>
@@ -141,72 +141,72 @@
     <message>
         <location filename="../qml/pages/SettingPage.qml" line="73"/>
         <source>Save</source>
-        <translation>Spara</translation>
+        <translation>保存</translation>
     </message>
     <message>
         <location filename="../qml/pages/SettingPage.qml" line="74"/>
         <source>Cancel</source>
-        <translation>Avbryt</translation>
+        <translation>取消</translation>
     </message>
     <message>
         <location filename="../qml/pages/SettingPage.qml" line="77"/>
         <source>Settings</source>
-        <translation>Inställningar</translation>
+        <translation>设置</translation>
     </message>
     <message>
         <location filename="../qml/pages/SettingPage.qml" line="84"/>
         <source>Keep backlight on</source>
-        <translation>Släck inte bakgrundsbelysningen</translation>
+        <translation>保持背光常亮</translation>
     </message>
     <message>
         <location filename="../qml/pages/SettingPage.qml" line="85"/>
         <source>Prevent screen from dimming.</source>
-        <translation>Förhindra skärmdimmer</translation>
+        <translation>防止屏幕变暗。</translation>
     </message>
     <message>
         <location filename="../qml/pages/SettingPage.qml" line="91"/>
         <source>Show additional banner</source>
-        <translation>Visa extra avisering</translation>
+        <translation>显示额外的横幅</translation>
     </message>
     <message>
         <location filename="../qml/pages/SettingPage.qml" line="92"/>
         <source>Notification banner in upper screen.</source>
-        <translation>Aviseringsflagga i skärmens överkant</translation>
+        <translation>屏幕上的通知横幅。</translation>
     </message>
     <message>
         <location filename="../qml/pages/SettingPage.qml" line="110"/>
         <source>Language:</source>
-        <translation>Språk:</translation>
+        <translation>语言</translation>
     </message>
     <message>
         <location filename="../qml/pages/SettingPage.qml" line="111"/>
         <source>Change of language will be active after restarting the application.</source>
-        <translation>Språkändringar kommer att aktiveras vid omstart av programmet.</translation>
+        <translation>改变语言将在重启应用之后生效。</translation>
     </message>
     <message>
         <location filename="../qml/pages/SettingPage.qml" line="323"/>
         <source>Orientation:</source>
-        <translation>Orientering:</translation>
+        <translation>方向：</translation>
     </message>
     <message>
         <location filename="../qml/pages/SettingPage.qml" line="329"/>
         <source>Portrait</source>
-        <translation>Stående</translation>
+        <translation>竖向</translation>
     </message>
     <message>
         <location filename="../qml/pages/SettingPage.qml" line="332"/>
         <source>Landscape</source>
-        <translation>Liggande</translation>
+        <translation>横向</translation>
     </message>
     <message>
         <location filename="../qml/pages/SettingPage.qml" line="335"/>
         <source>Dynamic</source>
-        <translation>Dynamiskt</translation>
+        <translation>动态的</translation>
     </message>
     <message>
         <location filename="../qml/pages/SettingPage.qml" line="324"/>
         <source>Sets the preferred screen orientation.</source>
-        <translation>Anger föredragen skärmorientering.</translation>
+        <translation>选择偏好屏幕方向</translation>
     </message>
 </context>
 <context>
@@ -214,17 +214,17 @@
     <message>
         <location filename="../qml/pages/TimeDialog.qml" line="52"/>
         <source>Save</source>
-        <translation>Spara</translation>
+        <translation>保存</translation>
     </message>
     <message>
         <location filename="../qml/pages/TimeDialog.qml" line="53"/>
         <source>Cancel</source>
-        <translation>Avbryt</translation>
+        <translation>取消</translation>
     </message>
     <message>
         <location filename="../qml/pages/TimeDialog.qml" line="92"/>
         <source>Dish</source>
-        <translation>Maträtt</translation>
+        <translation>菜肴</translation>
     </message>
 </context>
 <context>
@@ -234,7 +234,7 @@
         <location filename="../qml/cooktimer.qml" line="17"/>
         <location filename="../qml/cooktimer.qml" line="18"/>
         <source>Dish</source>
-        <translation>Maträtt</translation>
+        <translation>菜肴</translation>
     </message>
 </context>
 </TS>
