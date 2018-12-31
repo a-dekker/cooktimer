@@ -94,46 +94,46 @@
         <location filename="../qml/pages/MainPage.qml" line="384"/>
         <location filename="../qml/pages/MainPage.qml" line="388"/>
         <source>ready</source>
-        <translation>έτοιμο</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/pages/MainPage.qml" line="502"/>
         <source>About</source>
-        <translation>Σχετικά με</translation>
+        <translation type="unfinished">Σχετικά με</translation>
     </message>
     <message>
         <location filename="../qml/pages/MainPage.qml" line="506"/>
         <source>Settings</source>
-        <translation>Ρυθμίσεις</translation>
+        <translation type="unfinished">Ρυθμίσεις</translation>
     </message>
     <message>
         <location filename="../qml/pages/MainPage.qml" line="510"/>
         <source>Edit dishes</source>
-        <translation>Επεξεργασία φαγητων</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/pages/MainPage.qml" line="548"/>
-        <location filename="../qml/pages/MainPage.qml" line="805"/>
-        <location filename="../qml/pages/MainPage.qml" line="1059"/>
+        <location filename="../qml/pages/MainPage.qml" line="815"/>
+        <location filename="../qml/pages/MainPage.qml" line="1079"/>
         <source>Dish</source>
-        <translation>Φαγητο</translation>
+        <translation type="unfinished">Φαγητο</translation>
     </message>
     <message>
         <location filename="../qml/pages/MainPage.qml" line="597"/>
         <location filename="../qml/pages/MainPage.qml" line="599"/>
-        <location filename="../qml/pages/MainPage.qml" line="854"/>
-        <location filename="../qml/pages/MainPage.qml" line="856"/>
-        <location filename="../qml/pages/MainPage.qml" line="1108"/>
-        <location filename="../qml/pages/MainPage.qml" line="1110"/>
+        <location filename="../qml/pages/MainPage.qml" line="864"/>
+        <location filename="../qml/pages/MainPage.qml" line="866"/>
+        <location filename="../qml/pages/MainPage.qml" line="1128"/>
+        <location filename="../qml/pages/MainPage.qml" line="1130"/>
         <source>Stop</source>
-        <translation>Στοπ</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/pages/MainPage.qml" line="598"/>
-        <location filename="../qml/pages/MainPage.qml" line="855"/>
-        <location filename="../qml/pages/MainPage.qml" line="1109"/>
+        <location filename="../qml/pages/MainPage.qml" line="865"/>
+        <location filename="../qml/pages/MainPage.qml" line="1129"/>
         <source>Start</source>
-        <translation>Εναρξη</translation>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>

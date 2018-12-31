@@ -94,46 +94,46 @@
         <location filename="../qml/pages/MainPage.qml" line="384"/>
         <location filename="../qml/pages/MainPage.qml" line="388"/>
         <source>ready</source>
-        <translation>Připraven</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/pages/MainPage.qml" line="502"/>
         <source>About</source>
-        <translation>O</translation>
+        <translation type="unfinished">O programu</translation>
     </message>
     <message>
         <location filename="../qml/pages/MainPage.qml" line="506"/>
         <source>Settings</source>
-        <translation>Nastavení</translation>
+        <translation type="unfinished">Nastavení</translation>
     </message>
     <message>
         <location filename="../qml/pages/MainPage.qml" line="510"/>
         <source>Edit dishes</source>
-        <translation>Upravit pokrmy</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/pages/MainPage.qml" line="548"/>
-        <location filename="../qml/pages/MainPage.qml" line="805"/>
-        <location filename="../qml/pages/MainPage.qml" line="1059"/>
+        <location filename="../qml/pages/MainPage.qml" line="815"/>
+        <location filename="../qml/pages/MainPage.qml" line="1079"/>
         <source>Dish</source>
-        <translation>Pokrm</translation>
+        <translation type="unfinished">Pokrm</translation>
     </message>
     <message>
         <location filename="../qml/pages/MainPage.qml" line="597"/>
         <location filename="../qml/pages/MainPage.qml" line="599"/>
-        <location filename="../qml/pages/MainPage.qml" line="854"/>
-        <location filename="../qml/pages/MainPage.qml" line="856"/>
-        <location filename="../qml/pages/MainPage.qml" line="1108"/>
-        <location filename="../qml/pages/MainPage.qml" line="1110"/>
+        <location filename="../qml/pages/MainPage.qml" line="864"/>
+        <location filename="../qml/pages/MainPage.qml" line="866"/>
+        <location filename="../qml/pages/MainPage.qml" line="1128"/>
+        <location filename="../qml/pages/MainPage.qml" line="1130"/>
         <source>Stop</source>
-        <translation>Zastavit</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/pages/MainPage.qml" line="598"/>
-        <location filename="../qml/pages/MainPage.qml" line="855"/>
-        <location filename="../qml/pages/MainPage.qml" line="1109"/>
+        <location filename="../qml/pages/MainPage.qml" line="865"/>
+        <location filename="../qml/pages/MainPage.qml" line="1129"/>
         <source>Start</source>
-        <translation>Spustit</translation>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>

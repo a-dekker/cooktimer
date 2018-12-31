@@ -781,11 +781,21 @@ Page {
             }
         }
 
+        Rectangle {
+            id: sepLine1
+            anchors.top: progressBar1.bottom
+            anchors.topMargin: 4
+            color: Theme.secondaryHighlightColor
+            implicitHeight: 6
+            width: parent.width - Theme.paddingMedium
+            anchors.horizontalCenter: parent.horizontalCenter
+            visible: isPortrait
+        }
         Row {
             /* inner row */
             id: timerRow2
-            anchors.top: progressBar1.bottom
-            anchors.topMargin: isPortrait ? (largeScreen ? Theme.paddingLarge : 0) : 0
+            anchors.top: sepLine1.bottom
+            anchors.topMargin: isPortrait ? (largeScreen ? Theme.paddingLarge : 8) : 0
             spacing: largeScreen ? Theme.paddingMedium : Theme.paddingSmall
             anchors.horizontalCenter: parent.horizontalCenter
             height: isPortrait ? (largeScreen ? page.height/12 : Theme.itemSizeMedium) : (largeScreen ? page.height / 7 : Theme.paddingLarge * 1.6)
@@ -1035,11 +1045,21 @@ Page {
                 text: "00:00:00"
             }
         }
+        Rectangle {
+            id: sepLine2
+            anchors.top: progressBar2.bottom
+            anchors.topMargin: 4
+            color: Theme.secondaryHighlightColor
+            implicitHeight: 6
+            width: parent.width - Theme.paddingMedium
+            anchors.horizontalCenter: parent.horizontalCenter
+            visible: isPortrait
+        }
         Row {
             /* inner row */
             id: timerRow3
-            anchors.top: progressBar2.bottom
-            anchors.topMargin: isPortrait ? (largeScreen ? Theme.paddingLarge : 0) : 0
+            anchors.top: sepLine2.bottom
+            anchors.topMargin: isPortrait ? (largeScreen ? Theme.paddingLarge : 8) : 0
             spacing: largeScreen ? Theme.paddingMedium : Theme.paddingSmall
             anchors.horizontalCenter: parent.horizontalCenter
             height: isPortrait ? (largeScreen ? page.height/12 : Theme.itemSizeMedium) : (largeScreen ? page.height / 7 : Theme.paddingLarge * 1.6)
