@@ -8,6 +8,9 @@
 # * date Author's Name <author's email> version-release
 # - Summary of changes
 
+* tue Jan 01 2019 Arno Dekker <jack.tar@example.com> 0.0.2-13
+- Restored some lost translations
+
 * mon Dec 31 2018 Arno Dekker <jack.tar@example.com> 0.0.2-12
 - New icon (thanks JSEHV)
 - Small change on mainpage

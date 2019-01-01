@@ -94,29 +94,29 @@
         <location filename="../qml/pages/MainPage.qml" line="384"/>
         <location filename="../qml/pages/MainPage.qml" line="388"/>
         <source>ready</source>
-        <translation type="unfinished"></translation>
+        <translation>gati</translation>
     </message>
     <message>
         <location filename="../qml/pages/MainPage.qml" line="502"/>
         <source>About</source>
-        <translation type="unfinished">Rreth nesh</translation>
+        <translation>Rreth</translation>
     </message>
     <message>
         <location filename="../qml/pages/MainPage.qml" line="506"/>
         <source>Settings</source>
-        <translation type="unfinished">Cilësimet</translation>
+        <translation>Cilësimet</translation>
     </message>
     <message>
         <location filename="../qml/pages/MainPage.qml" line="510"/>
         <source>Edit dishes</source>
-        <translation type="unfinished"></translation>
+        <translation>Modifiko enët</translation>
     </message>
     <message>
         <location filename="../qml/pages/MainPage.qml" line="548"/>
         <location filename="../qml/pages/MainPage.qml" line="815"/>
         <location filename="../qml/pages/MainPage.qml" line="1079"/>
         <source>Dish</source>
-        <translation type="unfinished">Enë</translation>
+        <translation>Enët</translation>
     </message>
     <message>
         <location filename="../qml/pages/MainPage.qml" line="597"/>
@@ -126,14 +126,14 @@
         <location filename="../qml/pages/MainPage.qml" line="1128"/>
         <location filename="../qml/pages/MainPage.qml" line="1130"/>
         <source>Stop</source>
-        <translation type="unfinished"></translation>
+        <translation>Ndalo</translation>
     </message>
     <message>
         <location filename="../qml/pages/MainPage.qml" line="598"/>
         <location filename="../qml/pages/MainPage.qml" line="865"/>
         <location filename="../qml/pages/MainPage.qml" line="1129"/>
         <source>Start</source>
-        <translation type="unfinished"></translation>
+        <translation>Fillo</translation>
     </message>
 </context>
 <context>

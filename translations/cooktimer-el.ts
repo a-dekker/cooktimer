@@ -94,29 +94,29 @@
         <location filename="../qml/pages/MainPage.qml" line="384"/>
         <location filename="../qml/pages/MainPage.qml" line="388"/>
         <source>ready</source>
-        <translation type="unfinished"></translation>
+        <translation>έτοιμο</translation>
     </message>
     <message>
         <location filename="../qml/pages/MainPage.qml" line="502"/>
         <source>About</source>
-        <translation type="unfinished">Σχετικά με</translation>
+        <translation>Σχετικά με</translation>
     </message>
     <message>
         <location filename="../qml/pages/MainPage.qml" line="506"/>
         <source>Settings</source>
-        <translation type="unfinished">Ρυθμίσεις</translation>
+        <translation>Ρυθμίσεις</translation>
     </message>
     <message>
         <location filename="../qml/pages/MainPage.qml" line="510"/>
         <source>Edit dishes</source>
-        <translation type="unfinished"></translation>
+        <translation>Επεξεργασία φαγητων</translation>
     </message>
     <message>
         <location filename="../qml/pages/MainPage.qml" line="548"/>
         <location filename="../qml/pages/MainPage.qml" line="815"/>
         <location filename="../qml/pages/MainPage.qml" line="1079"/>
         <source>Dish</source>
-        <translation type="unfinished">Φαγητο</translation>
+        <translation>Φαγητο</translation>
     </message>
     <message>
         <location filename="../qml/pages/MainPage.qml" line="597"/>
@@ -126,14 +126,14 @@
         <location filename="../qml/pages/MainPage.qml" line="1128"/>
         <location filename="../qml/pages/MainPage.qml" line="1130"/>
         <source>Stop</source>
-        <translation type="unfinished"></translation>
+        <translation>Στοπ</translation>
     </message>
     <message>
         <location filename="../qml/pages/MainPage.qml" line="598"/>
         <location filename="../qml/pages/MainPage.qml" line="865"/>
         <location filename="../qml/pages/MainPage.qml" line="1129"/>
         <source>Start</source>
-        <translation type="unfinished"></translation>
+        <translation>Εναρξη</translation>
     </message>
 </context>
 <context>

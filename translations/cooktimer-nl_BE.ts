@@ -44,7 +44,7 @@
     <message>
         <location filename="../qml/pages/CommentPage.qml" line="23"/>
         <source>Enter small note here</source>
-        <translation>Voer hier een kleine aantekening in</translation>
+        <translation>Voert hier een kleine aantekening in</translation>
     </message>
 </context>
 <context>
@@ -72,7 +72,7 @@
     <message>
         <location filename="../qml/pages/DishEdit.qml" line="127"/>
         <source>No dishes defined. Press the plus button to add one.</source>
-        <translation>Geen gerechten opgeslagen. Druk op de plusknop voor der een toe te voegen.</translation>
+        <translation>Geen gerechten opgeslagen. Drukt op de plusknop voor der een toe te voegen.</translation>
     </message>
     <message>
         <location filename="../qml/pages/DishEdit.qml" line="137"/>
@@ -85,7 +85,7 @@
     <message>
         <location filename="../qml/pages/DishPage.qml" line="106"/>
         <source>No dishes defined. Choose &quot;Edit Dishes&quot; from the pulley menu.</source>
-        <translation>Der zijn geen gerechten opgegeven. Kies ‘Gerechten bewerken’ vanuit het uittrekmenu.</translation>
+        <translation>Der zijn geen gerechten opgegeven. Kiest ‘Gerechten bewerken’ vanuit het uittrekmenu.</translation>
     </message>
 </context>
 <context>
@@ -94,29 +94,29 @@
         <location filename="../qml/pages/MainPage.qml" line="384"/>
         <location filename="../qml/pages/MainPage.qml" line="388"/>
         <source>ready</source>
-        <translation type="unfinished"></translation>
+        <translation>gereed</translation>
     </message>
     <message>
         <location filename="../qml/pages/MainPage.qml" line="502"/>
         <source>About</source>
-        <translation type="unfinished">Over</translation>
+        <translation>Over</translation>
     </message>
     <message>
         <location filename="../qml/pages/MainPage.qml" line="506"/>
         <source>Settings</source>
-        <translation type="unfinished">Instellingen</translation>
+        <translation>Instellingen</translation>
     </message>
     <message>
         <location filename="../qml/pages/MainPage.qml" line="510"/>
         <source>Edit dishes</source>
-        <translation type="unfinished"></translation>
+        <translation>Gerechten bewerken</translation>
     </message>
     <message>
         <location filename="../qml/pages/MainPage.qml" line="548"/>
         <location filename="../qml/pages/MainPage.qml" line="815"/>
         <location filename="../qml/pages/MainPage.qml" line="1079"/>
         <source>Dish</source>
-        <translation type="unfinished">Gerecht</translation>
+        <translation>Gerecht</translation>
     </message>
     <message>
         <location filename="../qml/pages/MainPage.qml" line="597"/>
@@ -126,14 +126,14 @@
         <location filename="../qml/pages/MainPage.qml" line="1128"/>
         <location filename="../qml/pages/MainPage.qml" line="1130"/>
         <source>Stop</source>
-        <translation type="unfinished"></translation>
+        <translation>Stop</translation>
     </message>
     <message>
         <location filename="../qml/pages/MainPage.qml" line="598"/>
         <location filename="../qml/pages/MainPage.qml" line="865"/>
         <location filename="../qml/pages/MainPage.qml" line="1129"/>
         <source>Start</source>
-        <translation type="unfinished"></translation>
+        <translation>Start</translation>
     </message>
 </context>
 <context>
@@ -161,7 +161,7 @@
     <message>
         <location filename="../qml/pages/SettingPage.qml" line="85"/>
         <source>Prevent screen from dimming.</source>
-        <translation>Voorkom dat het scherm dimt.</translation>
+        <translation>Voorkomt dat het scherm dimt.</translation>
     </message>
     <message>
         <location filename="../qml/pages/SettingPage.qml" line="91"/>
@@ -181,12 +181,12 @@
     <message>
         <location filename="../qml/pages/SettingPage.qml" line="111"/>
         <source>Change of language will be active after restarting the application.</source>
-        <translation>Taalaanpassing zal actief worden na het herstarten van de toepassing.</translation>
+        <translation>Taalaanpassing zal actief worden nadat ge den app herstart.</translation>
     </message>
     <message>
         <location filename="../qml/pages/SettingPage.qml" line="323"/>
         <source>Orientation:</source>
-        <translation>Orientatie:</translation>
+        <translation>Oriëntatie:</translation>
     </message>
     <message>
         <location filename="../qml/pages/SettingPage.qml" line="329"/>
@@ -206,7 +206,7 @@
     <message>
         <location filename="../qml/pages/SettingPage.qml" line="324"/>
         <source>Sets the preferred screen orientation.</source>
-        <translation>Stel de gewenste schermoriëntatie in.</translation>
+        <translation>Stelt de gewenste schermoriëntatie in.</translation>
     </message>
 </context>
 <context>

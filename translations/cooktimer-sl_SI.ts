@@ -94,29 +94,29 @@
         <location filename="../qml/pages/MainPage.qml" line="384"/>
         <location filename="../qml/pages/MainPage.qml" line="388"/>
         <source>ready</source>
-        <translation type="unfinished"></translation>
+        <translation>pripravljeno</translation>
     </message>
     <message>
         <location filename="../qml/pages/MainPage.qml" line="502"/>
         <source>About</source>
-        <translation type="unfinished">O programu</translation>
+        <translation>O programu</translation>
     </message>
     <message>
         <location filename="../qml/pages/MainPage.qml" line="506"/>
         <source>Settings</source>
-        <translation type="unfinished">Nastavitve</translation>
+        <translation>Nastavitve</translation>
     </message>
     <message>
         <location filename="../qml/pages/MainPage.qml" line="510"/>
         <source>Edit dishes</source>
-        <translation type="unfinished"></translation>
+        <translation>Uredi jedi</translation>
     </message>
     <message>
         <location filename="../qml/pages/MainPage.qml" line="548"/>
         <location filename="../qml/pages/MainPage.qml" line="815"/>
         <location filename="../qml/pages/MainPage.qml" line="1079"/>
         <source>Dish</source>
-        <translation type="unfinished">Jed</translation>
+        <translation>Jed</translation>
     </message>
     <message>
         <location filename="../qml/pages/MainPage.qml" line="597"/>
@@ -126,14 +126,14 @@
         <location filename="../qml/pages/MainPage.qml" line="1128"/>
         <location filename="../qml/pages/MainPage.qml" line="1130"/>
         <source>Stop</source>
-        <translation type="unfinished"></translation>
+        <translation>Ustavi</translation>
     </message>
     <message>
         <location filename="../qml/pages/MainPage.qml" line="598"/>
         <location filename="../qml/pages/MainPage.qml" line="865"/>
         <location filename="../qml/pages/MainPage.qml" line="1129"/>
         <source>Start</source>
-        <translation type="unfinished"></translation>
+        <translation>Začni</translation>
     </message>
 </context>
 <context>

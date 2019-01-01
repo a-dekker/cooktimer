@@ -94,29 +94,29 @@
         <location filename="../qml/pages/MainPage.qml" line="384"/>
         <location filename="../qml/pages/MainPage.qml" line="388"/>
         <source>ready</source>
-        <translation type="unfinished"></translation>
+        <translation>gereed</translation>
     </message>
     <message>
         <location filename="../qml/pages/MainPage.qml" line="502"/>
         <source>About</source>
-        <translation type="unfinished">Over</translation>
+        <translation>Over</translation>
     </message>
     <message>
         <location filename="../qml/pages/MainPage.qml" line="506"/>
         <source>Settings</source>
-        <translation type="unfinished">Instellingen</translation>
+        <translation>Instellingen</translation>
     </message>
     <message>
         <location filename="../qml/pages/MainPage.qml" line="510"/>
         <source>Edit dishes</source>
-        <translation type="unfinished"></translation>
+        <translation>Gerechten bewerken</translation>
     </message>
     <message>
         <location filename="../qml/pages/MainPage.qml" line="548"/>
         <location filename="../qml/pages/MainPage.qml" line="815"/>
         <location filename="../qml/pages/MainPage.qml" line="1079"/>
         <source>Dish</source>
-        <translation type="unfinished">Gerecht</translation>
+        <translation>Gerecht</translation>
     </message>
     <message>
         <location filename="../qml/pages/MainPage.qml" line="597"/>
@@ -126,14 +126,14 @@
         <location filename="../qml/pages/MainPage.qml" line="1128"/>
         <location filename="../qml/pages/MainPage.qml" line="1130"/>
         <source>Stop</source>
-        <translation type="unfinished"></translation>
+        <translation>Stop</translation>
     </message>
     <message>
         <location filename="../qml/pages/MainPage.qml" line="598"/>
         <location filename="../qml/pages/MainPage.qml" line="865"/>
         <location filename="../qml/pages/MainPage.qml" line="1129"/>
         <source>Start</source>
-        <translation type="unfinished"></translation>
+        <translation>Start</translation>
     </message>
 </context>
 <context>
@@ -156,7 +156,7 @@
     <message>
         <location filename="../qml/pages/SettingPage.qml" line="84"/>
         <source>Keep backlight on</source>
-        <translation>De achtergrondverlichting van het scherm aan houden</translation>
+        <translation>Achtergrondverlichting van scherm aanhouden</translation>
     </message>
     <message>
         <location filename="../qml/pages/SettingPage.qml" line="85"/>
@@ -166,7 +166,7 @@
     <message>
         <location filename="../qml/pages/SettingPage.qml" line="91"/>
         <source>Show additional banner</source>
-        <translation>Extra banier weergeven</translation>
+        <translation>Extra banier tonen</translation>
     </message>
     <message>
         <location filename="../qml/pages/SettingPage.qml" line="92"/>
@@ -181,12 +181,12 @@
     <message>
         <location filename="../qml/pages/SettingPage.qml" line="111"/>
         <source>Change of language will be active after restarting the application.</source>
-        <translation>Taalaanpassing zal actief worden na het herstarten van de applicatie.</translation>
+        <translation>De taalwijziging zal worden toegepast na het herstarten van de applicatie.</translation>
     </message>
     <message>
         <location filename="../qml/pages/SettingPage.qml" line="323"/>
         <source>Orientation:</source>
-        <translation>Orientatie:</translation>
+        <translation>Oriëntatie:</translation>
     </message>
     <message>
         <location filename="../qml/pages/SettingPage.qml" line="329"/>
