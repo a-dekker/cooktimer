@@ -12,8 +12,6 @@ Dialog {
 
     property int langNbrToSave: -1
     property int orientationNbrToSave: -1
-    property string lampje: "true"
-    property string pop: "true"
 
     MySettings {
         id: myset
@@ -31,6 +29,13 @@ Dialog {
             myset.setValue("popup", "true")
         } else {
             myset.setValue("popup", "false")
+        }
+        if (backgroundswitch.checked) {
+            myset.setValue("background", "true")
+            mainapp.bg_image = true
+        } else {
+            myset.setValue("background", "false")
+            mainapp.bg_image = false
         }
         // languagenumber is not index, but enum number!
         if (langNbrToSave !== -1)
@@ -91,6 +96,14 @@ Dialog {
                 text: qsTr("Show additional banner")
                 description: qsTr("Notification banner in upper screen.")
                 checked: myset.value("popup") === "true"
+            }
+
+            TextSwitch {
+                id: backgroundswitch
+                width: parent.width
+                text: qsTr("Show background image")
+                description: qsTr("Show analog clock image in background.")
+                checked: myset.value("background") === "true"
             }
 
             //      TextSwitch {

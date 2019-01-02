@@ -8,6 +8,9 @@
 # * date Author's Name <author's email> version-release
 # - Summary of changes
 
+* wed Jan 02 2019 Arno Dekker <jack.tar@example.com> 0.0.2-14
+- Background image can be enabled or disabled
+
 * tue Jan 01 2019 Arno Dekker <jack.tar@example.com> 0.0.2-13
 - Restored some lost translations
 

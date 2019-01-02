@@ -91,47 +91,47 @@
 <context>
     <name>MainPage</name>
     <message>
-        <location filename="../qml/pages/MainPage.qml" line="384"/>
-        <location filename="../qml/pages/MainPage.qml" line="388"/>
+        <location filename="../qml/pages/MainPage.qml" line="389"/>
+        <location filename="../qml/pages/MainPage.qml" line="393"/>
         <source>ready</source>
         <translation>έτοιμο</translation>
     </message>
     <message>
-        <location filename="../qml/pages/MainPage.qml" line="502"/>
+        <location filename="../qml/pages/MainPage.qml" line="508"/>
         <source>About</source>
         <translation>Σχετικά με</translation>
     </message>
     <message>
-        <location filename="../qml/pages/MainPage.qml" line="506"/>
+        <location filename="../qml/pages/MainPage.qml" line="512"/>
         <source>Settings</source>
         <translation>Ρυθμίσεις</translation>
     </message>
     <message>
-        <location filename="../qml/pages/MainPage.qml" line="510"/>
+        <location filename="../qml/pages/MainPage.qml" line="516"/>
         <source>Edit dishes</source>
         <translation>Επεξεργασία φαγητων</translation>
     </message>
     <message>
-        <location filename="../qml/pages/MainPage.qml" line="548"/>
-        <location filename="../qml/pages/MainPage.qml" line="815"/>
-        <location filename="../qml/pages/MainPage.qml" line="1079"/>
+        <location filename="../qml/pages/MainPage.qml" line="554"/>
+        <location filename="../qml/pages/MainPage.qml" line="821"/>
+        <location filename="../qml/pages/MainPage.qml" line="1085"/>
         <source>Dish</source>
         <translation>Φαγητο</translation>
     </message>
     <message>
-        <location filename="../qml/pages/MainPage.qml" line="597"/>
-        <location filename="../qml/pages/MainPage.qml" line="599"/>
-        <location filename="../qml/pages/MainPage.qml" line="864"/>
-        <location filename="../qml/pages/MainPage.qml" line="866"/>
-        <location filename="../qml/pages/MainPage.qml" line="1128"/>
-        <location filename="../qml/pages/MainPage.qml" line="1130"/>
+        <location filename="../qml/pages/MainPage.qml" line="603"/>
+        <location filename="../qml/pages/MainPage.qml" line="605"/>
+        <location filename="../qml/pages/MainPage.qml" line="870"/>
+        <location filename="../qml/pages/MainPage.qml" line="872"/>
+        <location filename="../qml/pages/MainPage.qml" line="1134"/>
+        <location filename="../qml/pages/MainPage.qml" line="1136"/>
         <source>Stop</source>
         <translation>Στοπ</translation>
     </message>
     <message>
-        <location filename="../qml/pages/MainPage.qml" line="598"/>
-        <location filename="../qml/pages/MainPage.qml" line="865"/>
-        <location filename="../qml/pages/MainPage.qml" line="1129"/>
+        <location filename="../qml/pages/MainPage.qml" line="604"/>
+        <location filename="../qml/pages/MainPage.qml" line="871"/>
+        <location filename="../qml/pages/MainPage.qml" line="1135"/>
         <source>Start</source>
         <translation>Εναρξη</translation>
     </message>
@@ -139,72 +139,82 @@
 <context>
     <name>SettingPage</name>
     <message>
-        <location filename="../qml/pages/SettingPage.qml" line="73"/>
+        <location filename="../qml/pages/SettingPage.qml" line="78"/>
         <source>Save</source>
         <translation>Αποθήκευση</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SettingPage.qml" line="74"/>
+        <location filename="../qml/pages/SettingPage.qml" line="79"/>
         <source>Cancel</source>
         <translation>Ακύρωση</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SettingPage.qml" line="77"/>
+        <location filename="../qml/pages/SettingPage.qml" line="82"/>
         <source>Settings</source>
         <translation>Ρυθμίσεις</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SettingPage.qml" line="84"/>
+        <location filename="../qml/pages/SettingPage.qml" line="89"/>
         <source>Keep backlight on</source>
         <translation>Ενεργοποιηση διατηρησης φωτισμου </translation>
     </message>
     <message>
-        <location filename="../qml/pages/SettingPage.qml" line="85"/>
+        <location filename="../qml/pages/SettingPage.qml" line="90"/>
         <source>Prevent screen from dimming.</source>
         <translation>Αποτροπή οθόνης από εξασθένιση.</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SettingPage.qml" line="91"/>
+        <location filename="../qml/pages/SettingPage.qml" line="96"/>
         <source>Show additional banner</source>
         <translation>Εμφάνιση πρόσθετων διαφημιστικων</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SettingPage.qml" line="92"/>
+        <location filename="../qml/pages/SettingPage.qml" line="97"/>
         <source>Notification banner in upper screen.</source>
         <translation>Κοινοποίηση διαφημισης στην επάνω οθόνη.</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SettingPage.qml" line="110"/>
+        <location filename="../qml/pages/SettingPage.qml" line="104"/>
+        <source>Show background image</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/SettingPage.qml" line="105"/>
+        <source>Show analog clock image in background.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/SettingPage.qml" line="123"/>
         <source>Language:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/SettingPage.qml" line="111"/>
+        <location filename="../qml/pages/SettingPage.qml" line="124"/>
         <source>Change of language will be active after restarting the application.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/SettingPage.qml" line="323"/>
+        <location filename="../qml/pages/SettingPage.qml" line="336"/>
         <source>Orientation:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/SettingPage.qml" line="329"/>
+        <location filename="../qml/pages/SettingPage.qml" line="342"/>
         <source>Portrait</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/SettingPage.qml" line="332"/>
+        <location filename="../qml/pages/SettingPage.qml" line="345"/>
         <source>Landscape</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/SettingPage.qml" line="335"/>
+        <location filename="../qml/pages/SettingPage.qml" line="348"/>
         <source>Dynamic</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/SettingPage.qml" line="324"/>
+        <location filename="../qml/pages/SettingPage.qml" line="337"/>
         <source>Sets the preferred screen orientation.</source>
         <translation type="unfinished"></translation>
     </message>

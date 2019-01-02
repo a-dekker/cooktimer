@@ -211,6 +211,11 @@ Page {
         if (myset.value("backlight") === "true") {
             timer.start()
         }
+        if (myset.value("background") === "false") {
+            mainapp.bg_image = false
+        } else {
+            mainapp.bg_image = true
+        }
     }
 
     Component.onDestruction: notification.close()
@@ -488,6 +493,7 @@ Page {
         opacity: largeScreen ? 0.03 : 0.07
         horizontalAlignment: Image.AlignHCenter
         verticalAlignment: Image.AlignVCenter
+        visible: mainapp.bg_image
     }
 
     // To enable PullDownMenu, place our content in a SilicaFlickable

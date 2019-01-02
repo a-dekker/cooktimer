@@ -15,6 +15,7 @@ CoverBackground {
             opacity: largeScreen ? 0.05 : 0.1
             horizontalAlignment: Image.AlignHCenter
             verticalAlignment: Image.AlignVCenter
+            visible: mainapp.bg_image
         }
     }
 

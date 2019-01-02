@@ -19,6 +19,7 @@ ApplicationWindow
     property bool timer1running: false
     property bool timer2running: false
     property bool timer3running: false
+    property bool bg_image: true
     property int orientationSetting: (Orientation.Portrait | Orientation.Landscape | Orientation.LandscapeInverted)
     property bool isLightTheme: {
         if (Theme.colorScheme == Theme.LightOnDark) return false
