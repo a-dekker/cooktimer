@@ -34,17 +34,17 @@
     <message>
         <location filename="../qml/pages/CommentPage.qml" line="16"/>
         <source>Done</source>
-        <translation type="unfinished"></translation>
+        <translation>Bitti</translation>
     </message>
     <message>
         <location filename="../qml/pages/CommentPage.qml" line="17"/>
         <source>Cancel</source>
-        <translation type="unfinished">İptal</translation>
+        <translation>İptal</translation>
     </message>
     <message>
         <location filename="../qml/pages/CommentPage.qml" line="23"/>
         <source>Enter small note here</source>
-        <translation type="unfinished"></translation>
+        <translation>Buraya küçük bir not yazın</translation>
     </message>
 </context>
 <context>
@@ -176,47 +176,47 @@
     <message>
         <location filename="../qml/pages/SettingPage.qml" line="104"/>
         <source>Show background image</source>
-        <translation type="unfinished"></translation>
+        <translation>Arkaplan resmini göster</translation>
     </message>
     <message>
         <location filename="../qml/pages/SettingPage.qml" line="105"/>
         <source>Show analog clock image in background.</source>
-        <translation type="unfinished"></translation>
+        <translation>Arkaplanda analog saat resmi göster.</translation>
     </message>
     <message>
         <location filename="../qml/pages/SettingPage.qml" line="123"/>
         <source>Language:</source>
-        <translation type="unfinished"></translation>
+        <translation>Dil:</translation>
     </message>
     <message>
         <location filename="../qml/pages/SettingPage.qml" line="124"/>
         <source>Change of language will be active after restarting the application.</source>
-        <translation type="unfinished"></translation>
+        <translation>Dil değişimi uygulamayı yeniden başlattıktan sonra geçerli olacak.</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SettingPage.qml" line="336"/>
+        <location filename="../qml/pages/SettingPage.qml" line="344"/>
         <source>Orientation:</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../qml/pages/SettingPage.qml" line="342"/>
-        <source>Portrait</source>
-        <translation type="unfinished"></translation>
+        <translation>Yön:</translation>
     </message>
     <message>
         <location filename="../qml/pages/SettingPage.qml" line="345"/>
-        <source>Landscape</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../qml/pages/SettingPage.qml" line="348"/>
-        <source>Dynamic</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../qml/pages/SettingPage.qml" line="337"/>
         <source>Sets the preferred screen orientation.</source>
-        <translation type="unfinished"></translation>
+        <translation>Tercih edilen ekran yönünü ayarlar.</translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/SettingPage.qml" line="350"/>
+        <source>Portrait</source>
+        <translation>Dikey</translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/SettingPage.qml" line="353"/>
+        <source>Landscape</source>
+        <translation>Yatay</translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/SettingPage.qml" line="356"/>
+        <source>Dynamic</source>
+        <translation>Dinamik</translation>
     </message>
 </context>
 <context>
@@ -234,7 +234,7 @@
     <message>
         <location filename="../qml/pages/TimeDialog.qml" line="92"/>
         <source>Dish</source>
-        <translation type="unfinished">Yemek</translation>
+        <translation>Yemek</translation>
     </message>
 </context>
 <context>

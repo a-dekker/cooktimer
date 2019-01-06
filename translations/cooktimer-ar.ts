@@ -194,27 +194,27 @@
         <translation>تغيير اللغة سيتم تطبيقه بعد إعادة تشغيل البرنامج</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SettingPage.qml" line="336"/>
+        <location filename="../qml/pages/SettingPage.qml" line="344"/>
         <source>Orientation:</source>
         <translation>التوجه:</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SettingPage.qml" line="342"/>
+        <location filename="../qml/pages/SettingPage.qml" line="350"/>
         <source>Portrait</source>
         <translation>طولي</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SettingPage.qml" line="345"/>
+        <location filename="../qml/pages/SettingPage.qml" line="353"/>
         <source>Landscape</source>
         <translation>مناظر الطبيعة</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SettingPage.qml" line="348"/>
+        <location filename="../qml/pages/SettingPage.qml" line="356"/>
         <source>Dynamic</source>
         <translation>حركي</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SettingPage.qml" line="337"/>
+        <location filename="../qml/pages/SettingPage.qml" line="345"/>
         <source>Sets the preferred screen orientation.</source>
         <translation>يثبت شاشة التوجه المفضلة.</translation>
     </message>

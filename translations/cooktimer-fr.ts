@@ -176,12 +176,12 @@
     <message>
         <location filename="../qml/pages/SettingPage.qml" line="104"/>
         <source>Show background image</source>
-        <translation type="unfinished"></translation>
+        <translation>Afficher l&apos;image d&apos;arrière-plan</translation>
     </message>
     <message>
         <location filename="../qml/pages/SettingPage.qml" line="105"/>
         <source>Show analog clock image in background.</source>
-        <translation type="unfinished"></translation>
+        <translation>Afficher l&apos;horloge analogique en arrière-plan.</translation>
     </message>
     <message>
         <location filename="../qml/pages/SettingPage.qml" line="123"/>
@@ -194,29 +194,29 @@
         <translation>Le changement de langue sera actif après redémarrage de l&apos;application.</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SettingPage.qml" line="336"/>
+        <location filename="../qml/pages/SettingPage.qml" line="344"/>
         <source>Orientation:</source>
         <translation>Orientation :</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SettingPage.qml" line="342"/>
+        <location filename="../qml/pages/SettingPage.qml" line="345"/>
+        <source>Sets the preferred screen orientation.</source>
+        <translation>Définir l&apos;orientation préférée</translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/SettingPage.qml" line="350"/>
         <source>Portrait</source>
         <translation>Portrait</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SettingPage.qml" line="345"/>
+        <location filename="../qml/pages/SettingPage.qml" line="353"/>
         <source>Landscape</source>
         <translation>Paysage</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SettingPage.qml" line="348"/>
+        <location filename="../qml/pages/SettingPage.qml" line="356"/>
         <source>Dynamic</source>
         <translation>Dynamique</translation>
-    </message>
-    <message>
-        <location filename="../qml/pages/SettingPage.qml" line="337"/>
-        <source>Sets the preferred screen orientation.</source>
-        <translation>Définir l&apos;orientation préférée</translation>
     </message>
 </context>
 <context>

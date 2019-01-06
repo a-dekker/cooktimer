@@ -91,6 +91,7 @@ TRANSLATIONS = translations/cooktimer-sv.ts \
                translations/cooktimer-sq_AL.ts \
                translations/cooktimer-hu.ts \
                translations/cooktimer-zh_CN.ts \
+               translations/cooktimer-it.ts \
                translations/cooktimer-es.ts
 #HEADERS += \
 #    src/osread.h \

@@ -178,7 +178,11 @@ int main(int argc, char *argv[])
         case settingsPublic::Languages::ZH_CN:
             translator.load("cooktimer-zh_CN.qm", SailfishApp::pathTo(QString("translations")).toLocalFile());
             break;
-            // English
+        // Italian
+        case settingsPublic::Languages::IT:
+            translator.load("cooktimer-it.qm", SailfishApp::pathTo(QString("translations")).toLocalFile());
+            break;
+        // English
         default:
             translator.load("cooktimer.qm", SailfishApp::pathTo(QString("translations")).toLocalFile());
             break;

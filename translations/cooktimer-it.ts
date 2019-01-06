@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="da">
+<TS version="2.1" language="it">
 <context>
     <name>About</name>
     <message>
         <location filename="../qml/pages/About.qml" line="22"/>
         <source>About</source>
-        <translation>Om</translation>
+        <translation>Info</translation>
     </message>
     <message>
         <location filename="../qml/pages/About.qml" line="25"/>
@@ -16,17 +16,17 @@
     <message>
         <location filename="../qml/pages/About.qml" line="57"/>
         <source>Version</source>
-        <translation>Version</translation>
+        <translation>Versione</translation>
     </message>
     <message>
         <location filename="../qml/pages/About.qml" line="62"/>
         <source>&quot;Timers for cooking&quot;</source>
-        <translation>&quot;Timere til madlavning&quot;</translation>
+        <translation>&quot;Timer per cucinare&quot;</translation>
     </message>
     <message>
         <location filename="../qml/pages/About.qml" line="68"/>
         <source>Author</source>
-        <translation>Udvikler</translation>
+        <translation>Autore</translation>
     </message>
 </context>
 <context>
@@ -34,17 +34,17 @@
     <message>
         <location filename="../qml/pages/CommentPage.qml" line="16"/>
         <source>Done</source>
-        <translation>Færdig</translation>
+        <translation>Fatto</translation>
     </message>
     <message>
         <location filename="../qml/pages/CommentPage.qml" line="17"/>
         <source>Cancel</source>
-        <translation>Annuller</translation>
+        <translation>Annulla</translation>
     </message>
     <message>
         <location filename="../qml/pages/CommentPage.qml" line="23"/>
         <source>Enter small note here</source>
-        <translation>Tilføj kort note her</translation>
+        <translation>Inserisci nota qui</translation>
     </message>
 </context>
 <context>
@@ -52,32 +52,32 @@
     <message>
         <location filename="../qml/pages/DishEdit.qml" line="19"/>
         <source>Save</source>
-        <translation>Gem</translation>
+        <translation>Salva</translation>
     </message>
     <message>
         <location filename="../qml/pages/DishEdit.qml" line="20"/>
         <source>Cancel</source>
-        <translation>Annuller</translation>
+        <translation>Annulla</translation>
     </message>
     <message>
         <location filename="../qml/pages/DishEdit.qml" line="49"/>
         <source>Deleting</source>
-        <translation>Sletter</translation>
+        <translation>Eliminazione</translation>
     </message>
     <message>
         <location filename="../qml/pages/DishEdit.qml" line="59"/>
         <source>Dish name</source>
-        <translation>Navn på ret</translation>
+        <translation>Nome piatto</translation>
     </message>
     <message>
         <location filename="../qml/pages/DishEdit.qml" line="127"/>
         <source>No dishes defined. Press the plus button to add one.</source>
-        <translation>Ingen retter defineret. Tryk på plus-knappen for at tilføje en.</translation>
+        <translation>Nessun piatto definito. Premi il pulsante + per aggiungerne uno.</translation>
     </message>
     <message>
         <location filename="../qml/pages/DishEdit.qml" line="137"/>
         <source>New dish</source>
-        <translation>Ny ret</translation>
+        <translation>Nuovo piatto</translation>
     </message>
 </context>
 <context>
@@ -85,7 +85,7 @@
     <message>
         <location filename="../qml/pages/DishPage.qml" line="106"/>
         <source>No dishes defined. Choose &quot;Edit Dishes&quot; from the pulley menu.</source>
-        <translation>Ingen retter defineret. Vælg &quot;Rediger Retter&quot; fra topmenuen.</translation>
+        <translation>Nessun piatto definito. Scegli &quot;Modifica piatti&quot; dal pulley menu.</translation>
     </message>
 </context>
 <context>
@@ -94,29 +94,29 @@
         <location filename="../qml/pages/MainPage.qml" line="389"/>
         <location filename="../qml/pages/MainPage.qml" line="393"/>
         <source>ready</source>
-        <translation>klar</translation>
+        <translation>pronto</translation>
     </message>
     <message>
         <location filename="../qml/pages/MainPage.qml" line="508"/>
         <source>About</source>
-        <translation>Om</translation>
+        <translation>Info</translation>
     </message>
     <message>
         <location filename="../qml/pages/MainPage.qml" line="512"/>
         <source>Settings</source>
-        <translation>Indstillinger</translation>
+        <translation>Impostazioni</translation>
     </message>
     <message>
         <location filename="../qml/pages/MainPage.qml" line="516"/>
         <source>Edit dishes</source>
-        <translation>Rediger retter</translation>
+        <translation>Modifica piatti</translation>
     </message>
     <message>
         <location filename="../qml/pages/MainPage.qml" line="554"/>
         <location filename="../qml/pages/MainPage.qml" line="821"/>
         <location filename="../qml/pages/MainPage.qml" line="1085"/>
         <source>Dish</source>
-        <translation>Ret</translation>
+        <translation>Piatto</translation>
     </message>
     <message>
         <location filename="../qml/pages/MainPage.qml" line="603"/>
@@ -133,7 +133,7 @@
         <location filename="../qml/pages/MainPage.qml" line="871"/>
         <location filename="../qml/pages/MainPage.qml" line="1135"/>
         <source>Start</source>
-        <translation>Start</translation>
+        <translation>Avvia</translation>
     </message>
 </context>
 <context>
@@ -141,82 +141,82 @@
     <message>
         <location filename="../qml/pages/SettingPage.qml" line="78"/>
         <source>Save</source>
-        <translation>Gem</translation>
+        <translation>Salva</translation>
     </message>
     <message>
         <location filename="../qml/pages/SettingPage.qml" line="79"/>
         <source>Cancel</source>
-        <translation>Annuller</translation>
+        <translation>Annulla</translation>
     </message>
     <message>
         <location filename="../qml/pages/SettingPage.qml" line="82"/>
         <source>Settings</source>
-        <translation>Indstillinger</translation>
+        <translation>Impostazioni</translation>
     </message>
     <message>
         <location filename="../qml/pages/SettingPage.qml" line="89"/>
         <source>Keep backlight on</source>
-        <translation>Hold baggrundslyset tændt</translation>
+        <translation>Mantieni lo schermo acceso</translation>
     </message>
     <message>
         <location filename="../qml/pages/SettingPage.qml" line="90"/>
         <source>Prevent screen from dimming.</source>
-        <translation>Undgå dæmpning af skærm.</translation>
+        <translation>Impedisce allo schermo di spegnersi.</translation>
     </message>
     <message>
         <location filename="../qml/pages/SettingPage.qml" line="96"/>
         <source>Show additional banner</source>
-        <translation>Vis flere bannere</translation>
+        <translation>Mostra ulteriore timer</translation>
     </message>
     <message>
         <location filename="../qml/pages/SettingPage.qml" line="97"/>
         <source>Notification banner in upper screen.</source>
-        <translation>Påmindelser i toppen af skærm.</translation>
+        <translation>Banner di notifica nella parte superiore dello schermo.</translation>
     </message>
     <message>
         <location filename="../qml/pages/SettingPage.qml" line="104"/>
         <source>Show background image</source>
-        <translation type="unfinished"></translation>
+        <translation>Mostra sfondo</translation>
     </message>
     <message>
         <location filename="../qml/pages/SettingPage.qml" line="105"/>
         <source>Show analog clock image in background.</source>
-        <translation type="unfinished"></translation>
+        <translation>Mostra orologio analogico come sfondo.</translation>
     </message>
     <message>
         <location filename="../qml/pages/SettingPage.qml" line="123"/>
         <source>Language:</source>
-        <translation>Sprog:</translation>
+        <translation>Lingua:</translation>
     </message>
     <message>
         <location filename="../qml/pages/SettingPage.qml" line="124"/>
         <source>Change of language will be active after restarting the application.</source>
-        <translation>Ændring af sprog vil først blive aktiveret efter genstart af program.</translation>
+        <translation>La lingua verrà attivata dopo il riavvio dell&apos;app.</translation>
     </message>
     <message>
         <location filename="../qml/pages/SettingPage.qml" line="344"/>
         <source>Orientation:</source>
-        <translation>Orientering:</translation>
-    </message>
-    <message>
-        <location filename="../qml/pages/SettingPage.qml" line="350"/>
-        <source>Portrait</source>
-        <translation>Portræt</translation>
-    </message>
-    <message>
-        <location filename="../qml/pages/SettingPage.qml" line="353"/>
-        <source>Landscape</source>
-        <translation>Landskab</translation>
-    </message>
-    <message>
-        <location filename="../qml/pages/SettingPage.qml" line="356"/>
-        <source>Dynamic</source>
-        <translation>Dynamisk</translation>
+        <translation>Orientamento:</translation>
     </message>
     <message>
         <location filename="../qml/pages/SettingPage.qml" line="345"/>
         <source>Sets the preferred screen orientation.</source>
-        <translation>Sætter den foretrukne skærmorientering.</translation>
+        <translation>Imposta l&apos;orientamento dello schermo.</translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/SettingPage.qml" line="350"/>
+        <source>Portrait</source>
+        <translation>Ritratto</translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/SettingPage.qml" line="353"/>
+        <source>Landscape</source>
+        <translation>Panoramico</translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/SettingPage.qml" line="356"/>
+        <source>Dynamic</source>
+        <translation>Automatico</translation>
     </message>
 </context>
 <context>
@@ -224,17 +224,17 @@
     <message>
         <location filename="../qml/pages/TimeDialog.qml" line="52"/>
         <source>Save</source>
-        <translation>Gem</translation>
+        <translation>Salva</translation>
     </message>
     <message>
         <location filename="../qml/pages/TimeDialog.qml" line="53"/>
         <source>Cancel</source>
-        <translation>Annuller</translation>
+        <translation>Annulla</translation>
     </message>
     <message>
         <location filename="../qml/pages/TimeDialog.qml" line="92"/>
         <source>Dish</source>
-        <translation>Ret</translation>
+        <translation>Piatto</translation>
     </message>
 </context>
 <context>
@@ -244,7 +244,7 @@
         <location filename="../qml/cooktimer.qml" line="17"/>
         <location filename="../qml/cooktimer.qml" line="18"/>
         <source>Dish</source>
-        <translation>Ret</translation>
+        <translation>Piatto</translation>
     </message>
 </context>
 </TS>

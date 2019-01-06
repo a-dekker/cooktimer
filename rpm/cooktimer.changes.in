@@ -8,173 +8,176 @@
 # * date Author's Name <author's email> version-release
 # - Summary of changes
 
-* wed Jan 02 2019 Arno Dekker <jack.tar@example.com> 0.0.2-14
+* Wed Jan 02 2019 Arno Dekker <jack.tar@example.com> 0.0.2-15
+- Updated multiple languages, added Italian (thanks fravaccaro)
+
+* Wed Jan 02 2019 Arno Dekker <jack.tar@example.com> 0.0.2-14
 - Background image can be enabled or disabled
 
-* tue Jan 01 2019 Arno Dekker <jack.tar@example.com> 0.0.2-13
+* Tue Jan 01 2019 Arno Dekker <jack.tar@example.com> 0.0.2-13
 - Restored some lost translations
 
-* mon Dec 31 2018 Arno Dekker <jack.tar@example.com> 0.0.2-12
+* Mon Dec 31 2018 Arno Dekker <jack.tar@example.com> 0.0.2-12
 - New icon (thanks JSEHV)
 - Small change on mainpage
 
-* sat Oct 20 2018 Arno Dekker <jack.tar@example.com> 0.0.2-11
+* Sat Oct 20 2018 Arno Dekker <jack.tar@example.com> 0.0.2-11
 - Added Chinese (thanks rui kon)
 - Adaptions for light ambiences
 
-* sat Oct 20 2018 Arno Dekker <jack.tar@example.com> 0.0.2-10
+* Sat Oct 20 2018 Arno Dekker <jack.tar@example.com> 0.0.2-10
 - Small fixes on settings and coverpage
 
-* tue Apr 17 2018 Arno Dekker <jack.tar@example.com> 0.0.2-9
+* Tue Apr 17 2018 Arno Dekker <jack.tar@example.com> 0.0.2-9
 - Added Hungarian by Szabó G.
 
-* sat Apr 14 2018 Arno Dekker <jack.tar@example.com> 0.0.2-8
+* Sat Apr 14 2018 Arno Dekker <jack.tar@example.com> 0.0.2-8
 - Added Flemish (Dutch Belgium) by Nathan Follens
 
-* sat Sep 23 2017 Arno Dekker <jack.tar@example.com> 0.0.2-7
+* Sat Sep 23 2017 Arno Dekker <jack.tar@example.com> 0.0.2-7
 - Better scaling of minus button
 - Better scaling of timepicker
 
-* thu Aug 24 2017 Arno Dekker <jack.tar@example.com> 0.0.2-6
+* Thu Aug 24 2017 Arno Dekker <jack.tar@example.com> 0.0.2-6
 - Albaninan translation by Benard Sulejmani
 
-* thu Jun 1 2017 Arno Dekker <jack.tar@example.com> 0.0.2-5
+* Thu Jun 1 2017 Arno Dekker <jack.tar@example.com> 0.0.2-5
 - Removed time indication on alarmscreen
 - Fixed issue on settingspage
 
-* mon Nov 28 2016 Arno Dekker <jack.tar@example.com> 0.0.2-4
+* Mon Nov 28 2016 Arno Dekker <jack.tar@example.com> 0.0.2-4
 - Slovenian added by sponka
 
-* tue Nov 22 2016 Arno Dekker <jack.tar@example.com> 0.0.2-3
+* Tue Nov 22 2016 Arno Dekker <jack.tar@example.com> 0.0.2-3
 - Portuguese (Brazil) translation by Lucas Elder Neves
 
-* mon Nov 07 2016 Arno Dekker <jack.tar@example.com> 0.0.2-2
+* Mon Nov 07 2016 Arno Dekker <jack.tar@example.com> 0.0.2-2
 - Pause text from underlined to italic
 - Dutch language corrections by pljmn
 - Breton language added by Wanibzh29
 
-* wed Apr 13 2016 Arno Dekker <jack.tar@example.com> 0.0.2-1
+* Wed Apr 13 2016 Arno Dekker <jack.tar@example.com> 0.0.2-1
 - Added Arabic language
 
-* sat Mar 19 2016 Arno Dekker <jack.tar@example.com> 0.0.2-0
+* Sat Mar 19 2016 Arno Dekker <jack.tar@example.com> 0.0.2-0
 - Fully Optimized for Jolla tablet
 - Fix bug with initial empty comment
 
-* tue Jan 12 2016 Arno Dekker <jack.tar@example.com> 0.0.1-40
+* Tue Jan 12 2016 Arno Dekker <jack.tar@example.com> 0.0.1-40
 - added small buttons for quickly increase or decrease minutes
 
-* tue Jan 12 2016 Arno Dekker <jack.tar@example.com> 0.0.1-39
+* Tue Jan 12 2016 Arno Dekker <jack.tar@example.com> 0.0.1-39
 - minor change in popup panel
 - various translation updates
 
-* sat Jan 9 2016 Arno Dekker <jack.tar@example.com> 0.0.1-38
+* Sat Jan 9 2016 Arno Dekker <jack.tar@example.com> 0.0.1-38
 - fixed bug in notes when not selecting a dish
 - Spanish translation update
 
-* thu Jan 7 2016 Arno Dekker <jack.tar@example.com> 0.0.1-37
+* Thu Jan 7 2016 Arno Dekker <jack.tar@example.com> 0.0.1-37
 - Added note field for additional dish notes
 
-* mon Jan 04 2016 Arno Dekker <jack.tar@example.com> 0.0.1-36
+* Mon Jan 04 2016 Arno Dekker <jack.tar@example.com> 0.0.1-36
 - Removed limitations on amount of predefined dishes
 - Icon changes
 
-* mon Oct 31 2015 Arno Dekker <jack.tar@example.com> 0.0.1-35
+* Mon Oct 31 2015 Arno Dekker <jack.tar@example.com> 0.0.1-35
 - Added 3 cover buttons for start/stop of timers
 
-* mon Oct 19 2015 Arno Dekker <jack.tar@example.com> 0.0.1-34
+* Mon Oct 19 2015 Arno Dekker <jack.tar@example.com> 0.0.1-34
 - Added landscape support (apart from alarmscreen)
 
-* fri Oct 01 2015 Arno Dekker <jack.tar@example.com> 0.0.1-33
+* Fri Oct 01 2015 Arno Dekker <jack.tar@example.com> 0.0.1-33
 - Updated popup notification to behavior change in SFOS 2.0
 
-* wed Sep 23 2015 Arno Dekker <jack.tar@example.com> 0.0.1-32
+* Wed Sep 23 2015 Arno Dekker <jack.tar@example.com> 0.0.1-32
 - Updates in Catalan, French and Polish
 
-* sun Sep 17 2015 Arno Dekker <jack.tar@example.com> 0.0.1-31
+* Sun Sep 17 2015 Arno Dekker <jack.tar@example.com> 0.0.1-31
 - Progressbar on coverpage
 
-* sun Sep 17 2015 Arno Dekker <jack.tar@example.com> 0.0.1-30
+* Sun Sep 17 2015 Arno Dekker <jack.tar@example.com> 0.0.1-30
 - Cosmetic fixes (e.g. small space between new SailfishOS 2.0 buttons)
 
-* sun Sep 13 2015 Arno Dekker <jack.tar@example.com> 0.0.1-29
+* Sun Sep 13 2015 Arno Dekker <jack.tar@example.com> 0.0.1-29
 - Fixed bug in setting dishname in timepicker screen
 
-* sun Sep 05 2015 Arno Dekker <jack.tar@example.com> 0.0.1-28
+* Sun Sep 05 2015 Arno Dekker <jack.tar@example.com> 0.0.1-28
 - Fix timepicker broken in SailfishOS 1.1.9.27
 
-* sat Aug 08 2015 Arno Dekker <jack.tar@example.com> 0.0.1-27
+* Sat Aug 08 2015 Arno Dekker <jack.tar@example.com> 0.0.1-27
 - Small change in alignment in dish page
 - Other time input method in dishedit page
 
-* thu Jul 23 2015 Arno Dekker <jack.tar@example.com> 0.0.1-26
+* Thu Jul 23 2015 Arno Dekker <jack.tar@example.com> 0.0.1-26
 - Catalan translation added (thanks mjoan)
 
-* sat Jul 18 2015 Arno Dekker <jack.tar@example.com> 0.0.1-25
+* Sat Jul 18 2015 Arno Dekker <jack.tar@example.com> 0.0.1-25
 - Some changes in timepick screen
 - Change dishname temporarily in timepick screen
 
-* thu Jul 16 2015 Arno Dekker <jack.tar@example.com> 0.0.1-24
+* Thu Jul 16 2015 Arno Dekker <jack.tar@example.com> 0.0.1-24
 - Danish translation added (thanks Peter Jespersen)
 
-* fri Jul 6 2015 Arno Dekker <jack.tar@example.com> 0.0.1-23
+* Fri Jul 6 2015 Arno Dekker <jack.tar@example.com> 0.0.1-23
 - Polish translation added (thanks atlochowski)
 
-* fri Jun 26 2015 Arno Dekker <jack.tar@example.com> 0.0.1-22
+* Fri Jun 26 2015 Arno Dekker <jack.tar@example.com> 0.0.1-22
 - System default language can be overruled in the settings
 - Small layout change in time adjustment screen
 - Changed popup to nemo notification
 
-* sat Jun 2 2015 Arno Dekker <jack.tar@example.com> 0.0.1-21
+* Sat Jun 2 2015 Arno Dekker <jack.tar@example.com> 0.0.1-21
 - moved dish/time text in time dialog above clock for better visibility
 
-* sat May 2 2015 Arno Dekker <jack.tar@example.com> 0.0.1-20
+* Sat May 2 2015 Arno Dekker <jack.tar@example.com> 0.0.1-20
 - added Greek language (thanks to beonex)
 
-* sat May 2 2015 Arno Dekker <jack.tar@example.com> 0.0.1-20
+* Sat May 2 2015 Arno Dekker <jack.tar@example.com> 0.0.1-20
 - added Greek language (thanks to beonex)
 
-* tue Mar 31 2015 Arno Dekker <jack.tar@example.com> 0.0.1-19
+* Tue Mar 31 2015 Arno Dekker <jack.tar@example.com> 0.0.1-19
 - time indicator below progressbar
 
-* tue Mar 31 2015 Arno Dekker <jack.tar@example.com> 0.0.1-18
+* Tue Mar 31 2015 Arno Dekker <jack.tar@example.com> 0.0.1-18
 - Added spanish translations (thanks to carmenfdezb)
 - Updated dutch translations
 - Some changes in progressbar
 
-* wed Mar 08 2015 Arno Dekker <jack.tar@example.com> 0.0.1-17
+* Wed Mar 08 2015 Arno Dekker <jack.tar@example.com> 0.0.1-17
 - Replaced optional progresscircles with progressbar
 
-* wed Jan 14 2015 Arno Dekker <jack.tar@example.com> 0.0.1-16
+* Wed Jan 14 2015 Arno Dekker <jack.tar@example.com> 0.0.1-16
 - Added French, Turkish, Finnish and German translations
 
-* sat Jan 10 2015 Arno Dekker <jack.tar@example.com> 0.0.1-15
+* Sat Jan 10 2015 Arno Dekker <jack.tar@example.com> 0.0.1-15
 - Minor changes in setup page/disable start button when applicable
 
-* sun Dec 26 2014 Arno Dekker <jack.tar@example.com> 0.0.1-14
+* Sun Dec 26 2014 Arno Dekker <jack.tar@example.com> 0.0.1-14
 - Russian translation completed
 
-* sun Dec 21 2014 Arno Dekker <jack.tar@example.com> 0.0.1-13
+* Sun Dec 21 2014 Arno Dekker <jack.tar@example.com> 0.0.1-13
 - Added Czech and Russian, Dutch updated
 - Introduced optional progress circles
 
-* wed Dec 10 2014 Arno Dekker <jack.tar@example.com> 0.0.1-12
+* Wed Dec 10 2014 Arno Dekker <jack.tar@example.com> 0.0.1-12
 - Added internationalization on request of eson
 - Dutch (not supported as language) and Swedish language added
 
-* sat Dec 6 2014 Arno Dekker <jack.tar@example.com> 0.0.1-11
+* Sat Dec 6 2014 Arno Dekker <jack.tar@example.com> 0.0.1-11
 - small haptic feedback for start/stop button
 - fix: only last executed alarm timer should have highlighted color
 - fixed wrong size of 3rd start button
 - option for additional banner when alarm rings
 
-* mon Nov 3 2014 Arno Dekker <jack.tar@example.com> 0.0.1-10
+* Mon Nov 3 2014 Arno Dekker <jack.tar@example.com> 0.0.1-10
 - Touching running timer will pause the timer
 - Small changes in mainscreen
 
-* sat Oct 18 2014 Arno Dekker <jack.tar@example.com> 0.0.1-9
+* Sat Oct 18 2014 Arno Dekker <jack.tar@example.com> 0.0.1-9
 - Adapted for other resolutions (tested on Nexus 7 v.2012)
 
-* fri Oct 17 2014 Arno Dekker <jack.tar@example.com> 0.0.1-8
+* Fri Oct 17 2014 Arno Dekker <jack.tar@example.com> 0.0.1-8
 - Remaining time label now always updated if timer is not running
 
 * Tue Aug 26 2014 Arno Dekker <jack.tar@example.com> 0.0.1-7

@@ -194,27 +194,27 @@
         <translation>Taalaanpassing zal actief worden nadat ge den app herstart.</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SettingPage.qml" line="336"/>
+        <location filename="../qml/pages/SettingPage.qml" line="344"/>
         <source>Orientation:</source>
         <translation>Oriëntatie:</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SettingPage.qml" line="337"/>
+        <location filename="../qml/pages/SettingPage.qml" line="345"/>
         <source>Sets the preferred screen orientation.</source>
         <translation>Stelt de gewenste schermoriëntatie in.</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SettingPage.qml" line="342"/>
+        <location filename="../qml/pages/SettingPage.qml" line="350"/>
         <source>Portrait</source>
         <translation>Staand</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SettingPage.qml" line="345"/>
+        <location filename="../qml/pages/SettingPage.qml" line="353"/>
         <source>Landscape</source>
         <translation>Liggend</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SettingPage.qml" line="348"/>
+        <location filename="../qml/pages/SettingPage.qml" line="356"/>
         <source>Dynamic</source>
         <translation>Dynamisch</translation>
     </message>
