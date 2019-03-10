@@ -6,7 +6,7 @@
     <message>
         <location filename="../qml/pages/About.qml" line="22"/>
         <source>About</source>
-        <translation>Sobre l&apos;aplicació</translation>
+        <translation>Quant a</translation>
     </message>
     <message>
         <location filename="../qml/pages/About.qml" line="25"/>
@@ -39,7 +39,7 @@
     <message>
         <location filename="../qml/pages/CommentPage.qml" line="17"/>
         <source>Cancel</source>
-        <translation>Cancel·lar</translation>
+        <translation>Cancel·la</translation>
     </message>
     <message>
         <location filename="../qml/pages/CommentPage.qml" line="23"/>
@@ -52,12 +52,12 @@
     <message>
         <location filename="../qml/pages/DishEdit.qml" line="19"/>
         <source>Save</source>
-        <translation>Desar</translation>
+        <translation>Desa</translation>
     </message>
     <message>
         <location filename="../qml/pages/DishEdit.qml" line="20"/>
         <source>Cancel</source>
-        <translation>Cancel·lar</translation>
+        <translation>Cancel·la</translation>
     </message>
     <message>
         <location filename="../qml/pages/DishEdit.qml" line="49"/>
@@ -72,12 +72,12 @@
     <message>
         <location filename="../qml/pages/DishEdit.qml" line="127"/>
         <source>No dishes defined. Press the plus button to add one.</source>
-        <translation>Cap Plat definit. Prem el botó &quot;més&quot; per afegir-ne un.</translation>
+        <translation>Cap plat definit. Prem el botó &quot;més&quot; per afegir-ne un.</translation>
     </message>
     <message>
         <location filename="../qml/pages/DishEdit.qml" line="137"/>
         <source>New dish</source>
-        <translation>Nou Plat</translation>
+        <translation>Nou plat</translation>
     </message>
 </context>
 <context>
@@ -85,7 +85,7 @@
     <message>
         <location filename="../qml/pages/DishPage.qml" line="106"/>
         <source>No dishes defined. Choose &quot;Edit Dishes&quot; from the pulley menu.</source>
-        <translation>Cap Plat definit. Selecciona &quot;Editar Plats&quot; des del menú extensible.</translation>
+        <translation>Cap plat definit. Selecciona &quot;Editar Plats&quot; des del menú extensible.</translation>
     </message>
 </context>
 <context>
@@ -99,12 +99,12 @@
     <message>
         <location filename="../qml/pages/MainPage.qml" line="508"/>
         <source>About</source>
-        <translation>Sobre l&apos;aplicació</translation>
+        <translation>Quant a</translation>
     </message>
     <message>
         <location filename="../qml/pages/MainPage.qml" line="512"/>
         <source>Settings</source>
-        <translation>Ajustaments</translation>
+        <translation>Configuració</translation>
     </message>
     <message>
         <location filename="../qml/pages/MainPage.qml" line="516"/>
@@ -126,14 +126,14 @@
         <location filename="../qml/pages/MainPage.qml" line="1134"/>
         <location filename="../qml/pages/MainPage.qml" line="1136"/>
         <source>Stop</source>
-        <translation>Aturar </translation>
+        <translation>Atura</translation>
     </message>
     <message>
         <location filename="../qml/pages/MainPage.qml" line="604"/>
         <location filename="../qml/pages/MainPage.qml" line="871"/>
         <location filename="../qml/pages/MainPage.qml" line="1135"/>
         <source>Start</source>
-        <translation>Iniciar</translation>
+        <translation>Inicia </translation>
     </message>
 </context>
 <context>
@@ -141,17 +141,17 @@
     <message>
         <location filename="../qml/pages/SettingPage.qml" line="78"/>
         <source>Save</source>
-        <translation>Desar</translation>
+        <translation>Desa</translation>
     </message>
     <message>
         <location filename="../qml/pages/SettingPage.qml" line="79"/>
         <source>Cancel</source>
-        <translation>Cancel·lar</translation>
+        <translation>Cancel·la </translation>
     </message>
     <message>
         <location filename="../qml/pages/SettingPage.qml" line="82"/>
         <source>Settings</source>
-        <translation>Ajustaments</translation>
+        <translation>Configuració </translation>
     </message>
     <message>
         <location filename="../qml/pages/SettingPage.qml" line="89"/>
@@ -161,7 +161,7 @@
     <message>
         <location filename="../qml/pages/SettingPage.qml" line="90"/>
         <source>Prevent screen from dimming.</source>
-        <translation>Evita que s&apos;apagui la pantalla.</translation>
+        <translation>Evita que s&apos;apague la pantalla.</translation>
     </message>
     <message>
         <location filename="../qml/pages/SettingPage.qml" line="96"/>
@@ -176,12 +176,12 @@
     <message>
         <location filename="../qml/pages/SettingPage.qml" line="104"/>
         <source>Show background image</source>
-        <translation type="unfinished"></translation>
+        <translation>Mostra la imatge de fons </translation>
     </message>
     <message>
         <location filename="../qml/pages/SettingPage.qml" line="105"/>
         <source>Show analog clock image in background.</source>
-        <translation type="unfinished"></translation>
+        <translation>Mostra el rellotge analògic al fons </translation>
     </message>
     <message>
         <location filename="../qml/pages/SettingPage.qml" line="123"/>
@@ -191,12 +191,17 @@
     <message>
         <location filename="../qml/pages/SettingPage.qml" line="124"/>
         <source>Change of language will be active after restarting the application.</source>
-        <translation>El canvi de llengua es farà efectiu un cop reinicieu l&apos;aplicació.</translation>
+        <translation>El canvi de llengua es farà efectiu un cop reinicies l&apos;aplicació.</translation>
     </message>
     <message>
         <location filename="../qml/pages/SettingPage.qml" line="344"/>
         <source>Orientation:</source>
         <translation>Orientació:</translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/SettingPage.qml" line="345"/>
+        <source>Sets the preferred screen orientation.</source>
+        <translation>Estableix l&apos;orientació de pantalla preferida.</translation>
     </message>
     <message>
         <location filename="../qml/pages/SettingPage.qml" line="350"/>
@@ -213,23 +218,18 @@
         <source>Dynamic</source>
         <translation>Dinàmic</translation>
     </message>
-    <message>
-        <location filename="../qml/pages/SettingPage.qml" line="345"/>
-        <source>Sets the preferred screen orientation.</source>
-        <translation>Estableix l&apos;orientació de pantalla preferida.</translation>
-    </message>
 </context>
 <context>
     <name>TimeDialog</name>
     <message>
         <location filename="../qml/pages/TimeDialog.qml" line="52"/>
         <source>Save</source>
-        <translation>Desar</translation>
+        <translation>Desa</translation>
     </message>
     <message>
         <location filename="../qml/pages/TimeDialog.qml" line="53"/>
         <source>Cancel</source>
-        <translation>Cancel·lar </translation>
+        <translation>Cancel·la </translation>
     </message>
     <message>
         <location filename="../qml/pages/TimeDialog.qml" line="92"/>

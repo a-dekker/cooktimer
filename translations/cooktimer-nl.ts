@@ -176,12 +176,12 @@
     <message>
         <location filename="../qml/pages/SettingPage.qml" line="104"/>
         <source>Show background image</source>
-        <translation>Toon achtergrond afbeelding</translation>
+        <translation>Achtergrondafbeelding tonen</translation>
     </message>
     <message>
         <location filename="../qml/pages/SettingPage.qml" line="105"/>
         <source>Show analog clock image in background.</source>
-        <translation>Toon analoge klok afbeelding in de achtergrond.</translation>
+        <translation>Toon analogeklokafbeelding op de achtergrond.</translation>
     </message>
     <message>
         <location filename="../qml/pages/SettingPage.qml" line="123"/>

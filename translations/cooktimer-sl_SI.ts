@@ -176,12 +176,12 @@
     <message>
         <location filename="../qml/pages/SettingPage.qml" line="104"/>
         <source>Show background image</source>
-        <translation type="unfinished"></translation>
+        <translation>Prikaži sliko ozadja</translation>
     </message>
     <message>
         <location filename="../qml/pages/SettingPage.qml" line="105"/>
         <source>Show analog clock image in background.</source>
-        <translation type="unfinished"></translation>
+        <translation>V ozadju prikaži sliko analogne ure</translation>
     </message>
     <message>
         <location filename="../qml/pages/SettingPage.qml" line="123"/>
@@ -199,6 +199,11 @@
         <translation>Usmerjenost zaslona:</translation>
     </message>
     <message>
+        <location filename="../qml/pages/SettingPage.qml" line="345"/>
+        <source>Sets the preferred screen orientation.</source>
+        <translation>Nastavi želeno usmerjenost zaslona.</translation>
+    </message>
+    <message>
         <location filename="../qml/pages/SettingPage.qml" line="350"/>
         <source>Portrait</source>
         <translation>Pokončno</translation>
@@ -212,11 +217,6 @@
         <location filename="../qml/pages/SettingPage.qml" line="356"/>
         <source>Dynamic</source>
         <translation>Dinamično</translation>
-    </message>
-    <message>
-        <location filename="../qml/pages/SettingPage.qml" line="345"/>
-        <source>Sets the preferred screen orientation.</source>
-        <translation>Nastavi želeno usmerjenost zaslona.</translation>
     </message>
 </context>
 <context>

@@ -176,12 +176,12 @@
     <message>
         <location filename="../qml/pages/SettingPage.qml" line="104"/>
         <source>Show background image</source>
-        <translation>Toon achtergrond afbeelding</translation>
+        <translation>Achtergrondafbeelding weergeven</translation>
     </message>
     <message>
         <location filename="../qml/pages/SettingPage.qml" line="105"/>
         <source>Show analog clock image in background.</source>
-        <translation>Toon analoge klok afbeelding in de achtergrond.</translation>
+        <translation>Toont analogeklokafbeelding in den achtergrond.</translation>
     </message>
     <message>
         <location filename="../qml/pages/SettingPage.qml" line="123"/>
@@ -191,7 +191,7 @@
     <message>
         <location filename="../qml/pages/SettingPage.qml" line="124"/>
         <source>Change of language will be active after restarting the application.</source>
-        <translation>Taalaanpassing zal actief worden nadat ge den app herstart.</translation>
+        <translation>Taalaanpassing gaat actief worden nadat ge den app herstart.</translation>
     </message>
     <message>
         <location filename="../qml/pages/SettingPage.qml" line="344"/>
