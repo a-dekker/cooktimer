@@ -1,4 +1,4 @@
-import QtQuick 2.0
+import QtQuick 2.2
 import Sailfish.Silica 1.0
 
 Page {
@@ -30,7 +30,8 @@ Page {
                 width: parent.width
                 anchors.horizontalCenter: parent.horizontalCenter
                 horizontalAlignment: Qt.AlignHCenter
-                visible: isPortrait || (largeScreen && screen.width > 1080) || screen.width < 1080
+                visible: isPortrait || (largeScreen && screen.width > 1080)
+                         || screen.width < 1080
             }
             Label {
                 text: "cooktimer"
@@ -73,7 +74,8 @@ Page {
                 width: parent.width
                 anchors.horizontalCenter: parent.horizontalCenter
                 horizontalAlignment: Qt.AlignHCenter
-                visible: isPortrait || (largeScreen && screen.width > 1080) || screen.width < 1080
+                visible: isPortrait || (largeScreen && screen.width > 1080)
+                         || screen.width < 1080
             }
             Label {
                 text: "© Arno Dekker 2014-2019"

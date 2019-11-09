@@ -14,17 +14,17 @@
         <translation>信息</translation>
     </message>
     <message>
-        <location filename="../qml/pages/About.qml" line="57"/>
+        <location filename="../qml/pages/About.qml" line="58"/>
         <source>Version</source>
         <translation>版本</translation>
     </message>
     <message>
-        <location filename="../qml/pages/About.qml" line="62"/>
+        <location filename="../qml/pages/About.qml" line="63"/>
         <source>&quot;Timers for cooking&quot;</source>
         <translation>&quot;烹饪计时器&quot;</translation>
     </message>
     <message>
-        <location filename="../qml/pages/About.qml" line="68"/>
+        <location filename="../qml/pages/About.qml" line="69"/>
         <source>Author</source>
         <translation>作者</translation>
     </message>
@@ -70,12 +70,12 @@
         <translation>菜名</translation>
     </message>
     <message>
-        <location filename="../qml/pages/DishEdit.qml" line="127"/>
+        <location filename="../qml/pages/DishEdit.qml" line="128"/>
         <source>No dishes defined. Press the plus button to add one.</source>
         <translation>没有确定的菜式。按加号按钮添加一个。</translation>
     </message>
     <message>
-        <location filename="../qml/pages/DishEdit.qml" line="137"/>
+        <location filename="../qml/pages/DishEdit.qml" line="138"/>
         <source>New dish</source>
         <translation>新菜式</translation>
     </message>
@@ -83,7 +83,7 @@
 <context>
     <name>DishPage</name>
     <message>
-        <location filename="../qml/pages/DishPage.qml" line="106"/>
+        <location filename="../qml/pages/DishPage.qml" line="107"/>
         <source>No dishes defined. Choose &quot;Edit Dishes&quot; from the pulley menu.</source>
         <translation>没有确定的菜式。从滚轮菜单中选择 &quot;编辑菜式&quot;。</translation>
     </message>
@@ -91,47 +91,47 @@
 <context>
     <name>MainPage</name>
     <message>
-        <location filename="../qml/pages/MainPage.qml" line="389"/>
-        <location filename="../qml/pages/MainPage.qml" line="393"/>
+        <location filename="../qml/pages/MainPage.qml" line="388"/>
+        <location filename="../qml/pages/MainPage.qml" line="392"/>
         <source>ready</source>
         <translation>已就绪</translation>
     </message>
     <message>
-        <location filename="../qml/pages/MainPage.qml" line="508"/>
+        <location filename="../qml/pages/MainPage.qml" line="507"/>
         <source>About</source>
         <translation>关于</translation>
     </message>
     <message>
-        <location filename="../qml/pages/MainPage.qml" line="512"/>
+        <location filename="../qml/pages/MainPage.qml" line="511"/>
         <source>Settings</source>
         <translation>设置</translation>
     </message>
     <message>
-        <location filename="../qml/pages/MainPage.qml" line="516"/>
+        <location filename="../qml/pages/MainPage.qml" line="515"/>
         <source>Edit dishes</source>
         <translation>编辑菜式</translation>
     </message>
     <message>
-        <location filename="../qml/pages/MainPage.qml" line="554"/>
-        <location filename="../qml/pages/MainPage.qml" line="821"/>
-        <location filename="../qml/pages/MainPage.qml" line="1085"/>
+        <location filename="../qml/pages/MainPage.qml" line="553"/>
+        <location filename="../qml/pages/MainPage.qml" line="834"/>
+        <location filename="../qml/pages/MainPage.qml" line="1111"/>
         <source>Dish</source>
         <translation>菜式</translation>
     </message>
     <message>
-        <location filename="../qml/pages/MainPage.qml" line="603"/>
-        <location filename="../qml/pages/MainPage.qml" line="605"/>
-        <location filename="../qml/pages/MainPage.qml" line="870"/>
-        <location filename="../qml/pages/MainPage.qml" line="872"/>
-        <location filename="../qml/pages/MainPage.qml" line="1134"/>
-        <location filename="../qml/pages/MainPage.qml" line="1136"/>
+        <location filename="../qml/pages/MainPage.qml" line="602"/>
+        <location filename="../qml/pages/MainPage.qml" line="604"/>
+        <location filename="../qml/pages/MainPage.qml" line="883"/>
+        <location filename="../qml/pages/MainPage.qml" line="885"/>
+        <location filename="../qml/pages/MainPage.qml" line="1160"/>
+        <location filename="../qml/pages/MainPage.qml" line="1162"/>
         <source>Stop</source>
         <translation>停止</translation>
     </message>
     <message>
-        <location filename="../qml/pages/MainPage.qml" line="604"/>
-        <location filename="../qml/pages/MainPage.qml" line="871"/>
-        <location filename="../qml/pages/MainPage.qml" line="1135"/>
+        <location filename="../qml/pages/MainPage.qml" line="603"/>
+        <location filename="../qml/pages/MainPage.qml" line="884"/>
+        <location filename="../qml/pages/MainPage.qml" line="1161"/>
         <source>Start</source>
         <translation>开始</translation>
     </message>
@@ -199,6 +199,11 @@
         <translation>方向：</translation>
     </message>
     <message>
+        <location filename="../qml/pages/SettingPage.qml" line="345"/>
+        <source>Sets the preferred screen orientation.</source>
+        <translation>选择偏好屏幕方向</translation>
+    </message>
+    <message>
         <location filename="../qml/pages/SettingPage.qml" line="350"/>
         <source>Portrait</source>
         <translation>竖向</translation>
@@ -212,11 +217,6 @@
         <location filename="../qml/pages/SettingPage.qml" line="356"/>
         <source>Dynamic</source>
         <translation>动态的</translation>
-    </message>
-    <message>
-        <location filename="../qml/pages/SettingPage.qml" line="345"/>
-        <source>Sets the preferred screen orientation.</source>
-        <translation>选择偏好屏幕方向</translation>
     </message>
 </context>
 <context>
@@ -240,9 +240,9 @@
 <context>
     <name>cooktimer</name>
     <message>
+        <location filename="../qml/cooktimer.qml" line="15"/>
         <location filename="../qml/cooktimer.qml" line="16"/>
         <location filename="../qml/cooktimer.qml" line="17"/>
-        <location filename="../qml/cooktimer.qml" line="18"/>
         <source>Dish</source>
         <translation>菜肴</translation>
     </message>

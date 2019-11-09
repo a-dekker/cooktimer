@@ -1,4 +1,4 @@
-import QtQuick 2.0
+import QtQuick 2.2
 import Sailfish.Silica 1.0
 import "../localdb.js" as DB
 
@@ -8,9 +8,9 @@ Dialog {
 
     function appendDish(dish, duration, comment) {
         dishlist.model.append({
-                                  Dish: dish,
-                                  Duration: duration,
-                                  Comment: comment
+                                  "Dish": dish,
+                                  "Duration": duration,
+                                  "Comment": comment
                               })
     }
 
@@ -77,13 +77,13 @@ Dialog {
                     onClicked: {
                         var dialog = pageStack.push(Qt.resolvedUrl(
                                                         "TimeDialog.qml"), {
-                                                        infotext: Dish,
-                                                        hour: cookTime.text.split(
-                                                                  ":")[0],
-                                                        minute: cookTime.text.split(
-                                                                    ":")[1],
-                                                        second: cookTime.text.split(
-                                                                    ":")[2]
+                                                        "infotext": Dish,
+                                                        "hour": cookTime.text.split(
+                                                                    ":")[0],
+                                                        "minute": cookTime.text.split(
+                                                                      ":")[1],
+                                                        "second": cookTime.text.split(
+                                                                      ":")[2]
                                                     })
                         dialog.accepted.connect(function () {
                             dishlist.model.setProperty(index, 'Dish',
@@ -104,11 +104,12 @@ Dialog {
                     onClicked: {
                         var dialog = pageStack.push(Qt.resolvedUrl(
                                                         "CommentPage.qml"), {
-                                                        commenttext: Comment
+                                                        "commenttext": Comment
                                                     })
                         dialog.accepted.connect(function () {
-                            dishlist.model.setProperty(index, 'Comment',
-                                                       dialog.commenttext.trim())
+                            dishlist.model.setProperty(
+                                        index, 'Comment',
+                                        dialog.commenttext.trim())
                         })
                     }
                 }

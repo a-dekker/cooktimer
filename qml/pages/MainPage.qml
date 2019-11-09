@@ -1,4 +1,4 @@
-import QtQuick 2.0
+import QtQuick 2.2
 import Sailfish.Silica 1.0
 import harbour.cooktimer.Launcher 1.0
 import harbour.cooktimer.Settings 1.0
@@ -9,14 +9,13 @@ import QtFeedback 5.0
 import "../localdb.js" as DB
 import "Vars.js" as GlobVars
 
-
 // database in /home/nemo/.local/share/cooktimer/cooktimer/QML/OfflineStorage/Databases
 Page {
     id: page
     allowedOrientations: mainapp.orientationSetting
 
-    property bool largeScreen: Screen.sizeCategory === Screen.Large ||
-                               Screen.sizeCategory === Screen.ExtraLarge
+    property bool largeScreen: Screen.sizeCategory === Screen.Large
+                               || Screen.sizeCategory === Screen.ExtraLarge
 
     property string myGlobalDish1
     property string myGlobalDuration1
@@ -148,14 +147,14 @@ Page {
         }
 
         property DBusInterface _dbus: DBusInterface {
-                                          id: dbus
+            id: dbus
 
-                                          service: "com.nokia.mce"
-                                          path: "/com/nokia/mce/request"
-                                          iface: "com.nokia.mce.request"
+            service: "com.nokia.mce"
+            path: "/com/nokia/mce/request"
+            iface: "com.nokia.mce.request"
 
-                                          bus: DBusInterface.SystemBus
-                                      }
+            bus: DBusInterface.SystemBus
+        }
     }
 
     Insomniac {
@@ -390,8 +389,8 @@ Page {
         }
         // pageStack.push(Qt.resolvedUrl("AlarmDialogBase.qml"))
         bar.launch("timedclient-qt5 -b'TITLE=button0' -e\"APPLICATION=nemoalarms;TITLE="
-                   + alarmtxt + "\n" + qsTr("ready")
-                   + ";ticker=0;timeOfDay=0;triggerTime=1395217218;;type=countdown;suppressTimeoutSnooze;hideSnoozeButton1\"")
+                   + alarmtxt + "\n" + qsTr(
+                       "ready") + ";ticker=0;timeOfDay=0;triggerTime=1395217218;;type=countdown;suppressTimeoutSnooze;hideSnoozeButton1\"")
     }
 
     function wakeUp1() {
@@ -431,7 +430,6 @@ Page {
 
         if (passed >= _remaining2) {
             console.warn('Time2 has passed!', passed - _remaining2, 'seconds')
-            // remainingTime2.seconds = 1
             remainingTime2.text = "00:00:00"
             progressBar2.value = 0
             mainapp.timeText2 = remainingTime2.text
@@ -473,7 +471,8 @@ Page {
 
     function _showDishInfo(dish_name, comment_text) {
         if (infoPanelLoader.status === Loader.Null) {
-            infoPanelLoader.source = Qt.resolvedUrl("../common/DishInfoPanel.qml")
+            infoPanelLoader.source = Qt.resolvedUrl(
+                        "../common/DishInfoPanel.qml")
             infoPanelLoader.item.parent = page
             infoPanelLoader.item.dish = dish_name
             infoPanelLoader.item.comment = comment_text
@@ -527,16 +526,16 @@ Page {
         PageHeader {
             id: header
             title: "Cooktimer"
-            visible: isPortrait || largeScreen
+            visible: isPortrait || largeScreen || Screen.width >= 1080
         }
         Row {
             /* inner row */
             id: timerRow1
             spacing: largeScreen ? Theme.paddingMedium : Theme.paddingSmall
-            anchors.top: isPortrait || largeScreen ? header.bottom : header.top
+            anchors.top: isPortrait || largeScreen || Screen.width >= 1080 ? header.bottom : header.top
             anchors.topMargin: isPortrait ? (largeScreen ? Theme.paddingLarge : 0) : Theme.paddingSmall
             anchors.horizontalCenter: parent.horizontalCenter
-            height: isPortrait ? (largeScreen ? page.height/12 : Theme.itemSizeMedium) : (largeScreen ? Theme.itemSizeExtraLarge : Theme.paddingLarge * 1.6)
+            height: isPortrait ? (largeScreen ? page.height / 12 : Theme.itemSizeMedium) : (largeScreen ? Theme.itemSizeExtraLarge : Theme.paddingLarge * 1.6)
 
             Button {
                 id: dish1
@@ -566,13 +565,13 @@ Page {
                     onClicked: {
                         var dialog = pageStack.push(Qt.resolvedUrl(
                                                         "TimeDialog.qml"), {
-                                                        infotext: dish1.text,
-                                                        hour: timer1.text.split(
-                                                                  ":")[0],
-                                                        minute: timer1.text.split(
-                                                                    ":")[1],
-                                                        second: timer1.text.split(
-                                                                    ":")[2]
+                                                        "infotext": dish1.text,
+                                                        "hour": timer1.text.split(
+                                                                    ":")[0],
+                                                        "minute": timer1.text.split(
+                                                                      ":")[1],
+                                                        "second": timer1.text.split(
+                                                                      ":")[2]
                                                     })
                         dialog.accepted.connect(function () {
                             GlobVars.myDuration = " "
@@ -648,7 +647,8 @@ Page {
         Item {
             id: counter1
             anchors.top: timerRow1.bottom
-            height: isPortrait ? (largeScreen ? page.height/12 : Theme.itemSizeMedium) : Theme.itemSizeSmall
+            height: isPortrait ? (largeScreen ? page.height
+                                                / 12 : Theme.itemSizeSmall) : Theme.itemSizeSmall
             anchors.horizontalCenter: parent.horizontalCenter
             width: parent.width - Theme.paddingLarge
             Rectangle {
@@ -687,7 +687,8 @@ Page {
                 anchors.verticalCenter: largeScreen ? parent.verticalCenter : parent.bottom
                 anchors.verticalCenterOffset: isLandscape ? Theme.paddingSmall : 0
                 color: Theme.secondaryHighlightColor
-                font.pixelSize: largeScreen ? Theme.fontSizeExtraLarge * 2.5 : Theme.fontSizeExtraLarge * 1.8
+                font.pixelSize: largeScreen ? Theme.fontSizeExtraLarge
+                                              * 2.5 : Theme.fontSizeExtraLarge * 1.8
                 text: "00:00:00"
                 onClicked: {
                     if (ticker1.running) {
@@ -762,6 +763,7 @@ Page {
             anchors.topMargin: 1
             leftMargin: 0
             rightMargin: 0
+            visible: isRunning1 || isPaused1
             Timer {
                 interval: 100
                 repeat: true
@@ -790,21 +792,32 @@ Page {
         Rectangle {
             id: sepLine1
             anchors.top: progressBar1.bottom
-            anchors.topMargin: 4
-            color: Theme.secondaryHighlightColor
-            implicitHeight: 6
-            width: parent.width - Theme.paddingMedium
+            anchors.leftMargin: Theme.paddingLarge
             anchors.horizontalCenter: parent.horizontalCenter
-            visible: isPortrait
+            width: parent.width - Theme.paddingLarge * 2
+            implicitHeight: isPortrait ? parent.height / 30 : 0
+            opacity: 0.5
+            radius: 10
+            gradient: Gradient {
+                GradientStop {
+                    position: 0.0
+                    color: Theme.rgba(Theme.primaryColor, 0.1)
+                }
+                GradientStop {
+                    position: 1.0
+                    color: Theme.rgba(Theme.primaryColor, 0.05)
+                }
+            }
         }
         Row {
             /* inner row */
             id: timerRow2
             anchors.top: sepLine1.bottom
-            anchors.topMargin: isPortrait ? (largeScreen ? Theme.paddingLarge : 8) : 0
+            anchors.topMargin: isPortrait ? (largeScreen ? Theme.paddingLarge : parent.height
+                                                           / 30) : 0
             spacing: largeScreen ? Theme.paddingMedium : Theme.paddingSmall
             anchors.horizontalCenter: parent.horizontalCenter
-            height: isPortrait ? (largeScreen ? page.height/12 : Theme.itemSizeMedium) : (largeScreen ? page.height / 7 : Theme.paddingLarge * 1.6)
+            height: isPortrait ? (largeScreen ? page.height / 12 : Theme.itemSizeMedium) : (largeScreen ? page.height / 7 : Theme.paddingLarge * 1.6)
             Button {
                 id: dish2
                 width: (page.width - (Theme.paddingLarge * 2)) / 2.34
@@ -833,13 +846,13 @@ Page {
                     onClicked: {
                         var dialog = pageStack.push(Qt.resolvedUrl(
                                                         "TimeDialog.qml"), {
-                                                        infotext: dish2.text,
-                                                        hour: timer2.text.split(
-                                                                  ":")[0],
-                                                        minute: timer2.text.split(
-                                                                    ":")[1],
-                                                        second: timer2.text.split(
-                                                                    ":")[2]
+                                                        "infotext": dish2.text,
+                                                        "hour": timer2.text.split(
+                                                                    ":")[0],
+                                                        "minute": timer2.text.split(
+                                                                      ":")[1],
+                                                        "second": timer2.text.split(
+                                                                      ":")[2]
                                                     })
                         dialog.accepted.connect(function () {
                             GlobVars.myDuration = " "
@@ -914,7 +927,8 @@ Page {
         Item {
             id: counter2
             anchors.top: timerRow2.bottom
-            height: isPortrait ? (largeScreen ? page.height/12 : Theme.itemSizeMedium) : Theme.itemSizeSmall
+            height: isPortrait ? (largeScreen ? page.height
+                                                / 12 : Theme.itemSizeSmall) : Theme.itemSizeSmall
             anchors.horizontalCenter: parent.horizontalCenter
             width: parent.width - Theme.paddingLarge
             Rectangle {
@@ -952,7 +966,8 @@ Page {
                 anchors.verticalCenter: largeScreen ? parent.verticalCenter : parent.bottom
                 anchors.verticalCenterOffset: isLandscape ? Theme.paddingSmall : 0
                 color: Theme.secondaryHighlightColor
-                font.pixelSize: largeScreen ? Theme.fontSizeExtraLarge * 2.5 : Theme.fontSizeExtraLarge * 1.8
+                font.pixelSize: largeScreen ? Theme.fontSizeExtraLarge
+                                              * 2.5 : Theme.fontSizeExtraLarge * 1.8
                 text: "00:00:00"
                 onClicked: {
                     if (ticker2.running) {
@@ -1027,6 +1042,7 @@ Page {
             anchors.topMargin: 1
             leftMargin: 0
             rightMargin: 0
+            visible: isRunning2 || isPaused2
             Timer {
                 interval: 100
                 repeat: true
@@ -1054,21 +1070,31 @@ Page {
         Rectangle {
             id: sepLine2
             anchors.top: progressBar2.bottom
-            anchors.topMargin: 4
-            color: Theme.secondaryHighlightColor
-            implicitHeight: 6
-            width: parent.width - Theme.paddingMedium
-            anchors.horizontalCenter: parent.horizontalCenter
-            visible: isPortrait
+            anchors.leftMargin: Theme.paddingLarge
+            width: parent.width - Theme.paddingLarge * 2
+            implicitHeight: isPortrait ? parent.height / 30 : 0
+            opacity: 0.5
+            radius: 10
+            gradient: Gradient {
+                GradientStop {
+                    position: 0.0
+                    color: Theme.rgba(Theme.primaryColor, 0.1)
+                }
+                GradientStop {
+                    position: 1.0
+                    color: Theme.rgba(Theme.primaryColor, 0.05)
+                }
+            }
         }
         Row {
             /* inner row */
             id: timerRow3
             anchors.top: sepLine2.bottom
-            anchors.topMargin: isPortrait ? (largeScreen ? Theme.paddingLarge : 8) : 0
+            anchors.topMargin: isPortrait ? (largeScreen ? Theme.paddingLarge : parent.height
+                                                           / 30) : 0
             spacing: largeScreen ? Theme.paddingMedium : Theme.paddingSmall
             anchors.horizontalCenter: parent.horizontalCenter
-            height: isPortrait ? (largeScreen ? page.height/12 : Theme.itemSizeMedium) : (largeScreen ? page.height / 7 : Theme.paddingLarge * 1.6)
+            height: isPortrait ? (largeScreen ? page.height / 12 : Theme.itemSizeMedium) : (largeScreen ? page.height / 7 : Theme.paddingLarge * 1.6)
             Button {
                 id: dish3
                 width: (page.width - (Theme.paddingLarge * 2)) / 2.34
@@ -1097,13 +1123,13 @@ Page {
                     onClicked: {
                         var dialog = pageStack.push(Qt.resolvedUrl(
                                                         "TimeDialog.qml"), {
-                                                        infotext: dish3.text,
-                                                        hour: timer3.text.split(
-                                                                  ":")[0],
-                                                        minute: timer3.text.split(
-                                                                    ":")[1],
-                                                        second: timer3.text.split(
-                                                                    ":")[2]
+                                                        "infotext": dish3.text,
+                                                        "hour": timer3.text.split(
+                                                                    ":")[0],
+                                                        "minute": timer3.text.split(
+                                                                      ":")[1],
+                                                        "second": timer3.text.split(
+                                                                      ":")[2]
                                                     })
                         dialog.accepted.connect(function () {
                             GlobVars.myDuration = " "
@@ -1178,7 +1204,8 @@ Page {
         Item {
             id: counter3
             anchors.top: timerRow3.bottom
-            height: isPortrait ? (largeScreen ? page.height/12 : Theme.itemSizeMedium) : Theme.itemSizeSmall
+            height: isPortrait ? (largeScreen ? page.height
+                                                / 12 : Theme.itemSizeSmall) : Theme.itemSizeSmall
             anchors.horizontalCenter: parent.horizontalCenter
             width: parent.width - Theme.paddingLarge
             Rectangle {
@@ -1216,7 +1243,8 @@ Page {
                 anchors.verticalCenter: largeScreen ? parent.verticalCenter : parent.bottom
                 anchors.verticalCenterOffset: isLandscape ? Theme.paddingSmall : 0
                 color: Theme.secondaryHighlightColor
-                font.pixelSize: largeScreen ? Theme.fontSizeExtraLarge * 2.5 : Theme.fontSizeExtraLarge * 1.8
+                font.pixelSize: largeScreen ? Theme.fontSizeExtraLarge
+                                              * 2.5 : Theme.fontSizeExtraLarge * 1.8
                 text: "00:00:00"
                 onClicked: {
                     if (ticker3.running) {
@@ -1292,6 +1320,7 @@ Page {
             anchors.bottomMargin: 1
             leftMargin: 0
             rightMargin: 0
+            visible: isRunning3 || isPaused3
             Timer {
                 interval: 100
                 repeat: true

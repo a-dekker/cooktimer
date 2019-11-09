@@ -58,7 +58,7 @@ DockedPanel {
             Separator {
                 color: Theme.primaryColor
                 width: parent.width
-                opacity: 0.5
+                opacity: mainapp.isLightTheme ? 0.8 : 0.5
                 anchors.horizontalCenter: parent.horizontalCenter
                 horizontalAlignment: Qt.AlignHCenter
             }

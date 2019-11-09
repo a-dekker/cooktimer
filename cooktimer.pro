@@ -45,7 +45,7 @@ OTHER_FILES += qml/cooktimer.qml \
     qml/images/icon-cover-stop.png \
     qml/images/icon-cover-stop-rev.png \
     qml/localdb.js \
-    qml/common/SilicaLabel.qml \
+#   qml/common/SilicaLabel.qml \
     qml/common/DishInfoPanel.qml
 
 icon86.files += icons/86x86/cooktimer.png

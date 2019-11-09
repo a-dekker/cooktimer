@@ -1,4 +1,4 @@
-import QtQuick 2.1
+import QtQuick 2.2
 import Sailfish.Silica 1.0
 import "../localdb.js" as DB
 import "Vars.js" as GlobVars
@@ -7,14 +7,14 @@ Page {
     id: dishPage
     allowedOrientations: mainapp.orientationSetting
 
-    property bool largeScreen: Screen.sizeCategory === Screen.Large ||
-                               Screen.sizeCategory === Screen.ExtraLarge
+    property bool largeScreen: Screen.sizeCategory === Screen.Large
+                               || Screen.sizeCategory === Screen.ExtraLarge
 
     function appendDish(dish, duration, comment) {
         dishlist.model.append({
-                                  Dish: dish,
-                                  Duration: duration,
-                                  Comment: comment
+                                  "Dish": dish,
+                                  "Duration": duration,
+                                  "Comment": comment
                               })
     }
 
@@ -57,7 +57,8 @@ Page {
                 GlobVars.myComment = Comment
                 pageStack.pop()
             }
-            Item { // background element with diagonal gradient
+            Item {
+                // background element with diagonal gradient
                 anchors.fill: parent
                 clip: true
                 Rectangle {
@@ -65,7 +66,7 @@ Page {
                     x: -dishlist.width
                     anchors.verticalCenter: parent.verticalCenter
                     height: parent.height
-                    width: dishlist.width*2
+                    width: dishlist.width * 2
                     color: "white"
                 }
                 OpacityRampEffect {

@@ -8,6 +8,11 @@
 # * date Author's Name <author's email> version-release
 # - Summary of changes
 
+* Sun Mar 10 2019 Arno Dekker <jack.tar@example.com> 0.0.3-1
+- Updated Danish
+- More small changes for light theme
+- Main screen layout adaptions
+
 * Sun Mar 10 2019 Arno Dekker <jack.tar@example.com> 0.0.2-16
 - Various language updates
 
