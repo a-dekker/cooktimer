@@ -176,12 +176,12 @@
     <message>
         <location filename="../qml/pages/SettingPage.qml" line="104"/>
         <source>Show background image</source>
-        <translation type="unfinished"></translation>
+        <translation>显示背景图片</translation>
     </message>
     <message>
         <location filename="../qml/pages/SettingPage.qml" line="105"/>
         <source>Show analog clock image in background.</source>
-        <translation type="unfinished"></translation>
+        <translation>在后台显示模拟时钟图片</translation>
     </message>
     <message>
         <location filename="../qml/pages/SettingPage.qml" line="123"/>

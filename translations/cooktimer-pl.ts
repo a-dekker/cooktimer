@@ -176,12 +176,12 @@
     <message>
         <location filename="../qml/pages/SettingPage.qml" line="104"/>
         <source>Show background image</source>
-        <translation type="unfinished"></translation>
+        <translation>Pokaż obraz tła</translation>
     </message>
     <message>
         <location filename="../qml/pages/SettingPage.qml" line="105"/>
         <source>Show analog clock image in background.</source>
-        <translation type="unfinished"></translation>
+        <translation>Pokaż zegar analogowy w tle.</translation>
     </message>
     <message>
         <location filename="../qml/pages/SettingPage.qml" line="123"/>
@@ -199,6 +199,11 @@
         <translation>Orientacja:</translation>
     </message>
     <message>
+        <location filename="../qml/pages/SettingPage.qml" line="345"/>
+        <source>Sets the preferred screen orientation.</source>
+        <translation>Ustaw preferowaną orientację ekranu.</translation>
+    </message>
+    <message>
         <location filename="../qml/pages/SettingPage.qml" line="350"/>
         <source>Portrait</source>
         <translation>Pionowa</translation>
@@ -212,11 +217,6 @@
         <location filename="../qml/pages/SettingPage.qml" line="356"/>
         <source>Dynamic</source>
         <translation>Dynamiczna</translation>
-    </message>
-    <message>
-        <location filename="../qml/pages/SettingPage.qml" line="345"/>
-        <source>Sets the preferred screen orientation.</source>
-        <translation>Ustaw preferowaną orientację ekranu.</translation>
     </message>
 </context>
 <context>
