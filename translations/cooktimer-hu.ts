@@ -176,12 +176,12 @@
     <message>
         <location filename="../qml/pages/SettingPage.qml" line="104"/>
         <source>Show background image</source>
-        <translation type="unfinished"></translation>
+        <translation>Háttérkép megjelenítése</translation>
     </message>
     <message>
         <location filename="../qml/pages/SettingPage.qml" line="105"/>
         <source>Show analog clock image in background.</source>
-        <translation type="unfinished"></translation>
+        <translation>Analóg óra képének megjelenítése a háttérben.</translation>
     </message>
     <message>
         <location filename="../qml/pages/SettingPage.qml" line="123"/>
@@ -199,6 +199,11 @@
         <translation>Tájolás:</translation>
     </message>
     <message>
+        <location filename="../qml/pages/SettingPage.qml" line="345"/>
+        <source>Sets the preferred screen orientation.</source>
+        <translation>Beállítja az előnyben részesített képernyőtájolást.</translation>
+    </message>
+    <message>
         <location filename="../qml/pages/SettingPage.qml" line="350"/>
         <source>Portrait</source>
         <translation>Álló</translation>
@@ -212,11 +217,6 @@
         <location filename="../qml/pages/SettingPage.qml" line="356"/>
         <source>Dynamic</source>
         <translation>Dinamikus</translation>
-    </message>
-    <message>
-        <location filename="../qml/pages/SettingPage.qml" line="345"/>
-        <source>Sets the preferred screen orientation.</source>
-        <translation>Beállítja az előnyben részesített képernyőtájolást.</translation>
     </message>
 </context>
 <context>

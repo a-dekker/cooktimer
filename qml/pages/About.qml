@@ -34,7 +34,7 @@ Page {
                          || screen.width < 1080
             }
             Label {
-                text: "cooktimer"
+                text: "Cooktimer"
                 font.pixelSize: largeScreen ? Theme.fontSizeHuge : Theme.fontSizeExtraLarge
                 anchors.horizontalCenter: parent.horizontalCenter
             }
@@ -78,7 +78,7 @@ Page {
                          || screen.width < 1080
             }
             Label {
-                text: "© Arno Dekker 2014-2019"
+                text: "© Arno Dekker 2014-2020"
                 anchors.horizontalCenter: parent.horizontalCenter
             }
         }

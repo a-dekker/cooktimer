@@ -21,7 +21,7 @@
     <message>
         <location filename="../qml/pages/About.qml" line="63"/>
         <source>&quot;Timers for cooking&quot;</source>
-        <translation>&quot;Таймеры для приготовления&quot;</translation>
+        <translation>&quot;Таймеры для кухни&quot;</translation>
     </message>
     <message>
         <location filename="../qml/pages/About.qml" line="69"/>
@@ -176,12 +176,12 @@
     <message>
         <location filename="../qml/pages/SettingPage.qml" line="104"/>
         <source>Show background image</source>
-        <translation type="unfinished"></translation>
+        <translation>Показывать фоновую картинку</translation>
     </message>
     <message>
         <location filename="../qml/pages/SettingPage.qml" line="105"/>
         <source>Show analog clock image in background.</source>
-        <translation type="unfinished"></translation>
+        <translation>Показывать циферблат на фоне</translation>
     </message>
     <message>
         <location filename="../qml/pages/SettingPage.qml" line="123"/>
@@ -199,6 +199,11 @@
         <translation>Ориентация:</translation>
     </message>
     <message>
+        <location filename="../qml/pages/SettingPage.qml" line="345"/>
+        <source>Sets the preferred screen orientation.</source>
+        <translation>Установите предпочитаемую ориентацию экрана.</translation>
+    </message>
+    <message>
         <location filename="../qml/pages/SettingPage.qml" line="350"/>
         <source>Portrait</source>
         <translation>Портретная</translation>
@@ -212,11 +217,6 @@
         <location filename="../qml/pages/SettingPage.qml" line="356"/>
         <source>Dynamic</source>
         <translation>Автоматическая</translation>
-    </message>
-    <message>
-        <location filename="../qml/pages/SettingPage.qml" line="345"/>
-        <source>Sets the preferred screen orientation.</source>
-        <translation>Установите предпочитаемую ориентацию экрана.</translation>
     </message>
 </context>
 <context>
