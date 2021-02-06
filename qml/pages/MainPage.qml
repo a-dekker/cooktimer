@@ -32,9 +32,6 @@ Page {
     property bool isRunning1: ticker1.running || insomniac1.running
     property bool isRunning2: ticker2.running || insomniac2.running
     property bool isRunning3: ticker3.running || insomniac3.running
-    property bool isPaused1: false
-    property bool isPaused2: false
-    property bool isPaused3: false
     property alias seconds1: remainingTime1.seconds
     property alias seconds2: remainingTime2.seconds
     property alias seconds3: remainingTime3.seconds
@@ -95,7 +92,7 @@ Page {
                 // do not update if time has been changed
                 if (GlobVars.myDuration != " ")
                     myGlobalDuration1 = GlobVars.myDuration
-                if (!ticker1.running && !isPaused1) {
+                if (!ticker1.running && !mainapp.isPaused1) {
                     remainingTime1.text = timer1.text
                     mainapp.timeText1 = remainingTime1.text
                 }
@@ -107,7 +104,7 @@ Page {
                 // do not update if time has been changed
                 if (GlobVars.myDuration != " ")
                     myGlobalDuration2 = GlobVars.myDuration
-                if (!ticker2.running && !isPaused2) {
+                if (!ticker2.running && !mainapp.isPaused2) {
                     remainingTime2.text = timer2.text
                     mainapp.timeText2 = remainingTime2.text
                 }
@@ -119,7 +116,7 @@ Page {
                 // do not update if time has been changed
                 if (GlobVars.myDuration != " ")
                     myGlobalDuration3 = GlobVars.myDuration
-                if (!ticker3.running && !isPaused3) {
+                if (!ticker3.running && !mainapp.isPaused3) {
                     remainingTime3.text = timer3.text
                     mainapp.timeText3 = remainingTime3.text
                 }
@@ -240,6 +237,7 @@ Page {
         totalTime1.text = timer1.text
         remainingTime1.text = timer1.text
         mainapp.timeText1 = remainingTime1.text
+        remainingTime1.opacity = 1
         var tt = timer1.text
         tt = tt.split(":")
         var sec = _totalsecs1 = tt[0] * 3600 + tt[1] * 60 + tt[2] * 1
@@ -247,7 +245,7 @@ Page {
         GlobVars.myDuration = remainingTime1.text
         if (remainingTime1.text !== "00:00:00" || ticker1.running) {
             _lastTick1 = Math.round(Date.now() / 1000)
-            if (!isPaused1) {
+            if (!mainapp.isPaused1) {
                 buttonBuzz.play()
                 ticker1.running = !ticker1.running
                 mainapp.timer1running = !mainapp.timer1running
@@ -258,9 +256,8 @@ Page {
             } else {
                 remainingTime1.color = Theme.secondaryHighlightColor
                 remainingTime1.font.bold = false
-                remainingTime1.font.italic = false
             }
-            isPaused1 = false
+            mainapp.isPaused1 = false
         }
         if (!ticker1.running) {
             if (insomniac1.running) {
@@ -269,11 +266,59 @@ Page {
         }
     }
 
+    function togglePause1() {
+        if (ticker1.running) {
+            ticker1.stop()
+            mainapp.isPaused1 = true
+            remainingTime1.color = Theme.secondaryColor
+            remainingTime1.font.bold = false
+            mainapp.timer1running = !mainapp.timer1running
+        } else if (seconds1 > 0 && mainapp.isPaused1) {
+            mainapp.isPaused1 = false
+            remainingTime1.opacity = 1
+            GlobVars.myDuration = remainingTime1.text
+            if (remainingTime1.text !== "00:00:00" || ticker1.running) {
+                _lastTick1 = Math.round(Date.now() / 1000)
+                ticker1.running = !ticker1.running
+                mainapp.timer1running = !mainapp.timer1running
+            }
+            ticker1.start()
+            remainingTime1.color = Theme.highlightColor
+            remainingTime1.font.bold = true
+        }
+    }
+
+    Timer {
+        id: blinktimer1
+        interval: 1000
+        running: Qt.application.active && mainapp.isPaused1
+        repeat: true
+        onTriggered: remainingTime1.opacity = remainingTime1.opacity === 0 ? 1 : 0
+    }
+
+    Timer {
+        id: blinktimer2
+        interval: 1000
+        running: Qt.application.active && mainapp.isPaused2
+        repeat: true
+        onTriggered: remainingTime2.opacity = remainingTime2.opacity === 0 ? 1 : 0
+    }
+
+    Timer {
+        id: blinktimer3
+        interval: 1000
+        running: Qt.application.active && mainapp.isPaused3
+        repeat: true
+        onTriggered: remainingTime3.opacity = remainingTime3.opacity === 0 ? 1 : 0
+    }
+
+
     function toggleTimer2() {
         progressBar2.value = 0
         totalTime2.text = timer2.text
         remainingTime2.text = timer2.text
         mainapp.timeText2 = remainingTime2.text
+        remainingTime2.opacity = 1
         var tt = timer2.text
         tt = tt.split(":")
         var sec = _totalsecs2 = tt[0] * 3600 + tt[1] * 60 + tt[2] * 1
@@ -281,7 +326,7 @@ Page {
         GlobVars.myDuration = remainingTime2.text
         if (remainingTime2.text !== "00:00:00" || ticker2.running) {
             _lastTick2 = Math.round(Date.now() / 1000)
-            if (!isPaused2) {
+            if (!mainapp.isPaused2) {
                 buttonBuzz.play()
                 ticker2.running = !ticker2.running
                 mainapp.timer2running = !mainapp.timer2running
@@ -292,9 +337,8 @@ Page {
             } else {
                 remainingTime2.color = Theme.secondaryHighlightColor
                 remainingTime2.font.bold = false
-                remainingTime2.font.italic = false
             }
-            isPaused2 = false
+            mainapp.isPaused2 = false
         }
         if (!ticker2.running) {
             if (insomniac2.running) {
@@ -303,11 +347,34 @@ Page {
         }
     }
 
+    function togglePause2() {
+        if (ticker2.running) {
+            ticker2.stop()
+            mainapp.isPaused2 = true
+            remainingTime2.color = Theme.secondaryColor
+            remainingTime2.font.bold = false
+            mainapp.timer2running = !mainapp.timer2running
+        } else if (seconds2 > 0 && mainapp.isPaused2) {
+            mainapp.isPaused2 = false
+            remainingTime2.opacity = 1
+            GlobVars.myDuration = remainingTime2.text
+            if (remainingTime2.text !== "00:00:00" || ticker2.running) {
+                _lastTick2 = Math.round(Date.now() / 1000)
+                ticker2.running = !ticker2.running
+                mainapp.timer2running = !mainapp.timer2running
+            }
+            ticker2.start()
+            remainingTime2.color = Theme.highlightColor
+            remainingTime2.font.bold = true
+        }
+    }
+
     function toggleTimer3() {
         progressBar3.value = 0
         totalTime3.text = timer3.text
         remainingTime3.text = timer3.text
         mainapp.timeText3 = remainingTime3.text
+        remainingTime3.opacity = 1
         var tt = timer3.text
         tt = tt.split(":")
         var sec = _totalsecs3 = tt[0] * 3600 + tt[1] * 60 + tt[2] * 1
@@ -315,7 +382,7 @@ Page {
         GlobVars.myDuration = remainingTime3.text
         if (remainingTime3.text !== "00:00:00" || ticker3.running) {
             _lastTick3 = Math.round(Date.now() / 1000)
-            if (!isPaused3) {
+            if (!mainapp.isPaused3) {
                 buttonBuzz.play()
                 ticker3.running = !ticker3.running
                 mainapp.timer3running = !mainapp.timer3running
@@ -326,14 +393,35 @@ Page {
             } else {
                 remainingTime3.color = Theme.secondaryHighlightColor
                 remainingTime3.font.bold = false
-                remainingTime3.font.italic = false
             }
-            isPaused3 = false
+            mainapp.isPaused3 = false
         }
         if (!ticker3.running) {
             if (insomniac3.running) {
                 insomniac3.stop()
             }
+        }
+    }
+
+    function togglePause3() {
+        if (ticker3.running) {
+            ticker3.stop()
+            mainapp.isPaused3 = true
+            remainingTime3.color = Theme.secondaryColor
+            remainingTime3.font.bold = false
+            mainapp.timer3running = !mainapp.timer3running
+        } else if (seconds3 > 0 && mainapp.isPaused3) {
+            mainapp.isPaused3 = false
+            remainingTime3.opacity = 1
+            GlobVars.myDuration = remainingTime3.text
+            if (remainingTime3.text !== "00:00:00" || ticker3.running) {
+                _lastTick3 = Math.round(Date.now() / 1000)
+                ticker3.running = !ticker3.running
+                mainapp.timer3running = !mainapp.timer3running
+            }
+            ticker3.start()
+            remainingTime3.color = Theme.highlightColor
+            remainingTime3.font.bold = true
         }
     }
 
@@ -387,7 +475,6 @@ Page {
         if (myset.value("popup") === "true") {
             banner("INFO", alarmtxt + " " + qsTr("ready"))
         }
-        // pageStack.push(Qt.resolvedUrl("AlarmDialogBase.qml"))
         bar.launch("timedclient-qt5 -b'TITLE=button0' -e\"APPLICATION=nemoalarms;TITLE="
                    + alarmtxt + "\n" + qsTr(
                        "ready") + ";ticker=0;timeOfDay=0;triggerTime=1395217218;;type=countdown;suppressTimeoutSnooze;hideSnoozeButton1\"")
@@ -532,7 +619,8 @@ Page {
             /* inner row */
             id: timerRow1
             spacing: largeScreen ? Theme.paddingMedium : Theme.paddingSmall
-            anchors.top: isPortrait || largeScreen || Screen.width >= 1080 ? header.bottom : header.top
+            anchors.top: isPortrait || largeScreen
+                         || Screen.width >= 1080 ? header.bottom : header.top
             anchors.topMargin: isPortrait ? (largeScreen ? Theme.paddingLarge : 0) : Theme.paddingSmall
             anchors.horizontalCenter: parent.horizontalCenter
             height: isPortrait ? (largeScreen ? page.height / 12 : Theme.itemSizeMedium) : (largeScreen ? Theme.itemSizeExtraLarge : Theme.paddingLarge * 1.6)
@@ -580,7 +668,7 @@ Page {
                                     + ":" + (dialog.minute > 9 ? dialog.minute : "0"
                                                                  + dialog.minute) + ":"
                                     + (dialog.second > 9 ? dialog.second : "0" + dialog.second)
-                            if (!ticker1.running && !isPaused1) {
+                            if (!ticker1.running && !mainapp.isPaused1) {
                                 remainingTime1.text = timer1.text
                                 mainapp.timeText1 = remainingTime1.text
                             }
@@ -588,7 +676,7 @@ Page {
                     }
                     onPressAndHold: {
                         myGlobalDuration1 = "00:00:00"
-                        if (!ticker1.running) {
+                        if (!ticker1.running && !mainapp.isPaused1) {
                             progressBar1.value = 0
                             remainingTime1.text = "00:00:00"
                             mainapp.timeText1 = remainingTime1.text
@@ -599,8 +687,8 @@ Page {
             Button {
                 id: start1
                 width: (page.width - (Theme.paddingLarge * 2)) / 4
-                text: ticker1.running || isPaused1 ? qsTr(
-                                                         "Stop") : qsTr("Start")
+                text: ticker1.running
+                      || mainapp.isPaused1 ? qsTr("Stop") : qsTr("Start")
                 enabled: timer1.text === "00:00:00" && start1.text !== qsTr(
                              "Stop") ? false : true
                 onClicked: {
@@ -656,10 +744,9 @@ Page {
                 opacity: 0
             }
             IconButton {
-                anchors.right: remainingTime1.left
+                id: minButton1
                 anchors.verticalCenter: remainingTime1.top
                 anchors.verticalCenterOffset: largeScreen ? Theme.itemSizeSmall : Theme.itemSizeExtraSmall
-                y: Theme.paddingLarge
                 icon.source: 'image://theme/icon-m-remove'
                 scale: largeScreen ? 2 : 1
                 onClicked: {
@@ -671,7 +758,7 @@ Page {
                                 + (button_minute > 9 ? button_minute : "0" + button_minute)
                                 + ":" + myGlobalDuration1.split(":")[2]
                         buttonBuzz.play()
-                        if (!ticker1.running && !isPaused1) {
+                        if (!ticker1.running && !mainapp.isPaused1) {
                             remainingTime1.text = timer1.text
                             mainapp.timeText1 = remainingTime1.text
                         }
@@ -683,7 +770,9 @@ Page {
                 id: remainingTime1
                 readOnly: true
                 property int seconds
-                anchors.horizontalCenter: parent.horizontalCenter
+                anchors.left: minButton1.right
+                anchors.right: plusButton1.left
+                horizontalAlignment: Qt.AlignHCenter
                 anchors.verticalCenter: largeScreen ? parent.verticalCenter : parent.bottom
                 anchors.verticalCenterOffset: isLandscape ? Theme.paddingSmall : 0
                 color: Theme.secondaryHighlightColor
@@ -691,32 +780,12 @@ Page {
                                               * 2.5 : Theme.fontSizeExtraLarge * 1.8
                 text: "00:00:00"
                 onClicked: {
-                    if (ticker1.running) {
-                        ticker1.stop()
-                        isPaused1 = true
-                        remainingTime1.color = Theme.secondaryColor
-                        remainingTime1.font.bold = false
-                        remainingTime1.font.italic = true
-                        mainapp.timer1running = !mainapp.timer1running
-                    } else if (seconds1 > 0 && isPaused1) {
-                        isPaused1 = false
-                        GlobVars.myDuration = remainingTime1.text
-                        if (remainingTime1.text !== "00:00:00"
-                                || ticker1.running) {
-                            _lastTick1 = Math.round(Date.now() / 1000)
-                            ticker1.running = !ticker1.running
-                            mainapp.timer1running = !mainapp.timer1running
-                        }
-                        ticker1.start()
-                        remainingTime1.color = Theme.highlightColor
-                        remainingTime1.font.bold = true
-                        remainingTime1.font.italic = false
-                    }
+                    togglePause1()
                 }
             }
             IconButton {
                 id: plusButton1
-                anchors.left: remainingTime1.right
+                x: parent.width - minButton1.width
                 y: Theme.paddingLarge
                 anchors.verticalCenter: remainingTime1.top
                 anchors.verticalCenterOffset: largeScreen ? Theme.itemSizeSmall : Theme.itemSizeExtraSmall
@@ -731,7 +800,7 @@ Page {
                                 + (button_minute > 9 ? button_minute : "0" + button_minute)
                                 + ":" + myGlobalDuration1.split(":")[2]
                         buttonBuzz.play()
-                        if (!ticker1.running && !isPaused1) {
+                        if (!ticker1.running && !mainapp.isPaused1) {
                             remainingTime1.text = timer1.text
                             mainapp.timeText1 = remainingTime1.text
                         }
@@ -763,7 +832,7 @@ Page {
             anchors.topMargin: 1
             leftMargin: 0
             rightMargin: 0
-            visible: isRunning1 || isPaused1
+            visible: isRunning1 || mainapp.isPaused1
             Timer {
                 interval: 100
                 repeat: true
@@ -861,7 +930,7 @@ Page {
                                     + ":" + (dialog.minute > 9 ? dialog.minute : "0"
                                                                  + dialog.minute) + ":"
                                     + (dialog.second > 9 ? dialog.second : "0" + dialog.second)
-                            if (!ticker2.running && !isPaused2) {
+                            if (!ticker2.running && !mainapp.isPaused2) {
                                 remainingTime2.text = timer2.text
                                 mainapp.timeText2 = remainingTime2.text
                             }
@@ -869,7 +938,7 @@ Page {
                     }
                     onPressAndHold: {
                         myGlobalDuration2 = "00:00:00"
-                        if (!ticker2.running) {
+                        if (!ticker2.running && !mainapp.isPaused2) {
                             progressBar2.value = 0
                             remainingTime2.text = "00:00:00"
                             mainapp.timeText2 = remainingTime2.text
@@ -880,8 +949,8 @@ Page {
             Button {
                 id: start2
                 width: (page.width - (Theme.paddingLarge * 2)) / 4
-                text: ticker2.running || isPaused2 ? qsTr(
-                                                         "Stop") : qsTr("Start")
+                text: ticker2.running
+                      || mainapp.isPaused2 ? qsTr("Stop") : qsTr("Start")
                 enabled: timer2.text === "00:00:00" && start2.text !== qsTr(
                              "Stop") ? false : true
                 onClicked: {
@@ -936,12 +1005,11 @@ Page {
                 opacity: 0
             }
             IconButton {
-                anchors.right: remainingTime2.left
+                id: minButton2
                 anchors.verticalCenter: remainingTime2.top
                 anchors.verticalCenterOffset: largeScreen ? Theme.itemSizeSmall : Theme.itemSizeExtraSmall
-                y: Theme.paddingLarge
-                scale: largeScreen ? 2 : 1
                 icon.source: 'image://theme/icon-m-remove'
+                scale: largeScreen ? 2 : 1
                 onClicked: {
                     var button_minute = parseInt(timer2.text.split(":")[1], 10)
                     if (button_minute > 0) {
@@ -951,7 +1019,7 @@ Page {
                                 + (button_minute > 9 ? button_minute : "0" + button_minute)
                                 + ":" + myGlobalDuration2.split(":")[2]
                         buttonBuzz.play()
-                        if (!ticker2.running && !isPaused2) {
+                        if (!ticker2.running && !mainapp.isPaused2) {
                             remainingTime2.text = timer2.text
                             mainapp.timeText2 = remainingTime2.text
                         }
@@ -962,7 +1030,9 @@ Page {
                 id: remainingTime2
                 readOnly: true
                 property int seconds
-                anchors.horizontalCenter: parent.horizontalCenter
+                anchors.left: minButton2.right
+                anchors.right: plusButton2.left
+                horizontalAlignment: Qt.AlignHCenter
                 anchors.verticalCenter: largeScreen ? parent.verticalCenter : parent.bottom
                 anchors.verticalCenterOffset: isLandscape ? Theme.paddingSmall : 0
                 color: Theme.secondaryHighlightColor
@@ -970,32 +1040,12 @@ Page {
                                               * 2.5 : Theme.fontSizeExtraLarge * 1.8
                 text: "00:00:00"
                 onClicked: {
-                    if (ticker2.running) {
-                        ticker2.stop()
-                        isPaused2 = true
-                        remainingTime2.color = Theme.secondaryColor
-                        remainingTime2.font.bold = false
-                        remainingTime2.font.italic = true
-                        mainapp.timer2running = !mainapp.timer2running
-                    } else if (seconds2 > 0 && isPaused2) {
-                        isPaused2 = false
-                        GlobVars.myDuration = remainingTime2.text
-                        if (remainingTime2.text !== "00:00:00"
-                                || ticker2.running) {
-                            _lastTick2 = Math.round(Date.now() / 1000)
-                            ticker2.running = !ticker2.running
-                            mainapp.timer2running = !mainapp.timer2running
-                        }
-                        ticker2.start()
-                        remainingTime2.color = Theme.highlightColor
-                        remainingTime2.font.bold = true
-                        remainingTime2.font.italic = false
-                    }
+                    togglePause2()
                 }
             }
             IconButton {
                 id: plusButton2
-                anchors.left: remainingTime2.right
+                x: parent.width - minButton2.width
                 y: Theme.paddingLarge
                 anchors.verticalCenter: remainingTime2.top
                 anchors.verticalCenterOffset: largeScreen ? Theme.itemSizeSmall : Theme.itemSizeExtraSmall
@@ -1010,7 +1060,7 @@ Page {
                                 + (button_minute > 9 ? button_minute : "0" + button_minute)
                                 + ":" + myGlobalDuration2.split(":")[2]
                         buttonBuzz.play()
-                        if (!ticker2.running && !isPaused2) {
+                        if (!ticker2.running && !mainapp.isPaused2) {
                             remainingTime2.text = timer2.text
                             mainapp.timeText2 = remainingTime2.text
                         }
@@ -1042,7 +1092,7 @@ Page {
             anchors.topMargin: 1
             leftMargin: 0
             rightMargin: 0
-            visible: isRunning2 || isPaused2
+            visible: isRunning2 || mainapp.isPaused2
             Timer {
                 interval: 100
                 repeat: true
@@ -1138,7 +1188,7 @@ Page {
                                     + ":" + (dialog.minute > 9 ? dialog.minute : "0"
                                                                  + dialog.minute) + ":"
                                     + (dialog.second > 9 ? dialog.second : "0" + dialog.second)
-                            if (!ticker3.running && !isPaused3) {
+                            if (!ticker3.running && !mainapp.isPaused3) {
                                 remainingTime3.text = timer3.text
                                 mainapp.timeText3 = remainingTime3.text
                             }
@@ -1146,7 +1196,7 @@ Page {
                     }
                     onPressAndHold: {
                         myGlobalDuration3 = "00:00:00"
-                        if (!ticker3.running) {
+                        if (!ticker3.running && !mainapp.isPaused3) {
                             progressBar3.value = 0
                             remainingTime3.text = "00:00:00"
                             mainapp.timeText3 = remainingTime3.text
@@ -1157,8 +1207,8 @@ Page {
             Button {
                 id: start3
                 width: (page.width - (Theme.paddingLarge * 2)) / 4
-                text: ticker3.running || isPaused3 ? qsTr(
-                                                         "Stop") : qsTr("Start")
+                text: ticker3.running
+                      || mainapp.isPaused3 ? qsTr("Stop") : qsTr("Start")
                 enabled: timer3.text === "00:00:00" && start3.text !== qsTr(
                              "Stop") ? false : true
                 onClicked: {
@@ -1213,10 +1263,9 @@ Page {
                 opacity: 0
             }
             IconButton {
-                anchors.right: remainingTime3.left
+                id: minButton3
                 anchors.verticalCenter: remainingTime3.top
                 anchors.verticalCenterOffset: largeScreen ? Theme.itemSizeSmall : Theme.itemSizeExtraSmall
-                y: Theme.paddingLarge
                 icon.source: 'image://theme/icon-m-remove'
                 scale: largeScreen ? 2 : 1
                 onClicked: {
@@ -1228,7 +1277,7 @@ Page {
                                 + (button_minute > 9 ? button_minute : "0" + button_minute)
                                 + ":" + myGlobalDuration3.split(":")[2]
                         buttonBuzz.play()
-                        if (!ticker3.running && !isPaused3) {
+                        if (!ticker3.running && !mainapp.isPaused3) {
                             remainingTime3.text = timer3.text
                             mainapp.timeText3 = remainingTime3.text
                         }
@@ -1239,7 +1288,9 @@ Page {
                 id: remainingTime3
                 readOnly: true
                 property int seconds
-                anchors.horizontalCenter: parent.horizontalCenter
+                anchors.left: minButton3.right
+                anchors.right: plusButton3.left
+                horizontalAlignment: Qt.AlignHCenter
                 anchors.verticalCenter: largeScreen ? parent.verticalCenter : parent.bottom
                 anchors.verticalCenterOffset: isLandscape ? Theme.paddingSmall : 0
                 color: Theme.secondaryHighlightColor
@@ -1247,32 +1298,12 @@ Page {
                                               * 2.5 : Theme.fontSizeExtraLarge * 1.8
                 text: "00:00:00"
                 onClicked: {
-                    if (ticker3.running) {
-                        ticker3.stop()
-                        isPaused3 = true
-                        remainingTime3.color = Theme.secondaryColor
-                        remainingTime3.font.bold = false
-                        remainingTime3.font.italic = true
-                        mainapp.timer3running = !mainapp.timer3running
-                    } else if (seconds3 > 0 && isPaused3) {
-                        isPaused3 = false
-                        GlobVars.myDuration = remainingTime3.text
-                        if (remainingTime3.text !== "00:00:00"
-                                || ticker3.running) {
-                            _lastTick3 = Math.round(Date.now() / 1000)
-                            ticker3.running = !ticker3.running
-                            mainapp.timer3running = !mainapp.timer3running
-                        }
-                        ticker3.start()
-                        remainingTime3.color = Theme.highlightColor
-                        remainingTime3.font.bold = true
-                        remainingTime3.font.italic = false
-                    }
+                    togglePause3()
                 }
             }
             IconButton {
                 id: plusButton3
-                anchors.left: remainingTime3.right
+                x: parent.width - minButton3.width
                 y: Theme.paddingLarge
                 anchors.verticalCenter: remainingTime3.top
                 anchors.verticalCenterOffset: largeScreen ? Theme.itemSizeSmall : Theme.itemSizeExtraSmall
@@ -1287,7 +1318,7 @@ Page {
                                 + (button_minute > 9 ? button_minute : "0" + button_minute)
                                 + ":" + myGlobalDuration3.split(":")[2]
                         buttonBuzz.play()
-                        if (!ticker3.running && !isPaused3) {
+                        if (!ticker3.running && !mainapp.isPaused3) {
                             remainingTime3.text = timer3.text
                             mainapp.timeText3 = remainingTime3.text
                         }
@@ -1320,7 +1351,7 @@ Page {
             anchors.bottomMargin: 1
             leftMargin: 0
             rightMargin: 0
-            visible: isRunning3 || isPaused3
+            visible: isRunning3 || mainapp.isPaused3
             Timer {
                 interval: 100
                 repeat: true

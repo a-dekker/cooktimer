@@ -11,8 +11,7 @@ Page {
         contentWidth: parent.width
         contentHeight: col.height
 
-        VerticalScrollDecorator {
-        }
+        VerticalScrollDecorator {}
 
         Column {
             id: col
@@ -78,7 +77,7 @@ Page {
                          || screen.width < 1080
             }
             Label {
-                text: "© Arno Dekker 2014-2020"
+                text: "© Arno Dekker 2014-2021"
                 anchors.horizontalCenter: parent.horizontalCenter
             }
         }

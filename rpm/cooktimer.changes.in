@@ -8,7 +8,12 @@
 # * date Author's Name <author's email> version-release
 # - Summary of changes
 
-* Mon oct 26 2020 Arno Dekker <jack.tar@example.com> 0.0.3-4
+* Thu Jan 28 2021 Arno Dekker <jack.tar@example.com> 0.0.3-5
+- Fixed multiple layout breakages in SFOS 4.0
+- Handle pause state correctly on coverpage
+- Switched to blinking text in pause state
+
+* Mon Oct 26 2020 Arno Dekker <jack.tar@example.com> 0.0.3-4
 - Updated German
 
 * Wed Mar 25 2020 Arno Dekker <jack.tar@example.com> 0.0.3-3

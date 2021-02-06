@@ -1,3 +1,4 @@
+
 /*
  Copyright (C) 2013 Jolla Ltd.
  Contact: Thomas Perl <thomas.perl@jollamobile.com>
@@ -27,6 +28,7 @@
  (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
  SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
+
 /****************************************************************************************
 **
 ** edited by Nightmare 03/2014
@@ -45,8 +47,8 @@ Dialog {
     property int hour: 0
     property int minute: 0
     property int second: 0
-    property bool largeScreen: Screen.sizeCategory === Screen.Large ||
-                               Screen.sizeCategory === Screen.ExtraLarge
+    property bool largeScreen: Screen.sizeCategory === Screen.Large
+                               || Screen.sizeCategory === Screen.ExtraLarge
 
     DialogHeader {
         acceptText: qsTr("Save")
@@ -65,6 +67,7 @@ Dialog {
     }
 
     onRejected: {
+
         // just reject
     }
 
@@ -79,7 +82,7 @@ Dialog {
         anchors.top: marginspace.bottom
         height: nameOfDish.height - Theme.paddingLarge * 2
         anchors.horizontalCenter: parent.horizontalCenter
-        width: nameOfDish.width + Theme.paddingLarge * 2
+        width: parent.width / 2
         visible: isPortrait
         Rectangle {
             anchors.fill: parent
@@ -88,6 +91,7 @@ Dialog {
         }
         TextField {
             id: nameOfDish
+            horizontalAlignment: Qt.AlignHCenter
             color: Theme.highlightColor
             placeholderText: qsTr("Dish")
             EnterKey.enabled: text.trim().length > 0
@@ -126,7 +130,8 @@ Dialog {
     }
     TimePickerSeconds {
         id: pickTime
-        y: isLandscape ? (largeScreen ? diaTime.height / 3 : diaTime.height /3.5 ) : diaTime.height / 3
+        y: isLandscape ? (largeScreen ? diaTime.height / 3 : diaTime.height
+                                        / 3.5) : diaTime.height / 3
         hour: diaTime.hour
         minute: diaTime.minute
         second: diaTime.second
@@ -139,7 +144,7 @@ Dialog {
         anchors.leftMargin: largeScreen ? Theme.itemSizeLarge * 2 : Theme.itemSizeLarge
         height: nameOfDish.height - Theme.paddingLarge * 2
         anchors.verticalCenter: parent.verticalCenter
-        width: nameOfDish.width + Theme.paddingLarge * 2
+        width: parent.width / 4
         visible: isLandscape
         Rectangle {
             anchors.fill: parent
@@ -148,6 +153,7 @@ Dialog {
         }
         TextField {
             id: nameOfDish_landscape
+            horizontalAlignment: Qt.AlignHCenter
             color: Theme.highlightColor
             EnterKey.enabled: text.trim().length > 0
             text: diaTime.infotext

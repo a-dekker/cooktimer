@@ -4,27 +4,27 @@
 <context>
     <name>About</name>
     <message>
-        <location filename="../qml/pages/About.qml" line="22"/>
+        <location filename="../qml/pages/About.qml" line="21"/>
         <source>About</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/About.qml" line="25"/>
+        <location filename="../qml/pages/About.qml" line="24"/>
         <source>Info</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/About.qml" line="58"/>
+        <location filename="../qml/pages/About.qml" line="57"/>
         <source>Version</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/About.qml" line="63"/>
+        <location filename="../qml/pages/About.qml" line="62"/>
         <source>&quot;Timers for cooking&quot;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/About.qml" line="69"/>
+        <location filename="../qml/pages/About.qml" line="68"/>
         <source>Author</source>
         <translation type="unfinished"></translation>
     </message>
@@ -91,47 +91,47 @@
 <context>
     <name>MainPage</name>
     <message>
-        <location filename="../qml/pages/MainPage.qml" line="388"/>
-        <location filename="../qml/pages/MainPage.qml" line="392"/>
+        <location filename="../qml/pages/MainPage.qml" line="476"/>
+        <location filename="../qml/pages/MainPage.qml" line="479"/>
         <source>ready</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/MainPage.qml" line="507"/>
+        <location filename="../qml/pages/MainPage.qml" line="594"/>
         <source>About</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/MainPage.qml" line="511"/>
+        <location filename="../qml/pages/MainPage.qml" line="598"/>
         <source>Settings</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/MainPage.qml" line="515"/>
+        <location filename="../qml/pages/MainPage.qml" line="602"/>
         <source>Edit dishes</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/MainPage.qml" line="553"/>
-        <location filename="../qml/pages/MainPage.qml" line="834"/>
-        <location filename="../qml/pages/MainPage.qml" line="1111"/>
+        <location filename="../qml/pages/MainPage.qml" line="641"/>
+        <location filename="../qml/pages/MainPage.qml" line="903"/>
+        <location filename="../qml/pages/MainPage.qml" line="1161"/>
         <source>Dish</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/MainPage.qml" line="602"/>
-        <location filename="../qml/pages/MainPage.qml" line="604"/>
-        <location filename="../qml/pages/MainPage.qml" line="883"/>
-        <location filename="../qml/pages/MainPage.qml" line="885"/>
-        <location filename="../qml/pages/MainPage.qml" line="1160"/>
-        <location filename="../qml/pages/MainPage.qml" line="1162"/>
+        <location filename="../qml/pages/MainPage.qml" line="691"/>
+        <location filename="../qml/pages/MainPage.qml" line="692"/>
+        <location filename="../qml/pages/MainPage.qml" line="953"/>
+        <location filename="../qml/pages/MainPage.qml" line="954"/>
+        <location filename="../qml/pages/MainPage.qml" line="1211"/>
+        <location filename="../qml/pages/MainPage.qml" line="1212"/>
         <source>Stop</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/MainPage.qml" line="603"/>
-        <location filename="../qml/pages/MainPage.qml" line="884"/>
-        <location filename="../qml/pages/MainPage.qml" line="1161"/>
+        <location filename="../qml/pages/MainPage.qml" line="691"/>
+        <location filename="../qml/pages/MainPage.qml" line="953"/>
+        <location filename="../qml/pages/MainPage.qml" line="1211"/>
         <source>Start</source>
         <translation type="unfinished"></translation>
     </message>
@@ -222,17 +222,17 @@
 <context>
     <name>TimeDialog</name>
     <message>
-        <location filename="../qml/pages/TimeDialog.qml" line="52"/>
+        <location filename="../qml/pages/TimeDialog.qml" line="54"/>
         <source>Save</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/TimeDialog.qml" line="53"/>
+        <location filename="../qml/pages/TimeDialog.qml" line="55"/>
         <source>Cancel</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/TimeDialog.qml" line="92"/>
+        <location filename="../qml/pages/TimeDialog.qml" line="96"/>
         <source>Dish</source>
         <translation type="unfinished"></translation>
     </message>

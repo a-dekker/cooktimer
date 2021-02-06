@@ -73,7 +73,7 @@ Page {
                     sourceItem: itemLine
                     slope: 0.25
                     offset: 0.0
-                    clampFactor: -0.85
+                    clampFactor: -0.90
                     direction: OpacityRamp.BottomToTop
                 }
             }

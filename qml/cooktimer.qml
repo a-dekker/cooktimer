@@ -18,6 +18,9 @@ ApplicationWindow {
     property bool timer1running: false
     property bool timer2running: false
     property bool timer3running: false
+    property bool isPaused1: false
+    property bool isPaused2: false
+    property bool isPaused3: false
     property bool bg_image: true
     property int orientationSetting: (Orientation.Portrait | Orientation.Landscape
                                       | Orientation.LandscapeInverted)
