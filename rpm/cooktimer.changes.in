@@ -8,7 +8,10 @@
 # * date Author's Name <author's email> version-release
 # - Summary of changes
 
-* Thu Jan 28 2021 Arno Dekker <jack.tar@example.com> 0.0.3-5
+* Sat Jan 6 2021 Arno Dekker <jack.tar@example.com> 0.0.3-6
+- Added HarbourBackup entry in desktopfile for use with My Backup
+
+* Thu Feb 5 2021 Arno Dekker <jack.tar@example.com> 0.0.3-5
 - Fixed multiple layout breakages in SFOS 4.0
 - Handle pause state correctly on coverpage
 - Switched to blinking text in pause state

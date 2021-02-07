@@ -5,3 +5,5 @@ Name=Cooktimer
 Icon=cooktimer
 Exec=cooktimer
 
+[X-HarbourBackup]
+BackupPathList=.local/share/cooktimer/:.config/cooktimer
