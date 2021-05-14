@@ -8,6 +8,10 @@
 # * date Author's Name <author's email> version-release
 # - Summary of changes
 
+* Fri May 14 2021 Arno Dekker <jack.tar@example.com> 0.0.3-7
+- small improvements timepicker colors for light themes
+- aarch64 build added
+
 * Sat Jan 6 2021 Arno Dekker <jack.tar@example.com> 0.0.3-6
 - Added HarbourBackup entry in desktopfile for use with My Backup
 

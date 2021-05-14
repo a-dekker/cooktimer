@@ -40,7 +40,7 @@
 ** nightsoft@outlook.com
 **
 ****************************************************************************************/
-import QtQuick 2.2
+import QtQuick 2.5
 import Sailfish.Silica 1.0
 
 
@@ -139,12 +139,44 @@ Item {
         opacity: 0.1
         width: 560
         height: 560
+        layer.effect: ShaderEffect {
+            property color color: Theme.primaryColor
+
+            fragmentShader: "
+            varying mediump vec2 qt_TexCoord0;
+            uniform highp float qt_Opacity;
+            uniform lowp sampler2D source;
+            uniform highp vec4 color;
+            void main() {
+                highp vec4 pixelColor = texture2D(source, qt_TexCoord0);
+                gl_FragColor = vec4(mix(pixelColor.rgb/max(pixelColor.a, 0.00390625), color.rgb/max(color.a, 0.00390625), color.a) * pixelColor.a, pixelColor.a) * qt_Opacity;
+            }
+            "
+        }
+        layer.enabled: true
+        layer.samplerName: "source"
     }
     Image {
         id: minutesCircle
         anchors.centerIn: secondsCircle
         source: "../images/timepicker.png"
         opacity: 0 //0.1
+        layer.effect: ShaderEffect {
+            property color color: Theme.primaryColor
+
+            fragmentShader: "
+            varying mediump vec2 qt_TexCoord0;
+            uniform highp float qt_Opacity;
+            uniform lowp sampler2D source;
+            uniform highp vec4 color;
+            void main() {
+                highp vec4 pixelColor = texture2D(source, qt_TexCoord0);
+                gl_FragColor = vec4(mix(pixelColor.rgb/max(pixelColor.a, 0.00390625), color.rgb/max(color.a, 0.00390625), color.a) * pixelColor.a, pixelColor.a) * qt_Opacity;
+            }
+            "
+        }
+        layer.enabled: true
+        layer.samplerName: "source"
     }
 
     GlassItem {
@@ -152,7 +184,7 @@ Item {
         falloffRadius: 0.22
         radius: 0.25
         anchors.centerIn: minutesCircle
-        color: mouse.changingProperty == 1 ? Theme.highlightColor : Theme.primaryColor
+        color: mouse.changingProperty == 1 ? Theme.highlightColor : "white"
 
         property real value
         property bool animationEnabled: true
@@ -178,7 +210,7 @@ Item {
         falloffRadius: 0.22
         radius: 0.25
         anchors.centerIn: minutesCircle
-        color: mouse.changingProperty == 2 ? Theme.highlightColor : Theme.primaryColor
+        color: mouse.changingProperty == 2 ? Theme.highlightColor : "white"
 
         property real value
 
@@ -202,7 +234,7 @@ Item {
         falloffRadius: 0.22
         radius: 0.25
         anchors.centerIn: secondsCircle
-        color: mouse.changingProperty == 3 ? Theme.highlightColor : Theme.primaryColor
+        color: mouse.changingProperty == 3 ? Theme.highlightColor : "white"
 
         property real value
 
