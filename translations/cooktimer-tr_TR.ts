@@ -194,27 +194,27 @@
         <translation>Dil değişimi uygulamayı yeniden başlattıktan sonra geçerli olacak.</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SettingPage.qml" line="344"/>
+        <location filename="../qml/pages/SettingPage.qml" line="352"/>
         <source>Orientation:</source>
         <translation>Yön:</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SettingPage.qml" line="345"/>
+        <location filename="../qml/pages/SettingPage.qml" line="353"/>
         <source>Sets the preferred screen orientation.</source>
         <translation>Tercih edilen ekran yönünü ayarlar.</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SettingPage.qml" line="350"/>
+        <location filename="../qml/pages/SettingPage.qml" line="358"/>
         <source>Portrait</source>
         <translation>Dikey</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SettingPage.qml" line="353"/>
+        <location filename="../qml/pages/SettingPage.qml" line="361"/>
         <source>Landscape</source>
         <translation>Yatay</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SettingPage.qml" line="356"/>
+        <location filename="../qml/pages/SettingPage.qml" line="364"/>
         <source>Dynamic</source>
         <translation>Dinamik</translation>
     </message>

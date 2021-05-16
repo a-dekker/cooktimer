@@ -1,4 +1,4 @@
-import QtQuick 2.2
+import QtQuick 2.5
 import Sailfish.Silica 1.0
 
 DockedPanel {
@@ -11,8 +11,6 @@ DockedPanel {
     height: infoColumn.height + 2 * Theme.paddingMedium
     contentHeight: height
     dock: Dock.Bottom
-
-
 
     function showDishInfo() {
         if (expanded) {
@@ -29,8 +27,6 @@ DockedPanel {
 
     property int _headerWidth: 125
     property int _textWidth: width - _headerWidth - Theme.paddingLarge
-
-
 
     Rectangle {
         anchors.fill: parent

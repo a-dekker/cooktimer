@@ -88,6 +88,7 @@ TRANSLATIONS = translations/cooktimer-sv.ts \
                translations/cooktimer-br.ts \
                translations/cooktimer-pt_BR.ts \
                translations/cooktimer-sl_SI.ts \
+               translations/cooktimer-sk_SK.ts \
                translations/cooktimer-sq_AL.ts \
                translations/cooktimer-hu.ts \
                translations/cooktimer-zh_CN.ts \

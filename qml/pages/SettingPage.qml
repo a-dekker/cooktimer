@@ -1,4 +1,4 @@
-import QtQuick 2.2
+import QtQuick 2.5
 import Sailfish.Silica 1.0
 import harbour.cooktimer.Settings 1.0
 import "../common"
@@ -186,17 +186,20 @@ Dialog {
                             text: "Russian/Русский"
                         } // 19
                         MenuItem {
-                            text: "Slovenian/Slovenski"
+                            text: "Slovak/Slovensky"
                         } // 20
                         MenuItem {
-                            text: "Spanish/Español"
+                            text: "Slovenian/Slovenski"
                         } // 21
                         MenuItem {
-                            text: "Swedish/Svensk"
+                            text: "Spanish/Español"
                         } // 22
                         MenuItem {
-                            text: "Turkish/Türk"
+                            text: "Swedish/Svensk"
                         } // 23
+                        MenuItem {
+                            text: "Turkish/Türk"
+                        } // 24
                     }
                     // The next two converter functions decouple the alphabetical language list
                     // index from the internal settings index, which cannot be changed for legacy reasons
@@ -273,6 +276,9 @@ Dialog {
                         case Languages.IT:
                             // Italian
                             return GlobVars.italian
+                        case Languages.SK_SK:
+                            // Slovak
+                            return GlobVars.slovak
                         default:
                             return GlobVars.english
                         }
@@ -328,6 +334,8 @@ Dialog {
                             return Languages.ZH_CN // Chinese
                         case GlobVars.italian:
                             return Languages.IT // Italian
+                        case GlobVars.slovak:
+                            return Languages.SK_SK // Slovak
                         default:
                             return Languages.EN // English
                         }

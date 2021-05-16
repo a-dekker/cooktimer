@@ -233,6 +233,12 @@ int main(int argc, char* argv[]) {
                     "cooktimer-it.qm",
                     SailfishApp::pathTo(QString("translations")).toLocalFile());
                 break;
+            // Slovak
+            case settingsPublic::Languages::SK_SK:
+                translator.load(
+                    "cooktimer-sk_SK.qm",
+                    SailfishApp::pathTo(QString("translations")).toLocalFile());
+                break;
             // English
             default:
                 translator.load(

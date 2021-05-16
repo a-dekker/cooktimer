@@ -1,32 +1,32 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="ar">
+<TS version="2.1" language="sk_SK">
 <context>
     <name>About</name>
     <message>
         <location filename="../qml/pages/About.qml" line="21"/>
         <source>About</source>
-        <translation>حول</translation>
+        <translation>O aplikácii</translation>
     </message>
     <message>
         <location filename="../qml/pages/About.qml" line="24"/>
         <source>Info</source>
-        <translation>معلومات</translation>
+        <translation>Informácia</translation>
     </message>
     <message>
         <location filename="../qml/pages/About.qml" line="57"/>
         <source>Version</source>
-        <translation>إصدار</translation>
+        <translation>Verzia</translation>
     </message>
     <message>
         <location filename="../qml/pages/About.qml" line="62"/>
         <source>&quot;Timers for cooking&quot;</source>
-        <translation>&quot;مؤقتات للطبخ&quot;</translation>
+        <translation>&quot;Kuchársky časomer&quot;</translation>
     </message>
     <message>
         <location filename="../qml/pages/About.qml" line="68"/>
         <source>Author</source>
-        <translation>المؤلف</translation>
+        <translation>Autor</translation>
     </message>
 </context>
 <context>
@@ -34,17 +34,17 @@
     <message>
         <location filename="../qml/pages/CommentPage.qml" line="16"/>
         <source>Done</source>
-        <translation>تمّ</translation>
+        <translation>Hotovo</translation>
     </message>
     <message>
         <location filename="../qml/pages/CommentPage.qml" line="17"/>
         <source>Cancel</source>
-        <translation>إلغاء</translation>
+        <translation>Zrušiť</translation>
     </message>
     <message>
         <location filename="../qml/pages/CommentPage.qml" line="23"/>
         <source>Enter small note here</source>
-        <translation>أدخل ملاحظة صغيرة هنا</translation>
+        <translation>Tu vložiť krátku poznámku</translation>
     </message>
 </context>
 <context>
@@ -52,32 +52,32 @@
     <message>
         <location filename="../qml/pages/DishEdit.qml" line="19"/>
         <source>Save</source>
-        <translation>حفظ</translation>
+        <translation>Uložiť</translation>
     </message>
     <message>
         <location filename="../qml/pages/DishEdit.qml" line="20"/>
         <source>Cancel</source>
-        <translation>إلغاء</translation>
+        <translation>Zrušiť</translation>
     </message>
     <message>
         <location filename="../qml/pages/DishEdit.qml" line="49"/>
         <source>Deleting</source>
-        <translation>جاري الحذف</translation>
+        <translation>Odstraňovanie</translation>
     </message>
     <message>
         <location filename="../qml/pages/DishEdit.qml" line="59"/>
         <source>Dish name</source>
-        <translation>اسم الطبق</translation>
+        <translation>Názov jedla</translation>
     </message>
     <message>
         <location filename="../qml/pages/DishEdit.qml" line="128"/>
         <source>No dishes defined. Press the plus button to add one.</source>
-        <translation>لم يتم تعريف أطباق. اضغط على زر زائد لإضافة واحد.</translation>
+        <translation>Žiadne jedlá nie sú určené. Stlačte tlačidlo a pridajte jedno.</translation>
     </message>
     <message>
         <location filename="../qml/pages/DishEdit.qml" line="138"/>
         <source>New dish</source>
-        <translation>طبق جديد</translation>
+        <translation>Nové jedlo</translation>
     </message>
 </context>
 <context>
@@ -85,7 +85,7 @@
     <message>
         <location filename="../qml/pages/DishPage.qml" line="107"/>
         <source>No dishes defined. Choose &quot;Edit Dishes&quot; from the pulley menu.</source>
-        <translation>لم يتم تعريف أطباق. اختر &quot;تعديل الأطباق&quot; من القائمة البَكرة</translation>
+        <translation>Žiadne jedlá nie sú určené. Zvoľte &quot;Upraviť jedlo&quot; zo sťahovacej ponuky.</translation>
     </message>
 </context>
 <context>
@@ -94,29 +94,29 @@
         <location filename="../qml/pages/MainPage.qml" line="476"/>
         <location filename="../qml/pages/MainPage.qml" line="479"/>
         <source>ready</source>
-        <translation>مستعد</translation>
+        <translation>pripravený</translation>
     </message>
     <message>
         <location filename="../qml/pages/MainPage.qml" line="594"/>
         <source>About</source>
-        <translation>حول</translation>
+        <translation>O aplikácii</translation>
     </message>
     <message>
         <location filename="../qml/pages/MainPage.qml" line="598"/>
         <source>Settings</source>
-        <translation>إعدادات</translation>
+        <translation>Nastavenia</translation>
     </message>
     <message>
         <location filename="../qml/pages/MainPage.qml" line="602"/>
         <source>Edit dishes</source>
-        <translation>تعديل الأطباق</translation>
+        <translation>Upraviť jedlá</translation>
     </message>
     <message>
         <location filename="../qml/pages/MainPage.qml" line="641"/>
         <location filename="../qml/pages/MainPage.qml" line="903"/>
         <location filename="../qml/pages/MainPage.qml" line="1161"/>
         <source>Dish</source>
-        <translation>طبَق</translation>
+        <translation>Jedlo</translation>
     </message>
     <message>
         <location filename="../qml/pages/MainPage.qml" line="691"/>
@@ -126,14 +126,14 @@
         <location filename="../qml/pages/MainPage.qml" line="1211"/>
         <location filename="../qml/pages/MainPage.qml" line="1212"/>
         <source>Stop</source>
-        <translation>أوقف</translation>
+        <translation>Zastaviť</translation>
     </message>
     <message>
         <location filename="../qml/pages/MainPage.qml" line="691"/>
         <location filename="../qml/pages/MainPage.qml" line="953"/>
         <location filename="../qml/pages/MainPage.qml" line="1211"/>
         <source>Start</source>
-        <translation>ابدأ</translation>
+        <translation>Spustiť</translation>
     </message>
 </context>
 <context>
@@ -141,82 +141,82 @@
     <message>
         <location filename="../qml/pages/SettingPage.qml" line="78"/>
         <source>Save</source>
-        <translation>حفظ</translation>
+        <translation>Uložiť</translation>
     </message>
     <message>
         <location filename="../qml/pages/SettingPage.qml" line="79"/>
         <source>Cancel</source>
-        <translation>إلغاء</translation>
+        <translation>Zrušiť</translation>
     </message>
     <message>
         <location filename="../qml/pages/SettingPage.qml" line="82"/>
         <source>Settings</source>
-        <translation>إعدادات</translation>
+        <translation>Nastavenia</translation>
     </message>
     <message>
         <location filename="../qml/pages/SettingPage.qml" line="89"/>
         <source>Keep backlight on</source>
-        <translation>الإبقاء على الإضاءة الخلفية</translation>
+        <translation>Nechať rozsvietené</translation>
     </message>
     <message>
         <location filename="../qml/pages/SettingPage.qml" line="90"/>
         <source>Prevent screen from dimming.</source>
-        <translation>منع الشاشة من العتم</translation>
+        <translation>Zabrániť stlmeniu obrazovky.</translation>
     </message>
     <message>
         <location filename="../qml/pages/SettingPage.qml" line="96"/>
         <source>Show additional banner</source>
-        <translation>عرض لافتة إضافية</translation>
+        <translation>Zobraziť ďalší prúžok</translation>
     </message>
     <message>
         <location filename="../qml/pages/SettingPage.qml" line="97"/>
         <source>Notification banner in upper screen.</source>
-        <translation>لافتة الإشعارات في أعلى الشاشة.</translation>
+        <translation>Informačný prúžok hore na obrazovke.</translation>
     </message>
     <message>
         <location filename="../qml/pages/SettingPage.qml" line="104"/>
         <source>Show background image</source>
-        <translation type="unfinished"></translation>
+        <translation>Zobraziť obrázok pozadia</translation>
     </message>
     <message>
         <location filename="../qml/pages/SettingPage.qml" line="105"/>
         <source>Show analog clock image in background.</source>
-        <translation type="unfinished"></translation>
+        <translation>Zobraziť analógové hodiny na pozadí.</translation>
     </message>
     <message>
         <location filename="../qml/pages/SettingPage.qml" line="123"/>
         <source>Language:</source>
-        <translation>اللغة:</translation>
+        <translation>Jazyk:</translation>
     </message>
     <message>
         <location filename="../qml/pages/SettingPage.qml" line="124"/>
         <source>Change of language will be active after restarting the application.</source>
-        <translation>تغيير اللغة سيتم تطبيقه بعد إعادة تشغيل البرنامج</translation>
+        <translation>Zmena jazyka sa prejaví po reštarte aplikácie.</translation>
     </message>
     <message>
         <location filename="../qml/pages/SettingPage.qml" line="352"/>
         <source>Orientation:</source>
-        <translation>التوجه:</translation>
-    </message>
-    <message>
-        <location filename="../qml/pages/SettingPage.qml" line="358"/>
-        <source>Portrait</source>
-        <translation>طولي</translation>
-    </message>
-    <message>
-        <location filename="../qml/pages/SettingPage.qml" line="361"/>
-        <source>Landscape</source>
-        <translation>مناظر الطبيعة</translation>
-    </message>
-    <message>
-        <location filename="../qml/pages/SettingPage.qml" line="364"/>
-        <source>Dynamic</source>
-        <translation>حركي</translation>
+        <translation>Orientácia:</translation>
     </message>
     <message>
         <location filename="../qml/pages/SettingPage.qml" line="353"/>
         <source>Sets the preferred screen orientation.</source>
-        <translation>يثبت شاشة التوجه المفضلة.</translation>
+        <translation>Nastavuje preferovanú orientáciu obrazovky.</translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/SettingPage.qml" line="358"/>
+        <source>Portrait</source>
+        <translation>Na výšku</translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/SettingPage.qml" line="361"/>
+        <source>Landscape</source>
+        <translation>Na šírku</translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/SettingPage.qml" line="364"/>
+        <source>Dynamic</source>
+        <translation>Dynamicky</translation>
     </message>
 </context>
 <context>
@@ -224,17 +224,17 @@
     <message>
         <location filename="../qml/pages/TimeDialog.qml" line="54"/>
         <source>Save</source>
-        <translation>حفظ</translation>
+        <translation>Uložiť</translation>
     </message>
     <message>
         <location filename="../qml/pages/TimeDialog.qml" line="55"/>
         <source>Cancel</source>
-        <translation>إلغاء</translation>
+        <translation>Zrušiť</translation>
     </message>
     <message>
         <location filename="../qml/pages/TimeDialog.qml" line="96"/>
         <source>Dish</source>
-        <translation>طبَق</translation>
+        <translation>Jedlo</translation>
     </message>
 </context>
 <context>
@@ -244,7 +244,7 @@
         <location filename="../qml/cooktimer.qml" line="16"/>
         <location filename="../qml/cooktimer.qml" line="17"/>
         <source>Dish</source>
-        <translation>طبَق</translation>
+        <translation>Jedlo</translation>
     </message>
 </context>
 </TS>

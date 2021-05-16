@@ -194,27 +194,27 @@
         <translation>A nyelv megváltoztatása az alkalmazás újraindítása után történik meg.</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SettingPage.qml" line="344"/>
+        <location filename="../qml/pages/SettingPage.qml" line="352"/>
         <source>Orientation:</source>
         <translation>Tájolás:</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SettingPage.qml" line="345"/>
+        <location filename="../qml/pages/SettingPage.qml" line="353"/>
         <source>Sets the preferred screen orientation.</source>
         <translation>Beállítja az előnyben részesített képernyőtájolást.</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SettingPage.qml" line="350"/>
+        <location filename="../qml/pages/SettingPage.qml" line="358"/>
         <source>Portrait</source>
         <translation>Álló</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SettingPage.qml" line="353"/>
+        <location filename="../qml/pages/SettingPage.qml" line="361"/>
         <source>Landscape</source>
         <translation>Fekvő</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SettingPage.qml" line="356"/>
+        <location filename="../qml/pages/SettingPage.qml" line="364"/>
         <source>Dynamic</source>
         <translation>Dinamikus</translation>
     </message>

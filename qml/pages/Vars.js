@@ -26,10 +26,11 @@ var italian = 16
 var polish = 17
 var portuguese_brazil = 18
 var russian = 19
-var slovenian = 20
-var spanish = 21
-var swedish = 22
-var turkish = 23
+var slovak = 20
+var slovenian = 21
+var spanish = 22
+var swedish = 23
+var turkish = 24
 
 var orientation_portrait = 0
 var orientation_landscape = 1

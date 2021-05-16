@@ -54,6 +54,7 @@ namespace settingsPublic {
                     BR,    // Breton
                     PT_BR, // Portuguese (Brazil)
                     SL_SI, // Slovenian
+                    SK_SK, // Slovak
                     SQ_AL, // Albanian
                     HU,    // Hungarian
                     ZH_CN, // Chinese
