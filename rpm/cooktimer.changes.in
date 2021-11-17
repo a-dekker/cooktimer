@@ -8,6 +8,9 @@
 # * date Author's Name <author's email> version-release
 # - Summary of changes
 
+* Tue Nov 16 2021 Arno Dekker <jack.tar@example.com> 0.0.4-1
+- Opt out of sailjail
+
 * Sun May 16 2021 Arno Dekker <jack.tar@example.com> 0.0.3-8
 - Slovak added thanks Ladislav Hodas
 

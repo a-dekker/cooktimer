@@ -7,3 +7,6 @@ Exec=cooktimer
 
 [X-HarbourBackup]
 BackupPathList=.local/share/cooktimer/:.config/cooktimer
+
+[X-Sailjail]
+Sandboxing=Disabled
