@@ -30,12 +30,9 @@ DockedPanel {
 
     Rectangle {
         anchors.fill: parent
-        color: Theme.rgba(Theme.primaryHighlightColor, 0.7)
-
-        Image {
-            width: parent.width
-            source: "image://theme/graphic-system-gradient"
-        }
+        color: mainapp.isLightTheme ? Theme.rgba(Theme.primaryHighlightColor,
+                                                 0.2) : Theme.rgba(
+                                          Theme.primaryHighlightColor, 0.7)
 
         Column {
             id: infoColumn

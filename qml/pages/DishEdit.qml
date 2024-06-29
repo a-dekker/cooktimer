@@ -21,16 +21,17 @@ Dialog {
     }
     SilicaListView {
         id: dishlist
-        VerticalScrollDecorator {
+        VerticalScrollDecorator {}
+        model: ListModel {}
+        anchors {
+            top: header.bottom
+            leftMargin: Theme.paddingSmall
+            rightMargin: Theme.paddingSmall
         }
-        model: ListModel {
-        }
-        anchors.leftMargin: Theme.paddingSmall
-        anchors.rightMargin: Theme.paddingSmall
         width: parent.width
-        y: header.height + Theme.paddingMedium
-        contentHeight: dishlist.count * Theme.itemSizeSmall
-        height: parent.height - (header.height + Theme.paddingMedium + addButton.height)
+        // contentHeight: dishlist.count * Theme.itemSizeSmall
+        height: parent.height - (header.height + addButton.height)
+        clip: true
 
         function loadDishList() {
             DB.readDishesEdit()

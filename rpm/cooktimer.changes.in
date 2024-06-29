@@ -8,6 +8,10 @@
 # * date Author's Name <author's email> version-release
 # - Summary of changes
 
+* Tue Jun 29 2024 Arno Dekker <jack.tar@example.com> 0.0.4-2
+- Display correct banner content if multiple dishes with comment are selected
+- Make banner background less dark for light themes
+
 * Tue Nov 16 2021 Arno Dekker <jack.tar@example.com> 0.0.4-1
 - Opt out of sailjail
 

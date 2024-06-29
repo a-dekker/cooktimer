@@ -312,7 +312,6 @@ Page {
         onTriggered: remainingTime3.opacity = remainingTime3.opacity === 0 ? 1 : 0
     }
 
-
     function toggleTimer2() {
         progressBar2.value = 0
         totalTime2.text = timer2.text
@@ -557,13 +556,10 @@ Page {
     }
 
     function _showDishInfo(dish_name, comment_text) {
-        if (infoPanelLoader.status === Loader.Null) {
-            infoPanelLoader.source = Qt.resolvedUrl(
-                        "../common/DishInfoPanel.qml")
-            infoPanelLoader.item.parent = page
-            infoPanelLoader.item.dish = dish_name
-            infoPanelLoader.item.comment = comment_text
-        }
+        infoPanelLoader.source = Qt.resolvedUrl("../common/DishInfoPanel.qml")
+        infoPanelLoader.item.parent = page
+        infoPanelLoader.item.dish = dish_name
+        infoPanelLoader.item.comment = comment_text
         infoPanelLoader.item.showDishInfo()
     }
 
@@ -608,8 +604,6 @@ Page {
             id: bar
         }
 
-        // set spacing considering the width/height ratio
-        // spacing: page.height / page.width > 1.6 ? Theme.paddingLarge : Theme.paddingMedium
         PageHeader {
             id: header
             title: "Cooktimer"

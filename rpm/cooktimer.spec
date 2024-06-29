@@ -14,7 +14,7 @@ Name:       cooktimer
 %{?qtc_builddir:%define _builddir %qtc_builddir}
 Summary:    Multiple timers for cooking
 Version:    0.4
-Release:    1
+Release:    2
 Group:      Qt/Qt
 License:    LGPL
 URL:        https://github.com/a-dekker/cooktimer
@@ -64,7 +64,7 @@ desktop-file-install --delete-original       \
 
 %files
 %defattr(644,root,root,755)
-%attr(755,root,root) %{_bindir}
+%attr(755,root,root) %{_bindir}/%{name}
 %{_datadir}/%{name}/qml
 %{_datadir}/applications/%{name}.desktop
 %{_datadir}/icons/hicolor/86x86/apps/%{name}.png
@@ -76,7 +76,6 @@ desktop-file-install --delete-original       \
 %{_datadir}/%{name}/lib/
 %{_datadir}/%{name}/lib/cooktimer
 %{_datadir}/%{name}/lib/cooktimer/insomniac
-/usr/bin
 /usr/share/cooktimer
 /usr/share/applications
 /usr/share/icons/hicolor/*/apps

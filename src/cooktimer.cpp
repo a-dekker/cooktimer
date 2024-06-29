@@ -45,18 +45,6 @@
 #include "settings.h"
 
 int main(int argc, char* argv[]) {
-    QProcess appinfo;
-    QString appversion;
-
-    // read app version from rpm database on startup
-    appinfo.start("/bin/rpm", QStringList() << "-qa"
-                                            << "--queryformat"
-                                            << "%{version}-%{RELEASE}"
-                                            << "cooktimer");
-    appinfo.waitForFinished(-1);
-    if (appinfo.bytesAvailable() > 0) {
-        appversion = appinfo.readAll();
-    }
 
     // SailfishApp::main() will display "qml/template.qml", if you need more
     // control over initialization, you can use:
@@ -68,7 +56,8 @@ int main(int argc, char* argv[]) {
     // To display the view, call "show()" (will show fullscreen on device).
     QScopedPointer<QGuiApplication> app(SailfishApp::application(argc, argv));
     QQuickView* view = SailfishApp::createView();
-    view->rootContext()->setContextProperty("version", appversion);
+    view->rootContext()->setContextProperty("version", APP_VERSION);
+    view->rootContext()->setContextProperty("buildyear", BUILD_YEAR);
     view->engine()->addImportPath(SailfishApp::pathTo("lib/").toLocalFile());
     view->engine()->addImportPath(
         SailfishApp::pathTo("qml/components/").toLocalFile());
