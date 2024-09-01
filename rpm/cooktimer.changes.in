@@ -8,6 +8,8 @@
 # * date Author's Name <author's email> version-release
 # - Summary of changes
 
+* Sun Sep 1 2024 Arno Dekker <jack.tar@example.com> 0.0.4-3
+- fix: time text could stay blank on coverpage after unpause from fullpage view
 * Tue Jun 29 2024 Arno Dekker <jack.tar@example.com> 0.0.4-2
 - Display correct banner content if multiple dishes with comment are selected
 - Make banner background less dark for light themes

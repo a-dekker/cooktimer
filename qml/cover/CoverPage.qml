@@ -25,6 +25,11 @@ CoverBackground {
         running: isPaused1 && Cover.Active
         repeat: true
         onTriggered: dishtime1.opacity = dishtime1.opacity === 0 ? 1 : 0
+        onRunningChanged: {
+            if (!running) {
+                dishtime1.opacity = 1
+            }
+        }
     }
 
     Timer {
@@ -33,6 +38,11 @@ CoverBackground {
         running: isPaused2 && Cover.Active
         repeat: true
         onTriggered: dishtime2.opacity = dishtime2.opacity === 0 ? 1 : 0
+        onRunningChanged: {
+            if (!running) {
+                dishtime2.opacity = 1
+            }
+        }
     }
 
     Timer {
@@ -41,6 +51,11 @@ CoverBackground {
         running: isPaused3 && Cover.Active
         repeat: true
         onTriggered: dishtime3.opacity = dishtime3.opacity === 0 ? 1 : 0
+        onRunningChanged: {
+            if (!running) {
+                dishtime3.opacity = 1
+            }
+        }
     }
 
     SilicaFlickable {
