@@ -60,22 +60,22 @@
         <translation>Avbryt</translation>
     </message>
     <message>
-        <location filename="../qml/pages/DishEdit.qml" line="49"/>
+        <location filename="../qml/pages/DishEdit.qml" line="50"/>
         <source>Deleting</source>
         <translation>Tar bort</translation>
     </message>
     <message>
-        <location filename="../qml/pages/DishEdit.qml" line="59"/>
+        <location filename="../qml/pages/DishEdit.qml" line="60"/>
         <source>Dish name</source>
         <translation>Maträtt</translation>
     </message>
     <message>
-        <location filename="../qml/pages/DishEdit.qml" line="128"/>
+        <location filename="../qml/pages/DishEdit.qml" line="129"/>
         <source>No dishes defined. Press the plus button to add one.</source>
         <translation>Inga maträtter definierade. Tryck på plus för att lägga till en.</translation>
     </message>
     <message>
-        <location filename="../qml/pages/DishEdit.qml" line="138"/>
+        <location filename="../qml/pages/DishEdit.qml" line="139"/>
         <source>New dish</source>
         <translation>Ny maträtt</translation>
     </message>
@@ -91,47 +91,47 @@
 <context>
     <name>MainPage</name>
     <message>
-        <location filename="../qml/pages/MainPage.qml" line="476"/>
-        <location filename="../qml/pages/MainPage.qml" line="479"/>
+        <location filename="../qml/pages/MainPage.qml" line="475"/>
+        <location filename="../qml/pages/MainPage.qml" line="478"/>
         <source>ready</source>
         <translation>Klar</translation>
     </message>
     <message>
-        <location filename="../qml/pages/MainPage.qml" line="594"/>
+        <location filename="../qml/pages/MainPage.qml" line="590"/>
         <source>About</source>
         <translation>Om</translation>
     </message>
     <message>
-        <location filename="../qml/pages/MainPage.qml" line="598"/>
+        <location filename="../qml/pages/MainPage.qml" line="594"/>
         <source>Settings</source>
         <translation>Inställningar</translation>
     </message>
     <message>
-        <location filename="../qml/pages/MainPage.qml" line="602"/>
+        <location filename="../qml/pages/MainPage.qml" line="598"/>
         <source>Edit dishes</source>
         <translation>Redigera maträtter</translation>
     </message>
     <message>
-        <location filename="../qml/pages/MainPage.qml" line="641"/>
-        <location filename="../qml/pages/MainPage.qml" line="903"/>
-        <location filename="../qml/pages/MainPage.qml" line="1161"/>
+        <location filename="../qml/pages/MainPage.qml" line="635"/>
+        <location filename="../qml/pages/MainPage.qml" line="938"/>
+        <location filename="../qml/pages/MainPage.qml" line="1239"/>
         <source>Dish</source>
         <translation>Maträtt</translation>
     </message>
     <message>
-        <location filename="../qml/pages/MainPage.qml" line="691"/>
-        <location filename="../qml/pages/MainPage.qml" line="692"/>
-        <location filename="../qml/pages/MainPage.qml" line="953"/>
-        <location filename="../qml/pages/MainPage.qml" line="954"/>
-        <location filename="../qml/pages/MainPage.qml" line="1211"/>
-        <location filename="../qml/pages/MainPage.qml" line="1212"/>
+        <location filename="../qml/pages/MainPage.qml" line="685"/>
+        <location filename="../qml/pages/MainPage.qml" line="686"/>
+        <location filename="../qml/pages/MainPage.qml" line="988"/>
+        <location filename="../qml/pages/MainPage.qml" line="989"/>
+        <location filename="../qml/pages/MainPage.qml" line="1289"/>
+        <location filename="../qml/pages/MainPage.qml" line="1290"/>
         <source>Stop</source>
         <translation>Stopp</translation>
     </message>
     <message>
-        <location filename="../qml/pages/MainPage.qml" line="691"/>
-        <location filename="../qml/pages/MainPage.qml" line="953"/>
-        <location filename="../qml/pages/MainPage.qml" line="1211"/>
+        <location filename="../qml/pages/MainPage.qml" line="685"/>
+        <location filename="../qml/pages/MainPage.qml" line="988"/>
+        <location filename="../qml/pages/MainPage.qml" line="1289"/>
         <source>Start</source>
         <translation>Start</translation>
     </message>

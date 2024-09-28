@@ -744,17 +744,43 @@ Page {
                 icon.source: 'image://theme/icon-m-remove'
                 scale: largeScreen ? 2 : 1
                 onClicked: {
-                    var button_minute = parseInt(timer1.text.split(":")[1], 10)
-                    if (button_minute > 0) {
-                        button_minute = button_minute - 1
-                        myGlobalDuration1 = myGlobalDuration1.split(
-                                    ":")[0] + ":"
-                                + (button_minute > 9 ? button_minute : "0" + button_minute)
-                                + ":" + myGlobalDuration1.split(":")[2]
-                        buttonBuzz.play()
-                        if (!ticker1.running && !mainapp.isPaused1) {
-                            remainingTime1.text = timer1.text
-                            mainapp.timeText1 = remainingTime1.text
+                    buttonBuzz.play()
+                    if (mainapp.timer1running || mainapp.isPaused1) {
+                        // shorten running timer by a minute
+                        var remaining_minutes = parseInt(
+                                    remainingTime1.text.split(":")[1], 10)
+                        var remaining_hours = parseInt(
+                                    remainingTime1.text.split(":")[0], 10)
+                        if (remaining_minutes > 0 || remaining_hours > 0) {
+                            remaining_minutes--
+                            if (seconds1 > 60) {
+                                if (remaining_minutes < 0) {
+                                    // to avoid short negative value on hour crossing
+                                    remaining_minutes = 0
+                                }
+                                remainingTime1.text = remainingTime1.text.split(
+                                            ":")[0] + ":"
+                                        + (remaining_minutes
+                                           > 9 ? remaining_minutes : "0" + remaining_minutes)
+                                        + ":" + remainingTime1.text.split(
+                                            ":")[2]
+                            }
+                            seconds1 = seconds1 - 60
+                        }
+                    } else {
+                        // shorten initial timer by a minute
+                        var button_minute = parseInt(timer1.text.split(":")[1],
+                                                     10)
+                        if (button_minute > 0) {
+                            button_minute--
+                            myGlobalDuration1 = myGlobalDuration1.split(
+                                        ":")[0] + ":"
+                                    + (button_minute > 9 ? button_minute : "0" + button_minute)
+                                    + ":" + myGlobalDuration1.split(":")[2]
+                            if (!ticker1.running && !mainapp.isPaused1) {
+                                remainingTime1.text = timer1.text
+                                mainapp.timeText1 = remainingTime1.text
+                            }
                         }
                     }
                 }
@@ -786,17 +812,32 @@ Page {
                 icon.source: largeScreen ? 'image://theme/icon-l-add' : 'image://theme/icon-m-add'
                 visible: myGlobalComment1 === "" || isLandscape || largeScreen
                 onClicked: {
-                    var button_minute = parseInt(timer1.text.split(":")[1], 10)
-                    if (button_minute < 59) {
-                        button_minute = button_minute + 1
-                        myGlobalDuration1 = myGlobalDuration1.split(
-                                    ":")[0] + ":"
-                                + (button_minute > 9 ? button_minute : "0" + button_minute)
-                                + ":" + myGlobalDuration1.split(":")[2]
-                        buttonBuzz.play()
-                        if (!ticker1.running && !mainapp.isPaused1) {
-                            remainingTime1.text = timer1.text
-                            mainapp.timeText1 = remainingTime1.text
+                    buttonBuzz.play()
+                    if (mainapp.timer1running || mainapp.isPaused1) {
+                        // add a minute to a running timer
+                        var remaining_minute = parseInt(
+                                    remainingTime1.text.split(":")[1], 10)
+                        remaining_minute++
+                        if (remaining_minute < 60) {
+                            remainingTime1.text = remainingTime1.text.split(
+                                        ":")[0] + ":" + (remaining_minute > 9 ? remaining_minute : "0" + remaining_minute)
+                                    + ":" + remainingTime1.text.split(":")[2]
+                        }
+                        seconds1 = seconds1 + 60
+                    } else {
+                        // add a minute to the initial time
+                        var button_minute = parseInt(timer1.text.split(":")[1],
+                                                     10)
+                        if (button_minute < 59) {
+                            button_minute++
+                            myGlobalDuration1 = myGlobalDuration1.split(
+                                        ":")[0] + ":"
+                                    + (button_minute > 9 ? button_minute : "0" + button_minute)
+                                    + ":" + myGlobalDuration1.split(":")[2]
+                            if (!ticker1.running && !mainapp.isPaused1) {
+                                remainingTime1.text = timer1.text
+                                mainapp.timeText1 = remainingTime1.text
+                            }
                         }
                     }
                 }
@@ -875,10 +916,10 @@ Page {
         Row {
             /* inner row */
             id: timerRow2
+            spacing: largeScreen ? Theme.paddingMedium : Theme.paddingSmall
             anchors.top: sepLine1.bottom
             anchors.topMargin: isPortrait ? (largeScreen ? Theme.paddingLarge : parent.height
                                                            / 30) : 0
-            spacing: largeScreen ? Theme.paddingMedium : Theme.paddingSmall
             anchors.horizontalCenter: parent.horizontalCenter
             height: isPortrait ? (largeScreen ? page.height / 12 : Theme.itemSizeMedium) : (largeScreen ? page.height / 7 : Theme.paddingLarge * 1.6)
             Button {
@@ -1005,17 +1046,43 @@ Page {
                 icon.source: 'image://theme/icon-m-remove'
                 scale: largeScreen ? 2 : 1
                 onClicked: {
-                    var button_minute = parseInt(timer2.text.split(":")[1], 10)
-                    if (button_minute > 0) {
-                        button_minute = button_minute - 1
-                        myGlobalDuration2 = myGlobalDuration2.split(
-                                    ":")[0] + ":"
-                                + (button_minute > 9 ? button_minute : "0" + button_minute)
-                                + ":" + myGlobalDuration2.split(":")[2]
-                        buttonBuzz.play()
-                        if (!ticker2.running && !mainapp.isPaused2) {
-                            remainingTime2.text = timer2.text
-                            mainapp.timeText2 = remainingTime2.text
+                    buttonBuzz.play()
+                    if (mainapp.timer2running || mainapp.isPaused2) {
+                        // shorten running timer by a minute
+                        var remaining_minutes = parseInt(
+                                    remainingTime2.text.split(":")[1], 10)
+                        var remaining_hours = parseInt(
+                                    remainingTime2.text.split(":")[0], 10)
+                        if (remaining_minutes > 0 || remaining_hours > 0) {
+                            remaining_minutes--
+                            if (seconds2 > 60) {
+                                if (remaining_minutes < 0) {
+                                    // to avoid short negative value on hour crossing
+                                    remaining_minutes = 0
+                                }
+                                remainingTime2.text = remainingTime2.text.split(
+                                            ":")[0] + ":"
+                                        + (remaining_minutes
+                                           > 9 ? remaining_minutes : "0" + remaining_minutes)
+                                        + ":" + remainingTime2.text.split(
+                                            ":")[2]
+                            }
+                            seconds2 = seconds2 - 60
+                        }
+                    } else {
+                        // shorten initial timer by a minute
+                        var button_minute = parseInt(timer2.text.split(":")[1],
+                                                     10)
+                        if (button_minute > 0) {
+                            button_minute--
+                            myGlobalDuration2 = myGlobalDuration2.split(
+                                        ":")[0] + ":"
+                                    + (button_minute > 9 ? button_minute : "0" + button_minute)
+                                    + ":" + myGlobalDuration2.split(":")[2]
+                            if (!ticker2.running && !mainapp.isPaused2) {
+                                remainingTime2.text = timer2.text
+                                mainapp.timeText2 = remainingTime2.text
+                            }
                         }
                     }
                 }
@@ -1046,17 +1113,32 @@ Page {
                 icon.source: largeScreen ? 'image://theme/icon-l-add' : 'image://theme/icon-m-add'
                 visible: myGlobalComment2 === "" || isLandscape || largeScreen
                 onClicked: {
-                    var button_minute = parseInt(timer2.text.split(":")[1], 10)
-                    if (button_minute < 59) {
-                        button_minute = button_minute + 1
-                        myGlobalDuration2 = myGlobalDuration2.split(
-                                    ":")[0] + ":"
-                                + (button_minute > 9 ? button_minute : "0" + button_minute)
-                                + ":" + myGlobalDuration2.split(":")[2]
-                        buttonBuzz.play()
-                        if (!ticker2.running && !mainapp.isPaused2) {
-                            remainingTime2.text = timer2.text
-                            mainapp.timeText2 = remainingTime2.text
+                    buttonBuzz.play()
+                    if (mainapp.timer2running || mainapp.isPaused2) {
+                        // add a minute to a running timer
+                        var remaining_minute = parseInt(
+                                    remainingTime2.text.split(":")[1], 10)
+                        remaining_minute++
+                        if (remaining_minute < 60) {
+                            remainingTime2.text = remainingTime2.text.split(
+                                        ":")[0] + ":" + (remaining_minute > 9 ? remaining_minute : "0" + remaining_minute)
+                                    + ":" + remainingTime2.text.split(":")[2]
+                        }
+                        seconds2 = seconds2 + 60
+                    } else {
+                        // add a minute to the initial time
+                        var button_minute = parseInt(timer2.text.split(":")[1],
+                                                     10)
+                        if (button_minute < 59) {
+                            button_minute++
+                            myGlobalDuration2 = myGlobalDuration2.split(
+                                        ":")[0] + ":"
+                                    + (button_minute > 9 ? button_minute : "0" + button_minute)
+                                    + ":" + myGlobalDuration2.split(":")[2]
+                            if (!ticker2.running && !mainapp.isPaused2) {
+                                remainingTime2.text = timer2.text
+                                mainapp.timeText2 = remainingTime2.text
+                            }
                         }
                     }
                 }
@@ -1079,9 +1161,10 @@ Page {
         ProgressBar {
             id: progressBar2
             anchors.top: counter2.bottom
-            anchors.horizontalCenter: parent.horizontalCenter
-            width: parent.width - 2 * Theme.paddingLarge
+            // width: parent.width - 2 * Theme.paddingLarge
+            width: parent.width - Theme.paddingLarge * 2
             height: Theme.paddingLarge * 2.5
+            anchors.horizontalCenter: parent.horizontalCenter
             maximumValue: 1
             anchors.topMargin: 1
             leftMargin: 0
@@ -1115,6 +1198,7 @@ Page {
             id: sepLine2
             anchors.top: progressBar2.bottom
             anchors.leftMargin: Theme.paddingLarge
+            anchors.horizontalCenter: parent.horizontalCenter
             width: parent.width - Theme.paddingLarge * 2
             implicitHeight: isPortrait ? parent.height / 30 : 0
             opacity: 0.5
@@ -1263,17 +1347,43 @@ Page {
                 icon.source: 'image://theme/icon-m-remove'
                 scale: largeScreen ? 2 : 1
                 onClicked: {
-                    var button_minute = parseInt(timer3.text.split(":")[1], 10)
-                    if (button_minute > 0) {
-                        button_minute = button_minute - 1
-                        myGlobalDuration3 = myGlobalDuration3.split(
-                                    ":")[0] + ":"
-                                + (button_minute > 9 ? button_minute : "0" + button_minute)
-                                + ":" + myGlobalDuration3.split(":")[2]
-                        buttonBuzz.play()
-                        if (!ticker3.running && !mainapp.isPaused3) {
-                            remainingTime3.text = timer3.text
-                            mainapp.timeText3 = remainingTime3.text
+                    buttonBuzz.play()
+                    if (mainapp.timer3running || mainapp.isPaused3) {
+                        // shorten running timer by a minute
+                        var remaining_minutes = parseInt(
+                                    remainingTime3.text.split(":")[1], 10)
+                        var remaining_hours = parseInt(
+                                    remainingTime3.text.split(":")[0], 10)
+                        if (remaining_minutes > 0 || remaining_hours > 0) {
+                            remaining_minutes--
+                            if (seconds3 > 60) {
+                                if (remaining_minutes < 0) {
+                                    // to avoid short negative value on hour crossing
+                                    remaining_minutes = 0
+                                }
+                                remainingTime3.text = remainingTime3.text.split(
+                                            ":")[0] + ":"
+                                        + (remaining_minutes
+                                           > 9 ? remaining_minutes : "0" + remaining_minutes)
+                                        + ":" + remainingTime3.text.split(
+                                            ":")[2]
+                            }
+                            seconds3 = seconds3 - 60
+                        }
+                    } else {
+                        // shorten initial timer by a minute
+                        var button_minute = parseInt(timer3.text.split(":")[1],
+                                                     10)
+                        if (button_minute > 0) {
+                            button_minute--
+                            myGlobalDuration3 = myGlobalDuration3.split(
+                                        ":")[0] + ":"
+                                    + (button_minute > 9 ? button_minute : "0" + button_minute)
+                                    + ":" + myGlobalDuration3.split(":")[2]
+                            if (!ticker3.running && !mainapp.isPaused3) {
+                                remainingTime3.text = timer3.text
+                                mainapp.timeText3 = remainingTime3.text
+                            }
                         }
                     }
                 }
@@ -1304,17 +1414,32 @@ Page {
                 icon.source: largeScreen ? 'image://theme/icon-l-add' : 'image://theme/icon-m-add'
                 visible: myGlobalComment3 === "" || isLandscape || largeScreen
                 onClicked: {
-                    var button_minute = parseInt(timer3.text.split(":")[1], 10)
-                    if (button_minute < 59) {
-                        button_minute = button_minute + 1
-                        myGlobalDuration3 = myGlobalDuration3.split(
-                                    ":")[0] + ":"
-                                + (button_minute > 9 ? button_minute : "0" + button_minute)
-                                + ":" + myGlobalDuration3.split(":")[2]
-                        buttonBuzz.play()
-                        if (!ticker3.running && !mainapp.isPaused3) {
-                            remainingTime3.text = timer3.text
-                            mainapp.timeText3 = remainingTime3.text
+                    buttonBuzz.play()
+                    if (mainapp.timer3running || mainapp.isPaused3) {
+                        // add a minute to a running timer
+                        var remaining_minute = parseInt(
+                                    remainingTime3.text.split(":")[1], 10)
+                        remaining_minute++
+                        if (remaining_minute < 60) {
+                            remainingTime3.text = remainingTime3.text.split(
+                                        ":")[0] + ":" + (remaining_minute > 9 ? remaining_minute : "0" + remaining_minute)
+                                    + ":" + remainingTime3.text.split(":")[2]
+                        }
+                        seconds3 = seconds3 + 60
+                    } else {
+                        // add a minute to the initial time
+                        var button_minute = parseInt(timer3.text.split(":")[1],
+                                                     10)
+                        if (button_minute < 59) {
+                            button_minute++
+                            myGlobalDuration3 = myGlobalDuration3.split(
+                                        ":")[0] + ":"
+                                    + (button_minute > 9 ? button_minute : "0" + button_minute)
+                                    + ":" + myGlobalDuration3.split(":")[2]
+                            if (!ticker3.running && !mainapp.isPaused3) {
+                                remainingTime3.text = timer3.text
+                                mainapp.timeText3 = remainingTime3.text
+                            }
                         }
                     }
                 }
