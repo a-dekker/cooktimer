@@ -8,6 +8,9 @@
 # * date Author's Name <author's email> version-release
 # - Summary of changes
 
+* Sun Dec 15 2024 Arno Dekker <jack.tar@example.com> 0.0.6-1
+- Allow the plus and minus button to pass an hour border
+
 * Sat Sep 28 2024 Arno Dekker <jack.tar@example.com> 0.0.5-1
 - Plus and minus button now increase or decrease running timer itself
 
