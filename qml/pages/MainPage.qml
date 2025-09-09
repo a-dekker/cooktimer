@@ -9,7 +9,7 @@ import QtFeedback 5.0
 import "../localdb.js" as DB
 import "Vars.js" as GlobVars
 
-// database in /home/nemo/.local/share/cooktimer/cooktimer/QML/OfflineStorage/Databases
+// database in $HOME/.local/share/cooktimer/cooktimer/QML/OfflineStorage/Databases
 Page {
     id: page
     allowedOrientations: mainapp.orientationSetting
@@ -233,8 +233,6 @@ Page {
     }
 
     function toggleTimer1() {
-        progressBar1.value = 0
-        totalTime1.text = timer1.text
         remainingTime1.text = timer1.text
         mainapp.timeText1 = remainingTime1.text
         remainingTime1.opacity = 1
@@ -313,8 +311,6 @@ Page {
     }
 
     function toggleTimer2() {
-        progressBar2.value = 0
-        totalTime2.text = timer2.text
         remainingTime2.text = timer2.text
         mainapp.timeText2 = remainingTime2.text
         remainingTime2.opacity = 1
@@ -369,8 +365,6 @@ Page {
     }
 
     function toggleTimer3() {
-        progressBar3.value = 0
-        totalTime3.text = timer3.text
         remainingTime3.text = timer3.text
         mainapp.timeText3 = remainingTime3.text
         remainingTime3.opacity = 1
@@ -492,7 +486,6 @@ Page {
         if (passed >= _remaining1) {
             console.warn('Time1 has passed!', passed - _remaining1, 'seconds')
             remainingTime1.text = "00:00:00"
-            progressBar1.value = 0
             mainapp.timeText1 = remainingTime1.text
             mainapp.timer1running = !mainapp.timer1running
             remainingTime1.font.bold = false
@@ -517,7 +510,6 @@ Page {
         if (passed >= _remaining2) {
             console.warn('Time2 has passed!', passed - _remaining2, 'seconds')
             remainingTime2.text = "00:00:00"
-            progressBar2.value = 0
             mainapp.timeText2 = remainingTime2.text
             mainapp.timer2running = !mainapp.timer2running
             remainingTime2.font.bold = false
@@ -541,9 +533,7 @@ Page {
 
         if (passed >= _remaining3) {
             console.warn('Time3 has passed!', passed - _remaining3, 'seconds')
-            // remainingTime3.seconds = 1
             remainingTime3.text = "00:00:00"
-            progressBar3.value = 0
             mainapp.timeText3 = remainingTime3.text
             mainapp.timer3running = !mainapp.timer3running
             remainingTime3.font.bold = false
@@ -607,17 +597,18 @@ Page {
         PageHeader {
             id: header
             title: "Cooktimer"
-            visible: isPortrait || largeScreen || Screen.width >= 1080
+            visible: isPortrait || largeScreen
         }
         Row {
             /* inner row */
             id: timerRow1
             spacing: largeScreen ? Theme.paddingMedium : Theme.paddingSmall
-            anchors.top: isPortrait || largeScreen
-                         || Screen.width >= 1080 ? header.bottom : header.top
-            anchors.topMargin: isPortrait ? (largeScreen ? Theme.paddingLarge : 0) : Theme.paddingSmall
-            anchors.horizontalCenter: parent.horizontalCenter
-            height: isPortrait ? (largeScreen ? page.height / 12 : Theme.itemSizeMedium) : (largeScreen ? Theme.itemSizeExtraLarge : Theme.paddingLarge * 1.6)
+            anchors {
+                top: isPortrait || largeScreen ? header.bottom : header.top
+                topMargin: isPortrait ? (largeScreen ? Theme.paddingLarge : 0) : Theme.paddingLarge
+                horizontalCenter: parent.horizontalCenter
+            }
+            height: isPortrait ? (largeScreen ? page.height / 12 : Theme.itemSizeMedium) : (largeScreen ? page.height / 7 : page.height / 10)
 
             Button {
                 id: dish1
@@ -671,7 +662,6 @@ Page {
                     onPressAndHold: {
                         myGlobalDuration1 = "00:00:00"
                         if (!ticker1.running && !mainapp.isPaused1) {
-                            progressBar1.value = 0
                             remainingTime1.text = "00:00:00"
                             mainapp.timeText1 = remainingTime1.text
                         }
@@ -720,7 +710,6 @@ Page {
                     if (!ticker3.running) {
                         remainingTime3.color = Theme.secondaryHighlightColor
                     }
-                    progressBar1.value = 0
                     // sound the alarm
                     alarm(dish1.text)
                 }
@@ -728,19 +717,50 @@ Page {
         }
         Item {
             id: counter1
-            anchors.top: timerRow1.bottom
+            anchors {
+                top: timerRow1.bottom
+                topMargin: parent.height / 15
+                horizontalCenter: parent.horizontalCenter
+            }
             height: isPortrait ? (largeScreen ? page.height
                                                 / 12 : Theme.itemSizeSmall) : Theme.itemSizeSmall
-            anchors.horizontalCenter: parent.horizontalCenter
             width: parent.width - Theme.paddingLarge
             Rectangle {
-                anchors.fill: parent
-                opacity: 0
+                width: parent.width * (1 - (remainingTime1.seconds / _totalsecs1) + 0.001)
+                height: largeScreen ? Theme.fontSizeExtraLarge
+                                      * 2.5 : Theme.fontSizeExtraLarge * 1.8
+                radius: 10
+                visible: isRunning1 || mainapp.isPaused1
+                anchors {
+                    verticalCenter: remainingTime1.top
+                    verticalCenterOffset: remainingTime1.textVerticalCenterOffset
+                }
+                gradient: Gradient {
+                    GradientStop {
+                        position: 0.0
+                        color: Theme.rgba(Theme.highlightBackgroundColor, 0.31)
+                    }
+                    GradientStop {
+                        position: 1.0
+                        color: Theme.rgba(Theme.highlightBackgroundColor, 0.1)
+                    }
+                }
+                Timer {
+                    // For updating coverpage
+                    interval: 100
+                    repeat: true
+                    onTriggered: mainapp.progressValue1
+                                 = (1 - (remainingTime1.seconds / _totalsecs1) + 0.001)
+                    running: (Qt.application.active && mainapp.timer1running)
+                             || (viewable)
+                }
             }
             IconButton {
                 id: minButton1
-                anchors.verticalCenter: remainingTime1.top
-                anchors.verticalCenterOffset: largeScreen ? Theme.itemSizeSmall : Theme.itemSizeExtraSmall
+                anchors {
+                    verticalCenter: remainingTime1.top
+                    verticalCenterOffset: remainingTime1.textVerticalCenterOffset
+                }
                 icon.source: 'image://theme/icon-m-remove'
                 scale: largeScreen ? 2 : 1
                 onClicked: {
@@ -800,15 +820,16 @@ Page {
                 }
             }
             TextField {
-                anchors.bottomMargin: 1
                 id: remainingTime1
+                anchors {
+                    bottomMargin: 1
+                    left: minButton1.right
+                    right: plusButton1.left
+                    verticalCenter: parent.verticalCenter
+                }
                 readOnly: true
                 property int seconds
-                anchors.left: minButton1.right
-                anchors.right: plusButton1.left
                 horizontalAlignment: Qt.AlignHCenter
-                anchors.verticalCenter: largeScreen ? parent.verticalCenter : parent.bottom
-                anchors.verticalCenterOffset: isLandscape ? Theme.paddingSmall : 0
                 color: Theme.secondaryHighlightColor
                 font.pixelSize: largeScreen ? Theme.fontSizeExtraLarge
                                               * 2.5 : Theme.fontSizeExtraLarge * 1.8
@@ -820,9 +841,10 @@ Page {
             IconButton {
                 id: plusButton1
                 x: parent.width - minButton1.width
-                y: Theme.paddingLarge
-                anchors.verticalCenter: remainingTime1.top
-                anchors.verticalCenterOffset: largeScreen ? Theme.itemSizeSmall : Theme.itemSizeExtraSmall
+                anchors {
+                    verticalCenter: remainingTime1.top
+                    verticalCenterOffset: remainingTime1.textVerticalCenterOffset
+                }
                 icon.source: largeScreen ? 'image://theme/icon-l-add' : 'image://theme/icon-m-add'
                 visible: myGlobalComment1 === "" || isLandscape || largeScreen
                 onClicked: {
@@ -864,7 +886,11 @@ Page {
                 }
             }
             IconButton {
-                anchors.left: isPortrait ? (largeScreen ? plusButton1.right : remainingTime1.right) : plusButton1.right
+                anchors {
+                    left: isPortrait ? (largeScreen ? remainingTime1.left : remainingTime1.right) : remainingTime1.left
+                    verticalCenter: remainingTime1.top
+                    verticalCenterOffset: remainingTime1.textVerticalCenterOffset
+                }
                 y: Theme.paddingLarge
                 icon.source: largeScreen ? 'image://theme/icon-l-document' : 'image://theme/icon-m-note'
                 visible: myGlobalComment1 !== ""
@@ -878,47 +904,14 @@ Page {
                 }
             }
         }
-        ProgressBar {
-            id: progressBar1
-            anchors.top: counter1.bottom
-            width: parent.width - Theme.paddingLarge * 2
-            height: Theme.paddingLarge * 2.5
-            anchors.horizontalCenter: parent.horizontalCenter
-            maximumValue: 1
-            anchors.topMargin: 1
-            leftMargin: 0
-            rightMargin: 0
-            visible: isRunning1 || mainapp.isPaused1
-            Timer {
-                interval: 100
-                repeat: true
-                onTriggered: progressBar1.value = mainapp.progressValue1
-                             = (1 - (remainingTime1.seconds / _totalsecs1) + 0.001)
-                running: (Qt.application.active && mainapp.timer1running)
-                         || (viewable)
-            }
-            Label {
-                id: totalTime1
-                anchors.left: parent.left
-                anchors.bottom: parent.bottom
-                color: Theme.secondaryColor
-                font.pixelSize: Theme.fontSizeExtraSmall
-                text: "00:00:00"
-            }
-            Label {
-                anchors.right: parent.right
-                anchors.bottom: parent.bottom
-                color: Theme.secondaryColor
-                font.pixelSize: Theme.fontSizeExtraSmall
-                text: "00:00:00"
-            }
-        }
 
         Rectangle {
             id: sepLine1
-            anchors.top: progressBar1.bottom
-            anchors.leftMargin: Theme.paddingLarge
-            anchors.horizontalCenter: parent.horizontalCenter
+            anchors {
+                top: counter1.bottom
+                leftMargin: Theme.paddingLarge
+                horizontalCenter: parent.horizontalCenter
+            }
             width: parent.width - Theme.paddingLarge * 2
             implicitHeight: isPortrait ? parent.height / 30 : 0
             opacity: 0.5
@@ -938,11 +931,12 @@ Page {
             /* inner row */
             id: timerRow2
             spacing: largeScreen ? Theme.paddingMedium : Theme.paddingSmall
-            anchors.top: sepLine1.bottom
-            anchors.topMargin: isPortrait ? (largeScreen ? Theme.paddingLarge : parent.height
-                                                           / 30) : 0
-            anchors.horizontalCenter: parent.horizontalCenter
-            height: isPortrait ? (largeScreen ? page.height / 12 : Theme.itemSizeMedium) : (largeScreen ? page.height / 7 : Theme.paddingLarge * 1.6)
+            anchors {
+                top: sepLine1.bottom
+                topMargin: isPortrait ? (largeScreen ? Theme.paddingLarge : parent.height / 30) : 0
+                horizontalCenter: parent.horizontalCenter
+            }
+            height: isPortrait ? (largeScreen ? page.height / 12 : Theme.itemSizeMedium) : (largeScreen ? page.height / 7 : page.height / 10)
             Button {
                 id: dish2
                 width: (page.width - (Theme.paddingLarge * 2)) / 2.34
@@ -995,7 +989,6 @@ Page {
                     onPressAndHold: {
                         myGlobalDuration2 = "00:00:00"
                         if (!ticker2.running && !mainapp.isPaused2) {
-                            progressBar2.value = 0
                             remainingTime2.text = "00:00:00"
                             mainapp.timeText2 = remainingTime2.text
                         }
@@ -1043,7 +1036,6 @@ Page {
                     if (!ticker3.running) {
                         remainingTime3.color = Theme.secondaryHighlightColor
                     }
-                    progressBar2.value = 0
                     // sound the alarm
                     alarm(dish2.text)
                 }
@@ -1051,19 +1043,50 @@ Page {
         }
         Item {
             id: counter2
-            anchors.top: timerRow2.bottom
+            anchors {
+                top: timerRow2.bottom
+                topMargin: parent.height / 15
+                horizontalCenter: parent.horizontalCenter
+            }
             height: isPortrait ? (largeScreen ? page.height
                                                 / 12 : Theme.itemSizeSmall) : Theme.itemSizeSmall
-            anchors.horizontalCenter: parent.horizontalCenter
             width: parent.width - Theme.paddingLarge
             Rectangle {
-                anchors.fill: parent
-                opacity: 0
+                width: parent.width * (1 - (remainingTime2.seconds / _totalsecs2) + 0.001)
+                height: largeScreen ? Theme.fontSizeExtraLarge
+                                      * 2.5 : Theme.fontSizeExtraLarge * 1.8
+                radius: 10
+                visible: isRunning2 || mainapp.isPaused2
+                anchors {
+                    verticalCenter: remainingTime2.top
+                    verticalCenterOffset: remainingTime2.textVerticalCenterOffset
+                }
+                gradient: Gradient {
+                    GradientStop {
+                        position: 0.0
+                        color: Theme.rgba(Theme.highlightBackgroundColor, 0.31)
+                    }
+                    GradientStop {
+                        position: 1.0
+                        color: Theme.rgba(Theme.highlightBackgroundColor, 0.1)
+                    }
+                }
+                Timer {
+                    // for updating coverpage
+                    interval: 100
+                    repeat: true
+                    onTriggered: mainapp.progressValue2
+                                 = (1 - (remainingTime2.seconds / _totalsecs2) + 0.001)
+                    running: (Qt.application.active && mainapp.timer2running)
+                             || (viewable)
+                }
             }
             IconButton {
                 id: minButton2
-                anchors.verticalCenter: remainingTime2.top
-                anchors.verticalCenterOffset: largeScreen ? Theme.itemSizeSmall : Theme.itemSizeExtraSmall
+                anchors {
+                    verticalCenter: remainingTime2.top
+                    verticalCenterOffset: remainingTime2.textVerticalCenterOffset
+                }
                 icon.source: 'image://theme/icon-m-remove'
                 scale: largeScreen ? 2 : 1
                 onClicked: {
@@ -1124,13 +1147,15 @@ Page {
             }
             TextField {
                 id: remainingTime2
+                anchors {
+                    bottomMargin: 1
+                    left: minButton2.right
+                    right: plusButton2.left
+                    verticalCenter: parent.verticalCenter
+                }
                 readOnly: true
                 property int seconds
-                anchors.left: minButton2.right
-                anchors.right: plusButton2.left
                 horizontalAlignment: Qt.AlignHCenter
-                anchors.verticalCenter: largeScreen ? parent.verticalCenter : parent.bottom
-                anchors.verticalCenterOffset: isLandscape ? Theme.paddingSmall : 0
                 color: Theme.secondaryHighlightColor
                 font.pixelSize: largeScreen ? Theme.fontSizeExtraLarge
                                               * 2.5 : Theme.fontSizeExtraLarge * 1.8
@@ -1143,8 +1168,10 @@ Page {
                 id: plusButton2
                 x: parent.width - minButton2.width
                 y: Theme.paddingLarge
-                anchors.verticalCenter: remainingTime2.top
-                anchors.verticalCenterOffset: largeScreen ? Theme.itemSizeSmall : Theme.itemSizeExtraSmall
+                anchors {
+                    verticalCenter: remainingTime2.top
+                    verticalCenterOffset: remainingTime2.textVerticalCenterOffset
+                }
                 icon.source: largeScreen ? 'image://theme/icon-l-add' : 'image://theme/icon-m-add'
                 visible: myGlobalComment2 === "" || isLandscape || largeScreen
                 onClicked: {
@@ -1153,12 +1180,12 @@ Page {
                         // add a minute to a running timer
                         var remaining_minutes = parseInt(
                                     remainingTime2.text.split(":")[1], 10)
-                        remaining_minute++
+                        remaining_minutes++
                         if (remaining_minutes < 60) {
                             remainingTime2.text = remainingTime2.text.split(
                                         ":")[0] + ":"
                                     + (remaining_minutes
-                                       > 9 ? remaining_minutes : "0" + remaining_minute)
+                                       > 9 ? remaining_minutes : "0" + remaining_minutes)
                                     + ":" + remainingTime2.text.split(":")[2]
                         }
                         seconds2 = seconds2 + 60
@@ -1186,7 +1213,11 @@ Page {
                 }
             }
             IconButton {
-                anchors.left: isPortrait ? (largeScreen ? plusButton2.right : remainingTime2.right) : plusButton2.right
+                anchors {
+                    left: isPortrait ? (largeScreen ? remainingTime2.left : remainingTime2.right) : remainingTime2.left
+                    verticalCenter: remainingTime2.top
+                    verticalCenterOffset: remainingTime2.textVerticalCenterOffset
+                }
                 y: Theme.paddingLarge
                 icon.source: largeScreen ? 'image://theme/icon-l-document' : 'image://theme/icon-m-note'
                 visible: myGlobalComment2 !== ""
@@ -1200,47 +1231,14 @@ Page {
                 }
             }
         }
-        ProgressBar {
-            id: progressBar2
-            anchors.top: counter2.bottom
-            // width: parent.width - 2 * Theme.paddingLarge
-            width: parent.width - Theme.paddingLarge * 2
-            height: Theme.paddingLarge * 2.5
-            anchors.horizontalCenter: parent.horizontalCenter
-            maximumValue: 1
-            anchors.topMargin: 1
-            leftMargin: 0
-            rightMargin: 0
-            visible: isRunning2 || mainapp.isPaused2
-            Timer {
-                interval: 100
-                repeat: true
-                onTriggered: progressBar2.value = mainapp.progressValue2
-                             = (1 - (remainingTime2.seconds / _totalsecs2) + 0.001)
-                running: (Qt.application.active && mainapp.timer2running)
-                         || (viewable)
-            }
-            Label {
-                id: totalTime2
-                anchors.left: parent.left
-                anchors.bottom: parent.bottom
-                color: Theme.secondaryColor
-                font.pixelSize: Theme.fontSizeExtraSmall
-                text: "00:00:00"
-            }
-            Label {
-                anchors.right: parent.right
-                anchors.bottom: parent.bottom
-                color: Theme.secondaryColor
-                font.pixelSize: Theme.fontSizeExtraSmall
-                text: "00:00:00"
-            }
-        }
+
         Rectangle {
             id: sepLine2
-            anchors.top: progressBar2.bottom
-            anchors.leftMargin: Theme.paddingLarge
-            anchors.horizontalCenter: parent.horizontalCenter
+            anchors {
+                top: counter2.bottom
+                leftMargin: Theme.paddingLarge
+                horizontalCenter: parent.horizontalCenter
+            }
             width: parent.width - Theme.paddingLarge * 2
             implicitHeight: isPortrait ? parent.height / 30 : 0
             opacity: 0.5
@@ -1259,12 +1257,13 @@ Page {
         Row {
             /* inner row */
             id: timerRow3
-            anchors.top: sepLine2.bottom
-            anchors.topMargin: isPortrait ? (largeScreen ? Theme.paddingLarge : parent.height
-                                                           / 30) : 0
+            anchors {
+                top: sepLine2.bottom
+                topMargin: isPortrait ? (largeScreen ? Theme.paddingLarge : parent.height / 30) : 0
+                horizontalCenter: parent.horizontalCenter
+            }
             spacing: largeScreen ? Theme.paddingMedium : Theme.paddingSmall
-            anchors.horizontalCenter: parent.horizontalCenter
-            height: isPortrait ? (largeScreen ? page.height / 12 : Theme.itemSizeMedium) : (largeScreen ? page.height / 7 : Theme.paddingLarge * 1.6)
+            height: isPortrait ? (largeScreen ? page.height / 12 : Theme.itemSizeMedium) : (largeScreen ? page.height / 7 : page.height / 10)
             Button {
                 id: dish3
                 width: (page.width - (Theme.paddingLarge * 2)) / 2.34
@@ -1317,7 +1316,6 @@ Page {
                     onPressAndHold: {
                         myGlobalDuration3 = "00:00:00"
                         if (!ticker3.running && !mainapp.isPaused3) {
-                            progressBar3.value = 0
                             remainingTime3.text = "00:00:00"
                             mainapp.timeText3 = remainingTime3.text
                         }
@@ -1365,7 +1363,6 @@ Page {
                     if (!ticker2.running) {
                         remainingTime2.color = Theme.secondaryHighlightColor
                     }
-                    progressBar3.value = 0
                     // sound the alarm
                     alarm(dish3.text)
                 }
@@ -1373,19 +1370,50 @@ Page {
         }
         Item {
             id: counter3
-            anchors.top: timerRow3.bottom
+            anchors {
+                top: timerRow3.bottom
+                topMargin: parent.height / 15
+                horizontalCenter: parent.horizontalCenter
+            }
             height: isPortrait ? (largeScreen ? page.height
                                                 / 12 : Theme.itemSizeSmall) : Theme.itemSizeSmall
-            anchors.horizontalCenter: parent.horizontalCenter
             width: parent.width - Theme.paddingLarge
             Rectangle {
-                anchors.fill: parent
-                opacity: 0
+                width: parent.width * (1 - (remainingTime3.seconds / _totalsecs3) + 0.001)
+                height: largeScreen ? Theme.fontSizeExtraLarge
+                                      * 2.5 : Theme.fontSizeExtraLarge * 1.8
+                radius: 10
+                visible: isRunning3 || mainapp.isPaused3
+                anchors {
+                    verticalCenter: remainingTime3.top
+                    verticalCenterOffset: remainingTime2.textVerticalCenterOffset
+                }
+                gradient: Gradient {
+                    GradientStop {
+                        position: 0.0
+                        color: Theme.rgba(Theme.highlightBackgroundColor, 0.31)
+                    }
+                    GradientStop {
+                        position: 1.0
+                        color: Theme.rgba(Theme.highlightBackgroundColor, 0.1)
+                    }
+                }
+                Timer {
+                    // timer to update coverpage
+                    interval: 100
+                    repeat: true
+                    onTriggered: mainapp.progressValue3
+                                 = (1 - (remainingTime3.seconds / _totalsecs3) + 0.001)
+                    running: (Qt.application.active && mainapp.timer3running)
+                             || (viewable)
+                }
             }
             IconButton {
                 id: minButton3
-                anchors.verticalCenter: remainingTime3.top
-                anchors.verticalCenterOffset: largeScreen ? Theme.itemSizeSmall : Theme.itemSizeExtraSmall
+                anchors {
+                    verticalCenter: remainingTime3.top
+                    verticalCenterOffset: remainingTime3.textVerticalCenterOffset
+                }
                 icon.source: 'image://theme/icon-m-remove'
                 scale: largeScreen ? 2 : 1
                 onClicked: {
@@ -1446,13 +1474,15 @@ Page {
             }
             TextField {
                 id: remainingTime3
+                anchors {
+                    bottomMargin: 1
+                    left: minButton3.right
+                    right: plusButton3.left
+                    verticalCenter: parent.verticalCenter
+                }
                 readOnly: true
                 property int seconds
-                anchors.left: minButton3.right
-                anchors.right: plusButton3.left
                 horizontalAlignment: Qt.AlignHCenter
-                anchors.verticalCenter: largeScreen ? parent.verticalCenter : parent.bottom
-                anchors.verticalCenterOffset: isLandscape ? Theme.paddingSmall : 0
                 color: Theme.secondaryHighlightColor
                 font.pixelSize: largeScreen ? Theme.fontSizeExtraLarge
                                               * 2.5 : Theme.fontSizeExtraLarge * 1.8
@@ -1465,10 +1495,12 @@ Page {
                 id: plusButton3
                 x: parent.width - minButton3.width
                 y: Theme.paddingLarge
-                anchors.verticalCenter: remainingTime3.top
-                anchors.verticalCenterOffset: largeScreen ? Theme.itemSizeSmall : Theme.itemSizeExtraSmall
+                anchors {
+                    verticalCenter: remainingTime3.top
+                    verticalCenterOffset: remainingTime3.textVerticalCenterOffset
+                }
                 icon.source: largeScreen ? 'image://theme/icon-l-add' : 'image://theme/icon-m-add'
-                visible: myGlobalComment3 === "" || isLandscape || largeScreen
+                visible: myGlobalComment2 === "" || isLandscape || largeScreen
                 onClicked: {
                     buttonBuzz.play()
                     if (mainapp.timer3running || mainapp.isPaused3) {
@@ -1508,7 +1540,11 @@ Page {
                 }
             }
             IconButton {
-                anchors.left: isPortrait ? (largeScreen ? plusButton3.right : remainingTime3.right) : plusButton3.right
+                anchors {
+                    left: isPortrait ? (largeScreen ? remainingTime3.left : remainingTime3.right) : remainingTime3.left
+                    verticalCenter: remainingTime3.top
+                    verticalCenterOffset: remainingTime3.textVerticalCenterOffset
+                }
                 y: Theme.paddingLarge
                 icon.source: largeScreen ? 'image://theme/icon-l-document' : 'image://theme/icon-m-note'
                 visible: myGlobalComment3 !== ""
@@ -1520,42 +1556,6 @@ Page {
                         myGlobalComment3 = ""
                     }
                 }
-            }
-        }
-        ProgressBar {
-            id: progressBar3
-            anchors.top: counter3.bottom
-            anchors.horizontalCenter: parent.horizontalCenter
-            width: parent.width - 2 * Theme.paddingLarge
-            height: Theme.paddingLarge * 2.5
-            maximumValue: 1
-            anchors.topMargin: 1
-            anchors.bottomMargin: 1
-            leftMargin: 0
-            rightMargin: 0
-            visible: isRunning3 || mainapp.isPaused3
-            Timer {
-                interval: 100
-                repeat: true
-                onTriggered: progressBar3.value = mainapp.progressValue3
-                             = (1 - (remainingTime3.seconds / _totalsecs3) + 0.001)
-                running: (Qt.application.active && mainapp.timer3running)
-                         || (viewable)
-            }
-            Label {
-                id: totalTime3
-                anchors.left: parent.left
-                anchors.bottom: parent.bottom
-                color: Theme.secondaryColor
-                font.pixelSize: Theme.fontSizeExtraSmall
-                text: "00:00:00"
-            }
-            Label {
-                anchors.right: parent.right
-                anchors.bottom: parent.bottom
-                color: Theme.secondaryColor
-                font.pixelSize: Theme.fontSizeExtraSmall
-                text: "00:00:00"
             }
         }
     }

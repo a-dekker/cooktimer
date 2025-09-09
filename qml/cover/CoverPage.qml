@@ -72,32 +72,38 @@ CoverBackground {
             font.pixelSize: Theme.fontSizeSmall
             color: Theme.primaryColor
         }
-        Label {
-            id: dishtime1
-            text: timeText1
-            horizontalAlignment: Text.AlignHCenter
-            verticalAlignment: Text.AlignTop
-            width: parent.width
-            font.pixelSize: Theme.fontSizeHuge
-            color: timer1running ? Theme.highlightColor : isPaused1 ? Theme.secondaryColor : Theme.secondaryHighlightColor
+        Item {
+            id: dish1
             anchors.topMargin: -Theme.paddingSmall
             anchors.bottomMargin: 0
             anchors.top: dishname1.bottom
-        }
-        ProgressBar {
-            id: progressCoverBar1
             width: parent.width
-            anchors.horizontalCenter: parent.horizontalCenter
-            maximumValue: 1
-            leftMargin: 0
-            rightMargin: 0
-            anchors.bottomMargin: 1
-            anchors.topMargin: mainapp.isLightTheme ? -2.5 * Theme.paddingLarge : -2
-                                                      * Theme.paddingLarge
-            anchors.top: dishtime1.bottom
-            value: mainapp.progressValue1
-            height: Theme.paddingMedium
-            visible: timer1running || isPaused1
+            height: dishtime1.height
+            Rectangle {
+                height: dishtime1.height
+                width: parent.width * mainapp.progressValue1
+                radius: 10
+                visible: timer1running || isPaused1
+                anchors.verticalCenter: dishtime1.verticalCenter
+                gradient: Gradient {
+                    GradientStop {
+                        position: 0.0
+                        color: Theme.rgba(Theme.highlightBackgroundColor, 0.35)
+                    }
+                    GradientStop {
+                        position: 1.0
+                        color: Theme.rgba(Theme.highlightBackgroundColor, 0.1)
+                    }
+                }
+            }
+            Label {
+                id: dishtime1
+                text: timeText1
+                verticalAlignment: Text.AlignTop
+                horizontalAlignment: Text.AlignHCenter
+                font.pixelSize: largeScreen ? Theme.fontSizeExtraLarge : Theme.fontSizeHuge
+                color: timer1running ? Theme.highlightColor : isPaused1 ? Theme.secondaryColor : Theme.secondaryHighlightColor
+            }
         }
 
         Label {
@@ -107,34 +113,43 @@ CoverBackground {
             width: parent.width
             font.pixelSize: Theme.fontSizeSmall
             color: Theme.primaryColor
-            anchors.top: dishtime1.bottom
+            anchors.top: dish1.bottom
             anchors.topMargin: 0
         }
-        Label {
-            id: dishtime2
-            text: timeText2
-            horizontalAlignment: Text.AlignHCenter
-            width: parent.width
+        Item {
+            id: dish2
             anchors.topMargin: -Theme.paddingSmall
-            font.pixelSize: Theme.fontSizeHuge
-            color: timer2running ? Theme.highlightColor : isPaused2 ? Theme.secondaryColor : Theme.secondaryHighlightColor
+            anchors.bottomMargin: 0
             anchors.top: dishname2.bottom
-        }
-        ProgressBar {
-            id: progressCoverBar2
             width: parent.width
-            anchors.horizontalCenter: parent.horizontalCenter
-            maximumValue: 1
-            leftMargin: 0
-            rightMargin: 0
-            anchors.topMargin: mainapp.isLightTheme ? -2.5 * Theme.paddingLarge : -2
-                                                      * Theme.paddingLarge
-            anchors.bottomMargin: 1
-            anchors.top: dishtime2.bottom
-            value: mainapp.progressValue2
-            height: Theme.paddingMedium
-            visible: timer2running || isPaused2
+            height: dishtime2.height
+            Rectangle {
+                height: dishtime2.height
+                width: parent.width * mainapp.progressValue2
+                radius: 10
+                visible: timer2running || isPaused2
+                anchors.verticalCenter: dishtime2.verticalCenter
+                gradient: Gradient {
+                    GradientStop {
+                        position: 0.0
+                        color: Theme.rgba(Theme.highlightBackgroundColor, 0.35)
+                    }
+                    GradientStop {
+                        position: 1.0
+                        color: Theme.rgba(Theme.highlightBackgroundColor, 0.1)
+                    }
+                }
+            }
+            Label {
+                id: dishtime2
+                text: timeText2
+                verticalAlignment: Text.AlignTop
+                horizontalAlignment: Text.AlignHCenter
+                font.pixelSize: largeScreen ? Theme.fontSizeExtraLarge : Theme.fontSizeHuge
+                color: timer2running ? Theme.highlightColor : isPaused2 ? Theme.secondaryColor : Theme.secondaryHighlightColor
+            }
         }
+
         Label {
             id: dishname3
             text: dishText3
@@ -142,36 +157,44 @@ CoverBackground {
             width: parent.width
             font.pixelSize: Theme.fontSizeSmall
             color: Theme.primaryColor
-            anchors.top: dishtime2.bottom
+            anchors.top: dish2.bottom
             anchors.topMargin: -Theme.paddingSmall
         }
-        Label {
-            id: dishtime3
-            text: timeText3
+        Item {
+            id: dish3
             anchors.topMargin: -Theme.paddingSmall
-            horizontalAlignment: Text.AlignHCenter
-            width: parent.width
-            font.pixelSize: Theme.fontSizeHuge
-            color: timer3running ? Theme.highlightColor : isPaused3 ? Theme.secondaryColor : Theme.secondaryHighlightColor
+            anchors.bottomMargin: 0
             anchors.top: dishname3.bottom
-        }
-
-        ProgressBar {
-            id: progressCoverBar3
             width: parent.width
-            anchors.horizontalCenter: parent.horizontalCenter
-            maximumValue: 1
-            leftMargin: 0
-            rightMargin: 0
-            anchors.topMargin: mainapp.isLightTheme ? -2.5 * Theme.paddingLarge : -2
-                                                      * Theme.paddingLarge
-            anchors.bottomMargin: 1
-            anchors.top: dishtime3.bottom
-            value: mainapp.progressValue3
-            height: Theme.paddingMedium
-            visible: timer3running || isPaused3
+            height: dishtime3.height
+            Rectangle {
+                height: dishtime3.height
+                width: parent.width * mainapp.progressValue3
+                radius: 10
+                visible: timer3running || isPaused3
+                anchors.verticalCenter: dishtime3.verticalCenter
+                gradient: Gradient {
+                    GradientStop {
+                        position: 0.0
+                        color: Theme.rgba(Theme.highlightBackgroundColor, 0.35)
+                    }
+                    GradientStop {
+                        position: 1.0
+                        color: Theme.rgba(Theme.highlightBackgroundColor, 0.1)
+                    }
+                }
+            }
+            Label {
+                id: dishtime3
+                text: timeText3
+                verticalAlignment: Text.AlignTop
+                horizontalAlignment: Text.AlignHCenter
+                font.pixelSize: largeScreen ? Theme.fontSizeExtraLarge : Theme.fontSizeHuge
+                color: timer3running ? Theme.highlightColor : isPaused3 ? Theme.secondaryColor : Theme.secondaryHighlightColor
+            }
         }
     }
+
     CoverActionList {
         id: coverAction
 

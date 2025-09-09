@@ -8,6 +8,10 @@
 # * date Author's Name <author's email> version-release
 # - Summary of changes
 
+* Tue Sep 09 2025 Arno Dekker <jack.tar@example.com> 0.0.7-1
+- Replace progressbar with background bar
+- Some layout issues should be addressed
+
 * Sun Dec 15 2024 Arno Dekker <jack.tar@example.com> 0.0.6-1
 - Allow the plus and minus button to pass an hour border
 
