@@ -1500,7 +1500,7 @@ Page {
                     verticalCenterOffset: remainingTime3.textVerticalCenterOffset
                 }
                 icon.source: largeScreen ? 'image://theme/icon-l-add' : 'image://theme/icon-m-add'
-                visible: myGlobalComment2 === "" || isLandscape || largeScreen
+                visible: myGlobalComment3 === "" || isLandscape || largeScreen
                 onClicked: {
                     buttonBuzz.play()
                     if (mainapp.timer3running || mainapp.isPaused3) {
