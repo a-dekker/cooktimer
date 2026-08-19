@@ -59,10 +59,8 @@ CoverBackground {
     }
 
     SilicaFlickable {
-        width: parent.width
-        anchors.leftMargin: Theme.paddingLarge
-        anchors.rightMargin: Theme.paddingLarge
         anchors.fill: parent
+        anchors.horizontalCenter: parent.horizontalCenter
 
         Label {
             id: dishname1
@@ -84,7 +82,6 @@ CoverBackground {
                 width: parent.width * mainapp.progressValue1
                 radius: 10
                 visible: timer1running || isPaused1
-                anchors.verticalCenter: dishtime1.verticalCenter
                 gradient: Gradient {
                     GradientStop {
                         position: 0.0
@@ -101,6 +98,7 @@ CoverBackground {
                 text: timeText1
                 verticalAlignment: Text.AlignTop
                 horizontalAlignment: Text.AlignHCenter
+                width: parent.width
                 font.pixelSize: largeScreen ? Theme.fontSizeExtraLarge : Theme.fontSizeHuge
                 color: timer1running ? Theme.highlightColor : isPaused1 ? Theme.secondaryColor : Theme.secondaryHighlightColor
             }
@@ -128,7 +126,6 @@ CoverBackground {
                 width: parent.width * mainapp.progressValue2
                 radius: 10
                 visible: timer2running || isPaused2
-                anchors.verticalCenter: dishtime2.verticalCenter
                 gradient: Gradient {
                     GradientStop {
                         position: 0.0
@@ -145,6 +142,7 @@ CoverBackground {
                 text: timeText2
                 verticalAlignment: Text.AlignTop
                 horizontalAlignment: Text.AlignHCenter
+                width: parent.width
                 font.pixelSize: largeScreen ? Theme.fontSizeExtraLarge : Theme.fontSizeHuge
                 color: timer2running ? Theme.highlightColor : isPaused2 ? Theme.secondaryColor : Theme.secondaryHighlightColor
             }
@@ -172,7 +170,6 @@ CoverBackground {
                 width: parent.width * mainapp.progressValue3
                 radius: 10
                 visible: timer3running || isPaused3
-                anchors.verticalCenter: dishtime3.verticalCenter
                 gradient: Gradient {
                     GradientStop {
                         position: 0.0
@@ -189,6 +186,7 @@ CoverBackground {
                 text: timeText3
                 verticalAlignment: Text.AlignTop
                 horizontalAlignment: Text.AlignHCenter
+                width: parent.width
                 font.pixelSize: largeScreen ? Theme.fontSizeExtraLarge : Theme.fontSizeHuge
                 color: timer3running ? Theme.highlightColor : isPaused3 ? Theme.secondaryColor : Theme.secondaryHighlightColor
             }
